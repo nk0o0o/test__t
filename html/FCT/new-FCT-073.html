@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리 - 복약 알림(데이터 없음)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>복약 관리</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">
+          복약 알림
+          <button type="button" class="tooltip" onclick="netiveUI.plugins.popAlert('#alertModal');"></button>
+        </p>
+        <div class="list_desc">※ 알림내역 0건<button type="button">알림 추가</button></div><!-- 20230906 문구수정 -->
+
+        <div class="medicine_card_wrap">
+          <div class="box_container medicine_card">
+            <div class="sub_tit">처방</div>
+            <div class="tit">비스포스포네이트, 콤지로이드정</div>
+            <div class="medicine_card_time">
+              <div class="info"><span>복약주기</span><em>월화수목금토</em></div>
+              <div class="info"><span>복약시간</span>아침, 점심, 저녁, 취짐 전</div>
+            </div>
+            <div class="medicine_card_btm">2023.08.05 ~ 2023.08.12
+              <div class="btn_wrap">
+                <button type="button" class="btn_txt_sm">수정</button>
+                <button type="button" class="btn_txt_sm" onclick="netiveUI.plugins.popAlert('#alert001')">삭제</button>
+              </div>
+            </div>
+          </div><!-- //.medicine_card -->
+          <div class="box_container medicine_card">
+            <div class="sub_tit">비처방</div>
+            <div class="tit">아스피린, 아시클로버</div>
+            <div class="medicine_card_time">
+              <div class="info"><span>복약주기</span><em>월화수목금</em></div>
+              <div class="info"><span>복약시간</span>아침, 저녁</div>
+            </div>
+            <div class="medicine_card_btm">2023.08.05 ~ 2023.08.12
+              <div class="btn_wrap">
+                <button type="button" class="btn_txt_sm">수정</button>
+                <button type="button" class="btn_txt_sm" onclick="netiveUI.plugins.popAlert('#alert001')">삭제</button>
+              </div>
+            </div>
+          </div><!-- //.medicine_card -->
+          <div class="box_container medicine_card">
+            <div class="sub_tit">영양제</div>
+            <div class="tit">아스피린, 아시클로버</div>
+            <div class="medicine_card_time">
+              <div class="info"><span>복약주기</span><em>매일</em></div>
+              <div class="info"><span>복약시간</span>아침</div>
+            </div>
+            <div class="medicine_card_btm">2023.08.05 ~ 2023.08.12
+              <div class="btn_wrap">
+                <button type="button" class="btn_txt_sm">수정</button>
+                <button type="button" class="btn_txt_sm" onclick="netiveUI.plugins.popAlert('#alert001')">삭제</button>
+              </div>
+            </div>
+          </div><!-- //.medicine_card -->
+        </div>
+
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+
+  <!-- alert 팝업 : 복림 알림 삭제 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">복림 알림 삭제</h2>
+      <p class="alert_msg">
+        복약 알림을 삭제하시겠습니까?<br>기존 입력하신 기록이 삭제됩니다.
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_line_dark ui-close">취소</button>
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!--// alert 팝업 : 복림 알림 삭제-->
+
+  <!-- 복약 알림? 모달팝업 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+       <h2 class="pop_tit">복약 알림이란?
+        <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+       </h2>
+       <div class="msg">
+        <strong>복약 중인 약 정보, 시간을 설정해주세요.</strong><br>
+        정해진 시간에 복약 알림도 받고, 꾸준하게 복약 관리도 할 수 있습니다.
+       </div>
+    </div>
+ </div>
+ <!-- //복약 알림? 모달팝업 -->
+</body>
+</html>

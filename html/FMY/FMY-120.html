@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dental MBTI 시작하기</title>
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+
+<body>
+	<div class="health_wrap type_goal type_survey type_diagnosis dent_mbti"><!-- 20230220 page class "dent_mbti" 추가 -->
+		<!-- 20230609 헤더수정 -->
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+		<!-- //20230609 헤더수정 -->
+		<div class="health_container pt0 pb0">
+      <div class="swiper-container sect_cate">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n" class="nav walk">
+              <p class="ico"></p>
+              <span>건강 걸음</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav ai">
+              <p class="ico"></p>
+              <span>AI 건강카메라</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav bmi">
+              <p class="ico"></p>
+              <span>BMI</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav mbti on">
+              <p class="ico"></p>
+              <span>Dental MBTI</span>
+            </a>
+          </li>
+        </ul>
+        <div class="cate_next"></div>
+        <div class="cate_prev"></div>
+      </div>
+      <!-- //.sect_cate -->
+			<div class="dental_join">
+			<!-- 20230321 class 변경 dental_start -> dental_join -->
+				<!-- 20230609 타이틀 추가 -->
+				<div class="header_box">
+					<h3 class="stt">
+						Dental MBTI<a href="#n" class="link"></a>
+					</h3>
+				</div>
+				<!-- //20230609 타이틀 추가 -->
+				<img src="../../resources/img/dental_join_img.png" alt="덴탈 시작하기"/><!-- 20230321 img 변경 -->
+				<p class="dental_join_txt"><!-- 20230321 텍스트 수정 -->
+					치과의사가 개발한 초간단 <span class="dental_str">구강 타입 테스트</span>에<br/>
+					참여하고,<span class="dental_str">맞춤 구강 관리 방법</span>을 확인해 보세요!
+					<em>콘텐츠 제공 : <img src="../../resources/img/v3_ico_rebrush.png" alt="Re:Brush"/></em><!-- 20230608 이미지경로 -->
+				</p>
+				<!-- 20230609 버튼 위치 수정 -->
+				<div class="btn_wrap">
+					<button type="button" onclick="netiveUI.plugins.popAlert('#alertConfirm');" class="btn_base_03">테스트 시작하기</button>
+				</div>
+				<!-- //20230609 버튼 위치 수정 -->
+			</div>
+		</div>
+
+		<!-- 진단/상담 완료 컨펌 팝업 --><!-- 20230220 팝업 주석 처리
+		<div id="alertConfirm" class="health_alert mypage_popup" style="display: none;">
+			<div class="inner">
+				<h1 class="tit_cont_03">'{진단/상담}'의 상담예약을 완료하시겠습니까?</h1>
+				<div class="btn_wrap">
+					<button type="button" class="btn_pop_light ui-close">취소</button>
+					<button type="button" onclick="netiveUI.plugins.popAlert('#alertComplete');" class="btn_pop_dark ui-close">상담예약 완료</button>
+				</div>
+			</div>
+		</div>
+		-->
+		<!-- //진단/상담 완료 컨펌 팝업 -->
+		<!-- 예약완료 팝업 --><!-- 20230220 팝업 주석 처리
+		<div id="alertComplete" class="health_alert mypage_popup" style="display: none;">
+			<div class="inner">
+				<h1 class="tit_cont_03">예약을 완료 했습니다.</h1>
+				<p class="msg">
+					부득이한 사정으로 예약을 취소하시려<br>
+					면 진단/상담 예약일 하루 전 오후 6시<br>
+					까지 취소가 가능합니다.
+				</p>
+				<div class="btn_wrap">
+					<button type="button" class="btn_pop_dark ui-close">확인</button>
+				</div>
+			</div>
+		</div>-->
+		<!-- //예약완료 팝업 -->
+		<!-- 20230609 푸터영역 추가 -->
+		<footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary on">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+		<!-- //20230609 푸터영역 추가 -->
+  </div>  
+  <!-- 상단 카테고리 슬라이드 -->
+  <script>
+    $(document).ready(function () {
+      var cateSwiper = new Swiper(".sect_cate", {
+        slidesPerView: 3,
+        navigation: {
+          nextEl: ".cate_next",
+          prevEl: ".cate_prev",
+          disabledClass: "disabled"
+        },
+        initialSlide:4
+      });
+    });
+  </script>
+</body>
+
+</html>

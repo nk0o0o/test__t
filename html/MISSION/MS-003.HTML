@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미션(3.4) - 맞춤건강미션 - 리스트</title>
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+
+<div class="health_wrap footer_no type_content">
+  <header class="health_header">
+    <div class="inbtn">
+      <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+      <h1>맞춤 건강 미션</h1>
+    </div>
+  </header>
+  <div class="health_container">
+    <!-- new_mission -->
+    <div class="n_ms">
+      <div class="n_ms_sub_cont">
+        <!-- 참여 중인 미션 -->
+        <div class="ms_list_view_wrap">
+          <div class="hc_head">
+            <h2 class="stt">맞춤 건강 미션 <a href="#n" class="link" onclick="netiveUI.plugins.popAlert('#alert01');"></a></h2>
+            <button type="button" class="right btn_txt">펼치기</button>
+          </div>
+          <div class="ms_list_view_cont">
+            <div class="swiper-container ms_box_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="ms_info_box c1">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">하루 5,000보 이상 걷기 하루 5,000보 이상 걷기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="chart_dn">
+                        <span data-num="100">0</span>
+                        <svg>
+                          <circle cx="24" cy="24" r="20" stroke="url(#gradient)"></circle>
+                          <defs>
+                            <linearGradient id="gradient">
+                              <stop offset="0%" stop-color="#cb8bda" />
+                              <stop offset="35%"   stop-color="#9b78f0" />
+                              <stop offset="70%"   stop-color="#0095ff" />
+                              <stop offset="100%"   stop-color="#19d3c5" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="bottom">
+                        <button type="button" class="btn_sm" onclick="netiveUI.plugins.popAlert('#alert02');">포인트 받기</button><!-- 20230907 팝업추가 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ms_info_box c1">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">BMI 10회 측정</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="chart_dn">
+                        <span data-num="100">0</span>
+                        <svg>
+                          <circle cx="24" cy="24" r="20" stroke="url(#gradient)"></circle>
+                          <defs>
+                            <linearGradient id="gradient">
+                              <stop offset="0%" stop-color="#cb8bda" />
+                              <stop offset="35%"   stop-color="#9b78f0" />
+                              <stop offset="70%"   stop-color="#0095ff" />
+                              <stop offset="100%"   stop-color="#19d3c5" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                      <div class="bottom">
+                        <button type="button" class="btn_sm">포인트 받기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ms_info_box c2">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">건강 콘텐츠 5회 보기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="chart_dn">
+                        <span data-num="75">0</span>
+                        <svg>
+                          <circle cx="24" cy="24" r="20" stroke="url(#gradient)"></circle>
+                          <defs>
+                            <linearGradient id="gradient">
+                              <stop offset="0%" stop-color="#cb8bda" />
+                              <stop offset="35%"   stop-color="#9b78f0" />
+                              <stop offset="70%"   stop-color="#0095ff" />
+                              <stop offset="100%"   stop-color="#19d3c5" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="ms_info_box c2">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">건강 콘텐츠 5회 보기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="chart_dn">
+                        <span data-num="36">0</span>
+                        <svg>
+                          <circle cx="24" cy="24" r="20" stroke="url(#gradient)"></circle>
+                          <defs>
+                            <linearGradient id="gradient">
+                              <stop offset="0%" stop-color="#cb8bda" />
+                              <stop offset="35%"   stop-color="#9b78f0" />
+                              <stop offset="70%"   stop-color="#0095ff" />
+                              <stop offset="100%"   stop-color="#19d3c5" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+        <!-- //참여 중인 미션 -->
+        <div class="tab_wrap type02">
+          <div class="tabs">
+            <ul class="tab_menulist">
+              <li class="active"><a class="tab_control" href="#tab-1">전체</a></li>
+              <li><a class="tab_control" href="#tab-2">참여 가능</a></li>
+              <li><a class="tab_control" href="#tab-3">참여 완료</a></li>
+            </ul>
+            <div class="tab_panel active" id="tab-1">
+              <!-- 빈도, 기간 -->
+              <div class="sort_cont">
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="1"><span>빈도</span></button>
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="2"><span>기간</span></button>
+              </div>
+              <!-- //빈도, 기간 -->
+              <ul class="ms_info_box_list">
+                <li>
+                  <div class="ms_info_box">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">하루 5,000보 이상 걷기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_run.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div>
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="ms_info_box">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">BMI 10회 측정</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_bmi.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div>
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="ms_info_box">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">건강 콘텐츠 5회 보기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_contents.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div>
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="ms_info_box">
+                    <a href="#">
+                      <div class="info">
+                        <strong class="tit">나의 구강타입 확인하기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_dental.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div>
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <!-- 준비중 -->
+                <li class="ing">
+                  <div class="ms_info_box">
+                    <a href="javascript:void(0);"><!-- 20230907 링크이동 없음 수정 -->
+                      <div class="info">
+                        <strong class="tit">하루 5,000보 이상 걷기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_bmi.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <!-- <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div> -->
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <!-- //준비중 -->
+                <!-- 참여완료 -->
+                <li class="end">
+                  <div class="ms_info_box">
+                    <a href="javascript:void(0);"><!-- 20230907 링크이동 없음 수정 -->
+                      <div class="info">
+                        <strong class="tit">하루 5,000보 이상 걷기</strong>
+                        <div class="date">참여기간 <span>08.05(월) ~ 08.12(월)</span></div>
+                        <div class="point_wrap">
+                          <div class="my_point"><span>500</span></div>
+                          <div class="txt"><span>N</span>회 이상</div>
+                        </div>
+                      </div>
+                    </a>
+                    <div class="right">
+                      <div class="img">
+                        <img src="../../resources/img/v3_img_48_fill_mission_bmi.svg" alt="">
+                      </div>
+                      <!-- 20230906 버튼 추가 -->
+                      <!-- <div class="bottom">
+                        <button type="button" class="btn_sm">바로 참여</button>
+                      </div> -->
+                      <!-- //20230906 버튼 추가  -->
+                    </div>
+                  </div>
+                </li>
+                <!-- //참여완료 -->
+              </ul>
+            </div>
+            <div class="tab_panel" id="tab-2">
+              <!-- 빈도, 기간 -->
+              <div class="sort_cont">
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="1"><span>빈도</span></button>
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="2"><span>기간</span></button>
+              </div>
+              <!-- //빈도, 기간 -->
+              <!-- 참여가능 없음 -->
+              <div class="box_nodata">
+                <span class="box_nodata_icon">
+                  <img src="../../resources/img/ic_48_fill_empty.svg" alt="">
+                </span>
+                <p>현재 참여 가능한 미션이 없습니다.</p>
+              </div>
+              <!-- //참여가능 없음 -->
+            </div>
+            <div class="tab_panel" id="tab-3">
+              <!-- 빈도, 기간 -->
+              <div class="sort_cont">
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="1"><span>빈도</span></button>
+                <button type="button" class="btn_sort btn_btm_sheet" data-btmsheet="btmSheet01" data-idx="2"><span>기간</span></button>
+              </div>
+              <!-- //빈도, 기간 -->
+              <!-- 참여완료 없음-->
+              <div class="box_nodata">
+                <span class="box_nodata_icon">
+                  <img src="../../resources/img/ic_48_fill_empty.svg" alt="">
+                </span>
+                <p>현재 완료된 미션이 없습니다.</p>
+              </div>
+              <!-- //참여완료 없음-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // .new_mission -->
+  </div>
+  <!-- // .health_container -->
+</div>
+
+<!-- 미션포인트안내 pop-->
+<div class="health_alert" id="alert01" style="display: none;">
+  <div class="inner">
+    <h2 class="pop_tit">
+      참여 중인 미션 안내<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+    </h2>
+    <p class="msg">
+      100% 달성한 미션은 ’포인트 받기’ 버튼을 클릭해야 포인트를 획득하실 수 있습니다.<br><br>지급된 포인트는 ‘My’ 페이지에서 확인하실 수 있습니다.
+    </p>
+  </div>
+</div>
+<!-- //미션포인트안내 pop-->
+
+<!-- 20230907 팝업추가 -->
+<!-- 포인트받기 모달팝업-->
+<div class="health_alert alert_point" id="alert02" style="display: none;">
+  <div class="inner">
+    <p class="msg">
+      <div class="lay_point">
+        <div class="num">100<em></em></div>
+        <p class="point_txt">100포인트 받기 완료!</p>
+        <p class="txt">지급된 포인트는 ‘My’ 메뉴에서<br>확인하실 수 있습니다.</p>
+      </div>
+    </p>
+    <div class="btn_wrap">
+      <button type="button" class="btn_pop_dark ui-close">확인</button>
+    </div>
+  </div>
+</div>
+
+<!-- 빈도 기간 bottom sheet-->
+<div class="btm_sheet " id="btmSheet01">
+  <div class="btm_sheet_back"></div>
+  <div class="inner tabs">
+    <div class="btm_sheet_head">
+      <ul class="tab_menulist">
+        <li><a class="tab_control" href="#tab-11">빈도</a></li>
+        <li><a class="tab_control" href="#tab-22">기간</a></li>
+      </ul>
+      <button type="button" class="btm_sheet_close"></button>
+    </div>
+    <div class="btm_sheet_cont">
+      <!-- 빈도 -->
+      <div class="tab_panel" id="tab-11" data-idx="1">
+        <ul class="chk_list_wrap">
+          <li>
+            <span>매일</span>
+            <label for="check_01" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_01">
+            </label>
+          </li>
+          <li>
+            <span>주 1회</span>
+            <label for="check_02" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_02">
+            </label>
+          </li>
+          <li>
+            <span>주 3회</span>
+            <label for="check_03" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_03">
+            </label>
+          </li>
+        </ul>
+      </div>
+      <!-- //빈도 -->
+      <!-- 기간 -->
+      <div class="tab_panel" id="tab-22" data-idx="2">
+        <ul class="chk_list_wrap">
+          <li>
+            <span>2주 동안</span>
+            <label for="check_011" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_011">
+            </label>
+          </li>
+          <li>
+            <span>4주 동안</span>
+            <label for="check_022" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_022">
+            </label>
+          </li>
+          <li>
+            <span>10일 동안</span>
+            <label for="check_033" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_033">
+            </label>
+          </li>
+          <li>
+            <span>15일 이상</span>
+            <label for="check_044" class="frm_check">
+              <input type="checkbox" name="checkName1" id="check_044">
+            </label>
+          </li>
+        </ul>
+      </div>
+      <!-- //기간 -->
+    </div>
+    <div class="btm_sheet_btns">
+      <button type="button" class="btm_sheet_close">확인</button>
+    </div>
+  </div>
+</div>
+<!-- 빈도 기간 bottom sheet-->
+
+
+<script>
+//20230906 참여중인미션 슬라이드 펼치기 접기
+  //swiper
+  let swiper = null;
+  swiper = new Swiper(".ms_box_swiper", {      
+    //loop: true,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    pagination: {        
+      el: ".ms_box_swiper .swiper-pagination",
+      type: 'fraction',
+    },
+    loop: this.SwiperLength > 1,//1개일때 루프정지
+    watchOverflow: true, 
+  });
+  
+  $(".ms_list_view_wrap .btn_txt").on("click",function(){
+    let msListVeiwWrap = $('.ms_list_view_wrap');
+    $(this).parents('.ms_list_view_wrap').toggleClass('is_change');     
+    if($(this).text() == '펼치기') {
+      $(this).text('접기');
+    } else {
+      $(this).text('펼치기');
+    }
+    if(msListVeiwWrap.hasClass('is_change')) {
+      swiper.destroy();
+    } else {
+      swiper = new Swiper(".ms_box_swiper", {      
+        loop: true,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 10,
+        observer: true,
+        observeParents: true,
+        pagination: {        
+          el: ".ms_box_swiper .swiper-pagination",
+          type: 'fraction',
+        },
+        loop: this.SwiperLength > 1,//1개일때 루프정지
+        watchOverflow: true,
+      });
+    }
+  });
+////20230906 참여중인미션 슬라이드 펼치기 접기
+  $(function() {
+    //bottom sheet
+    const btnBtmSheet = $('.btn_btm_sheet'),
+          BtmSheetMenu = $('.btm_sheet .tab_menulist').find('li'),
+          BtmSheetPanel = $('.btm_sheet .tab_panel');
+    btnBtmSheet.on('click', function() {
+      if($(this).data('btmsheet') !='btmSheetDate' && $(this).data('btmsheet') !='btmSheetTime'){
+        $("#"+ $(this).data('btmsheet')).addClass('show');
+        let idx = $(this).data('idx');
+        console.log(idx);
+        BtmSheetMenu.removeClass('active');
+        BtmSheetMenu.eq(idx-1).addClass('active');
+        BtmSheetPanel.removeClass('active');
+        $('.btm_sheet .tab_panel'+'[data-idx='+idx+']').addClass('active');
+      } else if($(this).data('btmsheet') =='btmSheetDate' || $(this).data('btmsheet') =='btmSheetTime'){
+        getPicker($(this).data('btmsheet'), $(this).attr('id'));
+      }
+    });
+    $('.btm_sheet_close').on('click', function() {
+      BtmSheetMenu.removeClass('active');
+      $(this).parents('.btm_sheet').removeClass('show');
+    });
+    BtmSheetMenu.find('a').on('click',function() {
+      BtmSheetMenu.removeClass('active');
+      BtmSheetPanel.removeClass('active');
+    })
+
+    //포인트 차트
+    const chart = $('.chart_dn');
+    chart.each(function() {
+      let item =$(this),
+          title = item.find('span'),
+          targetNum = title.attr('data-num'),
+          circle = item.find('circle');
+      $({rate:0}).animate({rate:targetNum},
+      {
+        duration:1000,
+        progress:function() {
+          let now = this.rate,
+              amount = 125 - 125 * now / 100;
+          title.text(Math.floor(now) +'%');
+          circle.css({strokeDashoffset:amount})
+        }
+      })
+    })
+  })
+</script>
+</body>
+</html>

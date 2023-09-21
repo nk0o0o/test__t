@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 건강카메라 </title>
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+  <script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+  <script src="../../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i type_home">
+    <!-- 헤더영역 신규 디자인변경 -->
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+    <!-- //헤더영역 신규 디자인변경 -->
+    <div class="health_container align_right">
+      <div class="swiper-container sect_cate">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n" class="nav walk">
+              <p class="ico"></p>
+              <span>건강 걸음</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav ai">
+              <p class="ico"></p>
+              <span>AI 건강카메라</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav bmi on">
+              <p class="ico"></p>
+              <span>BMI</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav mbti">
+              <p class="ico"></p>
+              <span>Dental MBTI</span>
+            </a>
+          </li>
+        </ul>
+        <div class="cate_next"></div>
+        <div class="cate_prev"></div>
+      </div>
+      <!-- //.sect_cate -->
+			<div class="bmi_result">
+				<h3 class="stt">
+					BMI & 주요 질환 상대지수
+					<a href="#n" class="link"></a>
+				</h3>
+				<div class="con_wrap">
+					<div class="state">
+						<p class="idx">22.60</p>
+						<span class="txt">최근 업데이트 2023-05-08</span>
+					</div>
+					<ul class="level bmi_cont">
+						<li>
+							<p class="obes_lev_1">1단계 비만</p>
+							<span>04.10</span>
+						</li>
+						<li>
+							<p class="before_obes">비만전단계</p>
+							<span>05.01</span>
+						</li>
+						<li>
+							<p class="normal">정상</p>
+							<span>05.08</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="user_bmi" class="more_cont bmi_cont normal">
+				<!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+				<div class="bmi_card">
+					<div class="bmi_state">
+							<p class="bmi_tit">
+								나의 체질량 지수
+								<button type="button" class="btn_mod">수정</button>
+							</p>
+							<div class="bmi_state_figure">
+								<div class="bmi_state_emot">
+									<div class="emot_area"></div><!-- 이모티콘자리 -->
+									<p></p><!-- 상태값 자리 -->
+								</div>
+								<p class="bmi_state_num">BMI <em>22.<span>0</span></em></p>
+							</div>
+					</div>
+					<div class="bmi_range_wrap">
+							<div class="bmi_range">
+								<div class="bmi_range_tit">정상 범위</div>
+								<div class="bmi_range_num">18.5~22.9</div>
+							</div>
+							<div class="bmi_range">
+								<div class="bmi_range_tit">또래 평균대비</div>
+								<div class="bmi_range_num">-3.0<i class="bmi_icon_arr down"></i></div>
+								<!-- 화살표 클래스 up, down -->
+							</div>
+					</div>
+				</div>
+				<div class="bmi_card">
+					<p class="bmi_tit">주요질환 상대위험도</p>
+					<ul class="bmi_disease_list">
+							<li class="bmi_disease">
+								<p class="bmi_disease_tit">본태성 고혈압</p>
+								<p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+							</li>
+							<li class="bmi_disease">
+								<p class="bmi_disease_tit">고지혈증</p>
+								<p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+							</li>
+					</ul>
+					<a href="#" class="bmi_more_btn">주요질환 더보기<i class="ico_arr_666"></i></a>
+				</div>
+			</div>
+      <!-- 하단 이용약관 -->
+      <div class="main_footer acco_list_wrap">
+        <div class="item_head">
+          <a id="popFull01" href="#"><span>이용약관</span></a>
+          <a id="popFull04" href="#"><span class="footer_tit">위치기반 서비스 이용 약관</span></a>
+          <br>
+          <a id="popFull02" href="#"><span class="footer_tit">개인정보처리방침</span></a>
+          <a id="popFull03" href="#"><span class="footer_tit">이전 개인정보처리방침</span></a>
+          <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+        </div>
+        <div class="item_cont" style="display: none;">
+          <div class="footer_call_center">
+            <p><span>고객센터 </span><a href="tel:1833-4030">1833-4030</a></p>
+            <p><span>(평일 오전 9시 ~ 오후 6시, 주말/공휴일 휴무)</p>
+          </div>
+        </div>
+      </div>
+      <!-- //하단 이용약관 -->
+    </div>
+    <!-- 푸터영역 신규 디자인변경 -->
+    <footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home on">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- //푸터영역 신규 디자인변경 -->
+  </div>
+
+<!-- 상단 카테고리 슬라이드 -->
+<script>
+  $(document).ready(function () {
+    var cateSwiper = new Swiper(".sect_cate", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".cate_next",
+        prevEl: ".cate_prev",
+        disabledClass: "disabled"
+      },
+    });
+  });
+</script>
+</body>
+
+</html>

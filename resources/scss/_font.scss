@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+//$font-path-noto : '/font/notosans/';
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url($font-path-noto + "NotoSansKR-Regular.woff2") format("woff2"),
+    url($font-path-noto + "NotoSansKR-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url($font-path-noto + "NotoSansKR-Bold.woff2") format("woff2"),
+    url($font-path-noto + "NotoSansKR-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url($font-path-noto + "NotoSansKR-Black.woff2") format("woff2"),
+    url($font-path-noto + "NotoSansKR-Black.woff") format("woff");
+}
+
+//$font-path-roboto : '/font/roboto/';
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+    url($font-path-roboto + "Roboto-Regular.woff2") format("woff2"),
+    url($font-path-roboto + "Roboto-Regular.woff") format("woff"),
+    url($font-path-roboto + "Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url($font-path-roboto + "Roboto-Bold.woff2") format("woff2"),
+    url($font-path-roboto + "Roboto-Bold.woff") format("woff"),
+    url($font-path-roboto + "Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url($font-path-roboto + "Roboto-Black.woff2") format("woff2"),
+    url($font-path-roboto + "Roboto-Black.woff") format("woff"),
+    url($font-path-roboto + "Roboto-Black.ttf") format("truetype");
+}
+
+//$font-path-suit : '/font/suit/';
+@font-face {//medium
+  font-family: "Suit";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Suit Medium"), local("SUIT-Medium"),
+    url($font-path-suit + "SUIT-Medium.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-Medium.woff") format("woff"),
+    url($font-path-suit + "SUIT-Medium.ttf") format("truetype");
+}
+@font-face {//semibold
+  font-family: "Suit";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Suit SemiBold"), local("SUIT-SemiBold"),
+    url($font-path-suit + "SUIT-SemiBold.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-SemiBold.woff") format("woff"),
+    url($font-path-suit + "SUIT-SemiBold.ttf") format("truetype");
+}
+@font-face {//bold
+  font-family: "Suit";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Suit Bold"), local("SUIT-Bold"),
+    url($font-path-suit + "SUIT-Bold.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-Bold.woff") format("woff"),
+    url($font-path-suit + "SUIT-Bold.ttf") format("truetype");
+}
+
+
+/* Suit tuneh */
+//$font-path-suit : '/font/suit/';
+@font-face {//Regular
+  font-family: "Suit tuneh";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SUIT Regular"), local("SUIT-Regular"),
+    url($font-path-suit + "SUIT-Regular.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-Regular.ttf") format("truetype");
+}
+@font-face {//Medium
+  font-family: "Suit tuneh";
+  font-style: normal;
+  font-weight: 500;
+  src: local("SUIT Medium"), local("SUIT-Medium"),
+    url($font-path-suit + "SUIT-Medium.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-Medium.woff") format("woff"),
+    url($font-path-suit + "SUIT-Medium.ttf") format("truetype");
+}
+@font-face {//Semi bold
+  font-family: "Suit tuneh";
+  font-style: normal;
+  font-weight: 600;
+  src: local("SUIT SemiBold"), local("SUIT-SemiBold"),
+    url($font-path-suit + "SUIT-SemiBold.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-SemiBold.woff") format("woff"),
+    url($font-path-suit + "SUIT-SemiBold.ttf") format("truetype");
+}
+@font-face {//bold
+  font-family: "Suit tuneh";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Suit Bold"), local("SUIT-Bold"),
+    url($font-path-suit + "SUIT-Bold.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-Bold.woff") format("woff"),
+    url($font-path-suit + "SUIT-Bold.ttf") format("truetype");
+}
+@font-face {//ExtraBold
+  font-family: "Suit tuneh";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Suit ExtraBold"), local("SUIT-ExtraBold"),
+    url($font-path-suit + "SUIT-ExtraBold.woff2") format("woff2"),
+    url($font-path-suit + "SUIT-ExtraBold.ttf") format("truetype");
+}

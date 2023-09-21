@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="jiewr0yg6a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#cae4ff"/>
+            <stop offset="1" stop-color="#afd6ff"/>
+        </linearGradient>
+    </defs>
+    <circle data-name="타원 209" cx="12" cy="12" r="12" style="fill:#0795fa"/>
+    <g data-name="그룹 1037" transform="translate(3.526 4.23)">
+        <path data-name="Ellipse 351" d="M6 .5a.2.2 0 0 1 .2.2 7.14 7.14 0 0 1-1.115 3.626 7.14 7.14 0 0 1-2.809 2.547.2.2 0 0 1-.265-.093L.357 3.265a.211.211 0 0 1 .093-.272 2.856 2.856 0 0 0 1.017-.963A2.856 2.856 0 0 0 1.905.7a.211.211 0 0 1 .207-.2z" transform="translate(9.968 7.769)" style="fill:url(#jiewr0yg6a)"/>
+        <path data-name="Ellipse 351" d="M.535.5a.2.2 0 0 0-.2.2 7.14 7.14 0 0 0 3.921 6.173.2.2 0 0 0 .264-.093l1.654-3.515a.211.211 0 0 0-.093-.272A2.856 2.856 0 0 1 4.626.7.211.211 0 0 0 4.42.5z" transform="translate(.968 7.77)" style="fill:url(#jiewr0yg6a)"/>
+        <path data-name="Ellipse 351" d="M.747 1.624a.21.21 0 0 1 .08-.29 7.669 7.669 0 0 1 7.846.329.21.21 0 0 1 .055.3l-2.38 3.421a.227.227 0 0 1-.3.06 3.068 3.068 0 0 0-2.918-.122.227.227 0 0 1-.3-.085z" transform="translate(4.255 -.141)" style="fill:url(#jiewr0yg6a)"/>
+        <circle data-name="타원 211" cx="1.718" cy="1.718" r="1.718" transform="translate(7.074 6.352)" style="fill:#0f48a4"/>
+    </g>
+</svg>

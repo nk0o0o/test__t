@@ -1,0 +1,78 @@
+a
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>guide : tab 02</title>
+   <script src="../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../resources/js/ui.common.js"></script>
+   <link rel="stylesheet" href="../resources/css/guide.css">
+</head>
+
+<body>
+   <div class="health_wrap type_goal type_bg_purple footer_no">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev ver02"><span
+                  class="hidden">이전</span></button>
+            <h1>추적</h1>
+         </div>
+         <div class="user package on"><button type="button">홍길동</button></div>
+         <!-- user class 가이드
+            패키지 구매회원의 경우 : .package 추가
+            신규 알림 있을 시 : .on 추가
+         -->
+      </header>
+      <div class="health_container pt0">
+         <div class="tabs tracking_wrap">
+            <ul class="tab_menulist">
+               <li class="active"><a class="tab_control" href="#tab-1">tab-1</a></li>
+               <li><a class="tab_control" href="#tab-2">tab-2</a></li>
+            </ul>
+            <div class="tab_panel tracking_cont" id="tab-1">
+               <div class="item_cont acco_list_wrap">
+                  <div class="item">
+                     <h2 class="tit_cont_01 ver02">걷기</label>
+                  </div>
+                  <ul class="item_detail">
+                     <div class="content_form">
+                        <p><span>거리<strong>400<em>m</em></strong></span><span>심박수<strong>50<em>bpm</em></strong></span></p>
+                        <p><span>오르막<strong>10<em>m</em></strong></span><span>평균속도<strong>2<em>km/H</em></strong></span></p>
+                        <p><span>내리막<strong>482<em>m</em></strong></span><span>활동칼로리<strong>10<em>kcal</em></strong></span></p>
+                     </div>
+                  </ul>
+               </div>
+               <div class="column_wrap">
+                  <ul class="column_list">
+                     <li><a href="">column_01</a></li>
+                     <li><a href="">column_02</a></li>
+                     <li><a href="">column_03</a></li>
+                     <li><a href="">column_04</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="tab_panel tracking_cont active" id="tab-2">
+               <div class="content_sub pd_type">
+                  <div class="content_form content_form_box">
+                     <p><span>거리<strong>400<em>m</em></strong></span><span>심박수<strong>50<em>bpm</em></strong></span></p>
+                     <p><span>오르막<strong>10<em>m</em></strong></span><span>평균속도<strong>2<em>km/H</em></strong></span>
+                     </p>
+                     <p><span>내리막<strong>482<em>m</em></strong></span><span>활동칼로리<strong>10<em>kcal</em></strong></span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+<script>
+   //20210923
+   $('.timer_btn').click(function () {
+      alert('버튼 영역 test');
+   })
+</script>
+
+</html>

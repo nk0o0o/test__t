@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="Object / ic_16_fill_careplan_q">
+        <path data-name="사각형 758" style="fill:transparent" d="M0 0h16v16H0z"/>
+        <g data-name="그룹 1063">
+            <path data-name="패스 15150" d="M15.644 26.357a5.293 5.293 0 1 0-5.293-5.293 5.293 5.293 0 0 0 5.293 5.293z" transform="translate(-7.586 -13.772)" style="fill:none;stroke:#7b7ef3;stroke-miterlimit:10;stroke-width:3px"/>
+            <path data-name="패스 15151" d="M17.231 20.863h-3.97l3.97 3.97H21.2z" transform="translate(-5.201 -9.6)" style="fill:#7b7ef3"/>
+        </g>
+    </g>
+</svg>

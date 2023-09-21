@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>웰니스 다이어리</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+   <style>
+      
+   </style>
+</head>
+
+<body class="ov_hidden">
+   <div class="health_wrap">
+      <div class="health_container">
+
+      </div>
+      <!--// health_container -->
+   </div>
+   <!-- popup -->
+   <div class="health_full wellness_diary actived" id="full001" style="display: block;">
+      <div class="inner">
+         <div class="pop_wrap">
+            <div class="pop_header">
+               <div class="header_wrap">
+                  <h1 class="hidden">건강 스코어</h1>
+                  <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+               </div>
+            </div>
+            <!-- //pop_header -->
+            <div class="pop_container">
+               <div class="con_inner">
+                  <div class="con_box">
+                     <div class="pop_con pb0">
+                        <!-- 팝업 내용 -->
+                        <div class="coach_result_wrap">
+                           <div class="seven_coach_cover">
+                              <h1 class="tit_cont_02">line님의<br>웰니스 지수</h1>
+                              <p class="text_mark">456<em>점</em></p>
+
+                              <div class="score_board">
+                                 <div class="card_wrap card_nutrition">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">100</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">영양</p>
+                                 </div>
+                                 <div class="card_wrap card_sleep">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">85</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">수면</p>
+                                 </div>
+                                 <div class="card_wrap card_competence">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">500</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">조절</p>
+                                 </div>
+                                 <div class="card_wrap card_heart">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">654</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">마음</p>
+                                 </div>
+                                 <div class="card_wrap card_mental">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">500</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">정신</p>
+                                 </div>
+                                 <div class="card_wrap card_body">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">700</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">신체</p>
+                                 </div>
+                                 <div class="card_wrap card_activity">
+                                    <div class="score_card">
+                                       <div class="inner">
+                                          <span class="progress_now hidden">1000</span>
+                                       </div>
+                                    </div>
+                                    <p class="tit">활동</p>
+                                 </div>
+                              </div>
+                              <div class="new_score_wrap">
+                                 <div class="new_score_height good">
+                                    <!-- good, better best  class 추가시 높게, 보통, 낮게 변경 good:낮게 better:보통 best:높게 -->
+                                    <div class="score_height_tit">
+                                       <h2>이전 대비</h2>
+                                    </div>
+                                    <div class="score_height_txt">
+                                       <p>활동, 마음, 수면 항목에서 <strong>30점</strong>이 <span class="cover"><span
+                                                class="inner"><strong>낮게</strong> 나왔어요.</span></span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="user_bmi" class="more_cont bmi_cont normal">
+                           <!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+                           <h2 class="tit_cont_02">line님의<br>BMI</h2>
+                           <div class="bmi_card">
+                              <div class="bmi_state">
+                                 <p class="bmi_tit">나의 체질량 지수</p>
+                                 <div class="bmi_state_figure">
+                                    <p class="bmi_state_num">BMI <em>22.<span>0</span></em></p>
+                                    <div class="bmi_state_emot">
+                                       <div class="emot_area"></div><!-- 이모티콘자리 -->
+                                       <p></p><!-- 상태값 자리 -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="bmi_range_wrap">
+                                 <div class="bmi_range">
+                                    <div class="bmi_range_tit">정상 범위</div>
+                                    <div class="bmi_range_num">18.5~22.9</div>
+                                 </div>
+                                 <div class="bmi_range">
+                                    <div class="bmi_range_tit">또래 평균대비</div>
+                                    <div class="bmi_range_num">-3.0<i class="bmi_icon_arr down"></i></div>
+                                    <!-- 화살표 클래스 up, down -->
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="bmi_card">
+                              <p class="bmi_tit">주요질환 상대위험도</p>
+                              <ul class="bmi_disease_list">
+                                 <li class="bmi_disease">
+                                    <p class="bmi_disease_tit">본태성 고혈압</p>
+                                    <p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+                                 </li>
+                                 <li class="bmi_disease">
+                                    <p class="bmi_disease_tit">고지혈증</p>
+                                    <p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+                                 </li>
+                              </ul>
+                              <a href="#" class="bmi_more_btn">주요질환 더보기<i class="ico_arr_666"></i></a>
+                           </div>
+                        </div>
+                        <div class="stress_score">
+                           <h2 class="tit_cont_02">line님의<br>스트레스 지수</h2>
+                           <p class="desc">안면인식 기능으로 나의 건강 상태를 확인할 수 있어요.<br>지문인식은 스트레스를 제외한 건강상태만 측정됩니다.</p>
+                           <!-- 측정 후 결과 -->
+                           <div class="stress_result">
+                              <div class="check_slide_wrap">
+                                 <div class="check_info">
+                                    <!-- <div class="check_type type_face">얼굴인식</div> --><!-- 얼굴인식: type_face  --> 
+                                    <div class="check_type type_finger">지문인식</div><!-- 지문인식:type_finger  --> 
+                                    <div class="check_date">최근 측정일 : 2022-09-22 10:30</div>
+                                 </div>
+                                 <!-- // .check_info -->                              
+                                 <div class="align_right_wrap">
+                                    <div class="swiper-container check_slide">
+                                       <ul class="swiper-wrapper">
+                                          <li class="swiper-slide">
+                                             <div class="check_wrap">
+                                                <strong>91</strong>
+                                                <span>심박수</span>
+                                                <span>BPM</span>
+                                             </div>
+                                          </li>
+                                          <li class="swiper-slide">
+                                             <div class="check_wrap">
+                                                <strong>97</strong>
+                                                <span>산소포화도</span>
+                                                <span>Sp02%</span>
+                                             </div>
+                                          </li>
+                                          <li class="swiper-slide">
+                                             <div class="check_wrap">
+                                                <strong>10</strong>
+                                                <span>분당호흡</span>
+                                                <span>RPM</span>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                            <!-- // 측정 후 결과 -->
+                           <div class="btn_wrap">
+                              <!-- 측정전 버튼 -->
+                              <!-- <button type="button" class="btn_base_03">측정하기</button> -->
+                              <!-- 측정 후 버튼 -->
+                              <button type="button" class="btn_base_03 primary">측정 더보기</button>
+                              <button type="button" class="btn_base_03">생체 측정 또하기</button>
+                           </div>
+                        </div>                                
+                     </div>
+                     <!-- // .pop_con 팝업내용 -->
+                  </div>
+               </div>
+            </div>
+            <!-- //pop_container -->
+         </div>
+         <div class="btn_btm_fixed">
+            <button type="button" class="btn">확인</button>
+         </div>
+      </div>
+   </div>
+   <!-- // popup-->
+   <!-- //.btn_btm_fixed -->
+   <script>
+      $(document).ready(function () {
+         //스트레스지수 슬라이드
+         var swiper = new Swiper(".check_slide", {
+            slidesPerView: "auto",
+            spaceBetween: 11,
+            observer: true,
+            observeParents: true
+         });
+
+         //물결차오르는 효과 호출
+         if ($('.progress_now').length > 0) {
+            progressAnimation(1000);//총점 100%이냐 1000점이냐
+         }         
+      });
+
+      //숫자만추출
+      var onlyNumber = function (num) {
+         return num.toString().replace(/[^0-9]/g, '');
+      };
+      //물결차오르는 효과
+      function progressAnimation (total) {
+         var $total = total;
+         $(".progress_now").each(function (i, block) {
+            $(block).after('<span class="progress_bar"></div>');
+            var $el = $(block);
+            var $elBar = $(block).siblings(".progress_bar");
+            var $elText = $el.text();            
+            if(Math.sign($elText) == -1){
+               $elText = 0;
+            };
+            var $now = parseInt(onlyNumber($elText), 10);
+            if($now > $total){
+               $now = $total;
+            } else if($now <= 0){
+               $elBar.css({"-webkit-animation":"none"},{"-moz-animation":"none"},{"-ms-animation":"none"},{"animation":"none"})
+            };
+            var $perNow = ($now / $total) * 100;
+            var $nowWidth = $(this).height();
+            if (isNaN($now)) $perNow = 0;
+            $elBar.animate({bottom: $perNow +'%'}, 3000, 'linear', function() {
+               setTimeout(function() {
+                  $elBar.animate({borderRadius: 0 +'%'},3000)
+               }, 100);
+            });
+           // countUpFn($el, $now, 3000)
+         })
+      }  
+      //숫자카운트업
+      function countUpFn(div, num, time){
+         var cnt0=0;
+         var $now = num;
+         var $div = div;
+         var $time = time;
+         var id0 = setInterval (count0Fn, 40);
+         cnt0++;
+         function count0Fn(){
+            cnt0++;
+            if(cnt0>$now){
+               clearInterval(id0);
+            } else {
+               $div.text(cnt0)
+            }
+         }
+         setTimeout(function() {
+            clearInterval(id0);
+         }, $time);
+      }
+   </script>
+</body>
+</html>
+

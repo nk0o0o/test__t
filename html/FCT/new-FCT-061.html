@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜(초기세팅)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>갑상선 케어 프로그램</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care">
+        <div class="tab_wrap">
+          <div class="tabs brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab active"><a class="tab_control" href="#tab-a1" aria-controls="tab-con01">케어 플랜</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a2" aria-controls="">복약 관리</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a3" aria-controls="">서비스 소개</a></li>
+            </ul>
+            <div class="tab_panel bg_gray active" id="tab-a1">
+              <!-- 케어 플랜 탭내용 -->
+              <div class="box_container is_shadow plan_step">                
+                <p class="box_tit">케어 단계</p><!-- 20230906 a에서 p태그로 교체 -->
+                <div class="current_step">
+                  <p class="desc">고객님의 현재 케어 단계</p>
+                  <p class="step">진단 전</p>
+                </div>
+                <div class="swiper-container plan_step_slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide step1 on"><!-- 진행중인 step : on -->
+                      <a href="#">진단 전</a>
+                    </div>
+                    <div class="swiper-slide step2">
+                      <a href="#">진단 시</a>
+                    </div>
+                    <div class="swiper-slide step3">
+                      <a href="#">수술</a>
+                    </div>
+                    <div class="swiper-slide step4">
+                      <a href="#">방사성 동위원소 치료</a>
+                    </div>
+                    <div class="swiper-slide step5">
+                      <a href="#">외부방사선치료</a>
+                    </div>
+                    <div class="swiper-slide step6">
+                      <a href="#">항암약물치료</a>
+                    </div>
+                    <div class="swiper-slide step7">
+                      <a href="#">추적관리</a>
+                    </div>
+                  </div>
+                </div><!-- //.plan_slider -->
+                <div class="plan_shortcut">현재 케어 단계 설정<button type="button">바로가기</button></div>
+              </div><!-- //.plan_step -->
+
+              <!-- 20230831 통합 케어 알림ui 수정 -->
+              <div class="box_container is_shadow plan_myplan">
+                <a href="#" class="box_tit">통합 케어 알림</a>
+                <div class="plan_shortcut">병원 일정<button type="button">일정추가</button></div>
+                <div class="myplan_tab box_container">
+                  <a href="#" class="myplan_cnt is_zero">
+                    <p class="cnt">0</p>
+                    <p>지난 일정</p>
+                  </a>
+                  <a href="#" class="myplan_cnt is_zero">
+                    <p class="cnt">0</p>
+                    <p>오늘 일정</p>
+                  </a>
+                  <a href="#" class="myplan_cnt is_zero"><!-- 일정 없을때 : is_zero -->
+                    <p class="cnt">0</p>
+                    <p>향후 일정</p>
+                  </a>
+                </div>
+                <div class="care_contact">
+                  <a href="#" class="care_msg">케어 메시지</a>
+                  <a href="#" class="care_msg">1:1 문의</a><!-- 20230906 문구수정 -->
+                </div>
+              </div><!-- //.plan_myplan -->
+              <!-- //20230831 통합 케어 알림ui 수정 -->
+
+              <!--20230831 plan_myplan 안으로 수정되어 이동
+                <div class="care_contact">
+                  <a href="#" class="care_msg"><span class="box_tit">케어 메시지</span></a>
+                  <a href="#" class="care_msg care_msg_qna"><span class="box_tit">1:1문의</span></a>
+                </div>
+              -->
+
+              <!-- 20230831 bnr_img 추가 -->
+              <!--  <div class="box_container bnr_img">
+                <a href="#">
+                 <img src="../../resources/img/v3_mission_promotion_banner01.png" alt="">
+                </a>
+              </div> --><!-- //.bnr_img -->
+              <!-- //20230831 bnr_img 추가 -->
+
+              <!-- 20230906 배너슬라이드로 교체 -->
+              <div class="swiper bnr_slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide box_container bnr_img">
+                    <a href="#">
+                      <img src="../../resources/img/v3_mission_promotion_banner02.png" alt="">
+                    </a>
+                  </div>
+                  <div class="swiper-slide box_container bnr_img">
+                    <a href="#">
+                      <img src="../../resources/img/v3_mission_promotion_banner01.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- //20230906 배너슬라이드로 교체 -->
+
+              <div class="box_container is_shadow care_direct">
+                <a href="#">
+                  <p class="box_tit">케어 플래너 즉시 연결</p>
+                  <p class="box_desc">운영 시간 : 평일 오전 9시 ~ 오후 6시 <br/>(법정 공휴일 휴무)</p><!-- 20230911 문구수정 -->
+                </a>
+              </div><!-- //.care_direct -->
+            </div><!-- //.tab_panel : 케어 플랜 -->
+            <div class="tab_panel" id="tab-a2">...복약 관리...</div>
+            <div class="tab_panel" id="tab-a3">...서비스소개...</div>
+          </div>
+        </div>
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <!-- 20230912 alert 팝업추가 : 신청자만 이용 -->
+  <div class="health_alert actived" id="alert001" style="display: none;">
+    <div class="inner">
+      <p class="alert_msg">
+        갑상선 케어 프로그램 신청자만<br>이용 가능한 서비스 입니다.
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_line_dark ui-close">나가기</button>
+        <button type="button" class="btn_pop_dark ui-close">신청문의</button>
+      </div>
+    </div>
+  </div>
+  <!--// 20230912 alert 팝업추가 : 신청자만 이용-->
+  <script>
+    var swiper = new Swiper(".plan_step_slider", {      
+      slidesPerView: 'auto',//20230906 수정
+      slidesOffsetBefore:20,//20230906 추가
+      slidesOffsetAfter:20,//20230906 추가
+      spaceBetween: 22,
+      centeredSlides: false,//20230906 수정
+      loop: false,
+    });
+    //20230906 배너슬라이드 추가
+    var swiper2 = new Swiper(".bnr_slider", {      
+      spaceBetween: 12,
+      centeredSlides: false,
+      loop: false,
+    });
+  </script>
+</body>
+</html>

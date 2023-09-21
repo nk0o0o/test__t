@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BMI(체질량지수)관리 - 2단계 비만</title>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+	<div class="health_wrap footer_no type_chall_list">
+		<header class="health_header">
+			<div class="inbtn">
+				<button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+				<h1>건강신호 측정 결과</h1>
+			</div>
+		</header>
+		<div class="health_container align_right">
+			<div class="htm_cont">
+				<div class="htm_result">
+					<div class="htm_result_header">
+						<div class="item good">
+							<p class="result_icon_img"></p>
+						</div>
+						<p class="condition">좋음</p>
+						<p class="level">10/10</p>
+						<div class="point_tit">
+							<span>웰니스 점수</span>
+							<div class="new_tool_wrap">
+								<div class="new_tool_cont">
+									<!-- 부모에 position 이 있어서 기준 점이 변경됨, 툴팁을 fixed 로 변경함 -->
+									<div class="ui-m">
+										<div class="ui-tooltip-wrap">
+											<button type="button" class="ui-btn typeInfo" style="display:contents;"><span
+													class="hidden">설명 보기</span></button>
+											<div class="toolTip">
+												<dl>
+													<dt>웰니스점수</dt>
+													<dd>웰니스 점수는 건강에 영향을 주는 다양한 요인을 분석한 결과를 수치로 나타낸 것입니다. 이러한 요인에는 신체적, 정신적 요소가 포함되며, 다양한 건강
+														신호 측정 결과* 를 반영합니다.</dd>
+													<dd>* 심박수, 산소포화도, 분당호흡수, 스트레스 지수, 심박변이도, 혈압 등</dd>
+													<dd>1~3점: 낮음, 4~7점: 보통, 8~10점: 좋음</dd>
+												</dl>
+												<button type="button" class="ui-btn typeModalClose"><span
+														class="hidden">닫기</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="stress_monitor">
+						<div class="check_slide_wrap">
+							<div class="align_right_wrap">
+								<div class="check_slide">
+									<ul class="">
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>Low</strong>
+												<span>스트레스<br>레벨</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>스트레스 지수</dt>
+																		<dd>육체적 및 정신적 스트레스 정도를 생체 신호를 이용하여 간접적으로 측정한 값으로 나의 스트레스 정도를 파악할 수 있습니다.</dd>
+																		<dd>80미만 = 안전, 80~150 = 양호, 151~300 = 보통, 301~600 = 주의, 601이상 = 위험</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>Normal</strong>
+												<span>스트레스<br>반응도</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>스트레스 반응도</dt>
+																		<dd>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>Mild</strong>
+												<span>회복<br>탄력성</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>회복 탄력성</dt>
+																		<dd>qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>83</strong>
+												<span>심박수</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>심박수</dt>
+																		<dd>1분간의 심장 박동수를 의미하며 정상 심박수는 성인 기준 60~100회/1분 입니다.</dd>
+																		<dd>정상 박동이더라도 운동을 하거나 화가나서 흥분하면 맥박이 100회 이상으로도 증가할 수 있으며, 이는 정상 반응입니다.</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>7</strong>
+												<span>분당<br>호흡수</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>분당 호흡 수</dt>
+																		<dd>1분간의 호흡수를 의미하며 성인 기준 정상 호흡수는 12~20회/분입니다. 호흡수와 깊이 등은 신체의 산소 요구와 이산화탄소 농도 등에 의해 조절됩니다.</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>98</strong>
+												<span>산소<br>포화도</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>산소포화도</dt>
+																		<dd>산소포화도는 혈액 내 적혈구의 헤모글로빈에 결합된 산소의 양을 의미합니다. 즉 적혈구에 의해 운반되는 산소의 양으로 얼마나 효과적으로 호흡하고 있는지, 산소가 전신에 잘 전달되고 있는지 등을 알아볼 수 있습니다.
+																		산소포화도의 정상 수치는 95% 이상입니다.</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide">
+											<div class="check_wrap">
+												<strong>77.6</strong>
+												<span>심박<br>변이도</span>
+												<div class="new_tool_wrap">
+													<div class="new_tool_cont">
+														<div class="ui-m">
+															<div class="ui-tooltip-wrap">
+																<button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+																<div class="toolTip">
+																	<dl>
+																		<dt>심박변이도</dt>
+																		<dd>심장 박동의 변이 정도를 의미하며, 즉 하나의 심장 주기로부터 다음 심장 주기 사이의 미세한 변이를 말합니다. 심장 박동의 미세한 변화를 분석하여 심신에 누적되는 과도한 스트레스의 영향을 파악할 수
+																			있습니다.</dd>
+																	</dl>
+																	<button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

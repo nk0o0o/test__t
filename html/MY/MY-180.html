@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콘텐츠 - 리스트 - 칼럼</title>
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+
+  <div class="health_wrap mypoint_wrap footer_no type_mypage type_content">
+    <!-- 헤더영역 신규 디자인변경 -->
+  <header class="health_header">
+    <div class="inbtn">
+      <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+      <h1>건강 콘텐츠 북마크</h1>
+    </div>
+  </header>
+  <!-- //헤더영역 신규 디자인변경 -->
+  <div class="health_container">
+    <div class="content_main_section">
+      <div class="health_cam_wrap">
+        <div class="tab_wrap">
+          <div class="tabs brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab active"><a class="tab_control" href="#tab-a1" aria-controls="tab-con01">전체</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a2" aria-controls="">건강</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a3" aria-controls="">영양</a></li>
+            </ul>
+            <!-- 전체탭 -->
+            <div class="tab_panel active" id="tab-a1">
+              <ul class="health_info_wrap health_cont_list">
+                <li>
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="../../resources/img/@dummy.jpg" alt=""/>
+                      <button type="button" class="btn_ico_bookmark_b on"></button><!-- 북마크 on -->
+                    </div>
+                    <div class="txt_wrap">
+                      <span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+                      <span class="sub_btm">
+                        <em class="hit">156</em>
+                        <em class="like">7</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="../../resources/img/@dummy.jpg" alt=""/>
+                      <button type="button" class="btn_ico_bookmark_b"></button>
+                    </div>
+                    <div class="txt_wrap">
+                      <span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+                      <span class="sub_btm">
+                        <em class="hit">156</em>
+                        <em class="like">7</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="img_wrap">
+                      <img src="../../resources/img/@dummy.jpg" alt=""/>
+                      <button type="button" class="btn_ico_bookmark_b"></button>
+                    </div>
+                    <div class="txt_wrap">
+                      <span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+                      <span class="sub_btm">
+                        <em class="hit">156</em>
+                        <em class="like">7</em>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- // 전체탭 -->
+            <!-- 건강탭 -->
+            <div class="tab_panel" id="tab-a2">
+              건강탭내용
+            </div>
+            <!-- //건강탭 -->
+            <!-- 영양탭 -->
+            <div class="tab_panel" id="tab-a3">
+              영양탭내용
+            </div>
+            <!-- //영양탭 -->
+          </div>
+        </div>
+      </div>
+      <!-- //.health_cam_wrap -->
+    </div>
+    <!-- // .content_main_section -->
+  </div>
+  <!-- // .health_container -->
+</div>
+</body>
+</html>

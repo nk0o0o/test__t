@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <title>guide : button</title>
+  <link rel="stylesheet" href="../resources/css/guide.css">
+  <script type="text/javascript" src="../resources/js/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+  <style>
+    body{padding: 20px;}
+    .btn_floating, .btn_btm_fixed{position: static;}
+  </style>
+</head>
+<body>
+  <h1>공통 버튼</h1>
+  <h3>더보기 버튼</h3>
+  <a href="#" class="btn_more_txt"><span>더보기</span></a>
+  <br>
+  <br>
+  
+  <h3>btn_sm 버튼</h3>
+  <button type="button" class="btn_sm">포인트 받기</button>
+  <br>
+  <br>
+
+  <h3>Sort 버튼</h3>
+  <button type="button" class="btn_sort btn_category"><span>카테고리 전체</span></button>
+  <button type="button" class="btn_sort"><span>빈도</span></button>
+  <button type="button" class="btn_sort"><span>기간<em>1</em></span></button>
+  <br>
+  <br>
+
+  <h3>바텀시트 버튼</h3>
+  <div class="btm_sheet_btns"><button type="button">확인</button></div>
+  <br>
+  <br>
+
+  <h3>텍스트 버튼 Small</h3>
+  <button class="btn_txt_sm">달력펼치기</button>
+  <!-- <a href="#" class="btn_txt_sm">달력펼치기</a> -->
+  <br>
+  <br>
+
+  <h3>텍스트 버튼 Medium</h3>
+  <button class="btn_txt_md">자세히 알아보기</button>
+  <!-- <a href="#" class="btn_txt_md">자세히 알아보기</a> -->
+  <br>
+  <br>
+
+  <h3>텍스트 버튼 + 아이콘 right</h3>
+  <button class="btn_txt_icon">서비스 알아보기</button>
+  <!-- <a href="#" class="btn_txt_icon">서비스 알아보기</a> -->
+  <br>
+  <br>
+
+  <h3>텍스트 버튼 + 아이콘 left</h3>
+  <button class="btn_txt_icon left">설정</button>
+  <!-- <a href="#" class="btn_txt_icon left">설정</a> -->
+  <br>
+  <br>
+
+  <h3>Ground Button</h3>
+  <button class="btn_outline">사진 첨부하기</button>
+  <!-- <a href="#" class="btn_outline">사진 첨부하기</a> -->
+  <br>
+  <br>
+
+  <h3>Bottom fixed Button</h3>
+  <div class="btn_btm_fixed">
+    <button type="button" class="btn">참여하기</button>
+  </div>
+  <br>
+  <div class="btn_btm_fixed flex_box">
+    <button type="button" class="btn bg_kakao">카카오 플친 인증</button>
+    <button type="button" class="btn">참여하기</button>
+  </div>
+  <br>
+  <br>
+
+  <h3>Floating Button</h3>
+  <button type="button" class="btn_floating care_qna">
+    <span class="care_qna_icon">문의</span>
+  </button>
+  <button type="button" class="btn_floating kakao">
+    <span class="hidden">카카오톡 플친</span>
+  </button>
+</body>
+</html>

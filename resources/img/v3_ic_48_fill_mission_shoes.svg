@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="gfs3i7bfza" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b698ff"/>
+            <stop offset="1" stop-color="#926bef"/>
+        </linearGradient>
+        <linearGradient id="ybofvbw9hb" x1=".961" y1=".895" x2="0" y2=".855" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#845fdb"/>
+            <stop offset="1" stop-color="#6f47cc"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Object / v3_ic_48_fill_mission_shoes">
+        <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+        <path data-name="패스 16688" d="M31.12 3.127A3.964 3.964 0 0 1 29 5.264c-4.586 2.754-8.351 5.154-8.489 9.318-.205 6.188 17.246 19.336 17.246 19.336l22.4-.448.467-4.251c0-3.614-.777-6.873-3.107-8.416A9.335 9.335 0 0 0 51.3 18.49c-.734-1.446-5.02-12.119-5.588-12.342a10.1 10.1 0 0 1-6.214 0 7.287 7.287 0 0 1-4.062-5.029c-.215-1.273-3.61-.65-4.316 2.008z" transform="translate(-15.453 6)" style="fill:url(#gfs3i7bfza)"/>
+        <path data-name="패스 16689" d="M26.509 10.422c2.9 5.158 1.039 12.07-.092 14.195 0 0-5.9-4.277-6.046-7.83s5.094-6.487 5.094-6.487a.661.661 0 0 1 1.044.122z" transform="translate(-15.193 2.968)" style="fill:#cbb5ff"/>
+        <path data-name="패스 16690" d="m57.648 15.215-3.339.468-2.786-.468" transform="translate(-25.027 1.479)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+        <path data-name="패스 16691" d="m62.124 24-3.809.461L56 24" transform="translate(-26.357 -.89)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"/>
+        <path data-name="패스 16692" d="M17.484 23.842a2.751 2.751 0 0 1 0-3.906 2.921 2.921 0 0 1 3.616 0l16.274 15.98c6.992 0 20.082.355 21.529.355a2.176 2.176 0 0 1 2.17 2.486 2.067 2.067 0 0 1-2.17 2.131H35.2s-16.631-15.98-17.716-17.046z" transform="translate(-14.671 .265)" style="fill:url(#ybofvbw9hb)"/>
+    </g>
+</svg>

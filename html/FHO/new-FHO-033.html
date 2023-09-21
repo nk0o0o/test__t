@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건강 걸음-상세</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+<script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/guide.css">
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap footer_no type_content">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>미션 상세</h1>
+      </div>    
+    </header>
+    <div class="cnt_mission">
+      <ul class="ms_bmi">
+        <li>
+          <a href="#n" class="def"><!-- 상세화면에서 a태그에 def 클래스 적용 -->
+            <div class="tit">BMI 30회 측정</div>
+          </a>
+          <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+          <p class="desc">
+            하루 출석 시 10Point (10일마다 보너스 10Point) 한달동안 모두 출석한 경우 1,000Point
+          </p>
+        </li>
+      </ul>
+      <div class="daily_check">
+        <div class="check_box">
+          <input type="checkbox" id="chk1" class="chkItem" name="">
+          <label for="chk1">1</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk2" class="chkItem" name="" checked>
+          <label for="chk2">2</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk3" class="chkItem" name="">
+          <label for="chk3">3</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk4" class="chkItem" name="" checked>
+          <label for="chk4">4</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk5" class="chkItem" name="" checked>
+          <label for="chk5">5</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk6" class="chkItem" name="">
+          <label for="chk6">6</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk7" class="chkItem" name="">
+          <label for="chk7">7</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk8" class="chkItem" name=""checked>
+          <label for="chk8">8</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk9" class="chkItem" name=""checked>
+          <label for="chk9">9</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk10" class="chkItem" name="">
+          <label for="chk10">10</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk11" class="chkItem" name="">
+          <label for="chk11">11</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk12" class="chkItem" name="">
+          <label for="chk12">12</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk13" class="chkItem" name="">
+          <label for="chk13">13</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk14" class="chkItem" name="">
+          <label for="chk14">14</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk15" class="chkItem" name="">
+          <label for="chk15">15</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk16" class="chkItem" name="">
+          <label for="chk16">16</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk17" class="chkItem" name="">
+          <label for="chk17">17</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk18" class="chkItem" name="">
+          <label for="chk18">18</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk19" class="chkItem" name="">
+          <label for="chk19">19</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk20" class="chkItem" name="">
+          <label for="chk20">20</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk21" class="chkItem" name="">
+          <label for="chk21">21</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk22" class="chkItem" name="">
+          <label for="chk22">22</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk23" class="chkItem" name="">
+          <label for="chk23">23</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk24" class="chkItem" name="">
+          <label for="chk24">24</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk25" class="chkItem" name="">
+          <label for="chk25">25</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk26" class="chkItem" name="">
+          <label for="chk26">26</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk27" class="chkItem" name="">
+          <label for="chk27">27</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk28" class="chkItem" name="">
+          <label for="chk28">28</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk29" class="chkItem" name="">
+          <label for="chk29">29</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk30" class="chkItem" name="">
+          <label for="chk30">30</label>
+        </div>
+        <div class="check_box">
+          <input type="checkbox" id="chk31" class="chkItem complete" name="">
+          <label for="chk31">달성!</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

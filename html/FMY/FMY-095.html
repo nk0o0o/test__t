@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BMI(체질량지수)관리 - 저체중</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap footer_no type_mypage">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+            <h1>BMI(체질량지수)관리</h1><!-- 20220811 텍스트 수정 -->
+         </div>
+			<!-- <div class="user"><button type="button">홍길동</button></div> --><!-- 20230602 삭제 -->
+      </header>
+      <div class="health_container my_bmi_container">
+         <!-- 20230602 수정 -->
+			<div class="my_bmi_head">
+				<h1>
+					홍길동 님의<br>현재 BMI
+					<button class="btn_form_line" type="button" onclick="netiveUI.plugins.popToast('#full001');">신체정보수정</button>
+				</h1>
+				<div class="my_bmi_info">
+					<p class="tooltip"><a href="#" onclick="netiveUI.plugins.popAlert('#alertModal');">BMI (체질량지수)란?</a></p>
+					<a href="FMY-096.html" class="bmi_date_history">BMI 히스토리</a>
+				</div>
+			</div>
+			<!-- //20230602 수정 -->
+			<!-- 20230602 수정 -->
+			<div id="user_bmi" class="my_bmi_body bmi_cont type1 low_weight">
+				<!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+				<div class="bmi_card">
+					<div class="bmi_state">
+						<div class="bmi_state_figure">
+							<div class="bmi_state_emot">
+								<div class="emot_area"></div><!-- 이모티콘자리 -->
+								<p></p><!-- 상태값 자리 -->
+							</div>
+							<p class="bmi_state_num">18.5 ㎏/㎡ 미만</p>
+						</div>
+					</div>
+					<div class="bmi_range_wrap">
+							<div class="bmi_range">
+								<div class="bmi_range_tit">정상 범위</div>
+								<div class="bmi_range_bmi">17.5</div>
+							</div>
+							<div class="bmi_range">
+								<div class="bmi_range_tit">또래 평균대비</div>
+								<div class="bmi_range_num">-7.0<i class="bmi_icon_arr down"></i></div>
+								<!-- 화살표 클래스 up, down -->
+							</div>
+					</div>
+				</div>
+				<!-- //20230602 수정 -->
+				<!-- <div class="bmi_visual"></div> -->
+				<!-- 20230602 수정 -->
+            <div class="my_bmi_alert">
+               00~00세 0성평균 BMI 00.00 대비 0.00이 낮으며 저체중입니다.<br>균형적인 식사와 근력운동이 필요합니다.
+            </div>
+            <div class="tabs my_bmi_tabs">
+               <ul class="tab_menulist">
+                  <li class="active"><a class="tab_control" href="#tab-1">ALL</a></li>
+                  <li><a class="tab_control" href="#tab-2">생활습관</a></li>
+                  <li><a class="tab_control" href="#tab-3">일반</a></li>
+               </ul>
+               <div class="tab_panel active" id="tab-1">
+                  <div class="disease_tit">
+                     <p class="disease_name">질환명</p><!-- 20220816 텍스트수정 -->
+                     <p class="disease_risk">질환발생율<br>(상대위험도*)</p><!-- 20220817 텍스트수정 -->
+                  </div>
+                  <ul class="disease_list">
+                     <!-- 20220816 질환 리스트 구조 수정 -->
+                     <li>
+                        <p class="disease_name">본태성 고혈압</p>
+                        <p class="disease_risk">
+                           <em>7.03%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">고지혈증</p>
+                        <p class="disease_risk">
+                           <em>5.99%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">당뇨</p>
+                        <p class="disease_risk">
+                           <em>0.02%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">본태성 고혈압</p>
+                        <p class="disease_risk">
+                           <em>7.03%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">고지혈증</p>
+                        <p class="disease_risk">
+                           <em>5.99%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">당뇨</p>
+                        <p class="disease_risk">
+                           <em>0.02%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <!--// 20220816 질환 리스트 구조 수정 -->
+                     <li class="disease_info">
+                        <!-- 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+                        <p class="disease_info_etc">Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p><!-- 20230602 ※삭제 -->
+                        <button class="disease_info_q"><span>*질환상대위험도란?</span></button>
+                        <div class="disease_info_a" style="display: none;">
+                           <p>BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+                              혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.</p>
+                        </div>
+                        <!--// 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+
+                        <!-- 20220811 개발수정대로 수정 -->
+                        <!-- <p class="disease_info_q">* 질환상대위험도란?</p>
+                        <p class="disease_info_a">
+						         BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+						         혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.<br><br></p>
+                        <p class="disease_info_a">※ Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p> -->
+                        <!-- 20220811 개발수정대로 수정 -->
+                     </li>
+                  </ul>
+               </div>
+               <div class="tab_panel" id="tab-2">
+                  <div class="disease_tit">
+                     <p class="disease_name">질환명</p><!-- 20220816 텍스트수정 -->
+                     <p class="disease_risk">질환발생율<br>(상대위험도*)</p><!-- 20220817 텍스트수정 -->
+                  </div>
+                  <ul class="disease_list">
+                     <!-- 20220816 질환 리스트 구조 수정 -->
+                     <li>
+                        <p class="disease_name">본태성 고혈압</p>
+                        <p class="disease_risk">
+                           <em>7.03%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">고지혈증</p>
+                        <p class="disease_risk">
+                           <em>5.99%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">당뇨</p>
+                        <p class="disease_risk">
+                           <em>0.02%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <!--// 20220816 질환 리스트 구조 수정 -->
+                     <li class="disease_info">
+                        <!-- 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+                        <p class="disease_info_etc">Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p><!-- 20230602 ※삭제 -->
+                        <button class="disease_info_q"><span>*질환상대위험도란?</span></button>
+                        <div class="disease_info_a" style="display: none;">
+                           <p>BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+                              혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.</p>
+                        </div>
+                        <!--// 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+
+                        <!-- 20220811 개발수정대로 수정 -->
+                        <!-- <p class="disease_info_q">* 질환상대위험도란?</p>
+                        <p class="disease_info_a">
+						         BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+						         혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.<br><br></p>
+                        <p class="disease_info_a">※ Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p> -->
+                        <!-- 20220811 개발수정대로 수정 -->
+                     </li>
+                  </ul>
+               </div>
+               <div class="tab_panel" id="tab-3">
+                  <div class="disease_tit">
+                     <p class="disease_name">질환명</p><!-- 20220816 텍스트수정 -->
+                     <p class="disease_risk">질환발생율<br>(상대위험도*)</p><!-- 20220817 텍스트수정 -->
+                  </div>
+                  <ul class="disease_list">
+                     <!-- 20220816 질환 리스트 구조 수정 -->
+                     <li>
+                        <p class="disease_name">본태성 고혈압</p>
+                        <p class="disease_risk">
+                           <em>7.03%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">고지혈증</p>
+                        <p class="disease_risk">
+                           <em>5.99%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <li>
+                        <p class="disease_name">당뇨</p>
+                        <p class="disease_risk">
+                           <em>0.02%</em>
+                           <span>(-2.77배<i class="bmi_icon_arr down"></i>)</span><!-- 20220822 화살표 위치 수정 -->
+                        </p>
+                     </li>
+                     <!--// 20220816 질환 리스트 구조 수정 -->
+                     <li class="disease_info">
+                        <!-- 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+                        <p class="disease_info_etc">Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p><!-- 20230602 ※삭제 -->
+                        <button class="disease_info_q"><span>*질환상대위험도란?</span></button>
+                        <div class="disease_info_a" style="display: none;">
+                           <p>BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+                              혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.</p>
+                        </div>
+                        <!--// 20220818 질환표 정보 아코디언추가로 구조 수정 -->
+
+                        <!-- 20220811 개발수정대로 수정 -->
+                        <!-- <p class="disease_info_q">* 질환상대위험도란?</p>
+                        <p class="disease_info_a">
+						         BMI가 25 초과인 경우 정상 범위(BMI25 미만)인 사람들에 비해 해당 질환에 걸릴 위험도가 얼마나 높은지, 
+						         혹은 그 반대의 경우 상대적인 위험도를 나타냅니다.<br><br></p>
+                        <p class="disease_info_a">※ Tune H에서 제공하는 의료통계 데이터는 국내 150만 명의 BMI 데이터와 3년 이내 질병 진단 데이터를 분석한 자료입니다.</p> -->
+                        <!-- 20220811 개발수정대로 수정 -->
+                     </li>
+                  </ul>
+               </div>
+					<!-- 20230602 위치이동 -->
+               <div class="my_bmi_bnr">
+                  <div class="bnr_txt txt_gradient">
+                     건강한 식이요법, 꾸준한&nbsp;운동을
+                     <br>TuneH와&nbsp;함께 해보아요!<br>
+                     몸이&nbsp;점점 달라지시는&nbsp;게 느껴질 거에요<!-- 20230602 텍스트 줄바꿈 -->
+                  </div>
+                  <!--
+                     20220810 패키지링크이동 배너 삭제
+                     <a href="#" class="bnr_link bodyfit">바디핏패키지 보러가기<i class="bnr_link_arr"></i></a>
+                     <a href="#" class="bnr_link nutrition">뉴트리션패키지 보러가기<i class="bnr_link_arr"></i></a> 
+                  -->
+                  <!-- 20230602 슬라이드 배너 삭제 -->
+               </div>
+            </div>
+            <!-- 20220811 요소 삭제
+               <div class="my_bmi_alert bg_color">
+               00대 0성 평균 BMI 00 대비 질환 상대 위험도가 낮으나 건강 유지를 위해
+               꾸준한 운동, 올바른 식이요법 및 생활습관을 통해 지속적으로 건강을
+               관리하세요!
+            </div> -->
+         </div>
+      </div>
+   </div>
+   <!-- BMI 체질량지수란? 모달팝업 -->
+   <div id="alertModal" class="health_alert bmi_q_popup" style="display: none;">
+      <div class="inner">
+         <h2 class="pop_tit">BMI 체질량지수란?<button type="button" class="btn_close ui-close"><span
+                  class="hidden">닫기</span></button>
+         </h2>
+         <div class="pop_cont">
+            체질량지수(body mass index, BMI)는 자신의 몸무게(kg)를 키의 제곱(㎡)으로 나눈 값입니다.<br>
+            체질량 지수는 근육과 지방의 무게를 구별하지 못하여 건강을 측정하는 절대 지표는
+            아니지만, 실제 지방량을 정확히 측정하기는 어렵습니다. 체질량 지수는 체지방량과
+            상관관계가 높기 떄문에 간접적으로 비만 정도를 평가하는 방법으로 가장 널리 사용됩니다.
+         </div>
+      </div>
+   </div>
+   <!-- //BMI 체질량지수란? 모달팝업 -->
+   <!-- BMI 신체정보수정 팝업 -->
+   <div class="health_full bmi_input_popup" id="full001" style="display: none;">
+      <div class="inner">
+         <div class="pop_wrap">
+            <div class="pop_header">
+               <div class="header_wrap">
+                  <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+               </div>
+            </div>
+            <!-- //pop header -->
+            <div class="pop_container">
+               <div class="con_inner">
+                  <div class="con_box">
+                     <div class="pop_con">
+                        <!-- 팝업 내용 -->
+                        <h2 class="tit_cont_01">키와 몸무게를<br>입력해주세요.</h2>
+                        <div class="inp_wrap">
+                           <span class="inp_label">키 (cm)</span>
+                           <input type="text" class="inp_bg" value="179">
+                           <span class="inp_label">몸무게 (Kg)</span>
+                           <input type="text" class="inp_bg" value="79">
+                        </div>
+                        <!-- //팝업내용 -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- //pop container -->
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_black2">확인</button>
+            </div>
+            <!-- // pop btn -->
+         </div>
+      </div>
+   </div>
+   <!-- //BMI 신체정보수정 팝업 -->
+</body>
+<script>
+   //20220803 tab 영역 위치이동 스크립트 추가
+   $('.my_bmi_tabs .tab_menulist').each(function () {
+      var $this = $(this),
+         $tab = $this.find('li.active'),
+         $link = $tab.find('a'),
+         $panel = $($link.attr('href'));
+
+      $this.on('click', '.tab_control', function (e) {
+         e.preventDefault();
+         var $link = $(this),
+            id = this.hash;
+
+         if (id && !$link.is('.active')) {
+            $panel.removeClass('active');
+            $tab.removeClass('active');
+
+            $panel = $(id).addClass('active');
+            $tab = $link.parent().addClass('active');
+            2022
+            var offset = $link.offset();
+            $('html').animate({
+               scrollTop: (offset.top) - 112 + 'px'
+            }, 800);
+         }
+      });
+   });
+   //20220810 슬라이드 배너추가
+   var swiper = new Swiper(".banner_slider", {
+      slidePerView:1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+         delay: 2000,
+         disableOnInteraction: false,
+      }
+   });
+   //20220817 질환표 정보 아코디언 추가
+   $(document).ready(function(){
+      $('.disease_info_q').on('click', function () {
+         var answer = $(this).next('.disease_info_a');
+         answer.stop().slideToggle(800);
+         var arr = $(this).find('span');
+         if (arr.hasClass('active')){
+            arr.removeClass('active');
+         } else {
+            arr.addClass('active');
+         }
+      });
+   });
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="mmigfasqza" y1=".274" x2=".903" y2=".678" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#f3f8ff"/>
+            <stop offset="1" stop-color="#e9f2fe"/>
+        </linearGradient>
+        <linearGradient id="0fcp5ikbdb" x1=".923" y1=".786" x2=".091" y2=".214" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#3e98fb"/>
+            <stop offset="1" stop-color="#72b8fb"/>
+        </linearGradient>
+        <linearGradient id="snh40nokfc" y1=".274" x2="1" y2=".272" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#1c71d9"/>
+            <stop offset="1" stop-color="#1c71d9"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Object / v3_ic_48_fill_take_medicine_nonprescription">
+        <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+        <g data-name="Group 814428" transform="translate(7.691 2.272)">
+            <rect data-name="사각형 816" width="25" height="36" rx="2" transform="translate(7.309 3.728)" style="fill:#b7dcfd"/>
+            <rect data-name="사각형 803" width="25" height="40" rx="2" transform="translate(1.309 1.727)" style="fill:url(#mmigfasqza)"/>
+            <g data-name="그룹 1363">
+                <g data-name="그룹 1367" transform="translate(0 28)">
+                    <circle data-name="타원 266" cx="2.5" cy="2.5" r="2.5" transform="translate(16.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                    <circle data-name="타원 265" cx="2.5" cy="2.5" r="2.5" transform="translate(5.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                </g>
+                <g data-name="그룹 1366" transform="translate(0 20)">
+                    <circle data-name="타원 266" cx="2.5" cy="2.5" r="2.5" transform="translate(16.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                    <circle data-name="타원 265" cx="2.5" cy="2.5" r="2.5" transform="translate(5.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                </g>
+                <g data-name="그룹 1365" transform="translate(0 12)">
+                    <circle data-name="타원 266" cx="2.5" cy="2.5" r="2.5" transform="translate(16.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                    <circle data-name="타원 265" cx="2.5" cy="2.5" r="2.5" transform="translate(5.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                </g>
+                <g data-name="그룹 1364" transform="translate(0 4)">
+                    <circle data-name="타원 266" cx="2.5" cy="2.5" r="2.5" transform="translate(16.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                    <circle data-name="타원 265" cx="2.5" cy="2.5" r="2.5" transform="translate(5.309 5.728)" style="fill:url(#0fcp5ikbdb)"/>
+                </g>
+            </g>
+            <path data-name="사각형 817" d="M2 0h21a2 2 0 0 1 2 2v3H0V2a2 2 0 0 1 2-2z" transform="translate(1.309 1.728)" style="fill:url(#snh40nokfc)"/>
+        </g>
+    </g>
+</svg>

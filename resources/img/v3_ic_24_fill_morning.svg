@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path data-name="사각형 763" style="fill:transparent" d="M0 0h24v24H0z"/>
+    <g data-name="그룹 1145">
+        <path data-name="빼기 4" d="M-9008.5-13506h-15v-.285a1.485 1.485 0 0 0-.431-1.038l-1.636-1.639a1.451 1.451 0 0 1-.433-1.038 1.464 1.464 0 0 1 .432-1.044l1.636-1.636a1.485 1.485 0 0 0 .431-1.041v-2.312a1.474 1.474 0 0 1 1.473-1.473h2.311a1.464 1.464 0 0 0 1.042-.431l1.636-1.636a1.464 1.464 0 0 1 1.039-.427 1.457 1.457 0 0 1 1.039.432l1.639 1.636a1.478 1.478 0 0 0 1.038.431h2.314a1.474 1.474 0 0 1 1.473 1.473v2.312a1.467 1.467 0 0 0 .431 1.041l1.636 1.636a1.477 1.477 0 0 1 0 2.08l-1.636 1.639a1.485 1.485 0 0 0-.431 1.038v.284z" transform="translate(9028.001 13522)" style="fill:#fcad29"/>
+        <path data-name="빼기 3" d="M-9012.527-13510h-8.945a6 6 0 0 1-1.525-4 6.006 6.006 0 0 1 6-6 6.006 6.006 0 0 1 6 6 6 6 0 0 1-1.526 4z" transform="translate(9029.001 13526)" style="fill:#fccd2f"/>
+        <path data-name="선 55" transform="translate(6.001 21)" style="fill:none;stroke:#fcad29;stroke-linecap:round;stroke-width:2px" d="M0 0h12"/>
+        <path data-name="선 56" transform="translate(3.001 18)" style="fill:none;stroke:#fcad29;stroke-linecap:round;stroke-width:2px" d="M0 0h18"/>
+    </g>
+</svg>

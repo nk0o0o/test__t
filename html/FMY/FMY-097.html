@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>건강지표 - 신체정보수정 팝업</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap footer_no type_mypage">
+      <button class="btn_form_line" type="button" onclick="netiveUI.plugins.popToast('#full001');">건강지표(BMI)-신체정보수정팝업</button>               
+   </div>
+   <!-- BMI 신체정보수정 팝업 -->
+   <div class="health_full bmi_input_popup" id="full001" style="display: none;">
+      <div class="inner">
+         <div class="pop_wrap">
+            <div class="pop_header">
+               <div class="header_wrap">
+                  <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+               </div>
+            </div>
+            <!-- //pop header -->
+            <div class="pop_container">
+               <div class="con_inner">
+                  <div class="con_box">
+                     <div class="pop_con">
+                        <!-- 팝업 내용 -->
+                        <h2 class="tit_cont_01">키와 몸무게를<br>입력해주세요.</h2>
+                        <div class="inp_wrap">
+                           <span class="inp_label">키 (cm)</span>
+                           <input type="text" class="inp_bg" value="179">
+                           <span class="inp_label">몸무게 (Kg)</span>
+                           <input type="text" class="inp_bg" value="79">
+                        </div>
+                        <!-- //팝업내용 -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- //pop container -->
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_black2">확인</button>
+            </div>
+            <!-- // pop btn -->
+         </div>
+      </div>
+   </div>
+   <!-- //BMI 신체정보수정 팝업 -->
+</body>
+
+</html>

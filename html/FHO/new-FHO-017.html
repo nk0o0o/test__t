@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메인 - Dental MBTI 분석후 </title>
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/jquery-circle-progress.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i type_home">
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti active">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+
+    <div class="health_container align_right">
+			<div class="main_cont">
+				<!-- 홈 상단 공지 -->
+				<div class="ntc_txt">
+					<div class="swiper-container notice_slide">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="inner">새로운 버전의 Tune H 3.0을 만나보세요 새로운 버전의 Tune H 3.0을 만나보세요</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="inner">공지 영역 01010101010101010101</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="inner">공지 영역 020202020202020200202</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //홈 상단 공지 -->
+				<div class="head_txt">
+					<p>Tune Your Health!</p>
+					<span>Tune H와 함께 간편한 건강관리 서비스를 이용하세요</span>
+				</div>
+				<div class="main_cont_type">
+					<div thumbsSlider="" class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide menu_01"><!-- 측정 후 complete 클래스 추가 --><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+								<span class="mtxt">AI 건강<br>카메라</span>
+								<!-- 20230726 ht_result 영역 삭제 -->
+							</div>
+							<div class="swiper-slide menu_02 complete fin01"><!-- 측정 후 complete 클래스 추가 --><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+								<span class="mtxt">BMI</span>
+								<!-- 20230726 ht_result 영역 삭제 -->
+							</div>
+							<!-- 20230721 MBTI 결과추가 -->
+							<div class="swiper-slide menu_03 fin01 complete"><!-- fin01/Black, fin02/Yellow, fin03/Red, fin04/Blue 결과에 따라 클래스 적용 --><!-- 측정 후 complete 클래스 추가 -->
+								<span class="mtxt">Dental<br>MBTI</span>
+								<!-- 20230726 ht_result 영역 삭제 -->
+							</div>
+							<!-- //20230721 MBTI 결과추가 -->												
+							<!-- 20230824 ai영양소 설계 추가 -->
+							<div class="swiper-slide menu_06">
+								<span class="mtxt">AI 영양소<br>설계</span>
+								<!-- 20230726 ht_result 영역 삭제 -->
+							</div>
+							<!--// 20230824 ai영양소 설계 추가 -->
+							<!-- 20230719 프리미엄 추가 -->
+							<div class="swiper-slide menu_05 complete"><!-- 일반고객 member(x) 라이나보험고객 member(0) 클래스 --><!-- 측정 후 complete 클래스 추가 -->
+								<span class="mtxt">프리미엄</span>
+								<!-- 20230726 ht_result 영역 삭제 -->
+							</div>
+							<!-- //20230719 프리미엄 추가 -->
+						</div>
+					</div>
+
+          <!-- 하단카드 -->
+					<div class="swiper mySwiper2">
+						<div class="swiper-wrapper">
+              <!-- 20230721 MBTI 결과 내용 -->
+              <!-- case 1: Black -->
+							<div class="swiper-slide box_03">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+										<button type="button" class="btn_form_line">다시 분석하기</button>
+									</div>
+									<div class="desc">
+										<p class="ic_lev black_type">Black</p><!-- black_type/yellow_type/red_type/blue_type -->
+										치아에 변색이 있거나, 통증을 느끼고 계시나요? 원인과 관리 방법을 확인해보세요!
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+              <!-- case 2: Yellow -->
+							<div class="swiper-slide box_03">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+										<button type="button" class="btn_form_line">다시 분석하기</button>
+									</div>
+									<div class="desc">
+										<p class="ic_lev yellow_type">Yellow</p><!-- black_type/yellow_type/red_type/blue_type -->
+										구강 및 인접기관에서 유래하는 자신과 타인에게 불쾌감을 주는 악취를 낼 수 있는 구강 타입
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+              <!-- case 3: Red -->
+							<div class="swiper-slide box_03">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+										<button type="button" class="btn_form_line">다시 분석하기</button>
+									</div>
+									<div class="desc">
+										<p class="ic_lev red_type">Red</p><!-- black_type/yellow_type/red_type/blue_type -->
+										잇몸이 부어있거나 출혈, 고름 등이 나오나요? 원인과 관리방법을 확인해보세요!
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+              <!-- case 4: Blue -->
+							<div class="swiper-slide box_03">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+										<button type="button" class="btn_form_line">다시 분석하기</button>
+									</div>
+									<div class="desc">
+										<p class="ic_lev blue_type">Blue</p><!-- black_type/yellow_type/red_type/blue_type -->
+										바람이 불거나 찬 물을 마실 때 치아가 시리나요? 원인과 관리 방법을 확인해보세요!
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+              <!-- //20230721 MBTI 결과 내용 -->
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+          <!--// 하단카드 -->
+				</div>
+			</div>
+			
+			<div class="health_cont_wrap">
+				<!-- 20230919 배너 수정 -->
+				<div class="swiper home_banner">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="../../resources/img/v3_banner_home_img03.png" alt="맞춤 건강 미션 + 특별 미션"/>
+						</div>						
+					</div>
+					<!-- <div class="swiper-pagination"></div> -->
+				</div>
+				<!-- //20230919 배너 수정 -->
+				<div class="health_cam_wrap">
+					<div class="hc_head">
+						<h3 class="stt">맞춤 건강 콘텐츠</h3>
+					</div>
+					<div class="tab_wrap">
+						<div class="tabs dep1">
+							<a href="#" class="btn_more_tb"><span>더보기</span></a>
+							<ul class="tab_menulist">
+								<li class="active"><a class="tab_control" href="#tab-1">칼럼</a></li>
+								<li><a class="tab_control" href="#tab-2">영상</a></li>
+								<li><a class="tab_control" href="#tab-3">오디오</a></li>
+							</ul>
+							<!-- 칼럼 탭 내용 시작 -->
+							<div class="tab_panel active" id="tab-1">
+								<ul class="health_info_wrap health_cont_list">
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b on"></button><!-- 북마크 on -->
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- // 칼럼 탭 내용 끝 -->
+							<!-- // 영상 탭 내용 시작 -->
+							<div class="tab_panel" id="tab-2">
+								<ul class="health_info_wrap health_cont_list vod">
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b on"></button><!-- 북마크 on -->
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+												<div class="vod_txt">
+													<p>6분</p>
+													<p>오디오</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+												<div class="vod_txt">
+													<p>6분</p>
+													<p>오디오</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+												<div class="vod_txt">
+													<p>6분</p>
+													<p>오디오</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="img_wrap">
+												<img src="../../resources/img/@dummy.jpg" alt="">
+												<button type="button" class="btn_ico_bookmark_b"></button>
+											</div>
+											<div class="txt_wrap">
+												<span class="tit">무시하지 말아야 할 암을 알리는 4가지 위험신호</span>
+												<div class="vod_txt">
+													<p>6분</p>
+													<p>오디오</p>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- // 영상 탭 내용 끝 -->
+						</div>
+					</div>
+				</div>
+			</div>
+      <!-- 하단 이용약관 -->
+      <div class="main_footer acco_list_wrap">
+        <div class="item_head">
+          <a id="popFull01" href="#"><span>이용약관</span></a>
+          <a id="popFull04" href="#"><span class="footer_tit">위치기반 서비스 이용 약관</span></a>
+          <br>
+          <a id="popFull02" href="#"><span class="footer_tit">개인정보처리방침</span></a>
+          <a id="popFull03" href="#"><span class="footer_tit">이전 개인정보처리방침</span></a>
+          <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+        </div>
+        <div class="item_cont" style="display: none;">
+          <div class="footer_call_center">
+            <p><span>고객센터 </span><a href="tel:1833-4030">1833-4030</a></p>
+            <p><span>(평일 오전 9시 ~ 오후 6시, 주말/공휴일 휴무)</p>
+          </div>
+        </div>
+      </div>
+      <!-- //하단 이용약관 -->
+		</div>
+
+		<footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home on">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 0,
+			slidesPerView: 'auto',
+      /* noSwiping: true,
+			noSwipingClass: 'swiper-no-swiping', 준비중일때(클릭되지 않아야할때)*/
+		});
+		var swiper2 = new Swiper(".mySwiper2", {
+			initialSlide: 2,
+			slidesPerView: 'auto',
+			spaceBetween: 16,
+			centeredSlides: true,
+			thumbs: {
+				swiper: swiper,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+			},
+      on:{
+        init: function(){
+          $('.mySwiper .swiper-wrapper').addClass('aicamera')
+        },
+        slideChangeTransitionEnd: function(){
+            //console.log(this.thumbs.swiper.$el.find('.slide-active'))//20230814 console 제거
+
+          var $thumbsSlider = $('.mySwiper .swiper-wrapper');
+          
+          $thumbsSlider.removeClass('aicamera bmi dental premium'); //20230814 dental 오타수정
+
+          function $slideResult(){
+            var $thumbsSlider = $('.mySwiper .swiper-wrapper');
+            var $swiperslide = $thumbsSlider.find('.slide-active');
+            $thumbsSlider.removeClass('fin01 fin02 fin03 fin04 fin05 member');
+            if($swiperslide.hasClass('fin01')) {
+              $thumbsSlider.addClass('fin01');
+            }else if($swiperslide.hasClass('fin02')) {
+              $thumbsSlider.addClass('fin02');
+            }else if($swiperslide.hasClass('fin03')) {
+              $thumbsSlider.addClass('fin03');
+            }else if($swiperslide.hasClass('fin04')) {
+              $thumbsSlider.addClass('fin04');
+            }else if($swiperslide.hasClass('fin05')) {//20230814 fin05 경우 추가
+              $thumbsSlider.addClass('fin05');
+            }else if($swiperslide.hasClass('member')) {
+              $thumbsSlider.addClass('member');
+            }
+          }
+            
+          switch (this.realIndex) {
+            case 0:
+              $thumbsSlider.addClass('aicamera');
+              $slideResult()				
+              break;
+            case 1:
+              $thumbsSlider.addClass('bmi');												
+              $slideResult()
+              break;
+            case 2:
+              $thumbsSlider.addClass('dental');												
+              $slideResult()
+              break;
+            case 3:
+              $thumbsSlider.addClass('premium');												
+              $slideResult()
+              break;
+          }//switch
+        }
+      }
+		});
+    // 20230803 메인 배너 슬라이드 추가
+		var swiper3 = new Swiper(".home_banner", {
+			spaceBetween: 24,
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+		var swiper4 = new Swiper(".notice_slide", {
+			direction: "vertical",
+			slidePerView: 1,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+		});
+		
+	</script>
+</body>
+
+</html>

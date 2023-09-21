@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="rpucynf0ra" x1=".767" y1=".311" x2=".211" y2=".661" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#daf2ff"/>
+            <stop offset=".502" stop-color="#b5e2fb"/>
+            <stop offset="1" stop-color="#d3f0ff"/>
+        </linearGradient>
+        <linearGradient id="e2whyxe7xb" x1=".793" y1=".318" x2=".267" y2=".633" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#48c8ff"/>
+            <stop offset=".502" stop-color="#3cb7ec"/>
+            <stop offset="1" stop-color="#48c8ff"/>
+        </linearGradient>
+    </defs>
+    <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+    <g data-name="그룹 611">
+        <path data-name="패스 14437" d="M3.358 1.408a7.926 7.926 0 0 1 10.959 1.908l7.554 10.654L8.973 22.9 1.428 12.259a7.734 7.734 0 0 1 1.93-10.851z" transform="rotate(-6.02 80.273 -62.431)" style="fill:url(#rpucynf0ra)"/>
+        <path data-name="패스 14438" d="M18.517 21.439a7.876 7.876 0 0 1-10.872-1.87L0 8.881 12.82 0l7.6 10.621a7.693 7.693 0 0 1-1.9 10.818z" transform="rotate(-6.02 193.798 -141.424)" style="fill:url(#e2whyxe7xb)"/>
+    </g>
+</svg>

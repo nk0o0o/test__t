@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리스트 없는 경우 - 챌린지 리스트 - 챌린지</title>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+  <div class="health_wrap footer_no type_goal type_chall_list">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>챌린지</h1>
+      </div>
+      <!-- 230120 추가 -->
+      <div class="user_rank white" id="mytoggle">
+        <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+        <button type="button" id="user_rank_btn">White 660</button>
+      </div>
+      <!-- //230120 추가 -->
+      <div class="user"><button type="button">홍길동</button></div>
+      <!-- user class 가이드
+      패키지 구매회원의 경우 : .package 추가
+      신규 알림 있을 시 : .on 추가
+    -->
+    </header>
+    <div class="health_container">
+      <!-- 참여중 -->
+      <div class="list_wrap chall_nodata"> <!-- 챌린지목록이 없을때 chall_nodata -->
+        <p class="list_label">참여 중인 챌린지(<span>0</span>)</p>
+        <div class="nodata">
+          현재 참여 중인 챌린지가 없습니다.
+        </div>
+      </div>
+      <!-- //참여중 -->
+      <!-- 참여가능 -->
+      <div class="list_wrap chall_nodata"> <!-- 챌린지목록이 없을때 chall_nodata -->
+        <p class="list_label">참여 가능한 챌린지(<span>0</span>)</p>
+        <div class="nodata">
+          참여 가능한 챌린지가 없습니다.
+        </div>
+      </div>
+      <!-- //참여가능 -->
+      <!-- 참여 완료 -->
+      <div class="list_wrap chall_nodata"> <!-- 챌린지목록이 없을때 chall_nodata -->
+        <p class="list_label">완료한 챌린지(<span>0</span>)</p>
+        <div class="nodata">
+          완료한 챌린지가 없습니다.
+        </div>
+      </div>
+      <!-- //참여 완료 -->
+    </div>
+  </div>
+</body>
+
+</html>

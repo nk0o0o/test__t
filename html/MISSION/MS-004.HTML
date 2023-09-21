@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미션(3.4) - 맞춤건강미션 - 상세 - 맞춤상세</title>
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+
+<div class="health_wrap footer_no type_content">
+  <header class="health_header">
+    <div class="inbtn">
+      <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+    </div>
+  </header>
+  <div class="health_container">
+    <!-- new_mission -->
+    <div class="n_ms">
+      <div class="n_ms_sub_cont detail">
+        <div class="detail_top">
+          <div class="tag">건강 걸음</div>
+          <div class="hc_head">
+            <h2 class="stt">
+              하루 5,000보 걸음 걷기
+              <span>15일 동안 하루 5,000 걸음 이상 걸으면 미션 달성!</span>
+            </h2>
+          </div>
+          <div class="date">참여기간 <span>08.05(월) ~ 08.19(월)</span><img src="../../resources/img/v3_img_48_fill_mission_dental.png" alt=""></div><!-- 20230907 이미지 태그 추가 --><!-- 20230906 클래스 date로 수정, 문구수정 띄어쓰기 -->
+          <div class="ms_dt_point">
+            <div class="my_point">
+              <span>2,000</span>
+            </div>
+            <span>매일, 15일 이상</span>
+          </div>
+        </div>
+        <div class="detail_cont">
+          <div class="contents">
+            관리자 html 별도 등록 영역
+          </div>
+          <a href="#" class="btn_more go_kakao"><span>Tune H 카카오 플친 연결하기</span></a><!-- 20230906 문구수정 -->
+        </div>
+        <div class="svc_desc acco_list_wrap">
+          <div class="item_head">
+            <p>꼭 확인해주세요!</p>
+            <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+          </div>
+          <!-- 20230920 문구 수정 -->
+          <ul class="item_cont" style="display: none;">
+            <li>미션을 완료하고 포인트 버튼 클릭 시 포인트가 지급됩니다.</li>
+            <li>포인트가 지급되는 시점은 미션 완료 시점과 다소 차이가 있을 수 있습니다.</li>
+            <li>미션은 서비스 사정으로 미션 진행 도중 변경될 수 있습니다.</li>            
+            <li>미션 진행 전 질환이 있는 사용자는 반드시 의사와 상담 후 진행하시기 바랍니다.</li>
+          </ul>
+          <!-- // 20230920 문구 수정 -->
+        </div>
+        <div class="btn_btm_fixed">
+          <button type="button" class="btn" onclick="netiveUI.plugins.popAlert('#alert01');">참여하기</button><!-- 20230907 팝업추가 -->
+        </div>
+      </div>
+    </div>
+    <!-- // .new_mission -->
+  </div>
+  <!-- // .health_container -->
+</div>
+<!-- 20230907 팝업추가 -->
+<!-- 미션참여완료 pop-->
+<div class="health_alert" id="alert01" style="display: none;">
+  <div class="inner">
+    <h2 class="pop_tit">미션 참여완료</h2>
+    <p class="msg">
+      맞춤 건강 미션 > 참여 중인 미션에서<br>상세 내용 확인 가능합니다.
+    </p>
+    <div class="btn_wrap">
+      <button type="button" class="btn_pop_dark ui-close">확인</button>
+    </div>
+  </div>
+</div>
+<!-- //미션참여완료 pop-->
+</body>
+</html>

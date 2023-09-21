@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dental MBTI 결과 - Red </title>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/chart.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+	<!-- health_full wellness_diary actived dent_result -->
+	<div class="health_wrap dent_result dent_mbti"><!-- 20230220 page class "dent_mbti" 추가 -->
+		<!-- 20230609 헤더수정 -->
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+		<!-- //20230609 헤더수정 -->
+		<div class="health_container both24 pb50">
+      <div class="swiper-container sect_cate">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n" class="nav walk">
+              <p class="ico"></p>
+              <span>건강 걸음</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav ai">
+              <p class="ico"></p>
+              <span>AI 건강카메라</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav bmi">
+              <p class="ico"></p>
+              <span>BMI</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav mbti on">
+              <p class="ico"></p>
+              <span>Dental MBTI</span>
+            </a>
+          </li>
+        </ul>
+        <div class="cate_next"></div>
+        <div class="cate_prev"></div>
+      </div>
+      <!-- //.sect_cate -->
+			<!-- 20230411 방사형 차트 추가 -->
+			<div class="header_box">
+				<h3 class="stt">
+					Dental MBTI<a href="#n" class="link"></a>
+				</h3>
+			</div>
+			<div class="radar_chart">
+				<h2>구강관리 스코어</h2>
+				<p class="score_sum">총합 <span class="num"></span>점</p>
+				<!-- 20230519 스코어 차트 추가 -->
+				<div class="score_grap">
+					<p class="contents">콘텐츠 제공 : <img src="../../resources/img/v3_ico_rebrush.png" alt="Re:Brush"/></p><!-- 20230608 이미지경로 -->
+					<div class="chart_list">
+						<ul>
+							<li>
+								<div class="cht_tit">치아</div>
+								<div class="step_wrap">
+									<span class="total">0</span>
+									<span class="total">1000</span>
+								</div>
+								<div class="cht_wrap">
+										<i class="cht_bar case01" style="width:45.3%"><span class="now"><span>45.3</span></span></i>
+										<i class="averg" style="left: 50%">
+											<span>이용자 평균</span>
+										</i>
+								</div>
+								<div class="status"><img src="../../resources/img/v3_icon_ch_bad.png" alt="bad" /></div><!-- 20230608 이미지경로 -->
+							</li>
+							<li>
+								<div class="cht_tit">잇몸</div>
+								<div class="step_wrap">
+									<span class="total">0</span>
+									<span class="total">1000</span>
+								</div>
+								<div class="cht_wrap">
+									<i class="cht_bar case02" style="width:67.5%"><span class="now"><span>67.5</span></span></i>
+									<i class="averg" style="left: 45%">
+										<span>이용자 평균</span>
+									</i>
+								</div>
+								<div class="status"><img src="../../resources/img/v3_icon_ch_good.png" alt="good" /></div><!-- 20230608 이미지경로 -->
+							</li>
+							<li>
+								<div class="cht_tit">시린이</div>
+								<div class="step_wrap">
+									<span class="total">0</span>
+									<span class="total">1000</span>
+								</div>
+								<div class="cht_wrap">
+									<i class="cht_bar case03" style="width:64.8%"><span class="now"><span>64.8</span></span></i>
+									<i class="averg" style="left: 34%">
+										<span>이용자 평균</span>
+									</i>
+								</div>
+								<div class="status"><img src="../../resources/img/v3_icon_ch_good.png" alt="good" /></div><!-- 20230608 이미지경로 -->
+							</li>
+							<li>
+								<div class="cht_tit">입냄새</div>
+								<div class="step_wrap">
+									<span class="total">0</span>
+									<span class="total">1000</span>
+								</div>
+								<div class="cht_wrap">
+									<i class="cht_bar case04" style="width:82.4%"><span class="now"><span>82.4</span></span></i>
+									<i class="averg" style="left: 64%">
+										<span>이용자 평균</span>
+									</i>
+								</div>
+								<div class="status"><img src="../../resources/img/v3_icon_ch_good.png" alt="good" /></div><!-- 20230608 이미지경로 -->
+							</li>
+							<li>
+								<div class="cht_tit">관리</div>
+								<div class="step_wrap">
+									<span class="total">0</span>
+									<span class="total">1000</span>
+								</div>
+								<div class="cht_wrap">
+									<i class="cht_bar case05" style="width:34.8%"><span class="now"><span>34.8</span></span></i>
+									<i class="averg" style="left: 58%">
+										<span>이용자 평균</span>
+									</i>
+								</div>
+								<div class="status"><img src="../../resources/img/v3_icon_ch_good.png" alt="good" /></div><!-- 20230608 이미지경로 -->
+							</li>
+						</ul>
+						<div class="percent">
+							<p>0%</p>
+							<p>100%</p>
+						</div>
+					</div>
+					<p class="desc">현재 구강관리 경고단계로 치아 관리에 힘써 주세요.</p>
+				</div>
+				<!-- // 20230519 스코어 차트 추가 -->
+			</div>
+			<!-- // 20230411 방사형 차트 추가 -->
+			<div class="dental_result_type">
+					<div class="result_tit_box">
+						<div class="result_tit_wrap result_red_type">
+								<!-- class result_red_type, black_type, blue_type, yellow_type - width값 다름 -->
+								<img src="../../resources/img/v3_icon_dental_red_type.png" alt="Red type" /><!-- 20230608 이미지경로 -->
+						</div>
+						<!-- <h2 class="dental_result_tit">타입</h2> --> <!-- 20230407 수정 -->
+					</div>
+					<p class="result_type_txt red_type"><!-- 20230328 class추가 --> <!-- 20230407 class 추가 .red_type, black_type, blue_type, yellow_type -->
+						잇몸이 부어있거나 출혈, 고름 등이 나오나요? 원인과 관리방법을 확인해보세요!
+					</p>
+			</div>
+			<div class="more_cont dent_cont normal">
+				<!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+				<div class="dent_cont_inner mt0">
+					<h3 class="tit_cont_03 dent_cont_tit dent_red_type">원인분석</h3>
+					<div class="dent_card cause_dent"><!-- 20230407 class 'cause_dent' 추가 card_red_type class 삭제 -->
+							<p class="dent_cause_desc"><!-- 20230407 "dent_cause" class 추가 및 문구수정 -->
+								잇몸질환이 있는 경우 양치질 시 잇몸에서 피가 나거나 잇몸이 붓고 아플 수 있습니다. 잇몸 건강 관리가 필요합니다.
+							</p>
+							<!-- 20230407 추가 -->
+							<h4 class="dent_cause_tit red">잇몸 염증에 영향을 주는 요인</h4><!-- 20230407 class 추가 red, black, blue, yellow -->
+							<ul class="dent_cause">
+								<li>
+										<img src="../../resources/img/dent_cause_stres.png" alt="스트레스, 피로" />
+										<span>스트레스, 피로</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_cause_sleep.png" alt="수면부족" />
+										<span>수면부족</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_cause_preg.png" alt="임신 혹은 생리기간" />
+										<span>임신 혹은 생리기간</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_cause_germs.png" alt="잇몸을 상하게 하는 주요 균" />
+										<span>잇몸 질환 유발균</span>
+								</li>
+							</ul>
+							<!-- //20230407 추가 -->
+					</div>
+				</div>
+				<div class="dent_cont_inner">
+					<h3 class="tit_cont_03 dent_cont_tit dent_red_type">관리방법</h3><!-- 20230407 수정 -->
+					<div class="dent_card care_dent"><!-- 'care_dent' class 추가 -->
+							<!-- 20230407 추가 -->
+							<ul class="dent_care">
+								<li>
+										<img src="../../resources/img/dent_care_brush.png" alt="칫솔 자주 교체" />
+										<span class="dent_lett_space">칫솔 정기교체로<br/> 잔여 세균 제거</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_soft.png" alt="부드러운 미세모 사용" />
+										<span>부드러운<br/>미세모 사용</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_gargle.png" alt="가글" />
+										<span>가글</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_grind.png" alt="이갈이 금지" />
+										<span>이갈이 금지</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_strong.png" alt="이 꽉무는 습관 개선" />
+										<span>이 꽉무는 습관&nbsp;개선</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_nosmoke.png" alt="금연" />
+										<span>금연</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_sleep_habit.png" alt="수면 습관 개선" />
+										<span>수면 습관 개선</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_stress.png" alt="스트레스 줄이기" />
+										<span class="dent_lett_space">스트레스 줄이기</span>
+								</li>
+								<li>
+										<img src="../../resources/img/dent_care_vita.png" alt="비타민 섭취" />
+										<span>비타민 섭취</span>
+								</li>
+							</ul>
+							<!-- //20230407 추가 -->
+					</div>
+				</div>
+				<div class="dent_cont_inner">
+					<h3 class="tit_cont_03 dent_cont_tit dent_red_type">주의사항</h3><!-- 20230407 수정 -->
+					<div class="dent_card caut_dent"><!-- 20230407 'caut_dent' class 추가 -->
+							<div class="dent_caut">
+								<div class="dent_caut_detail img_left"> <!-- 20230413 dent_caut_detail 클래스 통일 / img_left, img_right 이미지 위치 클래스 나눔 -->
+										<div class="dent_caut_img">
+											<img src="../../resources/img/dent_caut_fam.png" alt="가족력" />
+										</div>
+										<p><span class="dental_bold">잇몸질환은 가족력</span>이 있을 수 있으며, 가족 구성원간의 교차 감염이 발생할 수 있으므로 개별 칫솔을 따로보관 해야합니다.</p>
+								</div>
+								<div class="dent_caut_detail img_right">
+										<p><span class="dental_bold">전신 질환, 약물</span>등은 잇몸 질환과 연관이 있습니다.<br/>(아스피린,면역억제제 등) 정기적인 구강 검진이 필요하며 전문가의 처방이 아닌 약물의 오/남용은 삼가하셔야 합니다.</p>
+										<div class="dent_caut_img">
+											<img src="../../resources/img/dent_caut_medi.png" alt="약물 사진" />
+										</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<!-- 20230407 삭제 -->
+				<!--
+				<ul class="dent_link_wrap">
+					<li class="dent_link_inner">
+							<a href="#none">
+								<div class="dent_link">
+										MB와 기타 방법의 플라그 제거 효과 비교
+								</div>
+							</a>
+					</li>
+					<li class="dent_link_inner">
+							<a href="#none">
+								<div class="dent_link">
+										치주 질환과 전신 질환
+								</div>
+							</a>
+					</li>
+				</ul>
+				<dl class="other_dent_type">
+					<dt>다른 구강 타입 보기</dt>
+					<dd>
+							<a href="#none">
+								<img src="../../resources/img/icon_dental_black_text.png" alt="dental_black">
+							</a>
+					</dd>
+					<dd>
+							<a href="#none">
+								<img src="../../resources/img/icon_dental_blue_text.png" alt="dental_blue">
+							</a>
+					</dd>
+					<dd>
+							<a href="#none">
+								<img src="../../resources/img/icon_dental_yellow_text.png" alt="dental_yellow">
+							</a>
+					</dd>
+				</dl>
+				-->
+				<!-- 20230407 삭제 -->
+				<p class="dental_result_desc"><span class="dental_bold">Dental MBTI, 콘텐츠 제공 -</span> 대학병원 교수진, 현직치과 의사 40명으로 구성된 리브러쉬 자문의원</p>
+				<div class="btn_wrap">
+					<button type="button" class="btn_base_03 red">내 구강 타입에 맞는 콘텐츠 보기</button><!-- class 추가목록 .red, .black, .blue, .yellow -->
+				</div>
+			</div>
+		</div>
+		<!--// health_container -->
+
+		<!-- 20230609 푸터영역 추가 -->
+		<footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary on">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+		<!-- //20230609 푸터영역 추가 -->
+	</div>
+	<!-- //.btn_btm_fixed -->
+  <!-- 상단 카테고리 슬라이드 -->
+  <script>
+    $(document).ready(function () {
+      var cateSwiper = new Swiper(".sect_cate", {
+        slidesPerView: 3,
+        navigation: {
+          nextEl: ".cate_next",
+          prevEl: ".cate_prev",
+          disabledClass: "disabled"
+        },
+        initialSlide:4
+      });
+    });
+  </script>
+	<script>
+		//20230411 차트 스크립트추가
+		//방사형 차트 스크립트 
+		const ctx = document.getElementById("dentalMBTIChart").getContext("2d");
+		let backgroundColor;
+		let borderColor;
+		let pointBackgroundColor;
+		const data = {
+				labels: ["잇몸문제", "입냄새", "시린이", "치아문제"],
+				datasets: [
+					{
+							label: "Oral Health Score",
+							data: [15, 9, 9, 9], // values for each section
+							borderWidth: 0.5,
+							pointRadius: 2,//그려진 그래프의 끝 포인트 크기
+							pointHoverRadius: 4,
+							backgroundColor: "rgba(255, 179, 0, 0.2)",
+							borderColor: "rgba(255, 179, 0, 1)",
+							pointBackgroundColor: "rgba(255, 179, 0, 1)",
+					},
+				],
+		};
+		const config = {
+				type: "radar",
+				data: data,
+				options: {
+					//20230425 그래프 영역 패딩값 수정
+					layout: {
+							padding: {
+								left: 8,
+								right: 8
+							}
+					},
+					scales: {
+							r: {
+								beginAtZero: true,
+								max: 18,
+								min: 0,
+								ticks: {//그래프 속 숫자
+										callback: (value) => {return `${value}`},
+										backdropColor: "transparent",
+										font:{size : 14},                     
+										stepSize: 3,
+										display:false // f/t 숨김/보이기
+								},
+								grid: {
+										lineWidth:0.5,
+										color:"rgba(153, 153, 153, 1)"
+								},
+								angleLines: {
+										display: true,
+										lineWidth:0.5,
+										color:"rgba(153, 153, 153, 1)"
+								},
+								pointLabels: {//그래프 끝 라벨
+										font: {
+											family: "Noto Sans",
+											size: 14,
+											weight: '700',
+											lineHeight:1.9
+										},
+										color:"rgba(34, 34, 34, 1)",
+								}
+							},
+					},
+					plugins: {
+							legend: {
+								display: false,
+							},
+							tooltip:{
+								enabled: false,
+							}
+					},
+				},
+		};
+		const dentalMBTIChart = new Chart(ctx, config);
+		updateGraph()
+		function updateGraph() {
+				const dentalType = $("#dentalMBTIChart").attr('class')
+				switch (dentalType) {
+					case "red":
+					backgroundColor = "rgba(241, 20, 20, 0.2)";
+					borderColor = "rgba(241 20, 20, 1)";
+					pointBackgroundColor = "rgba(241 20, 20, 1)";
+					break;
+					case "black":
+					backgroundColor = "rgba(34, 34, 34, 0.2)";
+					borderColor = "rgba(34, 34, 34, 1)";
+					pointBackgroundColor = "rgba(34, 34, 34, 1)";
+					break;
+					case "blue":
+					backgroundColor = "rgba(0, 149, 255, 0.2)";
+					borderColor = "rgba(0, 149, 255, 1)";
+					pointBackgroundColor = "rgba(0, 149, 255, 1)";
+					break;
+					case "yellow":
+					backgroundColor = "rgba(255, 179, 0, 0.2)";
+					borderColor = "rgba(255, 179, 0, 1)";
+					pointBackgroundColor = "rgba(255, 179, 0, 1)";
+					break;
+					backgroundColor = "rgba(255, 179, 0, 0.2)";
+					borderColor = "rgba(255, 179, 0, 1)";
+					pointBackgroundColor = "rgba(255, 179, 0, 1)";
+					break;
+				}
+				dentalMBTIChart.data.datasets[0].backgroundColor = backgroundColor;
+				dentalMBTIChart.data.datasets[0].borderColor = borderColor;
+				dentalMBTIChart.data.datasets[0].pointBackgroundColor = pointBackgroundColor;
+				dentalMBTIChart.update();
+		}
+
+		let dentalScoreText;
+		const dentalData = dentalMBTIChart.data.datasets[0].data;         
+		dentalScoreText = dentalData.reduce((sum, current) => sum + current, 0);
+		$(document).ready(function(){
+				$('.score_sum').find('.num').text(dentalScoreText)
+		})
+	</script>
+	<script>
+		$(document).ready(function () {
+				//스트레스지수 슬라이드
+				var swiper = new Swiper(".check_slide", {
+					slidesPerView: "auto",
+					spaceBetween: 11,
+					observer: true,
+					observeParents: true
+				});
+
+				//물결차오르는 효과 호출
+				if ($('.progress_now').length > 0) {
+					progressAnimation(1000);//총점 100%이냐 1000점이냐
+				}         
+		});
+
+		//숫자만추출
+		var onlyNumber = function (num) {
+				return num.toString().replace(/[^0-9]/g, '');
+		};
+		//물결차오르는 효과
+		function progressAnimation (total) {
+				var $total = total;
+				$(".progress_now").each(function (i, block) {
+					$(block).after('<span class="progress_bar"></div>');
+					var $el = $(block);
+					var $elBar = $(block).siblings(".progress_bar");
+					var $elText = $el.text();            
+					if(Math.sign($elText) == -1){
+							$elText = 0;
+					};
+					var $now = parseInt(onlyNumber($elText), 10);
+					if($now > $total){
+							$now = $total;
+					} else if($now <= 0){
+							$elBar.css({"-webkit-animation":"none"},{"-moz-animation":"none"},{"-ms-animation":"none"},{"animation":"none"})
+					};
+					var $perNow = ($now / $total) * 100;
+					var $nowWidth = $(this).height();
+					if (isNaN($now)) $perNow = 0;
+					$elBar.animate({bottom: $perNow +'%'}, 3000, 'linear', function() {
+							setTimeout(function() {
+								$elBar.animate({borderRadius: 0 +'%'},3000)
+							}, 100);
+					});
+					// countUpFn($el, $now, 3000)
+				})
+		}  
+		//숫자카운트업
+		function countUpFn(div, num, time){
+				var cnt0=0;
+				var $now = num;
+				var $div = div;
+				var $time = time;
+				var id0 = setInterval (count0Fn, 40);
+				cnt0++;
+				function count0Fn(){
+					cnt0++;
+					if(cnt0>$now){
+							clearInterval(id0);
+					} else {
+							$div.text(cnt0)
+					}
+				}
+				setTimeout(function() {
+					clearInterval(id0);
+				}, $time);
+		}
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <linearGradient id="0cqa9rejda" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#cae4ff"/>
+            <stop offset="1" stop-color="#afd6ff"/>
+        </linearGradient>
+    </defs>
+    <path data-name="사각형 763" style="fill:transparent" d="M0 0h24v24H0z"/>
+    <circle data-name="타원 205" cx="12" cy="12" r="12" style="fill:#0095ff"/>
+    <g data-name="그룹 1044">
+        <path data-name="패스 15142" d="M0 0h11.291v13.18H0z" transform="translate(6 5.66)" style="fill:url(#0cqa9rejda)"/>
+        <path data-name="패스 15141" d="M-.1 0h4.21a.949.949 0 0 1 .9.989.949.949 0 0 1-.9.989H-.1A.949.949 0 0 1-1 .989.949.949 0 0 1-.1 0z" transform="translate(9.638 5)" style="fill:#0f48a4"/>
+        <path data-name="패스 15140" d="m1.447 0 1.191 1.611-.255 7.014H0l.255-7.014z" transform="rotate(-135 9.726 6.65)" style="fill:#0f48a4"/>
+    </g>
+</svg>

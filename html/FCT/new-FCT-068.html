@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 병원일정추가(팝업)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script><!-- 20230829 데이터픽커플러그인추가 -->
+<link rel="stylesheet" href="../../resources/css/jquery-ui.css"><!-- 20230829 데이터픽커플러그인추가 -->
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <!-- 케어단계설정 팝업 -->
+  <div class="health_full thyroid_pop actived" id="full001" >
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap type_center">
+            <h1>병원 일정 추가</h1>
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container">
+          <div class="con_inner">
+            <div class="con_box">
+              <div class="pop_con"> 
+                <!-- 팝업 내용 -->
+                <div class="appsetting_list_item">
+                  <em>알림설정</em>
+                  <label class="frm_toggle" for="appNoti01">
+                    <input type="checkbox" id="appNoti01" checked>
+                    <div class="toggle_slider round"></div>
+                  </label>
+                </div>
+                <div class="thyroid_pop_inner">
+                  <form action="">
+                    <div class="frm_container">
+
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">구분</label><!-- 20230906 문구수정 -->
+                        <select name="#" id="" class="frm_select">
+                          <option value="">카테고리 선택</option>
+                          <option value="">category 1</option>
+                          <option value="">category 2</option>
+                          <option value="">category 3</option>
+                          <option value="">category 4</option>
+                        </select>
+                      </div>
+                      
+                      <div class="frm_input_wrap">
+                        <label for="date01" class="frm_label">시작일시</label>
+                        <div class="is_datepicker">
+                          <input type="text" id="date01" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="YYYY.MM.DD">
+                        </div>       
+                        <input type="text" id="time01" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="예약 시간 선택">
+                      </div>
+                      
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">종료 일시</label>
+                        <div class="is_datepicker">
+                          <input type="text" id="date02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="YYYY.MM.DD">
+                        </div>
+                        <input type="text" id="time02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="예약 시간 선택">                        
+                      </div>
+                      
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">병원</label>
+                        <input type="text" id="input_06" class="frm_input" placeholder="병원명 입력" value="" name="">
+                      </div>
+                      
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">의료진</label>
+                        <input type="text" id="input_06" class="frm_input" placeholder="의료진명 입력" value="" name="">
+                      </div>
+                    </div><!-- //.frm_container -->
+                  </form>
+                </div><!-- //.thyroid_pop_inner -->
+                <!-- //팝업내용 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_black2">추가하기</button><!-- 20230831 문구 수정 -->
+        </div>
+        <!-- // pop btn -->
+      </div>
+     
+    </div>
+  </div><!-- //케어단계설정 팝업 -->
+  </div>
+</body>
+<script>
+  $(document).ready(function() {
+    // 날짜선택/시간선택 호출
+    $('.btn_btm_sheet').on('click', function() {
+      getPicker($(this).data('btmsheet'), $(this).attr('id'));
+    });
+  })
+</script>
+</html>

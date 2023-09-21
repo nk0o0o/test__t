@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap login_wrap footer_no"> 
+        <!-- <header></header> -->
+		<div class="health_container pt0">
+            <div class="login_main">
+                <div class="visual_wrap">
+                    <h2>우리 같이 <br / >건강한 습관을 <br />만들어요</h2>
+                </div>
+                <div class="form_wrap">
+                    <div class="inp_wrap">
+                        <div class="inp_item email">
+                            <label for="loginEmail" class="inp_label">이메일</label>
+                            <input type="text" id="loginEmail" name="inqFrm" class="inp_base" value="hello@naver.com">
+                        </div>
+                    </div>
+                    <div class="inp_wrap">
+                        <div class="inp_item password">
+                            <label for="loginPw" class="inp_label">비밀번호</label>
+                            <input type="password" id="loginPw" name="inqFrm" class="inp_base">
+                        </div>
+                    </div>
+
+                    <div class="inp_wrap">
+                        <div class="inp_item code">
+                            <label for="loginCode" class="inp_label">라이나코드</label>
+                            <input type="text" id="loginCode" name="inqFrm" class="inp_base" disabled value="2023dkcivps">
+                        </div>
+                    </div>
+                    
+                    <div class="flex_between_wrap">
+                        <div class="check_box">
+                            <input type="checkbox" id="autoLoginChk" class="check">
+                            <label for="autoLoginChk">자동 로그인</label>
+                        </div>
+                        <a href="javascript:;">비밀번호 찾기</a>
+                    </div>
+                    <button type="button" class="btn_base_03" onclick="netiveUI.plugins.popToast('#loginId_alert');">로그인</button>
+                    <button type="button" class="btn_base_03 primary">이메일로 회원가입</button>
+
+                    <dl class="sns_wrap">
+                        <dt>SNS 계정으로 시작</dt>
+                        <dd>
+                            <a href="javascript:;"><img src="../../resources/img/v3_ico_naver.png" alt=""></a>
+                            <a href="javascript:;"><img src="../../resources/img/v3_ico_kakao.png" alt=""></a>
+                            <a href="javascript:;"><img src="../../resources/img/v3_ico_google.png" alt=""></a>
+                            <a href="javascript:;"><img src="../../resources/img/v3_ico_apple.png" alt=""></a>
+                        </dd>
+                    </dl>
+                </div>
+                <p class="info">문의 사항은 고객센터(1833-4030)로 연락하시면 <br />
+                    안내해 드리겠습니다.</p>
+            </div>
+		</div>
+	</div>
+
+    <!-- 휴면 계정 안내 팝업 type1 -->
+    <div class="loginId_popup" id="loginId_alert" style="display: none;">
+        <div class="inner">
+            <div class="cont_box">
+                <dl>
+                    <dt>휴면 계정 안내</dt>
+                    <dd>
+                        <p>1년 이상 로그인 하지 않아 관련 법령에 따라 휴면 상태로 전환 되었습니다.</p>
+                        <div class="bg_wrap">
+                            <p>마지막 접속일 : 2022.01.03</p>
+                            <p>휴면 전환일 : 2022.01.03</p>
+                        </div>
+                        <p>Tune H 계정 서비스를 계속 이용하시려면 [휴면 해제하기] 버튼을 클릭해 주세요.</p>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="btn_base_02 line" onclick="$('#loginId_alert').hide();">취소</a>
+                <a href="javascript:;" class="btn_base_02">휴면 해제하기</a>
+            </div>
+        </div>
+    </div>
+    <!-- //휴면 계정 안내 팝업 type1 -->
+
+    <!-- 휴면 계정 안내 팝업 type2 -->
+    <div class="loginId_popup type2" id="loginId_alert_complete" style="display: none;">
+        <div class="inner">
+            <div class="cont_box">
+                <dl>
+                    <dt>휴면 계정 안내</dt>
+                    <dd>
+                        <p>해당 이메일 계정이 다시 <strong>활성화</strong> 되었습니다. <br />
+                            Tune H 서비스를 로그인 후 계속 이용해 주세요.</p>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="btn_base_02" onclick="$('#loginId_alert_complete').hide();">확인</a>
+            </div>
+        </div>
+    </div>
+    <!-- //휴면 계정 안내 팝업 type2 -->
+
+    <!-- 휴면 계정 안내 팝업 type3 -->
+    <div class="loginId_popup type3" id="loginId_alert_retry" style="display: none;">
+        <div class="inner">
+            <div class="cont_box">
+                <dl>
+                    <dt>휴면 계정 안내</dt>
+                    <dd>
+                        <p>해당 이메일 정보로 휴면해제를 할 수 없습니다. <strong>다른 이메일 정보로 회원 가입 후,</strong> Tune H 서비스 이용해주세요.</p>
+                    </dd>
+                </dl>
+                <a href="javascript:;" class="btn_base_02" onclick="$('#loginId_alert_retry').hide();">확인</a>
+            </div>
+        </div>
+    </div>
+    <!-- //휴면 계정 안내 팝업 type3 -->
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>리스트 없는 경우 - 챌린지 리스트 - 챌린지</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap type_goal type_chall_detail">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+            <h1>계단 오르기 챔피언</h1>
+         </div>
+         <div class="user"><button type="button">홍길동</button></div>
+         <!-- user class 가이드
+		      패키지 구매회원의 경우 : .package 추가
+		      신규 알림 있을 시 : .on 추가
+		    -->
+      </header>
+
+      <div class="health_container">
+         <div class="tab_wrap">
+            <div class="tabs">
+               <ul class="tab_menulist">
+                  <li><a class="tab_control" href="#tab-1">설명</a></li>
+                  <li><a class="tab_control" href="#tab-2">순위</a></li>
+                  <li class="active"><a class="tab_control" href="#tab-3">토론</a></li>
+               </ul>
+
+               <div class="tab_panel" id="tab-1"></div>
+               <div class="tab_panel" id="tab-2"></div>
+               <div class="tab_panel active" id="tab-3"></div>
+            </div>
+         </div>
+      </div>
+
+      <div class="btn_btm_fixed">
+         <button type="button" class="btn ver01" onclick="netiveUI.plugins.popAlert('#alert001');">신고</button>
+      </div>
+
+   </div>
+
+   <!-- 신고 팝업 -->
+   <div class="health_alert main_alert" id="alert001" style="display: none;"> <!-- main_alert FHO/FHO-001-03.html 에서 가져옴 -->
+      <div class="inner">
+         <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+         <p class="msg">
+            내용을 작성해주세요.
+         </p>
+         <div class="chk_wrap">
+            <div class="check_box term" role="group" aria-labelledby="약관" id="termCheckArea">
+               <div class="t_chk">
+                  <input type="checkbox" id="termCheck01" class="chkItem" name="termAgree">
+                  <label for="termCheck01">욕설 및 비방
+                  </label>
+               </div>
+               <div class="t_chk">
+                  <input type="checkbox" id="termCheck02" class="chkItem" name="termAgree">
+                  <label for="termCheck02">홍보</label>
+               </div>
+               <div class="t_chk">
+                  <input type="checkbox" id="termCheck03" class="chkItem" name="termAgree">
+                  <label for="termCheck03">음란/청소년 유해</label>
+               </div>
+               <div class="t_chk">
+                  <input type="checkbox" id="termCheck03" class="chkItem" name="termAgree">
+                  <label for="termCheck03">개인정보 노출</label>
+               </div>
+            </div>
+         </div>
+         <div class="inp_wrap mt20">
+            <!-- <span class="inp_label">기타내용</span> -->
+            <input type="text" class="inp_bg" placeholder="기타내용">
+         </div>
+         <div class="btn_wrap">
+            <button type="button" class="btn_pop_dark" onclick="netiveUI.plugins.popAlert('#alert002');">신고하기</button>
+         </div>
+      </div>
+   </div>
+   <!-- //신고 팝업 -->
+
+   <!-- 신고 확인 팝업 -->
+   <div class="health_alert" id="alert002" style="display: none;">
+      <div class="inner">
+         <p class="msg">
+            해당 토론을 신고하시겠습니까? 
+         </p>
+         <div class="btn_wrap">
+            <button type="button" class="btn_pop_primary">예</button>
+            <button type="button" class="btn_pop_light ui-close">아니오</button>
+          </div>
+      </div>
+   </div>
+   <!-- //신고 확인 팝업 -->
+
+</body>
+
+</html>

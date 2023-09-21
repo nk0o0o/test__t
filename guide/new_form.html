@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../resources/js/fullcalendar-6.1.8.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../resources/css/jquery-ui.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+  <link rel="stylesheet" href="../resources/css/guide.css">
+  
+  <title>New Form</title>
+  <style>
+    body{padding: 20px;}
+  </style>
+</head>
+<body>
+  <h1>텍스트 필드</h1>
+  <br/>
+
+  <h3>라디오 버튼</h3>
+  <label for="radio_01" class="frm_radio">
+    <input type="radio" name="radioName1" id="radio_01">
+    <span>라디오버튼1</span>
+  </label>
+  <br>
+  <label for="radio_02" class="frm_radio">
+    <span>라디오버튼2</span>
+    <input type="radio" name="radioName1" id="radio_02">
+  </label>
+  <br/>
+  <br/>
+
+  <h3>체크박스</h3>
+  <label for="check_01" class="frm_check">
+    <input type="checkbox" name="checkName2" id="check_01">
+    <span>라디오버튼1</span>
+  </label>
+  <br>
+  <label for="check_02" class="frm_check">
+    <span>라디오버튼2</span>
+    <input type="checkbox" name="checkName2" id="check_02">
+  </label>
+  <br/>
+  <br/>
+
+
+  <h3>검색</h3>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="input_02" class="frm_label">검색</label>
+    <div class="is_search">
+      <input type="text" id="input_02" class="frm_input" placeholder="검색어입력" >
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+  <br/>
+  <h3>주소 인풋</h3>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="input_03" class="frm_label">주소</label>
+    <div class="is_search">
+      <button type="button" id="" class="frm_input">서울시 중구 삼봉로 48</button>
+    </div>
+    <input type="text" id="input_03" class="frm_input" placeholder="상세주소입력" name="" value="라이나타워 1층">
+    <p class="notice err">상세주소를 입력해 주세요.</p>
+  </div>
+  <br/>
+  <br/>
+
+  <br/>
+  <h3>경고 문구</h3>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="input_04" class="frm_label">닉네임</label>
+    <input type="text" id="input_04" class="frm_input" placeholder="닉네임 입력" name="">
+    <p class="notice pass">사용가능한 닉네임입니다.</p> 
+  </div>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="input_05" class="frm_label">닉네임</label>
+    <input type="text" id="input_05" class="frm_input" placeholder="닉네임 입력" name="">
+    <p class="notice err">이미 사용중인 닉네임입니다.</p>
+  </div>
+  <br/>
+  <br/>
+
+  <br/>
+  <h3>라벨 o</h3>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="input_06" class="frm_label">닉네임</label>
+    <input type="text" id="input_06" class="frm_input" placeholder="닉네임 입력" name="">
+  </div>
+  <br/>
+  <br/>
+  
+  <h3>시간</h3>
+  <div class="frm_input_wrap">
+    <div class="is_timer">
+      <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
+      <span class="unit">2:23</span>
+    </div>
+  </div>
+  <br/>  
+  <br/>
+
+  <h3>글자카운터</h3>
+  <div class="frm_input_wrap">
+    <div class="is_txtcnt">
+      <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
+      <span class="unit">0/10</span>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+  <h3>글자카운터</h3>
+  <div class="frm_input_wrap">
+    <div class="is_txtcnt">
+      <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
+      <span class="unit"><em>2</em>/10</span>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+  <h3>버튼 있을때</h3>
+  <div class="frm_input_wrap ">
+    <div class="is_btn">
+      <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
+      <button type="button">재발송</button>
+    </div>
+  </div>
+  <br/>  
+  <div class="frm_input_wrap">    
+    <label for="input_07" class="frm_label">휴대번호 입력</label>
+    <div class="is_btn">
+      <input type="text" id="input_07" class="frm_input" placeholder="휴대번호 입력" name="">
+      <button type="button">재발송</button>
+    </div>
+  </div>
+  <br/>  
+  <br/>
+  
+  <h3>라벨 x</h3>
+  <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
+  
+  <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="" value="렐라">
+
+  <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="" value="렐라" disabled>
+
+  <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="" value="렐">
+
+  <br/>
+  <br/>
+  <h3>Textarea</h3>
+  <div class="frm_input_wrap">
+    <label for="" class="frm_label">문의내용</label>
+    <textarea type="text" id="" class="frm_textarea" placeholder="문의내용" name=""></textarea>
+  </div>
+  <br/>
+  <br/>
+  <h3>숫자 카운터</h3>
+  <div class="frm_input_wrap flex_box">
+    <label for="" class="frm_label">횟수</label>
+    <div class="frm_counter">
+      <button type="button" class="btn_minus"></button>
+      <input type="number" name="" id="" value="0">
+      <button type="button" class="btn_plus"></button>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+  <h3>Select Box</h3>
+  <select name="#" id="" class="frm_select">
+    <option value="">카테고리 선택</option>
+    <option value="">category 1</option>
+    <option value="">category 2</option>
+    <option value="">category 3</option>
+    <option value="">category 4</option>
+  </select>
+  <br/>
+  <br/>
+
+  <h3>Select Box - Disabled</h3>
+  <select name="#" id="" class="frm_select" disabled>
+    <option value="">카테고리 선택</option>
+    <option value="">category 1</option>
+    <option value="">category 2</option>
+    <option value="">category 3</option>
+    <option value="">category 4</option>
+  </select>
+  <br/>
+  <br/>
+  <br/>
+  
+  <h3>디바이더 Divider</h3>
+  <div class="divider"></div>
+  <br/>
+  <br/>
+  <br/>
+  
+  <h3>뱃지</h3>
+  <div class="badge badge_blue">진료</div>
+  <div class="badge badge_green">입원</div>
+  <div class="badge badge_yellow">수술</div>
+  <div class="badge badge_orange">항암 1차 치료</div>
+  <div class="badge badge_orangered">방사선 치료</div>
+  <div class="badge badge_purple">급성기 치료 종료일</div>
+  <div class="badge badge_gray">답변대기</div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>  
+  <h1>기타 공통</h1>
+  <br/>
+  <br/>
+  
+  <h3>기간 두칸</h3>
+  <br/>
+  <div class="frm_input_wrap">
+    <label for="" class="frm_label">기간</label>
+    <div class="flex_box">
+      <div class="is_datepicker">
+        <input type="text" id="date02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="2023.01.01">
+      </div>
+      <span class="period_division">~</span>
+      <div class="is_datepicker">
+        <input type="text" id="date03" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="2023.01.01">
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  
+  
+  <h3>Bottom Sheet</h3>  
+  <button type="button" class="btn_btm_sheet" data-btmsheet="btmSheet02">바텀시트열기버튼</button><!-- data-btmsheet="btmSheet02" -->
+  <div class="btm_sheet" id="btmSheet02"><!-- id="btmSheet02" -->
+    <div class="btm_sheet_back"></div>
+    <div class="inner">
+      <div class="btm_sheet_head">
+        <p class="tit">바텀시트 제목</p>
+        <button type="button" class="btm_sheet_close"></button>
+      </div>
+      <div class="btm_sheet_cont">
+        바텀시트 내용
+      </div>
+      <div class="btm_sheet_btns">
+        <button type="button" class="btm_sheet_close">확인</button>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <script>    
+  $(document).ready(function() {
+    $('.btn_btm_sheet').on('click', function() {
+      if($(this).data('btmsheet') !='btmSheetDate' && $(this).data('btmsheet') !='btmSheetTime'){
+        // 바텀시트 열고닫기
+        $("#"+ $(this).data('btmsheet')).addClass('show');
+      }else if($(this).data('btmsheet') =='btmSheetDate' || $(this).data('btmsheet') =='btmSheetTime'){
+        //해당 페이지 하단에 추가 (바텀시트 여러개여도 아래 소스 한번만)
+        // 날짜선택/시간선택 호출
+        getPicker($(this).data('btmsheet'), $(this).attr('id'));
+      }
+    });
+   /*  $('.btm_sheet_close').on('click', function() {
+     $(this).parents('.btm_sheet').removeClass('show')
+    }); */
+  });
+  </script>
+
+  
+  <h3>Bottom Sheet + DatePicker</h3>
+  <div class="frm_input_wrap">
+    <label for="" class="frm_label">날짜 선택</label>
+    <div class="is_datepicker">
+      <input type="text" id="date04" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="YYYY.MM.DD">
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+    //해당 페이지 하단에 추가 (바텀시트 여러개여도 아래 소스 한번만)
+    // 날짜선택/시간선택 호출
+    /* $('.btn_btm_sheet').on('click', function() {
+      getPicker($(this).data('btmsheet'), $(this).attr('id'));
+    }); */
+  })
+  </script>
+  <br/>
+  <br/>
+
+  <h3>Bottom Sheet + TimePicker</h3>
+  <div class="frm_input_wrap">
+    <label for="" class="frm_label">시간 선택</label>
+    <input type="text" id="time01" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="예약 시간 선택">
+  </div>
+  <div class="frm_input_wrap">
+    <label for="" class="frm_label">시간 선택</label>
+    <input type="text" id="time02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="예약 시간 선택">
+  </div>
+  <script>
+    $(document).ready(function() {
+    //해당 페이지 하단에 추가 (바텀시트 여러개여도 아래 소스 한번만)
+    // 날짜선택/시간선택 호출
+ /*    $('.btn_btm_sheet').on('click', function() {
+      getPicker($(this).data('btmsheet'), $(this).attr('id'));
+    }); */
+  })
+  </script>
+  <br/>
+  <br/>
+
+  <h3>접히는 폴더 박스<span class="add_desc">.box_container  .box_fold  .is_shadow  .bgcolor_bg 있음</span></h3>
+
+  <div class="box_container box_fold is_shadow bgcolor_bg">
+    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !</div>
+    <div class="box_fold_bottom">
+      <button type="button" class="box_fold_btn"></button>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  
+  <h3>토글버튼</h3>
+  <label class="frm_toggle" for="toggle01"><input type="checkbox" id="toggle01" checked><div class="toggle_slider round"></div></label>
+  <br/>
+  <br/>
+  <h3>토글버튼 - 글자 포함</h3>
+  <label class="frm_toggle is_text" for="toggle02">
+    <input type="checkbox" id="toggle02" checked>
+    <div class="toggle_slider round">
+      <div class="toggle_text"><span>yes</span><span>no</span></div>
+    </div>
+  </label>
+  <br/>
+  <br/>
+
+  <h3>데이터 없음</h3>
+  <div class="box_nodata">
+    <span class="box_nodata_icon">
+      <img src="../../resources/img/v3_ic_48_fill_common_empty.svg" alt>
+    </span>
+    <p>등록된 일정이 없습니다.</p>
+  </div><!-- //.box_nodata -->
+  <br/>
+  <br/>
+
+  <h3>리스트설명</h3>
+  <div class="list_desc">※ 최근 1년 내역<button type="button">일정추가</button></div>
+  <br/>
+  <br/>
+
+  <h3>플로팅 버튼</h3>
+  <button type="button" class="btn_floating kakao">
+    <span class="hidden">카카오톡 플친</span>
+  </button>
+  <br/>
+  <br/>
+  
+  <h3>작은 설명</h3>
+  <p class="add_desc">※ 고객님께서 설정한 치료 단계에 따라 맞춤 로드맵 영역에 자동 반영 됩니다</p>
+  <br/>
+  <br/>
+
+  <h3>스와이퍼 페이지네이션</h3>
+  <div class="swiper-container example_swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        slide1
+      </div>
+      <div class="swiper-slide">
+        slide2
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div> 
+  <script>
+    var swiper = new Swiper(".example_swiper", {      
+      slidesPerView: 1,
+      centeredSlides: true,
+      loop: true,
+      pagination: {        
+        el: ".example_swiper .swiper-pagination",
+      },
+    });
+  </script> 
+  <br/>
+  <br/> 
+
+  <h3>일정달력</h3>
+  
+  <div id='calendar'></div>
+<div class="calendar_desc">
+    <span class="check_none">미확인</span>
+    <span class="check_part">부분확인</span>
+    <span class="check_all">전체확인</span>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',     
+        height: 'auto',
+        editable:false,
+        selectable:true,
+        dateClick: function(info) {
+          $('.fc-daygrid-day').removeClass('fc_selected')
+          $(info.dayEl).addClass('fc_selected')
+          alert(info.dateStr);
+        },
+        customButtons: {
+          myCustomButton: {
+            text: '달력 접기',
+            click: function() {
+              calendar.changeView('dayGridWeek');
+            }
+          },
+        },
+        locale:'ko',
+        eventDisplay:'list-item',
+        fixedWeekCount: false,
+        /* buttonText:{
+          month:'달력 펼치기',
+          week: '달력 접기'
+        }, */
+        headerToolbar: {
+          start:'',
+          center: 'prev title next',
+          end:'myCustomButton'
+          //end:'dayGridMonth, dayGridWeek'
+        }, 
+        dayHeaderFormat: { 
+          weekday: 'short',
+        },
+        monthStartFormat :{
+          month: 'long', day: 'numeric'
+        },
+        views: {
+          dayGridMonth: {
+            titleFormat: { year: 'numeric',  month: "short"},
+          },
+          dayGridWeek: { 
+            titleFormat: { year: 'numeric', month: 'short'}
+          }
+        },
+        events:[
+          {
+            groupId:'미확인',
+            className: "check_none",
+            title: '미확인',
+            start: '2023-08-23'
+          },
+          {
+            groupId:'부분확인',
+            className: "check_part",
+            title: '부분확인',
+            start: ' 2023-09-01',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-09-02',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-08-24',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-08-30',
+},
+          {
+            groupId:'달성',
+            className: "check_clear",
+            title: '달성',
+            start: ' 2023-09-29',
+          }
+        ]
+      });
+      calendar.render();
+      
+      
+    });
+</script>
+</body>
+</html>

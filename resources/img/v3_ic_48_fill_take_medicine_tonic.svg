@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="wdwahcw13a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fef6e9"/>
+            <stop offset="1" stop-color="#fef7e9"/>
+        </linearGradient>
+        <linearGradient id="pxwiz5dqab" y1=".434" x2="1" y2=".429" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fde2b7"/>
+            <stop offset="1" stop-color="#ffd77c"/>
+        </linearGradient>
+        <linearGradient id="wtajh0d0ic" x1=".048" y1=".476" x2=".949" y2=".486" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#e3d9ca"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Object / v3_ic_48_fill_take_medicine_tonic">
+        <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+        <g data-name="Group 814428" transform="translate(8.457 6.316)">
+            <g data-name="Group 18903" transform="translate(-1.457 -2.317)">
+                <rect data-name="사각형 818" width="28.729" height="30.795" rx="6" transform="translate(0 5.205)" style="fill:url(#wdwahcw13a)"/>
+                <path data-name="사각형 819" transform="translate(0 11.45)" style="opacity:.7;fill:url(#pxwiz5dqab)" d="M0 0h28.729v15.498H0z"/>
+                <path data-name="패스 15248" d="M26.738 14.263c0-1.8-.907-3.263-2.027-3.263H6.978c-1.119 0-2.027 1.461-2.027 3.263v2.626c-.079-.043 21.771.09 21.787 0-.01-.143 0-2.353 0-2.626z" transform="translate(-1.558 -11)" style="fill:#ff962e;fill-rule:evenodd"/>
+            </g>
+            <rect data-name="사각형 820" width="9" height="20" rx="4.5" transform="rotate(45 -9.488 42.933)" style="fill:url(#wtajh0d0ic)"/>
+        </g>
+    </g>
+</svg>

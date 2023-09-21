@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>팀순위 - 챌린지 상세 순위 - 챌린지</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap footer_no type_goal type_chall_detail">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+            <h1>계단 오르기 챔피언</h1>
+         </div>
+         <!-- 230120 추가 -->
+         <div class="user_rank white" id="mytoggle">
+            <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+            <button type="button" id="user_rank_btn">White 660</button>
+         </div>
+         <!-- //230120 추가 -->
+         <div class="user"><button type="button">홍길동</button></div>
+         <!-- user class 가이드
+		      패키지 구매회원의 경우 : .package 추가
+		      신규 알림 있을 시 : .on 추가
+		    -->
+      </header>
+      <div class="health_container">
+         <div class="tab_wrap">
+            <div class="tabs">
+               <ul class="tab_menulist">
+                  <li><a class="tab_control" href="#tab-1">설명</a></li>
+                  <li class="active"><a class="tab_control" href="#tab-2">순위</a></li>
+                  <!-- <li><a class="tab_control" href="#tab-3">토론</a></li> -->
+               </ul>
+               <!-- 설명탭 -->
+               <div class="tab_panel" id="tab-1">
+
+               </div>
+               <!-- //설명탭 -->
+               <!-- 순위탭 -->
+               <div class="rank_tab tab_panel active" id="tab-2">
+                  <div class="goal_list_wrap">
+                     <ul class="rank_list_top team_rank">
+                        <!-- 팀순위리스트 : team_rank -->
+                        <!-- 20221024 팀순위리스트 점수추가로 태그수정 -->
+                        <li class="team_rank_01">
+                           <!-- 우리팀이 1위일때 -->
+                           <div class="ranking"><em>1</em>위</div>
+                           <div class="ico_rankTop">
+                              <figure><img src="../../resources/img/challenge/rank_top01.png" alt></figure>
+                              <p>A팀</p>
+                           </div>
+                           <div class="team_info">
+                              <p>4,790.1 METh</p>
+                              <div class="team_member"><span>27명</span></div>
+                           </div>
+                        </li>
+                        <li class="team_rank_02"><!-- 우리팀이 2위일때 -->
+                           <div class="ranking"><em>2</em>위</div>
+                           <div class="ico_rankTop">
+                              <figure><img src="../../resources/img/challenge/rank_top02.png" alt></figure>
+                              <p>B팀</p>
+                           </div>
+                           <div class="team_info">
+                              <p>4,790.1 METh</p>
+                              <div class="team_member"><span>24명</span></div>
+                           </div>
+                        </li>
+                        <li class="team_rank_03"><!-- 우리팀이 3위일때 -->
+                           <div class="ranking"><em>3</em>위</div>
+                           <div class="ico_rankTop">
+                              <figure><img src="../../resources/img/challenge/rank_top03.png" alt></figure>
+                              <p>C팀</p>
+                           </div>
+                           <div class="team_info">
+                              <p>4,790.1 METh</p>
+                              <div class="team_member"><span>227명</span></div>
+                           </div>
+                        </li>
+                        <li class="team_rank_04"><!-- 우리팀이 4위일때 -->
+                           <div class="ranking"><em>4</em>위</div>
+                           <div class="ico_rankTop">
+                              <figure><img src="../../resources/img/challenge/rank_top04.png" alt></figure>
+                              <p>D팀</p>
+                           </div>
+                           <div class="team_info">
+                              <p>4,790.1 METh</p>
+                              <div class="team_member"><span>24명</span></div>
+                           </div>
+                        </li>
+                        <li class="team_rank_05"><!-- 우리팀이 5위일때 -->
+                           <div class="ranking"><em>5</em>위</div>
+                           <div class="ico_rankTop">
+                              <figure><img src="../../resources/img/challenge/rank_top05.png" alt></figure>
+                              <p>E팀</p>
+                           </div>
+                           <div class="team_info">
+                              <p>4,790.1 METh</p>
+                              <div class="team_member"><span>227명</span></div>
+                           </div>
+                        </li>
+                        <!-- //20221024 팀순위리스트 점수추가로 태그수정 -->
+                     </ul>
+                  </div>
+                  <div class="my_rank_area">
+                     <p>나의 A 팀 기여도: <span><em>12</em> / 182명</span></p>
+                  </div>
+               </div>
+               <!-- //순위탭 -->
+               <!-- 토론탭 -->
+               <!-- <div class="tab_panel" id="tab-3"></div> -->
+               <!-- //토론탭 -->
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

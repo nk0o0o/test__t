@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진단/상담 설문</title>
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="health_wrap type_goal type_survey type_diagnosis">
+        <header class="health_header">
+            <div class="inbtn">
+                <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+                <h1>진단/상담 설문</h1>
+            </div>
+            <div class="user"><button type="button">홍길동</button></div>
+            <!-- user class 가이드
+        패키지 구매회원의 경우 : .package 추가
+        신규 알림 있을 시 : .on 추가
+      -->
+        </header>
+        <div class="health_container pt0 pb0">
+            <h2 class="survey_tit"><a href="#">{진단/상담명}</a></h2>
+            <div class="survey_cont">
+                <div class="swiper-container survey_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="survey_wrap">
+                                    <div class="content_tit">
+                                        <h3 class="tit_cont_02">당신은 최근 2주간 어느&nbsp;정도의 불면&nbsp;증상을 경험하고 있나요?</h3>
+                                    </div>
+                                    <div class="radio_box col-2">
+                                        <div class="item">
+                                            <input type="radio" id="rdo_01" class="radioItem" name="answer1">
+                                            <label for="rdo_01">잠들기 어렵다</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_02" class="radioItem" name="answer1">
+                                            <label for="rdo_02">잠을&nbsp;유지하기 어렵다</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_03" class="radioItem" name="answer1">
+                                            <label for="rdo_03">쉽게 깬다</label>
+                                        </div>
+                                    </div>
+                                    <!-- 2level 옵션 영역 -->
+                                    <div class="radio_box col-2 radio_box_detail">
+                                        <div class="item">
+                                            <input type="radio" id="rdo_04" class="radioItem" name="answer1-1" disabled>
+                                            <label for="rdo_04">0 전혀 없음</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_05" class="radioItem" name="answer1-1" disabled>
+                                            <label for="rdo_05">1 약간 있음</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_06" class="radioItem" name="answer1-1" disabled>
+                                            <label for="rdo_06">2 중간 수준</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_07" class="radioItem" name="answer1-1" disabled>
+                                            <label for="rdo_07">3 심각함</label>
+                                        </div>
+                                        <div class="item">
+                                            <input type="radio" id="rdo_08" class="radioItem" name="answer1-1" disabled>
+                                            <label for="rdo_08">4 매우 심각</label>
+                                        </div>
+                                    </div>
+                                    <!-- //2level 옵션 영역 -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="survey_wrap">
+                                <div class="content_tit">
+                                    <h3 class="tit_cont_02">당신의 현재 수명&nbsp;양상에 관하여 얼마나 만족하고 있나요?</h3>
+                                </div>
+                                <div class="radio_box col-2">
+                                    <div class="item">
+                                        <input type="radio" id="rdo_09" class="radioItem" name="answer2">
+                                        <label for="rdo_09">0 매우만족</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_10" class="radioItem" name="answer2">
+                                        <label for="rdo_10">1 만족</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_11" class="radioItem" name="answer2">
+                                        <label for="rdo_11">2 약간 만족</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_12" class="radioItem" name="answer2">
+                                        <label for="rdo_12">3 불만족</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_13" class="radioItem" name="answer2">
+                                        <label for="rdo_13">4 매우 불만족</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="survey_wrap">
+                                <div class="content_tit">
+                                    <h3 class="tit_cont_02">수면 문제로 인해 당신의 삶의&nbsp;질이 손상되고 있는 것을 주변&nbsp;다른&nbsp;사람들도 뚜렷하게 인식하고 있나요? </h3>
+                                </div>
+                                <div class="radio_box col-2">
+                                    <div class="item">
+                                        <input type="radio" id="rdo_14" class="radioItem" name="answer3">
+                                        <label for="rdo_14">0 전혀 모름</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_15" class="radioItem" name="answer3">
+                                        <label for="rdo_15">1 조금 알고 있음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_16" class="radioItem" name="answer3">
+                                        <label for="rdo_16">2 다소 알고 있음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_17" class="radioItem" name="answer3">
+                                        <label for="rdo_17">3 많이 알고 있음</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_18" class="radioItem" name="answer3">
+                                        <label for="rdo_18">4 매우 많이 알고 있음</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="survey_wrap">
+                                <div class="content_tit">
+                                    <h3 class="tit_cont_02">당신의 현재 수면&nbsp;양상에 관하여 얼마나 만족하고 있나요?</h3>
+                                </div>
+                                <div class="radio_box col-2">
+                                    <div class="item">
+                                        <input type="radio" id="rdo_19" class="radioItem" name="answer4">
+                                        <label for="rdo_19">0 전혀 걱정 안함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_20" class="radioItem" name="answer4">
+                                        <label for="rdo_20">1 조금 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_21" class="radioItem" name="answer4">
+                                        <label for="rdo_21">2 다소 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_22" class="radioItem" name="answer4">
+                                        <label for="rdo_22">3 많이 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_23" class="radioItem" name="answer4">
+                                        <label for="rdo_23">4 매우 많이 걱정함</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="survey_wrap">
+                                <div class="content_tit">
+                                    <h3 class="tit_cont_02">당신은 수면&nbsp;문제로 인해 일상적 기능에서 어느&nbsp;정도 방해 받고 있다고 생각하나요?</h3>
+                                        <p class="content_desc">(예: 낮에 피곤함, 직장이나 가사에 일하는 능력, 집중력, 기억력, 기분 등)</p>
+                                </div>
+                                <div class="radio_box col-2">
+                                    <div class="item">
+                                        <input type="radio" id="rdo_24" class="radioItem" name="answer5">
+                                        <label for="rdo_24">0 전혀 걱정 안함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_25" class="radioItem" name="answer5">
+                                        <label for="rdo_25">1 조금 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_26" class="radioItem" name="answer5">
+                                        <label for="rdo_26">2 다소 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_27" class="radioItem" name="answer5">
+                                        <label for="rdo_27">3 많이 걱정함</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_28" class="radioItem" name="answer5">
+                                        <label for="rdo_28">4 매우 많이 걱정함</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_btm_fixed">
+            <button type="button" onclick="netiveUI.plugins.popAlert('#alertConfirm');" class="btn" disabled>설문 저장하고 진단/상담 예약하기</button>
+        </div>
+
+        <!-- 진단/상담 완료 컨펌 팝업 -->
+        <div id="alertConfirm" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">'{진단/상담}'의 상담예약을 완료하시겠습니까?</h1>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_light ui-close">취소</button>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alertComplete');" class="btn_pop_dark ui-close">상담예약 완료</button>
+                </div>
+            </div>
+        </div>
+        <!-- //진단/상담 완료 컨펌 팝업 -->
+
+        <!-- 예약완료 팝업 -->
+        <div id="alertComplete" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">예약을 완료 했습니다.</h1>
+                <p class="msg">
+                    부득이한 사정으로 예약을 취소하시려<br>
+                    면 진단/상담 예약일 하루 전 오후 6시<br>
+                    까지 취소가 가능합니다.
+                </p>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_dark ui-close">확인</button>
+                </div>
+            </div>
+        </div>
+        <!-- //예약완료 팝업 -->
+    </div>
+    <script>
+       $(document).ready(function(){
+            var swiper = new Swiper(".survey_slider", {
+                direction: "vertical",
+                slidesPerView: 1,
+                spaceBetween: 0,            
+                freeMode: true,
+                freeModeSticky: false,
+                mousewheel: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: 'fraction',
+                    clickable: true,
+                },
+            });     
+
+            //2level 옵션 영역
+            $(".radio_box").on("click", function(){               
+                if(!!$(this).parent().find(".radio_box_detail")){
+                    var $inputName = $(this).find("input[type='radio']").attr('name');                             
+                    $(this).parent('.survey_wrap').find('.radio_box_detail input[name=' + $inputName + '-1]').removeAttr("disabled");
+                }
+            });
+
+            //질문 당 하나 이상 답 클릭시 하단 고정 버튼 활성화
+            $(".radio_box").on("click", function(){
+                var $questionNum = $('.radio_box').length;               
+                if($(".radioItem:checked").length == $questionNum){     
+                    $('.btn_btm_fixed button').removeAttr("disabled");              
+                }
+            });
+            //스크롤 
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`); 
+            window.addEventListener('resize, touchend', () => {
+                let vh = window.innerHeight * 0.01; 
+                document.documentElement.style.setProperty('--vh', `${vh}px`); 
+            }); 
+            window.addEventListener('touchend', () => {
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`); 
+            });
+            
+        })       
+    </script>
+</body>
+
+</html>

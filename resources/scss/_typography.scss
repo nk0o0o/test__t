@@ -1,0 +1,180 @@
+//typo //20230809 추가
+//EB - ExtraBold - 800
+//B - Bold - 700
+//SB - SemiBold - 600
+//M - medium - 500
+//R - Regular -400
+@mixin typo($font-size, $font-weight, $line-height, $letter-spacing: -0.0375rem, $font-family: "Suit tuneh") {
+    letter-spacing : $letter-spacing;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+// TYPO - HEADING
+//h1
+@mixin typo_h1_EB(){
+    @include typo(1.875rem, 800, 1.47);
+}
+@mixin typo_h1_B(){
+    @include typo(1.875rem, 700, 1.47);
+}
+//h2
+@mixin typo_h2_EB(){
+    @include typo(1.5rem, 800, 1.33);
+}
+@mixin typo_h2_B(){
+    @include typo(1.5rem, 700, 1.33);
+}
+@mixin typo_h2_SB(){
+    @include typo(1.5rem, 600, 1.33);
+}
+//h3
+@mixin typo_h3_EB(){
+    @include typo(1.375rem, 800, 1.36);
+}
+@mixin typo_h3_B(){
+    @include typo(1.375rem, 700, 1.36);
+}
+//h4
+@mixin typo_h4_EB(){
+    @include typo(1.1875rem, 800, 1.37);
+}
+@mixin typo_h4_B(){
+    @include typo(1.1875rem, 700, 1.37);
+}
+//h5
+@mixin typo_h5_EB(){
+    @include typo(1.0625rem, 800, 1.56);
+}
+@mixin typo_h5_B(){
+    @include typo(1.0625rem, 700, 1.56);
+}
+@mixin typo_h5_M(){
+    @include typo(1.0625rem, 500, 1.56);
+}
+//h6
+@mixin typo_h6_B(){
+    @include typo(1rem, 700, 1.5);
+}
+@mixin typo_h6_SB(){
+    @include typo(1rem, 600, 1.5);
+}
+@mixin typo_h6_M(){
+    @include typo(1rem, 500, 1.5);
+}
+//h7
+@mixin typo_h7_B(){
+    @include typo(0.875rem, 700, 1.57);
+}
+@mixin typo_h7_SB(){
+    @include typo(0.875rem, 600, 1.57);
+}
+@mixin typo_h7_M(){
+    @include typo(0.875rem, 500, 1.57);
+}
+
+// TYPO - BODY
+@mixin typo_B(){
+    @include typo(1rem, 700, 1.5, -0.046875rem);
+}
+@mixin typo_SB(){
+    @include typo(1rem, 600, 1.5, -0.046875rem);
+}
+@mixin typo_M(){
+    @include typo(1rem, 500, 1.5, -0.046875rem);
+}
+@mixin typo_R(){
+    @include typo(1rem, 400, 1.5, -0.046875rem);
+}
+@mixin typo_small_B(){
+    @include typo(0.875rem, 700, 1.57, -0.046875rem);
+}
+@mixin typo_small_SB(){
+    @include typo(0.875rem, 600, 1.57, -0.046875rem);
+}
+@mixin typo_small_M(){
+    @include typo(0.875rem, 500, 1.57, -0.046875rem);
+}
+@mixin typo_small_R(){
+    @include typo(0.875rem, 400, 1.57, -0.046875rem);
+}
+// TYPO - BUTTON
+@mixin typo_btn_L_B(){
+    @include typo(1rem, 700, 1.5, -0.05375rem);
+}
+@mixin typo_btn_M(){
+    @include typo(0.875rem, 500, 1.57, -0.046875rem);
+}
+@mixin typo_btn_B(){
+    @include typo(0.875rem, 700, 1.57, -0.046875rem);
+}
+@mixin typo_btn_S_M(){
+    @include typo(0.8125rem, 500, 1.54, -0.046875rem);
+}
+
+// TYPO - CAPTION
+@mixin typo_caption_SB(){
+    @include typo(0.8125rem, 600, 1.54, -0.046875rem);
+}
+@mixin typo_caption_M(){
+    @include typo(0.8125rem, 500, 1.54, -0.046875rem);
+}
+@mixin typo_caption_R(){
+    @include typo(0.8125rem, 400, 1.54, -0.046875rem);
+}
+
+// TYPO - LIST DATA
+@mixin typo_listData(){
+    @include typo(0.8125rem, normal, 1.38, normal, "Roboto");
+}
+@mixin typo_list_sub(){
+    @include typo(1rem, 500, normal, -0.046875rem);
+}
+
+// TYPO - TEXT FEILD
+@mixin typo_textfeild_title(){
+    @include typo(1rem, 500, 1.5);
+}
+@mixin typo_textfeild_focus(){
+    @include typo(1rem, 500, 1.5);
+}
+@mixin typo_textfeild_disabled(){
+    @include typo(1rem, 500, 1.5);
+}
+@mixin typo_textfeild_enabled(){
+    @include typo(1rem, normal, 1.5);
+}
+@mixin typo_textfeild_success(){
+    @include typo(0.875rem, normal, 1.57, -0.0375rem);
+}
+@mixin typo_textfeild_hint(){
+    @include typo(0.875rem, normal, 1.57, normal, "Roboto");
+}
+
+// TYPO - TAB
+@mixin typo_tab_1(){
+    @include typo(1rem, 500, 1.25, normal);
+}
+@mixin typo_tab_1_active(){
+    @include typo(1rem, 600, 1.25, -0.05375rem);
+}
+@mixin typo_tab_2(){
+    @include typo(1rem, 500, 1.25, normal);
+}
+@mixin typo_tab_2_active(){
+    @include typo(1rem, 600, 1.25, normal);
+}
+
+// TYPO - TABLE
+@mixin typo_table_th(){
+    @include typo(0.9375rem, normal, 1.6, -0.046875rem);
+}
+@mixin typo_table_td(){
+    @include typo(0.9375rem, normal, 1.6, -0.046875rem);
+}
+
+//TYPO - alert Pop msg
+@mixin typo_alert_msg(){
+    @include typo(0.875rem, 400, 1.57, normal);
+}

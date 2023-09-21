@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>메인 - HRA완료후 </title>
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+   <script src="../../resources/js/jquery-circle-progress.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+
+<body>
+   <div class="health_wrap type_main_i">
+      <header class="health_header">
+         <h1>웰니스 다이어리</h1>
+         <div class="user_rank red">
+            <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+            <button type="button">Red 3,567</button>
+         </div>    
+         <!-- 230120 추가 -->
+         <div class="user" id="mytoggle2" onclick="fnNavClick();">
+            <button type="button" id="user_my_button">MY</button>
+         </div> 
+         <!-- 230120 추가 -->
+      </header>
+      <div class="health_container align_right">
+         <!-- 상단 웰니스 지수 영역 -->
+         <div class="con">
+            <h2 class="tit_wellness">
+               <span class="txt_gradient">웰니스 지수 456점</span>
+               <button type="button" onclick="netiveUI.plugins.popAlert('#popWellness');"><span class="blind">웰니스지수란?</span></button>
+            </h2>
+            <div class="circle_dash_wrap larger">
+               <ul class="circle_outer">
+                  <!-- 지수 항목별 id : nutrition, sleep, competence, competence, heart, mental, body, activity -->
+                  <li id="nutrition" class="circle_cont active">
+                     <span class="blind">20%</span>
+                  </li>
+                  <li id="sleep" class="circle_cont">
+                     <span class="blind">70%</span>
+                  </li>
+                  <li id="competence" class="circle_cont">
+                     <span class="blind">100%</span>
+                  </li>
+                  <li id="heart" class="circle_cont">
+                     <span class="blind">80%</span>
+                  </li>
+                  <li id="mental" class="circle_cont">
+                     <span class="blind">40%</span>
+                  </li>
+                  <li id="body" class="circle_cont">
+                     <span class="blind">60%</span>
+                  </li>
+                  <li id="activity" class="circle_cont">
+                     <span class="blind">50%</span>
+                  </li>
+                  <li id="bmi" class="circle_cont"></li>
+                  <li id="bio" class="circle_cont"></li>
+                  <!-- 가운데 원 -->
+                  <div class="circle_center">
+                     <div class="inner">
+                        <button type="button" class="btn_info bmi" onclick="netiveUI.plugins.popAlert('#popBMI');"><span class="blind">bmi란?</span></button>
+                        <button type="button" class="btn_info bio" onclick="netiveUI.plugins.popAlert('#popBIO');"><span class="blind">생체측정이란?</span></button>
+                        <a href="#" class="txt_box">
+                           <span class="tit">영양</span>
+                           <span class="desc">개선 필요</span>
+                        </a>
+                        <div class="percent_bg">80%</div>
+                     </div>
+                  </div>
+               </ul>
+            </div>
+            <!-- 추적 대시보드 -->
+            <!-- 20221221 인덱스 3개로 수정 -->
+            <div class="my_state pt20 pb20">
+               <h2 class="tit">내 활동정보
+                  <button type="button" onclick="netiveUI.plugins.popAlert('#popMystate');"><span class="blind">내 활동정보란?</span></button>
+               </h2>
+               <ul>
+                  <li class="item state_walk">
+                     <strong class="value">7487</strong>
+                     <p>걸음 수</p>
+                  </li>
+                  <li class="item state_distance">
+                     <strong class="value">5.5 km</strong>
+                     <p>거리</p>
+                  </li>
+                  <li class="item state_calorie">
+                     <strong class="value">264kcal</strong>
+                     <p>에너지</p>
+                  </li>
+               </ul>
+               <div class="info_linkApp before_link">
+                  <!-- <p class="info_sync txt_center pt10 pb10">최근 동기화: 10-31 14:15 <strong>Fitbit</strong></p> -->
+			         <button type="button" class="btn_form_line">앱연결</button>
+               </div>
+            </div>
+            <!-- // 20221221 인덱스 3개로 수정 -->
+            <!-- // 추적 대시보드 -->
+            <div class="pt30 pb30"><!--  20221215 화살표위아래 패딩 pt30 pb30 수정 -->
+               <button class="btn_cut"><span class="blind">웰니스지수 작게보기 버튼</span></button>
+            </div>
+         </div>
+         <!-- // 상단 웰니스 지수 영역 -->
+         
+         <!-- 챌린지 배너 영역 -->
+         <div class="con bg_gray_wrap pt30 pb30">
+            <!-- 챌린지 배너 -->
+            <div class="challenge_bnr ing"> <!-- 진행중일때 class:ing -->
+               <h2 class="challenge_bnr_tit">챌린지<span>참여중</span></h2><!-- 20221206 텍스트 수정 -->
+               <div class="challenge_bnr_cont">
+                  <p class="desc">현재 참여 중인 챌린지를 꾸준하게 진행 해보세요.</p>
+                  <div class="icon_area">
+                     <div class="icon step"></div>
+                     <p>걷기 챔피언</p>
+                  </div>
+               </div>
+               <div class="challenge_bnr_btn">
+                  <button type="button" class="btn_base_02">챌린지 바로가기</button>
+               </div>
+            </div>
+            <!-- // 챌린지 배너 -->
+            <!-- 20221206 챌린지 미진행일때 배너추가 -->
+            <!-- 챌린지 미진행 --><!-- 미진행일때 class:not_ing -->
+             <!-- <div class="challenge_bnr not_ing">
+               <p class="challenge_bnr_tit">챌린지</p>
+               <div class="challenge_bnr_cont">
+                   <p class="desc">진행중인 챌린지가 없습니다.<br>챌린지에 참여해보세요.</p>
+                   <div class="icon_area"></div>
+               </div>
+               <div class="challenge_bnr_btn">
+                   <button type="button" class="btn_base_02">챌린지 바로가기</button>
+               </div>
+           </div> -->
+           <!-- //챌린지 미진행 -->
+         </div>
+         <!-- // 챌린지 배너 영역 -->
+
+         <!-- 개인화 영역 예시 1 -->
+         <div class="whi_box">
+            <div class="box_inner p32">
+                <!-- 20210902 tuneH 텍스트 수정 -->
+                <p class="whi_tit">지난 주 컨디션에<br>
+                    필요한 목표를 Tune H가<br>
+                    찾아 봤어요!
+                </p>
+                <div class="new_goal_wrap">
+                    <ul>
+                      <li class="new_goal_item">
+                        <span class="new_tit"><em class="category">영양</em>탄산음료 줄이기<em class="coin">800</em></span>
+                        <a href="#" class="add_btn"><div class="add_h">&nbsp;</div><div class="add_v">&nbsp;</div></a> <!--20210713 마크업 변경-->
+                      </li>
+                      <li class="new_goal_item ">
+                        <span class="new_tit c1"><em class="category">영양</em>탄산음료 줄이기<em class="coin">800</em></span>
+                        <a href="#" class="add_btn"><div class="add_h">&nbsp;</div><div class="add_v">&nbsp;</div></a> <!--20210713 마크업 변경-->
+                      </li>
+                    </ul>
+                </div>
+                <div class="btn_wrap ref mt30">
+                    <button type="button" class="btn_refresh"></button>
+                    <span>1/3</span>
+                </div>
+            </div>
+         </div>
+         <!--// 개인화 영역 예시 1 -->
+         <!-- 개인화 영역 예시 2 -->
+         <!-- <div class="con pt50">
+            <div class="pop_service_cont">
+               <div class="img_wrap">
+                  <img src="../../resources/img/img_starcoach_09.png" alt="">
+                  <p class="img_figure">퍼스널 코칭</p>
+               </div>
+               <div class="pop_service_txt">
+                  <p>test1324121님, 오늘 어떠했나요? 튀긴 음식을 안 드실 수 있었나요?</p>
+               </div>
+               <div class="pop_service_small">
+                  <p>예) 치킨 너겟, 피쉬 핑거, 감자 튀김</p>
+               </div>
+               <div class="pop_service_btn">
+                  <button type="button" class="btn_base_03 service_btn_w">답하기</button>
+               </div>
+            </div>
+         </div> -->
+         <!--// 개인화 영역 예시 2 -->
+         <!-- 개인화 영역 예시 3 -->
+        <!--  <div class="whi_box whi_load v2">
+            <div class="box_inner">
+                <p class="whi_tit mt80">훌륭해요!</p>
+            </div>
+            <div class="motion_wrap02">
+                <div class="motion_inner">
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="circle circle-3"></div>
+                    <div class="circle circle-4"></div>
+                    <div class="circle circle-5"></div>
+                    <div class="circle circle-6"></div>
+                    <div class="circle circle-7"></div>
+                </div>
+            </div>
+        </div> -->
+         <!--// 개인화 영역 예시 3 -->
+         <!-- 개인화 영역 예시 4 -->
+        <!--  <div class="whi_box whi_load v1">
+            <div class="box_inner">
+               <p class="whi_tit">답변 보내는 중 …</p>
+               <div class="motion_wrap" style="left: 550px; bottom: 500px; transition: all 3.5s cubic-bezier(0.59, -0.11, 0.43, 0.61) 0s;">
+                  <img src="../../resources/img/@dummy_bg02.png" class="motion_img" alt="비행기 이미지">
+               </div>
+            </div>
+         </div> -->
+         <!--// 개인화 영역 예시 4 -->
+                  
+         <!-- 콘텐츠/운동 추천 -->
+         <div class="con con_pr0 mt50">
+            <h2 class="tit_cont_02">Ground 님을 위한 코어운동 추천</h2>
+            <div class="item_wrap align_right_wrap">
+               <div
+                  class="swiper-container content_slider content01 swiper-container-initialized swiper-container-horizontal swiper-container-ios">
+                  <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                     <div class="swiper-slide swiper-slide-active" style="margin-right: 11px;">
+                        <div class="content_card">
+                           <a href="#" class="img_wrap">
+                              <img src="../../resources/img/@dummy.jpg" alt="">
+                           </a>
+                           <!-- <a href="javascript:void(0);" role="button" class="btn_ico_bookmark_b"></a> -->
+                        </div>
+                        <div class="txt_wrap">
+                           <span class="tit">긴장될 때 풀어주는 목 어깨 스트레칭</span>
+                           <span class="sub"><em>6분</em><em>약</em><em>오디오</em></span>
+                        </div>
+                     </div>
+                     <div class="swiper-slide swiper-slide-next" style="margin-right: 11px;">
+                        <div class="content_card">
+                           <a href="#" class="img_wrap">
+                              <img src="../../resources/img/@dummy.jpg" alt="">
+                           </a>                           
+                        </div>
+                        <div class="txt_wrap">
+                           <span class="tit">전신 서킷 트레이닝</span>
+                           <span class="sub"><em>6분</em><em>약</em><em>오디오</em></span>
+                        </div>
+                     </div>
+                     <div class="swiper-slide" style="margin-right: 11px;">
+                        <div class="content_card">
+                           <a href="#" class="img_wrap">
+                              <img src="../../resources/img/@dummy.jpg" alt="">
+                           </a>
+                        </div>
+                        <div class="txt_wrap">
+                           <span class="tit">전신 서킷 트레이닝</span>
+                           <span class="sub"><em>6분</em><em>약</em><em>오디오</em></span>
+                        </div>
+                     </div>
+                  </div>
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+               </div>
+            </div>
+         </div>
+         <!-- //콘텐츠/운동 추천 -->
+         
+         <!-- 패키지 추천 -->
+         <div class="con mt50 pb50">
+            <h2 class="tit_cont_02">Ground 님의 영양을 위한 패키지 추천</h2>
+            <p class="tit_sub_03 mt40">스코어 분석 기준 추천</p>
+            <div class="banner_a a3 mt10">
+               <a href="#">
+                  <p>바디핏<span class="sub">Premium</span></p>
+               </a>
+            </div>
+         </div>
+         <!-- //패키지 추천 -->
+
+         <!-- 슬라이드 배너 (큰/작은) -->
+         <!-- <div class="con mt50 pb50">            
+            <div class="swiper-container big_slider big_bnr">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide new_card">
+                     <a href="#">
+                        <img src="../../resources/img/@dummy_banner.png" alt="피지컬 피트니스 라이브 홈 퍼스널 트레이닝 1:10" />
+                     </a>
+                  </div>
+                  <div class="swiper-slide new_card">
+                     <a href="#">
+                        <img src="../../resources/img/@dummy_banner.png" alt="안다르 기획전 여름 운동이 쾌적해지는 방법은?" />
+                     </a>
+                  </div>
+               </div>
+            </div>            
+            <div class="swiper-container small_slider">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide new_card">
+                     <a href="#">
+                        <img src="../../resources/img/@dummy_banner02.png" alt="피지컬 피트니스 라이브 홈 퍼스널 트레이닝 1:10" />
+                     </a>
+                  </div>
+                  <div class="swiper-slide new_card">
+                     <a href="#">
+                        <img src="../../resources/img/@dummy_banner02.png" alt="안다르 기획전 여름 운동이 쾌적해지는 방법은?" />
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div> -->
+         <!-- //슬라이드 배너 (큰/작은) -->
+
+         <!-- 서비스 살펴보기 영역 -->
+         <div class="con pt30 pb30 txt_center">  <!-- 20230103 pt30 pb30 클래스 수정 -->
+            <a href="#" class="service_link">주요 서비스 살펴보기
+               <span><img src="../../resources/img/arr_right_w.png" alt></span> <!-- 20230104 아이콘 수정 -->
+            </a>
+         </div>
+         <!-- 서비스 살펴보기 영역 -->
+         
+         <!-- 하단 이용약관 -->
+         <div class="main_footer acco_list_wrap">
+            <div class="item_head">
+               <span>이용약관</span>
+               <span class="footer_tit">개인정보처리방침</span>
+               <span class="footer_tit">이전 개인정보처리방침</span>
+               <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+            </div>
+            <div class="item_cont" style="display: none;">
+               <div>
+                  <p>
+                     <span>시그나 코리아</span>
+                     <span class="cigna_president">대표이사 : 김양호</span>
+                  </p>
+                  <p class="address">서울 종로구 삼봉로 48 시그나타워 16층</p>
+                  <p><span>사업자등록번호 : </span>396-86-00109</p>
+                  <p><span>통신판매업신고 </span>2020-서울종로-2242</p>
+                  <p><a class="arrow_link"
+                        href="https://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2020300020230202246&pageUnit=10&searchCnd=wrkr_no&searchKrwd=3968600109&pageIndex=1"
+                        target="_blank">사업자정보확인</a></p>
+               </div>
+               <div class="footer_call_center">
+                  <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+                  <p><span>이메일 : </span><a class="arrow_link" href="../FMY/FMY-008.html">문의하기</a></p>
+                  <p>Tune H에서 운영되는 APP 내 판매되는 모든 상품은 시그나 코리아에서 책임지고 있습니다.</p>
+                  <p class="copy">ⓒ Cigna Korea All Rights Reserved.</p>
+               </div>
+            </div>
+         </div>         
+         <!-- //하단 이용약관 -->
+      </div>
+      <footer class="health_footer">
+         <!-- 토스트 팝업  -->
+         <!-- <div class="bottom_pop">
+                <div class="pop_inner">
+                    <p>목표를 추가했습니다.</p>
+                </div>
+            </div> -->
+         <!-- //토스트 팝업  -->
+         <div class="scroll_nav_item">
+            <a href="javascript:void(0)" class="btn_top"><span class="hidden">상단 위로 이동</span></a>
+            <a href="javascript:void(0)" class="nav_item"><span class="hidden">패키지</span></a>
+         </div>
+         <div class="health_footer_nav">
+            <!-- 20221121 푸터 내비수정 -->
+            <ul>
+               <li>
+                  <a href="#" class="nav_item home on"> <!--'on' class 추가시 해당 메뉴 활성화-->
+                     <span class="icon"></span>
+                     <strong>홈</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item goal">
+                     <span class="icon"></span>
+                     <strong>목표</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item contents">
+                     <span class="icon"></span>
+                     <strong>콘텐츠</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item package">
+                     <span class="icon"></span>
+                     <strong>패키지</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item coach">
+                     <span class="icon"></span>
+                     <strong>코치</strong>
+                  </a>
+               </li> 
+            </ul>
+            <!-- 말풍선 -->
+            <div class="footer_bubbleBox">
+               <span>나와 맞는 코치를 선택해보세요!</span>
+            </div>
+            <!-- //말풍선 -->
+         </div>
+      </footer>
+   </div>
+
+   <!-- 설명 팝업 -->
+   <!-- 웰니스 지수란? 설명 팝업 -->
+   <div class="health_alert" id="popWellness" style="display: none;">
+      <div class="inner">
+         <p class="msg">
+            웰니스 지수는 현재 회원님의 건강 
+            상태를 나타냅니다.<br>
+            회원님의 건강관련 정보가 모이면 모일수록 더욱 더 정교한 건강 스코어 및 
+            다양한 정보 제공이 가능합니다.<br>
+            신체 건강 및 정신 건강은 5가지 라이프 스타일 영역에서 선택된 항목에 영향을 받습니다.
+         </p>
+         <div class="btn_wrap">
+            <button type="button" class="btn_pop_dark ui-close">확인</button>
+         </div>
+      </div>
+   </div>
+   <!-- 생체측정이란? 설명 팝업 -->
+   <div class="health_alert" id="popBIO" style="display: none;">
+      <div class="inner">
+        <p class="msg">
+         생체측정 이란?<br>
+         안면인식,지문인식 기능으로 나의 건강상태를 확인 할 수 있습니다.
+        </p>
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_dark ui-close">확인</button>
+        </div>
+      </div>
+    </div>
+   <!-- BMI이란? 설명 팝업 -->
+   <div class="health_alert" id="popBMI" style="display: none;">
+      <div class="inner">
+        <p class="msg">
+         BMI 체질량지수란?<br>
+         체질량지수(body mass index, BMI)는 자신의 몸무게(kg)를 키의 제곱(㎡)으로 나눈 값입니다.<br>
+         체질량 지수는 근육과 지방의 무게를 구별하지 못하여 건강을 측정하는 절대 지표는 아니지만, 
+         실제 지방량을 정확히 측정하기는 어렵습니다. 
+         체질량 지수는 체지방량과 상관관계가 높기 떄문에 간접적으로 비만 정도를 평가하는 방법으로 가장 널리 사용됩니다.
+        </p>
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_dark ui-close">확인</button>
+        </div>
+      </div>
+    </div>
+   <!-- 내 활동정보란? 설명 팝업 -->
+   <div class="health_alert" id="popMystate" style="display: none;">
+      <div class="inner">
+        <p class="msg">
+         내 활동정보란?<br>
+         내 활동 정보를 보기 위해서는 앱연결 작업이 필요합니다.
+         Fitbit 또는 Google Fit 앱을 연결해 주세요.<br>
+         앱 연결 후에는 Fitbit은 1시간마다, Google Fit은 4시간마다 동기화 진행됩니다. 
+        </p>
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_dark ui-close">확인</button>
+        </div>
+      </div>
+    </div>
+   <!-- // 설명 팝업 -->
+   <script>
+      //슬라이드
+      var swiper = new Swiper(".content01, .content02, .flag_slider", {
+         slidesPerView: "auto",
+         spaceBetween: 11
+      });
+      var swiper2 = new Swiper(".big_slider", {
+         slidePerView: 1,
+         spaceBetween: 0,
+         loop: true,
+      });
+      var swiper3 = new Swiper(".small_slider", {
+         slidePerView: 1,
+         spaceBetween: 0,
+         loop: true,
+         autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+         }
+      });
+
+      $(function () {
+         var $total = 100;//총점
+         //작은 원 색상
+         var chartColors = {
+            nutrition: '#0095FF',
+            sleep: '#7648e6',
+            competence: '#b15ac5',
+            heart: '#ff47a9',
+            mental: '#5d99c4',
+            body: '#00aea1',
+            activity: '#19d3c5',
+         };
+         //숫자만 추출함수
+         var onlyNumber = function (num) {
+            return num.toString().replace(/[^0-9]/g, '');
+         };
+         //가운데 원 배경 채우기
+         var fillBg = function (percent, total){           
+            var $perNum = percent;
+            var $total = total;
+            var $el = $('.circle_center').find('.percent_bg');
+            $el.css('bottom', '0')
+            if(Math.sign($perNum) == -1){
+               $perNum = 0;
+            };
+            var $now = parseInt(onlyNumber($perNum), 10);         
+            if($now > $total){
+               $now = $total;
+            } else if($now <= 0){
+               $el.css('bottom', '0')
+            };
+            var $perNow = ($now / $total) * 100;
+            if (isNaN($now)){
+               $perNow = 0
+            };
+            $el.stop().animate({bottom: $perNow +'%'}, 1000, 'linear');        
+         };  
+         //작은원그래프 함수
+         var drawCirlcegrap = function(){
+            $('.circle_cont').each(function(){
+               var $this = $(this);
+               var $cont = $(this).attr('id');
+               var $percent = onlyNumber($this.find('span.blind').text(),0);
+               $this.circleProgress({
+                  startAngle: -Math.PI/2 ,
+                  value: $percent/100,
+                  fill:chartColors[$cont],
+                  emptyFill: "rgba(0,0,0,0.0)",
+                  animation: true,
+                  thickness: '3',
+                  size: 54,
+               });
+               if($this.hasClass('active')){
+                  $this.circleProgress({fill: chartColors[$cont],animation:true,thickness: '3',})
+               }else{
+                  $this.circleProgress({fill: '#fff',animation:false,thickness: '2',})
+               }
+            })
+         }
+         //초기화면
+         var $circleAct = $('.circle_cont.active');
+         fillBg(onlyNumber($circleAct.find('span.blind').text()), $total);
+         drawCirlcegrap();
+         $('.circle_center').addClass($circleAct.attr('id'))
+         $('.circle_dash_wrap').addClass('larger');
+         $('.btn_cut').removeClass('up');
+
+         //리사이징
+         var delay = 300;
+         var timer = null;
+         $(window).on('resize',function(){
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+               if (window.innerWidth <= 375) {
+                  drawCirlcegrap();
+               }
+            }, delay);
+         })
+         //작은원 클릭시
+         $('.circle_cont').on('click',function(e){
+            var $this = $(this);
+            var $cont = $(this).attr('id')
+            var $center = $this.siblings('.circle_center');
+            if($this.parents('.circle_dash_wrap').hasClass('smaller')){
+               //축소버전에서 작은원 클릭막기
+               $this.click('off')
+            }
+            //작은원 활성화
+            $('.circle_cont').removeClass('active');
+            $this.addClass('active');            
+            $('.circle_cont').circleProgress({fill: '#ffffff',animation:false,thickness: '2',});
+            if($this.hasClass('active')){
+               $this.circleProgress({fill: chartColors[$cont],animation:false,thickness: '3',})
+            }
+            //클릭한 작은원 값으로 가운데 원배경 채우기
+            $center.removeClass().addClass('circle_center')
+            $center.addClass($cont);
+            var $percent = $this.find('span.blind').text();
+            fillBg($percent, $total);
+
+            //bmi/bio일때 설명 팝업버튼 노출시키기
+            if($cont == 'bmi' || $cont == 'bio'){
+               $('.btn_info').css('display','none');
+               $('.btn_info.'+ $cont).css('display','block');
+            }else {
+               $('.btn_info').css('display','none');
+            }
+         });
+         
+         //웰니스 지수 UI 축소
+         $('.btn_cut').on('click',function(){            
+            var $circleWrap = $('.circle_dash_wrap');
+            var $circle = $('.circle_dash_wrap').find('.circle_cont');
+            $circle.addClass('circle_fade')
+            if($(this).hasClass('up') && $circleWrap.hasClass('smaller')){
+               $circleWrap.removeClass('smaller').addClass('larger');
+               $circle.removeClass('active');
+               $circle.eq(0).addClass('active');
+               $('.circle_center').addClass($('.circle_cont.active').attr('id'));
+               $('.my_state').stop().show();
+               $(this).removeClass('up');
+               drawCirlcegrap();
+            }else if(!$(this).hasClass('up') && $circleWrap.hasClass('larger')){
+               $circleWrap.addClass('smaller').removeClass('larger');
+               $circle.addClass('active');
+               $(this).addClass('up');
+               $('.my_state').stop().hide();
+               drawCirlcegrap();
+            }
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+               $circle.removeClass('circle_fade')
+            }, 700);
+         })
+
+      });//ready
+   </script>
+</body>
+
+</html>

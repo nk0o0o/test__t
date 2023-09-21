@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="6md8pipala" y1=".274" x2=".903" y2=".678" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#f3f8ff"/>
+            <stop offset="1" stop-color="#e9f2fe"/>
+        </linearGradient>
+        <linearGradient id="ekd8krfzbb" x1=".923" y1=".786" x2=".091" y2=".214" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#efe1cc"/>
+            <stop offset="1" stop-color="#f6ebd8"/>
+        </linearGradient>
+        <linearGradient id="3w1w6m9zec" x1=".576" y1=".644" x2=".662" y2=".556" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#e0d3bf"/>
+            <stop offset="1" stop-color="#ead6ba"/>
+        </linearGradient>
+    </defs>
+    <g data-name="Object / v3_ic_48_fill_take_medicine_prescription_drug">
+        <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+        <g data-name="Group 814428" transform="translate(1.691 .272)">
+            <rect data-name="사각형 806" width="36" height="40" rx="2" transform="translate(2.309 2.728)" style="fill:#b7dcfd"/>
+            <rect data-name="사각형 803" width="36" height="40" rx="2" transform="translate(1.309 1.727)" style="fill:url(#6md8pipala)"/>
+            <g data-name="빼기 8" style="fill:none">
+                <path d="M-7885.69-15496.271h-25.087a1.5 1.5 0 0 0 .086-.5 1.5 1.5 0 0 0-1.5-1.5 1.5 1.5 0 0 0-.5.086v-28.17a1.491 1.491 0 0 0 .5.086 1.5 1.5 0 0 0 1.5-1.5 1.493 1.493 0 0 0-.085-.5h24.17a1.492 1.492 0 0 0-.085.5 1.5 1.5 0 0 0 1.5 1.5 1.488 1.488 0 0 0 .5-.085v29.085a1 1 0 0 1-.999.998z" style="stroke:none" transform="translate(7918 15534)"/>
+                <path d="m-7885.69-15497.271-.002-.001v-28.051a2.508 2.508 0 0 1-1.95-1.95h-22.1c-.2.978-.971 1.75-1.949 1.95v26.1c.979.199 1.751.972 1.95 1.952h24.051m0 1h-25.087a1.503 1.503 0 0 0-1.914-1.917v-28.17a1.503 1.503 0 0 0 1.914-1.914h24.17a1.503 1.503 0 0 0 1.914 1.915v29.085a1 1 0 0 1-.997 1z" style="fill:#26c8a8;stroke:none" transform="translate(7918 15534)"/>
+            </g>
+            <path data-name="선 57" d="M2 12h-4V0h4z" transform="translate(19.309 10.666)" style="fill:#26c8a8"/>
+            <path data-name="선 58" d="M2 12h-4V0h4z" transform="rotate(90 4.322 20.987)" style="fill:#26c8a8"/>
+            <path data-name="패스 15231" d="M0 16V0" transform="rotate(90 .056 27.253)" style="stroke:#15937a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.182px;fill:none"/>
+            <g data-name="그룹 1311" transform="translate(-95.691 -1074.044)">
+                <circle data-name="타원 253" cx="8" cy="8" r="8" transform="translate(123 1103.772)" style="fill:url(#ekd8krfzbb)"/>
+                <path data-name="교차 1" d="M0 1.118Q.126.962.26.812L.792.273C.894.18 1 .088 1.1 0l11.14 10.983a7.913 7.913 0 0 1-1.1 1.12z" transform="translate(124.747 1105.803)" style="fill:url(#3w1w6m9zec)"/>
+            </g>
+        </g>
+    </g>
+</svg>

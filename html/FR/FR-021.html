@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약관 동의</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap login_wrap footer_no"> 
+        <!-- <header></header> -->
+		<div class="health_container pt0">
+            <div class="agree_wrap">
+                <div class="visual_wrap">
+                    <h2>서비스 이용을 위한 <br />
+                        약관 동의를<br />
+                        선택해 주세요</h2>
+                </div>
+                <div class="form_wrap">
+                    <div class="acco_list_wrap">
+
+                        <dl class="acco_list_item">
+                            <dt class="acco_item_head flex_between_wrap">
+                                <div class="check_box">
+                                    <input type="checkbox" id="mustAllChk" name="mustAllChk" class="check">
+                                    <label for="mustAllChk">(필수) 전체 동의</label>
+                                </div>
+                                <button type="button" class="acco_btn on"><span class="hidden">리스트 펼침</span></button>
+                            </dt>
+                            <dd class="acco_item_cont">
+                                <div class="flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="mustItemChk01" name="mustChk" class="check">
+                                        <label for="mustItemChk01">(필수) Tune H 서비스 이용 약관</label>
+                                    </div>
+                                    <a href="javascript:;">보기</a>
+                                </div>
+                                <div class="flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="mustItemChk02" name="mustChk" class="check">
+                                        <label for="mustItemChk02">(필수) 개인정보 수집·이용 동의</label>
+                                    </div>
+                                    <a href="javascript:;">보기</a>
+                                </div>
+                                <div class="flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="mustItemChk03" name="mustChk" class="check">
+                                        <label for="mustItemChk03">(필수) 건강정보(민감정보) 수집·이용 동의</label>
+                                    </div>
+                                    <a href="javascript:;">보기</a>
+                                </div>
+                                <div class="flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="mustItemChk04" name="mustChk" class="check">
+                                        <label for="mustItemChk04">(필수) 건강정보(민감정보) 제공 동의</label>
+                                    </div>
+                                    <a href="javascript:;">보기</a>
+                                </div>
+                                <div class="flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="mustItemChk05" name="mustChk" class="check">
+                                        <label for="mustItemChk05">(필수) 리워드 이용 약관</label>
+                                    </div>
+                                    <a href="javascript:;">보기</a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl class="acco_list_item choice">
+                            <dt class="acco_item_head flex_between_wrap">
+                                <div class="check_box">
+                                    <input type="checkbox" id="choiceAllChk" name="choiceAllChk" class="check">
+                                    <label for="choiceAllChk">(선택) 전체 동의</label>
+                                </div>
+                            </dt>
+                            <dd class="acco_item_cont">
+                                <div class="acco_item_head acco_inner_item_head flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="choiceItemChk01" name="choiceChk" class="check">
+                                        <label for="choiceItemChk01">(선택) 운동량 측정을 위한 위치 기반 서비스 이용 약관 동의</label>
+                                    </div>
+                                    <button type="button" class="acco_inner_btn acco_btn"><span class="hidden">리스트 펼침</span></button>
+                                </div>
+                                <div class="acco_inner_item_cont" style="display: none;">
+                                    <div class="flex_between_wrap">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="choiceItemChk01-1" name="choiceChk" class="check">
+                                            <label for="choiceItemChk01-1">위치기반 서비스 이용약관</label>
+                                        </div>
+                                        <a href="javascript:;">보기</a>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class="acco_item_cont">
+                                <div class="acco_item_head acco_inner_item_head flex_between_wrap">
+                                    <div class="check_box">
+                                        <input type="checkbox" id="choiceItemChk02" name="choiceChk" class="check">
+                                        <label for="choiceItemChk02">(선택) 마케팅 목적 개인정보 수집·이용 동의</label>
+                                    </div>
+                                    <button type="button" class="acco_inner_btn acco_btn"><span class="hidden">리스트 펼침</span></button>
+                                </div>
+                                <div class="acco_inner_item_cont" style="display: none;">
+                                    <div class="flex_between_wrap">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="choiceItemChk02-1" name="choiceChk" class="check">
+                                            <label for="choiceItemChk02-1">라이나생명 상품 소개를 위한 수집·이용 동의</label>
+                                        </div>
+                                        <a href="javascript:;">보기</a>
+                                    </div>
+                                    <div class="flex_between_wrap">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="choiceItemChk02-2" name="choiceChk" class="check">
+                                            <label for="choiceItemChk02-2">라이나생명 계열사 상품 소개를 위한 제공 동의</label>
+                                        </div>
+                                        <a href="javascript:;">보기</a>
+                                    </div>
+                                    <div class="flex_between_wrap">
+                                        <div class="check_box">
+                                            <input type="checkbox" id="choiceItemChk02-3" name="choiceChk" class="check">
+                                            <label for="choiceItemChk02-3">광고성 정보 수신 동의</label>
+                                        </div>
+                                        <a href="javascript:;">보기</a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </div>
+                </div>
+
+            </div>
+		</div>
+        
+        <div class="btn_btm_fixed">
+            <button type="button" class="btn">다음</button>
+        </div>
+	</div>
+
+    <script>
+        //(필수)전체동의 선택
+        $('input[name="mustAllChk"]').change(function(){
+            if($(this).is(":checked")){
+                $(this).prop("checked",true);
+                $('input[name="mustChk"]').prop('checked',true);
+            } else {
+                $(this).prop("checked",false);
+                $('input[name="mustChk"]').prop('checked',false);
+            }
+        })
+        //(필수)전체동의 부분 선택
+        $('input[name="mustChk"]').change(function(){
+            let checkValue =  $('input[name="mustChk"]:checked').length; //체크박스 선택된 갯수
+            let itemNumber =  $('input[name="mustChk"]').length; //체크박스 갯수
+            if(checkValue == itemNumber){
+                $('input[name="mustAllChk"]').prop("checked",true);
+            } else {
+                $('input[name="mustAllChk"]').prop("checked",false);
+            }
+        })
+
+        //(선택)전체동의 선택
+        $('input[name="choiceAllChk"]').change(function(){
+            if($(this).is(":checked")){
+                $(this).prop("checked",true);
+                $('input[name="choiceChk"]').prop('checked',true);
+            } else {
+                $(this).prop("checked",false);
+                $('input[name="choiceChk"]').prop('checked',false);
+            }
+        })
+        //(선택)전체동의 부분 선택
+        $('input[name="choiceChk"]').change(function(){
+            let checkValue =  $('input[name="choiceChk"]:checked').length; //체크박스 선택된 갯수
+            let itemNumber =  $('input[name="choiceChk"]').length; //체크박스 갯수
+            if(checkValue == itemNumber){
+                $('input[name="choiceAllChk"]').prop("checked",true);
+            } else {
+                $('input[name="choiceAllChk"]').prop("checked",false);
+            }
+        })
+    </script>
+
+</body>
+</html>

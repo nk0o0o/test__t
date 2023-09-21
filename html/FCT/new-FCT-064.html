@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 통합 케어 알림 - 케어메시지</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>  
+  <!-- 1:1 문의 플로팅 버튼  -->
+  <button type="button" class="btn_floating care_qna">
+    <span class="care_qna_icon">문의</span>
+  </button>
+  <!--// 1:1 문의 플로팅 버튼  -->
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>케어 플랜</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">통합 케어 알림</p><!-- 20230829 문구수정 -->
+        <div class="tab_wrap">
+          <div class="tabs dep1 brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab"><a class="tab_control" href="#tab-1" aria-controls="tab-con01">전체</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-2" aria-controls="">병원 예약 일정</a></li>
+              <li class="tab active"><a class="tab_control" href="#tab-3" aria-controls="">케어 메시지</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-4" aria-controls="">1:1 케어 문의</a></li>
+            </ul>
+            <div class="tab_panel" id="tab-1"></div>
+            <div class="tab_panel" id="tab-2"></div>
+            <div class="tab_panel active" id="tab-3">
+              <!-- 리스트 설명 -->
+              <div class="list_desc">※ 최근 1년 내역</div>
+              <!-- 리스트 -->
+              <div class="dayplan_list">
+                <div class="dayplan_wrap caremsg"><!-- 케어메시지: caremsg -->
+                  <div class="dayplan_tit">
+                    <p class="box_tit">케어 메시지</p><span>2023.06.18 (일)</span>
+                  </div>
+                  <div class="box_container box_fold plan_card">
+                    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !</div>
+                    <div class="box_fold_bottom">
+                      <div class="caremsg_status">읽지 않음</div><!-- 20230906 문구수정 -->
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->
+                  <div class="box_container box_fold plan_card on_read is_open"><!-- 열린 메시지: is_open -->
+                    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                    </div>
+                    <div class="box_fold_bottom">
+                      <div class="caremsg_status">읽음</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->
+                </div><!-- //.dayplan_wrap -->
+                <div class="dayplan_wrap caremsg">
+                  <div class="dayplan_tit">
+                    <p class="box_tit">케어 메시지</p><span>2023.06.18 (일)</span>
+                  </div>
+                  <div class="box_container box_fold plan_card on_read"><!-- 읽은 메시지: on_read -->
+                    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !</div>
+                    <div class="box_fold_bottom">
+                      <div class="caremsg_status">읽음</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div>
+                </div><!-- //.dayplan_wrap -->
+              </div><!-- //.dayplan_list -->
+            </div><!-- //.tab_panel -->
+            <div class="tab_panel" id="tab-4"></div>
+          </div>
+        </div><!-- //.tab_wrap -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <script>
+    var swiper = new Swiper(".plan_step_slider", {      
+      slidesPerView: 4,
+      spaceBetween: 22,
+      centeredSlides: true,
+      loop: false,
+    });
+  </script>
+</body>
+</html>

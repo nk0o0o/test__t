@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <clipPath id="0edw9pny6a">
+            <path transform="translate(0 .002)" style="fill:none" d="M0 0h16v16H0z"/>
+        </clipPath>
+    </defs>
+    <path data-name="base" style="fill:none" d="M0 0h16v16H0z"/>
+    <g data-name="마스크 그룹 15" transform="translate(0 -.002)" style="clip-path:url(#0edw9pny6a)">
+        <g data-name="합치기 13" style="fill:none">
+            <path d="M1 16.2a1 1 0 0 1-1-1V4.856a.411.411 0 0 1 .12-.274L4.246.188a.642.642 0 0 1 .91 0l4.118 4.393a.413.413 0 0 1 .121.274H9.4V15.2a1 1 0 0 1-1 1z" style="stroke:none" transform="rotate(45 8.358 13.384)"/>
+            <path d="M7.902 14.696V5.31L4.701 1.896 1.5 5.308v9.388h6.402m.5 1.5H1a1 1 0 0 1-1-1V4.856h.005a.411.411 0 0 1 .12-.275L4.246.188a.642.642 0 0 1 .91 0l4.118 4.393a.413.413 0 0 1 .121.275h.007v10.34a1 1 0 0 1-1 1z" style="fill:#666;stroke:none" transform="rotate(45 8.358 13.384)"/>
+        </g>
+        <g data-name="타원 285" transform="translate(10.5 4.002)" style="fill:#fff;stroke:#707070">
+            <circle cx="1" cy="1" r="1" style="stroke:none"/>
+            <circle cx="1" cy="1" r=".5" style="fill:none"/>
+        </g>
+    </g>
+</svg>

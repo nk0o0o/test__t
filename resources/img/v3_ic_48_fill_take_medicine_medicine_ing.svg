@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <defs>
+        <linearGradient id="wi9rf25qta" x1=".923" y1=".786" x2=".091" y2=".214" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#efe1cc"/>
+            <stop offset="1" stop-color="#f6ebd8"/>
+        </linearGradient>
+        <linearGradient id="2dw8ikvrlb" x1=".576" y1=".644" x2=".662" y2=".556" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#e0d3bf"/>
+            <stop offset="1" stop-color="#ead6ba"/>
+        </linearGradient>
+        <linearGradient id="2zr5hfty5c" x1=".767" y1=".689" x2=".211" y2=".339" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#d2e3fc"/>
+            <stop offset=".502" stop-color="#aecaf0"/>
+            <stop offset="1" stop-color="#d2e3fc"/>
+        </linearGradient>
+        <linearGradient id="b9zkb6w5pd" x1=".793" y1=".682" x2=".267" y2=".367" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#4895ff"/>
+            <stop offset=".502" stop-color="#3d7fd9"/>
+            <stop offset="1" stop-color="#4895ff"/>
+        </linearGradient>
+    </defs>
+    <path data-name="사각형 782" style="fill:transparent" d="M0 0h48v48H0z"/>
+    <g data-name="그룹 1310">
+        <g data-name="그룹 1309" transform="translate(-121 -1101)">
+            <circle data-name="타원 253" cx="11" cy="11" r="11" transform="translate(123 1104)" style="fill:url(#wi9rf25qta)"/>
+            <path data-name="교차 1" d="M0 1.559q.176-.218.363-.426l.742-.752c.142-.13.287-.258.435-.381l15.539 15.32a11.038 11.038 0 0 1-1.537 1.563z" transform="translate(125.437 1106.514)" style="fill:url(#2dw8ikvrlb)"/>
+        </g>
+        <g data-name="그룹 611">
+            <path data-name="패스 14437" d="M3.71 23.742a8.756 8.756 0 0 0 12.105-2.108L24.16 9.865 9.912 0 1.577 11.755A8.543 8.543 0 0 0 3.71 23.742z" transform="scale(-1) rotate(6.02 282.696 -430.193)" style="fill:url(#2zr5hfty5c)"/>
+            <path data-name="패스 14438" d="M20.455 1.547a8.7 8.7 0 0 0-12.01 2.065L0 15.419l14.161 9.81L22.553 13.5a8.5 8.5 0 0 0-2.1-11.95z" transform="scale(-1) rotate(6.02 407.46 -342.967)" style="fill:url(#b9zkb6w5pd)"/>
+        </g>
+    </g>
+</svg>

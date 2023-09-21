@@ -1,0 +1,909 @@
+//dental_MBTI 설문
+.type_survey.type_diagnosis.dent_mbti{
+  .health_container{
+    .survey_dent_wrap{
+      position: fixed;
+      width: 100%;
+      top: 84px;
+      left: 0;
+      z-index: 1000;
+      padding:11px 24px 13px 24px;
+      background:#ffe5a8;
+      .survey_dent_inner{
+        display:flex;
+        justify-content: space-between;
+        .survey_tit{
+          color:#222;
+          padding:0;
+        }
+        .survey-pagination{
+          padding:0;
+          background:transparent;
+          z-index:auto;
+          .survey-pagination-current{
+            font-size:22px;
+            color:#222;
+          }
+        }
+      }
+      .progress_wrap{
+        position:relative;
+        width:100%;
+        height:auto;
+        margin-top:8px;
+        margin-bottom:0;
+        .progress{
+          position:relative;
+          width:100%;
+          height:12px;
+          background:#fff;
+          border-radius:12px;
+          overflow:hidden;
+          i{
+            display:block;
+            height:12px;
+            background:#0095ff;
+            border-radius:12px;
+          }
+        }
+      }
+      +.survey_slider{
+        margin-top: 70px;
+      }
+    }
+    .survey_slider{
+      .survey_wrapper{
+        .survey_wrap{
+          .content_tit{
+            max-width:320px;
+            padding-left:24px;
+          }
+        }
+      }
+    }
+    .survey_wrap{
+      .radio_box{
+        padding-left:24px;
+        padding-right:24px;
+        .item{
+          .radioItem{
+            display: none;
+            +label{
+              height: auto;
+              min-height: 54px;
+              justify-content: left;
+              text-align:left;
+              padding:8px 16px 8px 40px;
+              font-size: 14px;
+            }
+            &:checked+label{
+              border: 3px solid #ffb352;
+              background-color: #fff5de;
+              background-image: url("../img/ico_chk.png");
+              background-position:16px center;
+            }
+          }
+        }
+      }
+    }
+    &.dent_mbti_ai{
+      .survey_wrapper{
+        .survey_wrap{
+          &+.survey_wrap{
+            margin:100px 0 24px 0;
+          }
+        }
+      }
+      .survey_chk{
+        padding:5px 24px;
+        overflow-y:auto;
+        .survey_ui{
+          width:95%;
+          padding:20px 16px 7px 16px;
+          .ui-widget-content{
+            border:none;
+            background:#ebebeb;
+          }
+          .ui-widget-header{
+            background:#ebebeb;
+          }
+          .ui-slider-horizontal{
+            background:#ebebeb;
+            height:6px;
+            border:none;
+          }
+          .ui-slider-handle{
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            background-color:#fff;
+            border:none;
+            top:-1em;
+            z-index:2;
+            box-shadow:2px 5px 13px 0 rgba(0, 0, 0, 0.24);
+          }
+          .s_dot{
+            margin-top:-13px;
+            ul{
+              position:relative;
+              width:100%;
+            }
+            li{
+              position:absolute;
+              top:0;
+              display:block;
+              width:20px;
+              height:20px;
+              border-radius:50%;
+              background:#ebebeb;
+              &:nth-child(1){
+                left:0;
+              }
+              &:nth-child(2){
+                left:33%;
+              }
+              &:nth-child(3){
+                left:66%;
+              }
+              &:nth-child(4){
+                left:99%;
+              }
+            }
+            .s_dot_txt{
+              display:flex;
+              justify-content: space-between;
+              font-size:14px;
+              color:#222;
+              padding-top:35px;
+              margin:0 -12px;
+              margin-right:-30px;
+              span{
+                display:block;
+              }
+            }
+          }
+        }
+      }
+      .radio_box{
+        display:block;
+        .item{
+          width:auto;
+           &+ .item{
+            margin-left:12px;
+           }
+          .radioItem + label{
+            width:128px;
+            text-align:center;
+            justify-content: center;
+            padding:0;
+          }
+          .radioItem:checked + label{
+            background:#000;
+            color:#fff;
+          }
+        }
+      }
+    }
+  }
+  .underline{
+    text-decoration: underline;
+  }
+}
+.dent_mbti{
+  .btn_btm_fixed{
+    width:100%;
+    position:fixed;
+    left:0;
+    bottom:0;
+    z-index:98;
+    .full-btm-btn{
+      background-color:#00264a;
+    }
+    .btn_type_half{
+      display:flex;
+      button{
+        padding:26px 20px 33px;
+        color:#fff;
+      }
+      .dent_prev{
+        background-color:#666;
+      }
+      .dent_next{
+        background-color:#222;
+      }
+      .dent_prev:disabled{
+        background-color:#d9d9d9;
+      }
+      .dent_next:disabled{
+        background-color:#c8c8c8;
+      }
+    }
+  }
+  .check_box.term{
+    padding:0;
+    background:transparent;
+  }
+  .dental_bold{
+    font-weight:bold;
+  }
+  .dental_small{
+    font-size:12px;
+  }
+  .btn{
+    background:#00264a;
+  }
+}
+.dent_mbti{
+  .ai_box{
+    position:relative;
+    padding:18px 24px 0 24px;
+    .ai_box_inner{
+      position:relative;
+      width:100%;
+      padding:20px 18px 18px 18px;
+      border-radius: 16px;
+      box-shadow: 0 3px 13px 0 rgba(34, 34, 34, 0.09);
+      .ai_color{
+        color:#222;
+      }
+      h3{
+        margin-bottom:5px;
+      }
+      .ai_robot{
+        position:absolute;
+        top:1.5rem;
+        right:1.1rem;
+        width:66px;
+        height:78px;
+        img{
+          width:100%;
+        }
+      }
+    }
+  }
+  &.type_goal.type_survey{
+    .health_container{
+      position:inherit;
+      margin-top:0;
+    }
+  }
+  .health_alert.mypage_popup{
+    .inner{
+      p.msg{
+        color:#222;
+        padding-top:25px;
+      }
+    }
+  }
+  .dental_join{
+    position: relative;
+    min-height: 790px;
+    background-image: linear-gradient(to bottom, #fff, #fff 26%, #fff5de 76%, #ffd9aa);
+    overflow: hidden;
+    img{
+      width:100%;
+    }
+    .dental_join_txt{
+      position: absolute;
+      top: calc(100% - 220px);
+      width:100%;
+      padding:0 16px;
+      text-align: center;
+      font-size:14px;
+      color:#222;
+      .dental_str{
+        font-size:18px;
+        font-weight:bold;
+      }
+      > em{
+        display: block;
+        margin-top: 25px;
+        font-size: 14px;
+        color: #666;
+        img {width: auto;}
+      }
+    }
+  }
+  .btn_wrap{
+    margin-top: 0;
+    padding: 0 48px 20px;
+    .btn_base_03{
+      width: 100%;
+      height: 38px;
+    }
+  }
+  @media all and (max-width: 320px) {
+    .dental_join{
+      padding-bottom: 60px;
+    }
+    .dental_join_txt{
+      .dental_str{display: inline-block;}
+      br{display: none;}
+    }
+  }
+  .header_box{
+    padding: 40px 24px 0;
+    .stt{
+      @include flexStart;
+      font-family: $font-roboto;
+      font-size: 19px;
+      color: $color-black2;
+      .link{
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 3px;
+        background: url(../img/v3_ico_question_line01.png) 50% 50% no-repeat;
+        background-size: 24px;
+      }
+    }
+  }
+}
+.dent_result{
+  padding: 84px 0 0;
+  .header_box{
+    padding: 40px 0 0;
+  }
+  .dental_result_type{
+    position:relative;
+    padding:18px;
+    margin:20px 0 23px 0;
+    border-radius:16px;
+    box-shadow:0 3px 13px 0 rgba(34, 34, 34, 0.09);
+    color:#222;   
+    .result_tit_box{
+      margin-bottom:14px;
+      .result_tit_wrap{
+        display:inline-block;
+        height:68px;
+        img{
+          height:100%;
+        }
+      }
+      .dental_result_tit{
+        display:inline-block;
+        padding-left:10px;
+        padding-top:2px;
+        line-height:77px;
+        vertical-align:top;
+        font-size:30px;
+        font-weight:bold;
+      }
+    }
+    .result_type_txt{
+      position:relative;
+      padding:10px 16px;
+      text-align:left;
+      color:#222;
+      border-radius:10px;
+      &::before{
+        display:block;
+        content:"";
+        display:block;
+        position:absolute;
+        z-index:10;
+        top:-15px;
+        left:33px;
+        width:30px;
+        height:15px;
+      }
+      &.red_type{
+        border:1px solid #ff9fb4;
+        background:#fff3f5;
+        box-shadow: 4px 4px 0 0 #ffd6df;
+        &::before{
+          background:url("../../resources/img/bloom_tail_red.png");
+          background-size:cover;
+        }
+      }
+      &.black_type{
+        border:1px solid #999;
+        background:#f8f8f8;
+        box-shadow: 4px 4px 0 0 #d9d9d9;
+        &::before{
+          background:url("../../resources/img/bloom_tail_black.png");
+          background-size:cover;
+        }
+      }
+      &.blue_type{
+        border:1px solid #8ec8ff;
+        background:#f8fcff;
+        box-shadow: 4px 4px 0 0 #c8e4ff;
+        &::before{
+          background:url("../../resources/img/bloom_tail_blue.png");
+          background-size:cover;
+        }
+      }
+      &.yellow_type{
+        border:1px solid #ffb300;
+        background:#fff8e8;
+        box-shadow: 4px 4px 0 0 #ffdd8d;
+        &::before{
+          background:url("../../resources/img/bloom_tail_yellow.png");
+          background-size:cover;
+        }
+      }
+    }
+  }
+  .dent_cont{
+    margin:0 -24px;
+    padding:23px 24px 34px;
+    .dent_cont_inner{
+      position:relative;
+      margin-top:30px;
+      &:first-child{
+        margin-top:0;
+      }
+      .dent_cont_tit{
+        position:absolute;
+        top:-6px;
+        left:17px;
+        display:inline-block;
+        padding:7px 16px 7px 16px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        color:#fff;
+        font-size:16px;
+        font-family: "NotoSansCJKkr";
+        &::after{
+         position:absolute;
+         top:3px;
+         right:-7px;
+         display:block;
+         content:"";
+         border-left: 5px solid transparent;
+         border-right: 5px solid transparent;
+         transform:rotate(-135deg);
+        }
+        &.dent_red_type{
+          background-color:#eb6565;
+          box-shadow: 3px 3px 1px 0 #ffcfda;
+          &::after{
+            border-bottom: 5px solid #be3131;
+          }
+        }
+        &.dent_black_type{
+         background-color:#666666;
+         box-shadow: 3px 3px 1px 0 #d9d9d9;
+         &::after{
+           border-bottom: 5px solid #222222;
+         }
+        }
+        &.dent_blue_type{
+         background-color:#4e9ae1;
+         box-shadow: 3px 3px 1px 0 #bae2fc;
+         &::after{
+           border-bottom: 5px solid #2d5997;
+         }
+        }
+        &.dent_yellow_type{
+         background-color:#dfa634;
+         box-shadow: 3px 3px 1px 0 #feecbd;
+         &::after{
+           border-bottom: 5px solid #7d6121;
+         }
+        }
+      }
+      .dent_card{
+        min-height:300px;
+        background-color:#fff;
+        border:1px solid #c8c8c8;
+        box-shadow: 8px 8px 11px 0 rgba(209, 217, 230, 0.4);
+        border-top-left-radius:16px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        &.cause_dent{
+          padding:57px 23px 25px 23px; 
+        }
+        &.care_dent{
+          padding:67px 17px 5px 17px;
+        }
+        &.caut_dent{
+          padding:65px 17px 34px 17px;
+        }
+        .dent_cause_desc{
+          color:#222;
+          font-size:16px;
+        }
+        .dent_cause_tit{
+          font-size:16px;
+          font-weight:bold;
+          margin-top:24px;
+          text-decoration:underline;
+          text-underline-position: under;
+          &.red{
+            color:#f11414;
+          }
+          &.black{
+            color:#222;
+          }
+          &.blue{
+            color:#0095ff;
+          }
+          &.yellow{
+            color:#bc8412;
+          }
+        }
+        .dent_cause{
+          display:flex;
+          flex-flow:row wrap;
+          justify-content:space-between;
+          margin:-20px 0 20px;
+          li{
+            width:calc(100% / 2 - 16px); 
+            text-align:center;
+            margin:36px 8px 0;
+            img{
+              width:110px;
+            }
+            span{
+              display:block;
+              font-size:14px;
+              line-height:1.42;
+              color:#222;
+              letter-spacing: -0.8px;
+              word-break: keep-all;
+            }
+          }
+        }
+        .dent_care{
+          display:flex;
+          flex-flow:row wrap;
+          justify-content: flex-start;
+          margin:-20px -8px 20px;
+          li{
+            width:calc(100% / 3 - 16px);
+            
+            margin: 20px 8px 0;
+            text-align:center;
+            img{
+              width:86px;
+            }
+            span{
+              display:block;
+              font-size:14px;
+              color:#222;
+              line-height:1.57;
+              letter-spacing:-1.1px;
+              word-break: keep-all;
+              &.dent_lett_space{
+                 letter-spacing:-1.1px;
+              }
+            }
+          }
+        }
+        .dent_caut{
+          display:flex;
+          flex-flow:column;
+          .dent_caut_detail{
+            display:flex;
+            align-items: center;
+            padding-bottom:24px;
+            margin-bottom:32px;
+            border-bottom:1px dashed #c8c8c8;
+            &:last-child{
+               padding-bottom:0;
+               margin-bottom:0;
+               border-bottom:0;
+            }
+            &.img_left{
+               .dent_caut_img{
+                  margin-right:16px;
+               }
+            }
+            &.img_right{
+               .dent_caut_img{
+                  margin-left:8px;
+               }
+            }
+            .dent_caut_img{
+              img{
+                width:110px;
+              }
+            }
+            &.desc{
+               p{
+                  font-size: 1rem;
+               }
+            }
+          }
+          p{
+            font-size:0.875rem;
+            line-height:22px;
+            color:#222;
+          }
+        }
+      }
+    }
+    .dent_link_wrap{
+      margin-top:24px;
+      .dent_link_inner{
+        position:relative;
+        width:100%;
+        padding:16px;
+        margin-top:8px;
+        background-color:#fff;
+        border-radius:16px;
+        box-shadow:8px 8px 11px 0 rgba(209, 217, 230, 0.4);
+        a{
+          font-size:14px;
+          color:#222;
+        }
+        .dent_link{
+          &::after{
+            position:absolute;
+            top:18px;
+            right:16px;
+            display:block;
+            content:"";
+            background:url("../img/arr_right.png") 0 0 no-repeat;
+            width:18px;
+            height:20px;
+            background-size:contain;
+          }
+        }
+      }
+    }
+    .other_dent_type{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top:24px;
+      dt{
+        width:100%;
+        font-size:1rem;
+        font-weight:bold;
+        color:#222;
+      }
+      dd{
+
+        margin-top:12px;
+        a{
+          display:block;
+          width:78px;
+          height:100px;
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+  .dental_bold{
+    font-weight:$fw-b;
+  }
+  .dent_lett_space{
+    letter-spacing:-1.1px;
+  }
+  .dental_result_desc{
+    padding-top: 24px;
+    margin-bottom: 30px;
+    font-size: 0.75rem;
+    color:#666;
+  }
+  .btn, .btn_base_03{
+    &.red{
+      background-color:#eb6565;
+    }
+    &.black{
+      background-color:#666666;
+    }
+    &.blue{
+      background-color:#4e9ae1;
+    }
+    &.yellow{
+      background-color:#dfa634;
+    }
+  }
+}
+@media all and (max-width: 365px) {
+  .dent_result{
+    .dent_cont{
+      .dent_cont_inner{
+        .dent_card{
+          .dent_cause{
+            li{
+              height:auto;
+              img{
+                width:100%;
+              }
+            }
+          }
+          .dent_care{
+            display:flex;
+            flex-flow:row wrap;
+            justify-content: space-between;
+            li{
+              width:calc(100%/2 - 16px);
+             
+              text-align:center;
+              img{
+                width:100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dent_res_view.health_wrap{
+  .health_header{
+    h1{
+      text-overflow:initial;
+      overflow:visible;
+    }
+  }
+  .dent_view{
+    h2{
+      padding:20px 0px 20px 20px;
+      color:#222;
+      .dent_view_red{
+        color:#eb6565;
+      }
+      .dent_view_black{
+        color:#666;
+      }
+      .dent_view_blue{
+        color:#0095ff;
+      }
+      .dent_view_yellow{
+        color:#ffb300;
+      }
+    }
+    .btn_arr_wrap{
+      li{
+        position:relative;
+        &::before{
+          content:"";
+          display:inline-block;
+          width:16px;
+          height:16px;
+          background:url("../img/arr_right.png") center/100% no-repeat;
+          position:absolute;
+          right:20px;
+          top:50%;
+          transform:translateY(-50%);
+        }
+      }
+      a{
+        display:block;
+        font-size:18px;
+        line-height:24px;
+        color:#222;
+        padding:18px 95px 18px 20px;
+        border-bottom:1px solid #f6f7f8;
+        .dent_items_label{
+          position:relative;
+          display:inline-block;
+          &::after{
+            display:block;
+            content:"N";
+            position:absolute;
+            right:-30px;
+            top:50%;
+            transform:translate(0,-50%);
+            font-size:10px;
+            font-weight:bold;
+            padding-left:5px;
+            color:#fff;
+            border-radius:10px;
+            width:18px;
+            height:18px;
+            line-height:18px;
+            background:linear-gradient(139deg, #ff9fb4 12%, #cb8bda 35%, #9b78f0 71%, #9b78f0 95%);
+          }
+        }
+        /*
+        .dent_items_label{
+          position:absolute;
+          top:50%;
+          right:70px;
+          transform:translate(0,-50%);
+          span{
+            display:block;
+            width:18px;
+            height:18px;
+            color:#fff;
+            font-size:10px;
+            font-weight:bold;
+            line-height:18px;
+            border-radius:10px;
+            text-align:center;
+            background:linear-gradient(139deg, #ff9fb4 12%, #cb8bda 35%, #9b78f0 71%, #9b78f0 95%);
+          }
+        }
+        */
+      }
+    }
+    .other_dent_type{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top:30px;
+      padding:0 20px 30px 20px;
+      dt{
+        width:100%;
+        font-size:16px;
+        font-weight:bold;
+        color:#222;
+      }
+      dd{
+        margin-top:12px;
+        padding:5px;
+        a{
+          display:block;
+          width:78px;
+          height:100px;
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 310px) {
+  .dent_res_view.health_wrap{
+    .health_header{
+      h1{
+        text-overflow:initial;
+        overflow:visible;
+        white-space:initial;
+      }
+    }
+    .dent_view{
+      .other_dent_type{
+        dd{
+          padding:0;
+          a{
+            img{
+              width:78px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dent_land{
+  position:relative;
+  line-height:0;
+  img{
+    width:100%;
+  }
+  .dent_btn_wrap{
+    display:block;
+    position:absolute;
+    bottom:40px;
+    left:0;
+    padding:0 13px 0 13px;
+    width:100%;
+    height:68px;
+    button{
+      width:100%;
+      height:68px;
+      border:3px solid #fff;
+      border-radius:60px;
+      background-image: linear-gradient(107deg, #19d3c5 -6%, rgba(0, 149, 255, 0.87) 36%, rgba(155, 120, 240, 0.85) 83%, #cb8bda 117%);
+      font-size:20px;
+      span{
+        position:relative;
+        display:inline-block;
+        padding-right:25px;
+        &::after{
+          display:block;
+          content:"";
+          position:absolute;
+          top:-1px;
+          right:0px;
+          width:25px;
+          height:25px;
+          background:url("../img/arrow_right.png") 0 0 no-repeat;
+          background-size:contain;
+        }
+      }
+    }
+  }
+}

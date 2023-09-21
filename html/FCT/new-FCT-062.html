@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 통합 케어 알림 - 병원예약일정</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>케어 플랜</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">통합 케어 알림</p><!-- 20230829 문구수정 -->
+
+        <div class="tab_wrap">
+          <div class="tabs dep1 brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab"><a class="tab_control" href="#tab-1" aria-controls="tab-con01">전체</a></li>
+              <li class="tab active"><a class="tab_control" href="#tab-2" aria-controls="">병원 일정</a></li><!-- 20230829 문구수정 -->
+              <li class="tab"><a class="tab_control" href="#tab-3" aria-controls="">케어 메시지</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-4" aria-controls="">1:1 케어 문의</a></li>
+            </ul>
+            <div class="tab_panel" id="tab-1"></div>
+            <div class="tab_panel active" id="tab-2">
+              <!-- 일정관리 -->
+              <div class="myplan_board">
+                <div class="myplan_board_tit">
+                  <p class="box_tit">일정관리</p>
+                  <span class="is_planer">* 구분 : 케어 플래너</span>
+                </div>                
+                <div class="myplan_tab">
+                  <a href="#" class="myplan_cnt is_past"><!-- 지난일정 :is_past -->
+                    <p class="cnt">7</p>
+                    <p>지난 일정</p>
+                  </a>
+                  <a href="#" class="myplan_cnt is_zero">
+                    <p class="cnt">0</p>
+                    <p>오늘 일정</p>
+                  </a>
+                  <a href="#" class="myplan_cnt is_zero"><!-- 일정 없을때 : is_zero -->
+                    <p class="cnt">0</p>
+                    <p>향후 일정</p>
+                  </a>
+                </div>
+              </div><!-- //.myplan_board -->
+              <!-- 리스트 설명 -->
+              <div class="list_desc">※ 최근 1년 내역<button type="button">일정추가</button></div>
+              <!-- 리스트 -->
+              <div class="dayplan_list">
+                <div class="dayplan_wrap">
+                  <div class="dayplan_tit">
+                    <p class="box_tit">병원 일정</p><span>2023.06.28 (토)</span>
+                  </div>
+                  <div class="box_container plan_card">
+                    <div class="plan_card_badge is_planer"><span class="badge badge_orange">항암 1차 치료</span></div>
+                    <div class="plan_card_detail">
+                      <div class="info">
+                        <span>의료진</span>
+                        <p>홍길동</p>
+                      </div>
+                      <div class="info">
+                        <span>병원명</span>
+                        <p>삼성서울병원 암병원</p>
+                      </div>
+                    </div><!-- //.plan_card_detail -->
+                    <div class="plan_card_time">오전<span>08:00</span></div>
+                  </div><!-- //.plan_card -->
+                  <div class="box_container plan_card">
+                    <div class="plan_card_badge"><span class="badge badge_yellow">수술</span></div>
+                    <div class="plan_card_detail">
+                      <div class="info">
+                        <span>의료진</span>
+                        <p>홍길동</p>
+                      </div>
+                      <div class="info">
+                        <span>병원명</span>
+                        <p>삼성서울병원 암병원</p>
+                      </div>
+                    </div><!-- //.plan_card_detail -->
+                    <div class="plan_card_time">
+                      오전<span>08:00</span>
+                      <div class="btn_wrap">
+                        <button type="button">수정</button>
+                        <button type="button" onclick="netiveUI.plugins.popAlert('#alert001')">삭제</button>
+                      </div>
+                    </div>
+                  </div><!-- //.plan_card -->
+                </div><!-- //.dayplan_wrap -->
+              </div><!-- //.dayplan_list -->
+            </div><!-- //.tab_panel -->
+            <div class="tab_panel" id="tab-3"></div>
+            <div class="tab_panel" id="tab-4"></div>
+          </div>
+        </div><!-- //.tab_wrap -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+
+  <!-- alert 팝업 : 일정 삭제 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">일정 삭제</h2><!-- 20230912 문구수정 -->
+      <p class="alert_msg">
+        일정을 삭제하면 고객님의 케어 플랜이 변경될 수 있으며, 일정 미션으로 지급된 포인트는 차감됩니다.<!-- 20230912 문구수정 -->
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_line_dark ui-close">취소</button>
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!--// alert 팝업 : 일정 삭제-->
+
+  <script>
+    var swiper = new Swiper(".plan_step_slider", {      
+      slidesPerView: 4,
+      spaceBetween: 22,
+      centeredSlides: true,
+      loop: false,
+    });
+  </script>
+</body>
+</html>

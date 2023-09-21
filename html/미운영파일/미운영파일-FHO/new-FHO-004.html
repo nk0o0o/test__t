@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>메인 - HRA완료후 </title>
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+   <script src="../../resources/js/jquery-circle-progress.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+   <div class="health_wrap type_main_i">
+      <!-- main Header -->
+      <header class="health_header gray_bg">
+         <h1>웰니스 다이어리</h1>
+         <div class="user" id="mytoggle2">
+            <button type="button" id="user_my_button">MY</button>
+         </div>
+         <div class="fullscreen" id="fullscreen"></div>
+      </header>
+      <!-- // main Header -->
+      <div class="health_container align_right">
+         <!-- 상단 웰니스 지수 영역 -->
+         <div class="con">
+            <h2 class="tit_wellness">
+               <span class="txt_gradient">웰니스 지수 581점</span>
+               <button type="button" onclick="netiveUI.plugins.popAlert('#popWellness');">
+                  <span class="blind">웰니스지수란?</span>
+               </button>
+            </h2>
+            <div class="circle_dash_wrap circle_start larger">
+               <ul class="circle_outer">
+                  <!-- 지수 항목별 id : nutrition, sleep, competence, heart, mental, body, activity -->
+                  <li id="nutrition" class="circle_cont" cdesc="영양" cdata="696">
+                     <span class="blind">69.6%</span>
+                  </li>
+                  <li id="sleep" class="circle_cont" cdesc="수면" cdata="711">
+                     <span class="blind">71.1%</span>
+                  </li>
+                  <li id="competence" class="circle_cont" cdesc="조절" cdata="484">
+                     <span class="blind">48.4%</span>
+                  </li>
+                  <li id="heart" class="circle_cont" cdesc="마음" cdata="560">
+                     <span class="blind">47.6%</span>
+                  </li>
+                  <li id="mental" class="circle_cont" cdesc="정신" cdata="476">
+                     <span class="blind">56.0%</span>
+                  </li>
+                  <li id="body" class="circle_cont" cdesc="신체" cdata="563">
+                     <span class="blind">56.3%</span>
+                  </li>
+                  <li id="activity" class="circle_cont" cdesc="활동" cdata="805">
+                     <span class="blind">80.5%</span>
+                  </li>
+                  <li id="bmi" class="circle_cont"></li>
+                  <li id="bio" class="circle_cont"></li>
+                  <li id="tunHStart" class="circle_cont active" cdata="S"></li>
+                  <!-- 가운데 원 -->
+                  <div class="circle_center">
+                     <div class="inner">
+                        <a href="#" class="txt_box" id="circleCenterLink">
+                           <span class="desc" id="dashCenterTit">앱 이용을 위한<br>첫걸음</span>
+                           <span class="tit" id="dashCenterDesc">건강설문<br>시작하기</span>
+                        </a>
+                     </div>
+                  </div>
+               </ul>
+            </div>
+            <div class="pt30 pb30"><!-- 20230313 pt30 pb30 클래스 수정 -->
+               <button class="btn_cut"><span class="blind">웰니스지수 작게보기 버튼</span></button>
+            </div>
+         </div>
+         <!-- // 상단 웰니스 지수 영역 -->
+         <!-- 챌린지 배너 영역 -->
+
+         <!-- // 챌린지 배너 영역 -->
+
+         <!-- 서비스 살펴보기 영역 -->
+         <!-- 	<div class="con pt30 pb30 txt_center">
+	            <a href="/fho/moveHelpTuneHInfo.do" class="service_link">주요 서비스 살펴보기
+	            	<span><img src="https://tuneh.azureedge.net/resources/img/arr_right_w.png" alt></span> 20230103 아이콘 추가
+	            </a>
+	         </div> -->
+         <!-- 서비스 살펴보기 영역 -->
+         <div class="health_wrap type_goal type_main bg_white_wrap pt0"><!-- 20230313 pt0클래스 수정 -->
+            <div class="health_container bg_gray_wrap">
+               <div class="goal_section align_right">
+                  <div class="tit_imgwrap mb24"><!-- 20230313 mb24클래스 수정 -->
+                     <p>진행 중인 미션</p>
+                  </div>
+                  <div class="swiper-container recommend_slider">
+                     <div class="swiper-wrapper">
+                        <!-- <div class="list_wrap chall_nodata">
+                           <div class="nodata">
+                              현재 진행중인 미션이 없습니다.
+                           </div>
+                        </div> -->
+                        <div class="swiper-slide">
+                           <a href="/goals/goalDetail?goalId=640ed200f3899d22ab0f947e&amp;kind=myGoal" class="recommend_card">
+                              <div class="recommend_card_top">
+                                 <span class="category">추적</span>
+                                 <span class="card_tit">하루 8,000보</span>
+                                 <span class="coin">100</span>
+                              </div>
+                              <div class="recommend_card_bottom">
+                                 <div class="progress_wrap">
+                                    <div class="now_wrap">
+                                       <span class="now"><span>0</span>%</span>
+                                       <span class="info">0/14</span>
+                                    </div>
+                                    <div class="progress"><i style="width:0%;"></i></div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="swiper-slide">
+                           <a href="/goals/goalDetail?goalId=640ed200f3899d22ab0f947e&amp;kind=myGoal" class="recommend_card">
+                              <div class="recommend_card_top">
+                                 <span class="category">추적</span>
+                                 <span class="card_tit">하루 8,000보</span>
+                                 <span class="coin">100</span>
+                              </div>
+                              <div class="recommend_card_bottom">
+                                 <div class="progress_wrap">
+                                    <div class="now_wrap">
+                                       <span class="now"><span>0</span>%</span>
+                                       <span class="info">0/14</span>
+                                    </div>
+                                    <div class="progress"><i style="width:0%;"></i></div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="swiper-slide">
+                           <a href="/goals/goalDetail?goalId=640ed200f3899d22ab0f947e&amp;kind=myGoal" class="recommend_card">
+                              <div class="recommend_card_top">
+                                 <span class="category">추적</span>
+                                 <span class="card_tit">하루 8,000보</span>
+                                 <span class="coin">100</span>
+                              </div>
+                              <div class="recommend_card_bottom">
+                                 <div class="progress_wrap">
+                                    <div class="now_wrap">
+                                       <span class="now"><span>0</span>%</span>
+                                       <span class="info">0/14</span>
+                                    </div>
+                                    <div class="progress"><i style="width:0%;"></i></div>
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- 20230313 recommend_slider 슬라이드 스크립트 추가 -->
+                  <script>
+                     var swiper = new Swiper(".recommend_slider", {
+                        slidesPerView: "auto",
+                        spaceBetween: 18, //20210714
+                        slidesOffsetAfter: 24 //20210715,
+                     });
+                  </script>
+                  <!-- // 20230313 recommend_slider 슬라이드 스크립트 추가 -->
+                  <p class="tooltip"><a href="#" onclick="netiveUI.plugins.popAlert('#alertModal001');">추적/코칭이란?</a></p>
+               </div>
+               <!-- //.goal_section -->
+               <div class="goal_section">
+                  <div class="tit_imgwrap">
+                     <p>미션 추가하기</p>
+                  </div>
+                  <div class="new_goal_wrap">
+                     <ul>
+                        <li class="new_goal_item">
+                           <span class="new_tit"><em class="category">영양</em>눈에 보이는 곳에 과일 두기<em class="coin">100</em></span>
+                           <a href="javascript:EVENT.addGoal('wol_fruit_in_sight', 'nutrition');"
+                              class="add_btn">
+                              <div class="add_h">&nbsp;</div>
+                              <div class="add_v">&nbsp;</div>
+                           </a>
+                        </li>
+                        <li class="new_goal_item">
+                           <span class="new_tit">
+                              <em class="category">활동</em>자전거 초보자<em class="coin">100</em>
+                           </span>
+                           <a href="javascript:EVENT.addGoal('cycling_novice', 'activity');"
+                              class="add_btn">
+                              <div class="add_h">&nbsp;</div>
+                              <div class="add_v">&nbsp;</div>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- 참여중 -->
+            <div class="health_container health_wrap footer_no type_chall_list">
+               <div class="msg_floating" id="btnShare">
+                  <p><a href="#">공유하기</a></p>
+               </div>
+               <div class="tit_imgwrap">
+                  <p>챌린지</p>
+               </div>
+               <!-- 참여중 -->
+               <div class="list_wrap chall_nodata">
+                  <!-- 챌린지목록이 없을때 chall_nodata -->
+                  <p class="list_label">참여 중인 챌린지(<span>0</span>)</p>
+                  <div class="nodata">
+                     현재 참여 중인 챌린지가 없습니다.
+                  </div>
+               </div>
+               <!-- //참여중 -->
+               <!-- 참여가능 -->
+               <div class="list_wrap">
+                  <p class="list_label">참여 가능한 챌린지(<span>3</span>)</p>
+                  <ul class="chall_list">
+                     <li>
+                        <a href="#">
+                           <div class="chall_con">
+                              <div class="img_wrap">
+                                 <img src="../../resources/img/challenge/icon_chall_steps.png" alt="">
+                              </div>
+                              <div class="txt_wrap">
+                                 <p class="tit">그룹생성테스트</p>
+                                 <p class="sub team">팀 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                              </div>
+                           </div>
+                           <div class="chall_desc">
+                              <span class="data">2023.03.05 ~ 2023.03.13</span>
+                              <div class="group">0명</div>
+                           </div>
+                           <button type="button" class="btn_next">
+                              <span class="hidden">다음화면으로 이동</span>
+                           </button>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <div class="chall_con">
+                              <div class="img_wrap">
+                                 <img src="../../resources/img/challenge/icon_chall_steps.png" alt="">
+                              </div>
+                              <div class="txt_wrap">
+                                 <p class="tit">TeamChallenge4AutoTests</p>
+                                 <p class="sub team">팀 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                              </div>
+                           </div>
+                           <div class="chall_desc">
+                              <span class="data">2023.02.25 ~ 2031.02.25</span>
+                              <div class="group">1명</div>
+                           </div>
+                           <button type="button" class="btn_next">
+                              <span class="hidden">다음화면으로 이동</span>
+                           </button>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <div class="chall_con">
+                              <div class="img_wrap">
+                                 <img src="../../resources/img/challenge/icon_chall_steps.png" alt="">
+                              </div>
+                              <div class="txt_wrap">
+                                 <p class="tit">Challenge4AutoTests</p>
+                                 <p class="sub solo">개인 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                              </div>
+                           </div>
+                           <div class="chall_desc">
+                              <span class="data">2023.02.25 ~ 2031.02.25</span>
+                              <div class="group">2명</div>
+                           </div>
+                           <button type="button" class="btn_next">
+                              <span class="hidden">다음화면으로 이동</span>
+                           </button>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- //참여가능 -->
+               <!-- 참여 완료 -->
+               <div class="list_wrap chall_nodata">
+                  <!-- 챌린지목록이 없을때 chall_nodata -->
+                  <p class="list_label">완료한 챌린지(<span>0</span>)</p>
+                  <div class="nodata">
+                     완료한 챌린지가 없습니다.
+                  </div>
+               </div>
+               <!-- //참여 완료 -->
+            </div>
+            <!-- 동의 확인 팝업 -->
+            <div class="chall_alert health_alert" id="alert003" style="display: none;" clgdata="">
+               <div class="inner">
+                  <p class="msg txt_center" id="agreCheck"
+                     onclick="netiveUI.plugins.popAlert('#alert004');">챌린지 참여를 위해서 운동량 측정을 위한 위치기반
+                     서비스 이용약관에 동의 해주세요<br><br>
+                     <span style="text-decoration : underline;">위치기반 서비스 이용 약관</span>
+                  </p>
+                  <div class="btn_wrap">
+                     <button type="button" class="btn_pop_light ui-close">아니오</button>
+                     <button type="button" class="btn_pop_primary ui-close"
+                        onclick="javascript:fnAgreGo('');">예</button>
+                  </div>
+               </div>
+            </div>
+            <!-- //동의 확인 팝업 -->
+            <!-- 동의 확인 팝업 -->
+            <div class="chall_alert health_alert" id="alert004" style="display: none;" clgdata="">
+               <div class="inner">
+                  <p class="msg txt_center" id="gpsInfo"> 위치기반서비스 이용약관&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     2021.11.22. 제정&amp;lt;/br&amp;gt;
+                     2022. 7. 15. 개정&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제1장 총 칙&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 1 조 (목적) 본 약관은 회원(“Tune H” 위치기반서비스 약관에 동의한 자를 말합니다. 이하 “회원”이라고 합니다.)이
+                     라이나생명보험주식회사(이하 “회사”라고 합니다)가 제공하는 Tune H 위치기반 서비스(이하 “서비스”라고 합니다)를 이용함에 있어 회사와
+                     회원의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 2 조 (이용약관의 효력 및 변경)&amp;lt;/br&amp;gt;
+                     ① 본 약관은 서비스를 신청한 고객 또는 개인위치정보주체가 본 약관에 동의하고 회사가 정한 소정의 절차에 따라 서비스의 이용자로 등록함으로써
+                     효력이 발생합니다.&amp;lt;/br&amp;gt;
+                     ② 회원이 온라인에서 본 약관의 &amp;quot;동의하기&amp;quot; 버튼을 클릭하였을 경우 본 약관의 내용을 모두 읽고 이를 충분히
+                     이해하였으며, 그 적용에 동의한 것으로 봅니다.&amp;lt;/br&amp;gt;
+                     ③ 회사는 위치정보의 보호 및 이용 등에 관한 법률, 콘텐츠산업 진흥법, 전자상거래 등에서의 소비자보호에 관한 법률, 소비자기본법 약관의
+                     규제에 관한 법률 등 관련법령을 위배하지 않는 범위에서 본 약관을 개정할 수 있습니다.&amp;lt;/br&amp;gt;
+                     ④ 회사가 약관을 개정할 경우에는 기존약관과 개정약관 및 개정약관의 적용일자와 개정사유를 명시하여 현행약관과 함께 그 적용일자 7일 전부터
+                     공지하고, 개정 내용이 회원에게 불리한 경우에는 그 적용일자 30일 전부터 적용일 이후 상당한 기간 동안 각각 이를 서비스 홈페이지에
+                     게시하거나 회원에게 전자적 형태(전자우편, SMS 등)로 약관 개정 사실을 발송하여 고지합니다. &amp;lt;/br&amp;gt;
+                     ⑤ 회사가 전항에 따라 회원에게 통지하면서 공지 또는 공지?고지일로부터 개정약관 시행일 7일 후까지 명시적으로 거부의사를 표시하지 아니하면
+                     이용약관에 승인한 것으로 봅니다. 회원이 개정약관에 동의하지 않을 경우 회원은 이용계약을 해지할 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     ⑥ “회원”이 개정약관의 적용에 동의하지 않는 경우 “회사”는 개정약관을 적용할 수 없으며, 이 경우 “회원”은 이용계약을 해지할 수
+                     있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 “회사”는 이용계약을 해지할 수 있습니다.
+                     &amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 3 조 (관계법령의 적용) 본 약관은 신의성실의 원칙에 따라 공정하게 적용하며, 본 약관에 명시되지 아니한 사항에 대하여는 관계법령, 각
+                     서비스 이용약관, 회사가 정한 지침 등의 규정 또는 상관례에 따릅니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제2장 서비스의 이용&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 4 조 (서비스의 내용) 회사가 제공하는 서비스는 아래와 같습니다.&amp;lt;/br&amp;gt;
+                     서비스 명&amp;lt;/br&amp;gt;
+                     서비스 내용&amp;lt;/br&amp;gt;
+                     Tune H&amp;lt;/br&amp;gt;
+                     위치기반 서비스&amp;lt;/br&amp;gt;
+                     o 회원의 위치를 확인하여 현재의 운동위치 표시 및/또는 운동 경로를 기록하고 회원의 운동량을 측정하여 저장,
+                     조회함&amp;lt;/br&amp;gt;
+                     o 회원의 운동정보를 분석하여 맞춤형 생활습관을 위한 콘텐츠를 제공함&amp;lt;/br&amp;gt;
+                     제 5 조 (서비스 이용요금) &amp;lt;/br&amp;gt;
+                     ① 회사가 제공하는 서비스는 기본적으로 무료입니다. 단, 별도의 유료 서비스의 경우 해당 서비스에 명시된 요금을 지불하여야 사용
+                     가능합니다.&amp;lt;/br&amp;gt;
+                     ② 회사는 유료 서비스 이용요금을 회사와 계약한 전자지불업체에서 정한 방법에 의하거나 회사가 정한 청구서에 합산하여 청구할 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     ③ 유료서비스 이용을 통하여 결제된 대금에 대한 취소 및 환불은 회사의 결제 이용약관 및 관계법규에
+                     따릅니다.&amp;lt;/br&amp;gt;
+                     ④ 회원의 개인정보도용 및 결제사기로 인한 환불요청 또는 결제자의 개인정보 요구는 법률이 정한 경우 외에는 거절될 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     ⑤ 무선 서비스 이용 시 발생하는 데이터 통신료는 별도이며 가입한 각 이동통신사의 정책에 따릅니다.&amp;lt;/br&amp;gt;
+                     ⑥ MMS 등으로 게시물을 등록할 경우 발생하는 요금은 이동통신사의 정책에 따릅니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 6 조 (서비스내용변경 통지 등)&amp;lt;/br&amp;gt;
+                     ① 회사가 서비스 내용을 변경하거나 종료하는 경우 회사는 회원의 등록된 전자우편 주소로 이메일을 통하여 서비스 내용의 변경 사항 또는 종료를
+                     통지할 수 있습니다.&amp;lt;/br&amp;gt;
+                     ② 제①항의 경우 불특정 다수인을 상대로 통지를 함에 있어서는 웹사이트 등 기타 회사의 공지사항을 통하여 회원들에게 통지할 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 7 조 (서비스이용의 제한 및 중지)&amp;lt;/br&amp;gt;
+                     ① 회사는 아래 각 호의 1에 해당하는 사유가 발생한 경우에는 회원의 서비스 이용을 제한하거나 중지시킬 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     1. 회원이 회사 서비스의 운영을 고의 또는 중과실로 방해하는 경우2. 회원이 타인의 명의 등을 이용하여 서비스에 가입하거나 타인의 개인정보를
+                     도용한 경우 &amp;lt;/br&amp;gt;
+                     3. 회원이 서비스를 이용하여 법령, 공공질서, 미풍양속 등에 반하는 행위를 한 경우&amp;lt;/br&amp;gt;
+                     　　4. 서비스용 설비 점검, 보수 또는 공사로 인하여 부득이한 경우&amp;lt;/br&amp;gt;
+                     　　5. 전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지했을 경우&amp;lt;/br&amp;gt;
+                     6. 국가비상사태, 서비스 설비의 장애 또는 서비스 이용의 폭주 등으로 서비스 이용에 지장이 있는 때&amp;lt;/br&amp;gt;
+                     7. 기타 중대한 사유로 인하여 회사가 서비스 제공을 지속하는 것이 부적당하다고 인정하는 경우&amp;lt;/br&amp;gt;
+                     ② 회사는 전항의 규정에 의하여 서비스의 이용을 제한하거나 중지한 때에는 그 사유 및 제한기간 등을 회원에게 알려야 합니다. 다만, 회사의
+                     귀책사유 없는 시스템 장애, 정전, 천재지변 등 회사가 통제할 수 없는 사유로 서비스가 제한되어 사전통지가 불가능한 경우에는 사후에
+                     통지합니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제3장 개인위치정보 처리 및 보호&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 8 조 (개인위치정보의 수집, 이용 또는 제공)&amp;lt;/br&amp;gt;
+                     ① 회사는 서비스 제공을 위하여 회원의 개인위치정보를 수집, 이용 또는 제공할 수 있으며, 회원은 본 약관에 동의함으로써 이에 동의한 것으로
+                     봅니다.&amp;lt;/br&amp;gt;
+                     ② 회사는 위치정보의 이용 및 보호에 관한 법률 제16조 제2항에 따라 위치정보 이용·제공?사실 확인자료를 자동 기록·보존하며, 해당 자료는
+                     6개월간 보관합니다.&amp;lt;/br&amp;gt;
+                     ③ 회사는 개인위치정보를 회원이 지정하는 제3자에게 제공하는 경우에는 개인위치정보를 수집한 당해 통신 단말장치로 매회 회원에게 제공받는 자,
+                     제공일시 및 제공목적을 통보합니다. 단, 아래 각 호의 1에 해당하는 경우에는 회원이 미리 특정하여 지정한 통신 단말장치 또는 전자우편주소로
+                     통보합니다.&amp;lt;/br&amp;gt;
+                     1. 개인위치정보를 수집한 당해 통신단말장치가 문자, 음성 또는 영상의 수신기능을 갖추지 아니한 경우&amp;lt;/br&amp;gt;
+                     2. 회원이 온라인 게시 등의 방법으로 통보할 것을 미리 요청한 경우&amp;lt;/br&amp;gt;
+                     ④ 회사는 제4항에도 불구하고 고객의 동의를 받아 최대 30일의 범위에서 일정 횟수 또는 기간마다 제3자에 대한 정보제공 내역을 모아서 통보할
+                     수 있습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 9 조 (개인위치정보주체의 권리)&amp;lt;/br&amp;gt;
+                     ① 회원은 회사에 대하여 언제든지 개인위치정보를 이용한 위치기반서비스 제공 및 개인위치정보의 제3자 제공에 대한 동의의 전부 또는 일부를
+                     철회할 수 있습니다. 이 경우 회사는 수집한 개인위치정보 및 위치정보 이용, 제공사실 확인자료를 파기합니다.&amp;lt;/br&amp;gt;
+                     ② 회원은 회사에 대하여 언제든지 개인위치정보의 수집, 이용 또는 제공의 일시적인 중지를 요구할 수 있으며, 회사는 이를 거절할 수 없고 이를
+                     위한 기술적 수단을 갖추고 있습니다.&amp;lt;/br&amp;gt;
+                     ③ 회원은 회사에 대하여 아래 각 호의 자료에 대한 열람 또는 고지를 요구할 수 있고, 당해 자료에 오류가 있는 경우에는 그 정정을 요구할 수
+                     있습니다. 이 경우 회사는 정당한 사유 없이 회원의 요구를 거절할 수 없습니다.&amp;lt;/br&amp;gt;
+                     1. 본인에 대한 위치정보 수집, 이용, 제공사실 확인자료&amp;lt;/br&amp;gt;
+                     2. 본인의 개인위치정보가 위치정보의 보호 및 이용 등에 관한 법률 또는 다른 법률 규정에 의하여 제3자에게 제공된 이유 및
+                     내용&amp;lt;/br&amp;gt;
+                     ④ 회원은 제1항 내지 제3항의 권리행사를 위해 이 약관 제18조의 연락처를 이용하여 회사에 요구할 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 10 조 (법정대리인의 권리) &amp;lt;/br&amp;gt;
+                     ① 회사는 만 14세 미만의 아동으로부터 개인위치정보를 수집, 이용 또는 제공하고자 하는 경우에는 만 14세 미만 아동과 그 법정대리인으로부터
+                     동의를 받아야 합니다. 이 경우 법정대리인은 제9조에 의한 회원의 권리를 모두 가집니다.&amp;lt;/br&amp;gt;
+                     ② 회사는 만 14세 미만의 아동의 개인위치정보 또는 위치정보 이용?제공사실 확인자료를 이용약관에 명시 또는 고지한 범위를 넘어 이용하거나
+                     제3자에게 제공하고자 하는 경우에는 14세미만의 아동과 그 법정대리인의 동의를 받아야 합니다. 단, 아래의 경우는
+                     제외합니다.&amp;lt;/br&amp;gt;
+                     1. 위치정보 및 위치기반서비스 제공에 따른 요금정산을 위하여 위치정보 이용, 제공사실 확인자료가 필요한
+                     경우&amp;lt;/br&amp;gt;
+                     2. 통계작성, 학술연구 또는 시장조사를 위하여 특정 개인을 알아볼 수 없는 형태로 가공하여 제공하는 경우&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 11 조 (8세 이하의 아동 등의 보호의무자의 권리) &amp;lt;/br&amp;gt;
+                     ① 회사는 아래의 경우에 해당하는 자(이하 “8세 이하의 아동”등이라 한다)의 보호의무자가 8세 이하의 아동 등의 생명 또는 신체보호를 위하여
+                     개인위치정보의 이용 또는 제공에 동의하는 경우에는 본인의 동의가 있는 것으로 봅니다.&amp;lt;/br&amp;gt;
+                     1. 8세 이하의 아동&amp;lt;/br&amp;gt;
+                     2. 금치산자&amp;lt;/br&amp;gt;
+                     3. 장애인복지법제2조제2항제2호의 규정에 의한 정신적 장애를 가진 자로서 장애인고용촉진및직업재활법 제2조제2호의 규정에 의한 중증장애인에
+                     해당하는 자(장애인복지법 제29조의 규정에 의하여 장애인등록을 한 자에 한한다)&amp;lt;/br&amp;gt;
+                     ② 8세 이하의 아동 등의 생명 또는 신체의 보호를 위하여 개인위치정보의 이용 또는 제공에 동의를 하고자 하는 보호의무자는 서면동의서에
+                     보호의무자임을 증명하는 서면을 첨부하여 회사에 제출하여야 합니다.&amp;lt;/br&amp;gt;
+                     ③ 보호의무자는 8세 이하의 아동 등의 개인위치정보 이용 또는 제공에 동의하는 경우 개인위치정보주체 권리의 전부를 행사할 수
+                     있습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 12 조 (위치정보관리책임자의 지정)&amp;lt;/br&amp;gt;
+                     ① 회사는 위치정보를 적절히 관리?보호하고 개인위치정보주체의 불만을 원활히 처리할 수 있도록 실질적인 책임을 질 수 있는 지위에 있는 자를
+                     위치정보관리책임자로 지정해 운영합니다. &amp;lt;/br&amp;gt;
+                     ② 위치정보관리책임자는 위치기반서비스를 제공하는 부서의 부서장으로서 구체적인 사항은 본 약관의 부칙에
+                     따릅니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제4장 기타&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 13 조 (손해배상) &amp;lt;/br&amp;gt;
+                     ① 회사가 위치정보의 보호 및 이용 등에 관한 법률 제15조 내지 제26조의 규정을 위반한 행위로 회원에게 손해가 발생한 경우 회원은 회사에
+                     대하여 손해배상 청구를 할 수 있습니다. 이 경우 회사는 고의, 과실이 없음을 입증하지 못하는 경우 책임을 면할 수
+                     없습니다.&amp;lt;/br&amp;gt;
+                     ② 회원이 본 약관의 규정을 위반하여 회사에 손해가 발생한 경우 회사는 회원에 대하여 손해배상을 청구할 수 있습니다. 이 경우 회원은 고의,
+                     과실이 없음을 입증하지 못하는 경우 책임을 면할 수 없습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 14 조 (면책) &amp;lt;/br&amp;gt;
+                     ① 회사는 다음 각 호의 경우로 위치기반서비스를 제공할 수 없는 경우 이로 인하여 회원에게 발생한 손해에 대해서는 책임을 부담하지
+                     않습니다.&amp;lt;/br&amp;gt;
+                     1. 천재지변 또는 이에 준하는 불가항력의 상태가 있는 경우&amp;lt;/br&amp;gt;
+                     2. 서비스 제공을 위하여 회사와 서비스 제휴계약을 체결한 제3자의 고의적인 서비스 방해가 있는 경우&amp;lt;/br&amp;gt;
+                     3. 회원의 귀책사유로 서비스 이용에 장애가 있는 경우&amp;lt;/br&amp;gt;
+                     4. 제1호 내지 제3호를 제외한 기타 회사의 고의?과실이 없는 사유로 인한 경우&amp;lt;/br&amp;gt;
+                     ② 회사는 서비스 및 서비스에 게재된 정보, 자료, 사실의 신뢰도, 정확성 등에 대해서는 보증을 하지 않으며 이로 인해 발생한 회원의 손해에
+                     대하여는 책임을 부담하지 아니합니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 15 조 (규정의 준용) &amp;lt;/br&amp;gt;
+                     ① 본 약관은 대한민국법령에 의하여 규정되고 이행됩니다.&amp;lt;/br&amp;gt;
+                     ② 본 약관에 규정되지 않은 사항에 대해서는 관련법령 및 상관습에 의합니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 16 조 (분쟁의 조정 및 기타) &amp;lt;/br&amp;gt;
+                     ① 회사는 위치정보와 관련된 분쟁에 대해 당사자간 협의가 이루어지지 아니하거나 협의를 할 수 없는 경우에는 위치정보의 보호 및 이용 등에 관한
+                     법률 제28조의 규정에 의한 방송통신위원회에 재정을 신청할 수 있습니다.&amp;lt;/br&amp;gt;
+                     ② 회사 또는 고객은 위치정보와 관련된 분쟁에 대해 당사자간 협의가 이루어지지 아니하거나 협의를 할 수 없는 경우에는 개인정보보호법 제43조의
+                     규정에 의한 개인정보분쟁조정위원회에 조정을 신청할 수 있습니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 17 조 (관할법원)&amp;lt;/br&amp;gt;
+                     회사의 서비스와 관련된 분쟁의 관할법원은 제소 당시 회원의 주소를 관할하는 지방법원으로 하고, 주소가 없는 경우에는 거소를 관할하는
+                     지방법원으로 합니다. 다만, 제소 당시 회원의 주소 또는 거소가 분명하지 않거나 외국 거주자의 경우에는 민사소송법에
+                     따릅니다.&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제 18 조 (회사의 연락처) 회사의 상호 및 주소 등은 다음과 같습니다.&amp;lt;/br&amp;gt;
+                     1. 상 호 : 라이나생명보험주식회사&amp;lt;/br&amp;gt;
+                     2. 대 표 자 : 조 지 은&amp;lt;/br&amp;gt;
+                     3. 주 소 : 서울시 종로구 삼봉로 48 시그나타워 &amp;lt;/br&amp;gt;
+                     4. 대표전화 : 1833-4030[CMYK1]&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     부 칙&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제1조 (시행일) 이 약관은 2021년 11월 22일부터 시행한다.&amp;lt;/br&amp;gt;
+                     제2조 위치정보관리책임자는 2021년 9월을 기준으로 다음과 같이 지정합니다.&amp;lt;/br&amp;gt;
+                     1. 소 속 : 시그나코리아 주식회사 정보보호파트장&amp;lt;/br&amp;gt;
+                     2. 연락처 : 02-6330-3449&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     부 칙&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     제1조 (시행일) 이 약관은 2022년 7월 15일부터 시행한다.&amp;lt;/br&amp;gt;
+                     제2조 위치정보관리책임자는 2022년 6월을 기준으로 다음과 같이 지정합니다.&amp;lt;/br&amp;gt;
+                     1. 소 속 : 라이나생명보험주식회사 위치정보관리책임자&amp;lt;/br&amp;gt;
+                     2. 연락처 : 02-3775-7183&amp;lt;/br&amp;gt;
+                     &amp;lt;/br&amp;gt;
+                     [CMYK1]콜센터 번호 확인 필요&amp;lt;/br&amp;gt;
+                  </p>
+                  <div class="btn_wrap">
+                     <button type="button" class="btn_pop_light ui-close"
+                        onclick="netiveUI.plugins.popAlert('#alert003');">확인</button>
+                  </div>
+               </div>
+            </div>
+            <!-- //동의 확인 팝업 -->
+            <div class="main_footer acco_list_wrap">
+               <div class="item_head">
+                  <a id="popFull01" href="javascript:netiveUI.plugins.popFull('#STPLAT_0000000000003M');"><span>이용약관</span></a>
+                  <a id="popFull02" href="javascript:fnLink2('https://www.lina.co.kr/cms/etc/1/index.htm');"><span class="footer_tit">개인정보처리방침</span></a>
+                  <a id="popFull03" href="javascript:netiveUI.plugins.popFull('#STPLAT_0000000000071M');"><span class="footer_tit">이전 개인정보처리방침</span></a>
+                  <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+               </div>
+               <div class="item_cont" style="display: none;">
+                  <div>
+                     <p>
+                        <span>라이나생명보험 주식회사</span>
+                        <span class="cigna_president">대표이사 : 조지은</span>
+                     </p>
+                     <p class="address">서울 종로구 삼봉로 48 라이나타워 20층</p>
+                     <p><span>사업자등록번호 : </span>104-81-85673</p>
+                     <p><span>통신판매업신고 </span>제2022-서울종로-0938호</p>
+                     <p><a class="arrow_link" href="javascript:fnLink2('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1048185673')">사업자정보확인</a></p>
+                  </div>
+                  <div class="footer_call_center">
+                     <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+                     <p><span>이메일 : </span><a class="arrow_link" href="/custcenter/qna.do?mode=insert">문의하기</a></p>
+                     <p class="copy">ⓒLINA Life Insurance Co., Ltd. All rights reserved.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!--서비스 이용 약관 동의 팝업-->
+            <div id="trmsDetailM"></div>
+            <script>
+               $(document).ready(function () {
+
+                  var $total = 100;//총점
+                  //작은 원 색상
+                  var chartColors = {
+                     nutrition: '#0095FF',
+                     sleep: '#7648e6',
+                     competence: '#b15ac5',
+                     heart: '#ff47a9',
+                     mental: '#5d99c4',
+                     body: '#00aea1',
+                     activity: '#19d3c5',
+                  };
+                  //숫자만 추출함수
+                  var onlyNumber = function (num) {
+                     return num.toString().replace('%', '');
+                     // return num.toString().replace(/[^0-9]/g, '');
+                  };
+                  //가운데 원 배경 채우기
+                  var fillBg = function (percent, total) {
+                     var $perNum = percent;
+                     var $total = total;
+                     var $el = $('.circle_center').find('.percent_bg');
+                     $el.css('bottom', '0')
+                     if (Math.sign($perNum) == -1) {
+                        $perNum = 0;
+                     };
+                     var $now = parseInt(onlyNumber($perNum), 10);
+                     if ($now > $total) {
+                        $now = $total;
+                     } else if ($now <= 0) {
+                        $el.css('bottom', '0')
+                     };
+                     var $perNow = ($now / $total) * 100;
+                     if (isNaN($now)) {
+                        $perNow = 0
+                     };
+                     $el.stop().animate({ bottom: $perNow + '%' }, 1000, 'linear');
+                  };
+                  //작은원그래프 함수
+                  var drawCirlcegrap = function () {
+                     $('.circle_cont').each(function () {
+                        var $this = $(this);
+                        var $cont = $(this).attr('id');
+                        var $percent = onlyNumber($this.find('span.blind').text(), 0);
+                        $this.circleProgress({
+                           startAngle: -Math.PI / 2,
+                           value: $percent / 100,
+                           fill: chartColors[$cont],
+                           emptyFill: "rgba(0,0,0,0.0)",
+                           animation: true,
+                           thickness: '3',
+                           size: 54,
+                        });
+                        if ($this.hasClass('active')) {
+                           $this.circleProgress({ fill: chartColors[$cont], animation: true, thickness: '3', })
+                        } else {
+                           $this.circleProgress({ fill: '#fff', animation: false, thickness: '2', })
+                        }
+                     })
+                  }
+                  //초기화면
+                  var $circleAct = $('.circle_cont.active');
+                  fillBg(onlyNumber($circleAct.find('span.blind').text()), $total);
+                  drawCirlcegrap();
+                  $('.circle_center').addClass($circleAct.attr('id'))
+                  $('.circle_dash_wrap').addClass('larger');
+                  $('.btn_cut').removeClass('up');
+
+                  //리사이징
+                  var delay = 300;
+                  var timer = null;
+                  $(window).on('resize', function () {
+                     clearTimeout(timer);
+                     timer = setTimeout(function () {
+                        if (window.innerWidth <= 375) {
+                           drawCirlcegrap();
+                        }
+                     }, delay);
+                  })
+
+
+                  var checkTunHStart = $("#tunHStart").attr('cdata');
+
+                  if (checkTunHStart == "F" || checkTunHStart == "S") {
+
+                     $("#nutrition").css('pointer-events', 'none');
+                     $("#sleep").css('pointer-events', 'none');
+                     $("#competence").css("pointer-events", 'none');
+                     $("#heart").css("pointer-events", 'none');
+                     $("#mental").css("pointer-events", 'none');
+                     $("#body").css("pointer-events", 'none');
+                     $("#activity").css("pointer-events", 'none');
+                     $("#bmi").css("pointer-events", 'none');
+                     $("#bio").css("pointer-events", 'none');
+                  }
+
+                  //작은원 클릭시
+                  $('.circle_cont').on('click', function (e) {
+
+                     var $this = $(this);
+                     var $cont = $(this).attr('id');
+                     var $center = $this.siblings('.circle_center');
+                     if ($this.parents('.circle_dash_wrap').hasClass('smaller')) {
+                        //축소버전에서 작은원 클릭막기
+                        $this.click('off');
+                     }
+
+                     //작은원 활성화
+                     $('.circle_cont').removeClass('active');
+                     $this.addClass('active');
+                     $('.circle_cont').circleProgress({ fill: '#ffffff', animation: false, thickness: '2', });
+                     if ($this.hasClass('active')) {
+                        $this.circleProgress({ fill: chartColors[$cont], animation: false, thickness: '3', })
+                     }
+
+                     var cdata = $("#" + $cont).attr("cdata");
+                     var cdesc = $("#" + $cont).attr("cdesc");
+                     fnCircleCenter($cont, cdesc, cdata);
+
+                     //클릭한 작은원 값으로 가운데 원배경 채우기
+                     $center.removeClass().addClass('circle_center')
+                     $center.addClass($cont);
+                     var $percent = $this.find('span.blind').text();
+                     fillBg($percent, $total);
+
+                     //bmi/bio일때 설명 팝업버튼 노출시키기
+                     if ($cont == 'bmi' || $cont == 'bio') {
+                        $('.btn_info').css('display', 'none');
+                        $('.btn_info.' + $cont).css('display', 'block');
+                     } else {
+                        $('.btn_info').css('display', 'none');
+                     }
+                  });
+
+                  //웰니스 지수 UI 축소
+                  $('.btn_cut').on('click', function () {
+                     var $circleWrap = $('.circle_dash_wrap');
+                     var $circle = $('.circle_dash_wrap').find('.circle_cont');
+                     $circle.addClass('circle_fade')
+                     if ($(this).hasClass('up') && $circleWrap.hasClass('smaller')) {
+                        $circleWrap.removeClass('smaller').addClass('larger');
+                        $circle.removeClass('active');
+                        $circle.eq(0).addClass('active');
+                        $('.circle_center').addClass($('.circle_cont.active').attr('id'));
+                        $('.my_state').stop().show();
+                        $(this).removeClass('up');
+                        drawCirlcegrap();
+                     } else if (!$(this).hasClass('up') && $circleWrap.hasClass('larger')) {
+                        $circleWrap.addClass('smaller').removeClass('larger');
+                        $circle.addClass('active');
+                        $(this).addClass('up');
+                        $('.my_state').stop().hide();
+                        drawCirlcegrap();
+                     }
+                     clearTimeout(timer);
+                     timer = setTimeout(function () {
+                        $circle.removeClass('circle_fade')
+                     }, 700);
+                  });
+               });
+            </script>
+         </div>
+         <script>
+            $(document).ready(function () {
+               netiveUI.plugins.popToast('#bnr_toast');
+               //20220225 하단 배너 슬라이드
+               if ($('.banner_bottom .swiper-container .swiper-slide').length > 1) {
+                  var swiper3 = new Swiper(".banner_bottom-slider", {
+                     slidePerView: 1,
+                     spaceBetween: 0,
+                     loop: false,
+                     pagination: {
+                        el: ".swiper-pagination",
+                     },
+                     autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                     }
+                  });
+               }
+            });
+         </script>
+         <footer class="health_footer">
+            <div class="bottom_pop" id="addGoalDiv" style="display: none;">
+               <div class="pop_inner">
+                  <p>
+                     목표를 추가했습니다
+                  </p>
+               </div>
+            </div>
+
+            <div class="scroll_nav_item">
+               <a href="javascript:void(0)" class="btn_top"><span class="hidden">상단 위로 이동</span></a>
+               <!-- 20230313 코칭 삭제 -->
+              <!--  <a href="/coach/main.do" class="nav_item" style="background-image: url(/cmm/fms/FileDown.do?atchFileId=FILE_000000000002706);"><span class="hidden">코칭</span></a> -->
+            </div>
+            <div class="health_footer_nav">
+               <ul>
+                  <li>
+                     <a href="/fho/mainPage.do" class="nav_item home   on  ">
+                        <span class="icon"></span>
+                        <strong>홈</strong>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/contents/main" class="nav_item contents  ">
+                        <span class="icon"></span>
+                        <strong>건강 관리법</strong>
+                     </a>
+                  </li>
+               </ul>
+                 <!-- 20230313 코칭 선택 말풍성 삭제 -->
+                 <!-- <div class="footer_bubbleBox" id="balloonDiv"
+                  onclick="javascript:location.href='/fmy/FMY-004001.do';">
+                  <span>
+                     나와 맞는 코치를 선택해보세요!
+                  </span>
+               </div> -->
+               <!-- // 20230313 코칭 선택 말풍성 삭제 -->
+            </div>
+         </footer>
+      </div>
+      <div class="health_full actived" id="full001" style="display: none;">
+         <div class="inner">
+            <div class="pop_wrap">
+               <div class="pop_header">
+                  <div class="header_wrap">
+                     <button type="button" class="btn_close ui-close"><span
+                           class="hidden">닫기</span></button>
+                  </div>
+               </div>
+               <div class="pop_container">
+                  <div class="con_inner">
+                     <div class="con_box">
+                        <div class="pop_con">
+                           <div class="tab_wrap tab_type">
+                              <div class="tabs">
+                                 <!-- 20210719 내용 수정 -->
+                                 <ul class="tab_menulist">
+                                    <li class="active"><a class="tab_control" href="#tab-3">Tune
+                                          Point/기프트</a></li>
+                                    <!--20210716 문구 수정-->
+                                    <li><a class="tab_control" href="#tab-4">레벨업</a></li>
+                                 </ul>
+                                 <div class="tab_panel active" id="tab-3">
+                                    <!-- 20210716 문구 수정 -->
+                                    <div class="content_tit">
+                                       <dl>
+                                          <dt>1. Tune Point란?</dt>
+                                          <dd>
+                                             <p>Tune Point는 Tune H의 리워드로서 <br>
+                                                Tune H App 회원가입 후 App 내 특정 활동 시 발생되며, 회사는 Tune
+                                                Point에 따라 회원등급(레벨) 상승, 기프트 등을 제공할 수 있습니다.</p>
+                                             <p class="mt_type">
+                                                1) App 활동 중 목표 달성, 성취 달성, 챌린지 참여, 챌린지 성과 달성, 그 밖에 특정
+                                                이벤트 참여 시 Tune Point가 적립됩니다.<br>
+                                                2) Tune Point는 회원 탈퇴 시 소멸됩니다.<br>
+                                                3) Tune Point 적립대상, 적립률 등은 회사 정책에 따라 사전 고지 후 변동될 수
+                                                있습니다.
+                                             </p>
+                                          </dd>
+                                       </dl>
+                                       <dl>
+                                          <dt>2. Tune Point 사용 안내</dt>
+                                          <dd>
+                                             <p>회사는 회원의 누적 Tune Point에 따라 회원등급(레벨)을 상향하거나, 기프트 등을
+                                                제공할 수 있습니다. Tune Point는 Tune H App 내 결제수단으로 사용될 수
+                                                없습니다.</p>
+                                             <p class="mt_type">
+                                                1) Tune Point는 타인에게 양도할 수 없습니다.<br>
+                                                2) 일부 활동(목표달성 등) 결과에 따른 Tune Point 제공은 자동으로 지급
+                                                됩니다.(단, 시스템상 실시간 지급이 안될 수 있습니다.)<br>
+                                                3) 기프트 제공은 회원 레벨 상승 또는 일정 Tune Point 도달 시 가능합니다.<br>
+                                                4) 일정 Tune Point에 따른 기프트는 사전 공지됩니다.
+                                             </p>
+                                          </dd>
+                                       </dl>
+                                       <dl>
+                                          <dt>3. Tune H 리워드 유효 기간 및 소멸 안내</dt>
+                                          <dd>
+                                             <p>유효기간과 소멸 기준을 확인하여 리워드를 관리하실 수 있습니다.</p>
+                                             <p class="mt_type">
+                                                1) 부정한 방법으로 획득한 리워드는 차감될 수 있습니다. 단, 일부 ‘이벤트’를 통해 적립된
+                                                리워드의 경우 각 리워드 마다 별도 지정된 소멸 일자를 따릅니다.<br>
+                                                2) 회원 탈퇴 등의 사유로 리워드가 소멸되는 경우 재가입을 하더라도 소멸된 리워드는 복구가
+                                                불가능합니다.<br>
+                                                3) 리워드는 적립시점부터 2년이 경과하면 소멸되며, 리워드 소멸은 소멸예정일 자정에
+                                                완료됩니다.<br>
+                                                예) 2018.10.30 소멸 예정리워드 → 2018.10.30에서 2018.10.31 로
+                                                넘어가는 밤 12시에 소멸
+                                             </p>
+                                          </dd>
+                                       </dl>
+                                    </div>
+                                    <!-- //20210716 문구 수정 -->
+                                 </div>
+                                 <div class="tab_panel" id="tab-4">
+                                    <div class="content_tit">
+                                       <dl>
+                                          <dt>1. Tune H 레벨업 기준</dt>
+                                          <dd class="levelup_guide">
+                                             <span>DIAMOND</span> 누적리워드 50,000 이상<br>
+                                             <span>BLACK</span> 누적리워드 20,000 이상<br>
+                                             <span>PURPLE</span> 누적리워드 15,000 이상<br>
+                                             <span>RED</span> 누적리워드 10,000 이상<br>
+                                             <span>GREEN</span> 누적리워드 5,000 이상<br>
+                                             <span>WHITE</span> 누적리워드 5,000 미만
+                                          </dd>
+                                       </dl>
+                                       <dl>
+                                          <dt>2. 유의사항</dt>
+                                          <dd>
+                                             1) 회원 레벨 산정 기준 및 레벨 별 기프트는 회사 사정에 따라 변경될 수 있습니다.<br>
+                                             2) Tune H 리워드 적립 및 레벨 업에 따른 회원 혜택을 받기 위해서는 반드시 Tune H
+                                             App의 회원이어야 합니다.<br>
+                                             3) 내부 심사 기준에 따라 아래의 경우 레벨 상향이 제한될 수 있습니다.<br>
+                                             - 선정 시점의 탈퇴고객<br>
+                                             - 휴대폰 번호 비정상 (3회 이상 중복, 번호 미기재, 번호 오류 등)<br>
+                                             - 특정 리워드 (활동 결과 직접 입력 가능한 부분) 적립 과다 등 비정상적으로 판단된 경우<br>
+                                             - 직원(라이나생명보험 또는 계열사 직원인 경우)<br>
+                                             - 프로모션 기간 동안 유료 패키지를 무료로 사용하는 경우
+                                          </dd>
+                                       </dl>
+                                    </div>
+                                 </div>
+                                 <!-- //20210719 내용 수정 -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- popup -->
+      <div class="health_full wellness_diary actived" id="healthScoreFull" style="display: none;">
+         <div class="inner">
+            <div class="pop_wrap">
+               <div class="pop_header">
+                  <div class="header_wrap">
+                     <h1 class="hidden">
+                        건강스코어
+                     </h1>
+                     <button type="button" id="closeButton" class="btn_close ui-close">
+                        <span class="hidden">닫기</span>
+                     </button>
+                  </div>
+               </div>
+               <!-- //pop header -->
+
+               <div class="pop_container">
+                  <div class="con_inner">
+                     <div class="con_box">
+                        <div class="pop_con pb0">
+                           <!-- 팝업 내용 -->
+                           <div class="coach_result_wrap">
+                              <div class="seven_coach_cover">
+                                 <h1 class="tit_cont_02" id="healthScoreTitle">test23님의<br>웰니스 지수
+                                 </h1>
+                                 <p class="text_mark">581<em>점</em></p>
+                                 <!-- 20210803 -->
+                                 <div class="coach_result_head" style="display:none">
+                                    <div class="progress_wrap">
+                                       <div class="step_wrap">
+                                          <span class="total">0</span>
+                                          <span class="total">1000</span>
+                                       </div>
+                                       <div class="progress">
+                                          <i class="avg_progress">
+                                             <span class="avg">이용자 평균 <em>455</em></span>
+                                             <!--평균값-->
+                                          </i>
+                                          <i class="result_progress">
+                                             <span class="value now">581</span>
+                                             <!--사용자값-->
+                                          </i>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="score_board">
+                                    <div class="card_wrap card_nutrition">
+                                       <a href="/goals/goalsByCategory?category=nutrition">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">69.6</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a href="/goals/goalsByCategory?category=nutrition">
+                                          <p class="tit">영양</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_sleep">
+                                       <a href="/goals/goalsByCategory?category=sleep">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">71.1</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a href="/goals/goalsByCategory?category=sleep">
+                                          <p class="tit">수면</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_competence">
+                                       <a href="/goals/goalsByCategory?category=indulgences">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">48.4</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a href="/goals/goalsByCategory?category=indulgences">
+                                          <p class="tit">조절</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_heart">
+                                       <a href="/goals/goalsByCategory?category=mindfulness">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">47.6</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a href="/goals/goalsByCategory?category=mindfulness">
+                                          <p class="tit">마음</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_mental">
+                                       <a
+                                          href="/fch/FCH-005001.do?category=assessment_mentalwellbeing">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">56.0</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a
+                                          href="/fch/FCH-005001.do?category=assessment_mentalwellbeing">
+                                          <p class="tit">정신</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_body">
+                                       <a
+                                          href="/fch/FCH-005001.do?category=assessment_physicalhealth">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">56.3</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a
+                                          href="/fch/FCH-005001.do?category=assessment_physicalhealth">
+                                          <p class="tit">신체</p>
+                                       </a>
+                                    </div>
+                                    <div class="card_wrap card_activity">
+                                       <a href="/goals/goalsByCategory?category=activity">
+                                          <div class="score_card">
+                                             <div class="inner">
+                                                <span class="progress_now hidden">80.5</span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                       <a href="/goals/goalsByCategory?category=activity">
+                                          <p class="tit">활동</p>
+                                       </a>
+                                    </div>
+                                 </div>
+                                 <!-- //20210803 -->
+                                 <div class="new_score_wrap">
+                                    <div class="new_score_height same">
+                                       <!-- good, better best  class 추가시 높게, 보통, 낮게 변경 good:낮게 better:보통 best:높게 -->
+                                       <div class="score_height_tit">
+                                          <h2>전일 대비</h2>
+                                       </div>
+                                       <div class="score_height_txt">
+                                          <p id="scoreDesc"><b>{2}</b> 항목에서 <strong>{1}</strong>
+                                             <span class="cover"><span
+                                                   class="inner"><strong>{0}</strong>
+                                                   나왔어요.</span></span></p>
+                                       </div>
+                                       <div class="score_height_result">
+                                          <div>
+                                             <!-- <div class="advice_wrap"> -->
+
+
+
+
+
+                                             <p class="advice">꾸준함도 좋지만 건강관리에 좀 더 집중해 보세요.</p>
+                                             <!-- 전체 이용자 대비 점수 보통 나왔을때 -->
+
+                                          </div>
+                                       </div>
+                                       <div class="score_height_result" style="display: none;">
+                                          <p class="choice">관심주제를 선택해서 시작해 보세요.</p>
+                                          <div class="activity">
+                                             <h3 class="better">잘하고 있어요!</h3>
+                                             <p class="none_advice" style="display: none;">주제 항목이
+                                                없습니다.</p>
+                                             <div class="advice_list best">
+                                                <ul>
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/goals/goalsByCategory?category=activity">
+                                                         <span>활동</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_05.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/goals/goalsByCategory?category=mindfulness">
+                                                         <span>마음</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_06.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/goals/goalsByCategory?category=sleep">
+                                                         <span>수면</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_04.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/fch/FCH-005001.do?category=assessment_mentalwellbeing">
+                                                         <span>정신</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_01.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="1" class="best">
+                                                      <a
+                                                         href="/fch/FCH-005001.do?category=assessment_physicalhealth">
+                                                         <span>신체</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_02.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/goals/goalsByCategory?category=nutrition">
+                                                         <span>영양</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_03.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+
+                                                   <li data-subdelta="0" class="better">
+                                                      <a
+                                                         href="/goals/goalsByCategory?category=indulgences">
+                                                         <span>조절</span>
+                                                         <img
+                                                            src="https://tuneh.azureedge.net/resources/img/ico_mind_07.png"
+                                                            alt="">
+                                                      </a>
+                                                   </li>
+
+                                                </ul>
+                                             </div>
+                                          </div>
+                                          <div class="activity">
+                                             <h3 class="low">조금 더 노력해볼까요?</h3>
+                                             <p class="none_advice" style="display: none;">주제 항목이
+                                                없습니다.</p>
+                                             <div class="advice_list good">
+                                                <ul>
+
+
+
+
+
+
+
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="pb100" style="display:none">
+                              <div class="tit_imgwrap mb60">
+                                 <img src="/cmm/fms/FileDown.do?atchFileId=FILE_000000000002706"
+                                    onerror="this.src='https://tuneh.azureedge.net/resources/img/img_coachchange.png'">
+                                 <p>딱 맞는 관리방법을 <br>준비했어요.</p>
+                              </div>
+                              <div class="pop_service_cont">
+                                 <div class="pop_service_small">
+                                    <p>분석을 통해 체계적으로 관리할 수 있는 패키지를 추천해드려요.</p>
+                                 </div>
+                                 <div class="pop_service_btn">
+                                    <button type="button" class="btn_base_03 service_btn_w"
+                                       onclick="location.href='/fmb/moveFmbMain.do'">추천받기</button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="user_bmi" class="more_cont bmi_cont before_obesity">
+                              <!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+                              <h2 class="tit_cont_02">test23님의<br>BMI</h2>
+                              <div class="bmi_card">
+                                 <div class="bmi_state">
+                                    <p class="bmi_tit">나의 체질량 지수</p>
+                                    <div class="bmi_state_figure">
+                                       <p class="bmi_state_num">BMI <em>24.69</em></p>
+                                       <div class="bmi_state_emot">
+                                          <div class="emot_area"></div><!-- 이모티콘자리 -->
+                                          <p></p><!-- 상태값 자리 -->
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="bmi_range_wrap">
+                                    <div class="bmi_range">
+                                       <div class="bmi_range_tit">비만전 단계</div>
+                                       <div class="bmi_range_num">23 ~ 24.9 ㎏/㎡</div>
+                                    </div>
+                                    <div class="bmi_range">
+                                       <div class="bmi_range_tit">또래 평균대비</div>
+                                       <div class="bmi_range_num">-0.31<i
+                                             class="bmi_icon_arr down"></i></div>
+                                       <!-- 화살표 클래스 up, down -->
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="bmi_card">
+                                 <p class="bmi_tit">주요질환 상대지수</p>
+                                 <ul class="bmi_disease_list">
+
+
+                                    <li class="bmi_disease">
+                                       <p class="bmi_disease_tit">고지혈증</p>
+                                       <p>-3.9 배 <i class="bmi_icon_arr down"></i></p>
+                                       <!-- 화살표 클래스 up, down -->
+                                    </li>
+
+                                    <li class="bmi_disease">
+                                       <p class="bmi_disease_tit">두드러기</p>
+                                       <p>-2.4 배 <i class="bmi_icon_arr down"></i></p>
+                                       <!-- 화살표 클래스 up, down -->
+                                    </li>
+                                 </ul>
+                                 <a href="/fmy/FMY-009001.do" class="bmi_more_btn">주요질환 더보기<i
+                                       class="ico_arr_666"></i></a>
+                              </div>
+                           </div>
+                           <div class="coach_graph" style="display:none">
+                              <span class="date" id="chartDate"></span>
+                              <!-- Swiper -->
+                              <div class="swiper-container coach_graph_Swiper">
+                                 <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                       <figure id="chartALegend">
+                                          <!-- 20210909 -->
+                                          <canvas id="myChartMovement"
+                                             style="width:100%;height: 100%;"></canvas>
+                                          <!--20210825-->
+                                       </figure>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-button-next" onclick="javascript:fnNextChart();"
+                                 id="btnHealthNext"></div>
+                              <div class="swiper-button-prev" onclick="javascript:fnBeforeChart();"
+                                 id="btnHealthBefore"></div>
+                              <p class="goal_tooltip">
+                                 <a href="#" onclick="netiveUI.plugins.popFully('#popPointInfo');">
+                                    건강스코어란?
+                                 </a>
+                              </p>
+                           </div>
+                           <div class="stress_score">
+                              <h2 class="tit_cont_02">test23님의<br>생체측정 결과</h2>
+                              <p class="desc">안면인식 기능으로 나의 건강 상태를 확인할 수 있어요.<br>지문인식은 스트레스를 제외한
+                                 건강상태만 측정됩니다.</p>
+                              <!-- 측정 후 결과 -->
+
+                              <div class="btn_wrap">
+                                 <!-- 측정전 버튼 -->
+
+                                 <button type="button" class="btn_base_03"
+                                    onclick="location.href='/fch/FCH-016001.do'">측정하기</button>
+
+                              </div>
+                           </div>
+                           <!-- //팝업내용 -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- //pop container -->
+            </div>
+            <div class="btn_btm_fixed">
+               <button type="button" class="btn" onclick="closeFunction()">확인</button>
+            </div>
+         </div>
+      </div>
+      <!-- // -->
+      <!-- 건강스코어란 팝업 -->
+      <div class="health_full" id="popPointInfo" style="display: none;">
+         <div class="inner">
+            <div class="pop_wrap">
+               <div class="pop_header">
+                  <div class="header_wrap">
+                     <h1>건강스코어란?</h1>
+                     <button type="button" class="btn_close aui-close"><span
+                           class="hidden">닫기</span></button>
+                  </div>
+               </div>
+               <div class="pop_container">
+                  <div class="con_inner">
+                     <div class="con_box">
+                        <div class="pop_con">
+                           <div class="point_item">
+                              <p>건강 스코어는 현재 회원님의 건강 상태를 나타냅니다.
+                              </p>
+                              <p>회원님의 건강관련 정보가 모이면 모일수록 더욱 더 정교한 건강 스코어 및 다양한 정보 제공이 가능합니다.
+                              </p>
+                              <p>신체 건강 및 정신 건강은 5가지 라이프 스타일 영역에서 선택된 항목에 영향을 받습니다.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- //건강스코어란 팝업 -->
+      <div class="health_alert" id="successPopAlert" style="display: none;">
+         <div class="inner">
+            <h1 class="tit_cont_03" style="display: none;"></h1>
+            <p class="msg" id="successPopAlertMessage"></p>
+            <div class="btn_wrap" id="successPopAlertClose">
+               <button type="button" class="btn_pop_primary" id="btnSuccess">
+                  확인
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="selfAuthPopAlert" style="display: none;">
+         <div class="inner">
+            <h1 class="tit_cont_03" style="display: none;"></h1>
+            <p>본인인증</p><br><br>
+            <p>정확한 AI 분석을 위해 반드시 본인 인증을 진행해 주세요.</p><br><br>
+
+            <div class="btn_wrap" id="selfAuthPopAlertClose">
+               <button type="button" class="btn_pop_dark ui-close" id="btn">
+                  본인인증하기
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popAlert" style="display: none;">
+         <div class="inner">
+            <h1 class="tit_cont_03" style="display: none;"></h1>
+            <p class="msg" id="popAlertMessage"></p>
+            <div class="btn_wrap" id="popAlertClose">
+               <button type="button" class="btn_pop_dark ui-close">
+                  확인
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popAlert7" style="display: none;">
+         <div class="inner">
+            <h1 class="tit_cont_03" style="display: none;"></h1>
+            <p class="msg" id="popAlertMessage7"></p>
+            <div class="btn_wrap" id="popAlertClose7"
+               onclick="javascript:location='/fch/FCH-016001.do'">
+               <button type="button" class="btn_pop_dark ui-close">
+                  나의 스트레스 지수 보기
+               </button>
+            </div>
+            <div class="btn_wrap" id="popAlertClose8"
+               onclick="javascript:location='/fmy/FMY-009001.do'">
+               <button type="button" class="btn_pop_dark ui-close">
+                  나의 BMI 보기
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popConfirm" style="display: none;">
+         <div class="inner">
+            <p class="msg" id="popConfirmMessage"></p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_line_dark ui-close"
+                  id="btnPopConfirmClose">취소</button>
+               <button type="button" class="btn_pop_dark" id="btnPopConfirmOk">확인</button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popServiceCenterAlert" style="display: none;">
+         <div class="inner">
+            <p class="msg" id="popServiceCenterAlertMessage"></p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_light ui-close">
+                  취소
+               </button>
+               <button type="button" class="btn_pop_primary">
+                  <a href='tel:1833-4030'>고객센터 연결</a>
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popDormancyAlert" style="display: none;">
+         <div class="inner">
+            <p class="msg" id="popDormancyAlertCenterAlertMessage"></p>
+            <br>
+            <p class="msg1"></p>
+            <p class="msg2"></p>
+            <br>
+            Tune-H 계정 서비스를 계속 이용하시려면 [휴면 해제하기] 버튼을 클릭해주세요.
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_light ui-close">
+                  취소
+               </button>
+               <button type="button" class="btn_pop_primary" id="btnDormancy">
+                  휴면 해제하기
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popDormancyCommAlert" style="display: none;">
+         <div class="inner">
+            해당 이메일 계정이 다시 <strong>활성화</strong> 되었습니다.
+            <br>
+            Tune H 서비스를 로그인 후 계속 이용해주세요.
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_light ui-close">
+                  확인
+               </button>
+            </div>
+         </div>
+      </div>
+      <div class="health_alert" id="popDormancyFailAlert" style="display: none;">
+         <div class="inner">
+            해당 이메일 정보로 휴면해제를 할 수 없습니다.
+            <br>
+            <strong>다른 이메일 정보로 회원가입 후</strong>
+            <br>
+            Tune H 서비스 이용해주세요.
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_light ui-close">
+                  확인
+               </button>
+            </div>
+         </div>
+      </div>
+      <!-- 웰니스 지수란? 설명 팝업 -->
+      <div class="health_alert" id="popWellness" style="display: none;">
+         <div class="inner">
+            <p class="msg">
+               웰니스 지수는 현재 회원님의 건강 상태를 나타냅니다.<br>
+               <br>
+               회원가입 시 입력한 정보(키, 몸무게, 나이, 지역 등)를 바탕으로 최초 계산되며, 건강 설문을 완료하면 더욱 정교한 웰니스 지수가 제공됩니다.<br>
+               <br>
+               이후에 목표 추가 및 달성, 코칭 메시지 답변 등의 활동을 통해서 웰니수 점수가 변화합니다.<br>
+               <br>
+               라이프 스타일에 따라 웰니스 지수가 올라갈 수도, 내려갈 수도 있습니다.<br>
+               <br>
+               앱을 꾸준히 이용하여 웰니스 지수를 지속적으로 관리해 보세요!
+            </p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_dark ui-close">확인</button>
+            </div>
+         </div>
+      </div>
+      <!-- 생체측정이란? 설명 팝업 -->
+      <div class="health_alert" id="popBIO" style="display: none;">
+         <div class="inner">
+            <p class="msg">
+               생체측정 이란?<br>
+               안면인식,지문인식 기능으로 나의 건강상태를 확인 할 수 있습니다.<br>
+               <br>
+               ※ 측정항목 : 심박수, 산소포화도, 분당호흡수, 심박변이도, 스트레스지수 (스트레스지수는 안면인식의 경우에만 제공됨)
+            </p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_dark ui-close">확인</button>
+            </div>
+         </div>
+      </div>
+      <!-- BMI이란? 설명 팝업 -->
+      <div class="health_alert" id="popBMI" style="display: none;">
+         <div class="inner">
+            <p class="msg">
+               BMI 체질량지수란?<br>
+               체질량지수(body mass index, BMI)는 자신의 몸무게(kg)를 키의 제곱(㎡)으로 나눈 값입니다.<br>
+               체질량 지수는 근육과 지방의 무게를 구별하지 못하여 건강을 측정하는 절대 지표는 아니지만,
+               실제 지방량을 정확히 측정하기는 어렵습니다.
+               체질량 지수는 체지방량과 상관관계가 높기 때문에 간접적으로 비만 정도를 평가하는 방법으로 가장 널리 사용됩니다.
+            </p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_dark ui-close">확인</button>
+            </div>
+         </div>
+      </div>
+      <!-- 활동정보? 설명 팝업 -->
+      <div class="health_alert" id="popMystate" style="display: none;">
+         <div class="inner">
+            <p class="msg">
+               내 활동정보를 보기 위해서는 앱연결 작업이 필요합니다.<br>
+               Fitbit 또는 GoogleFit 앱을 연결해 주세요<br>
+               앱 연결 후에는 Fitbit은 1시간마다, GoogleFit은 4시간마다 동기화 진행됩니다.<br><br>
+            </p>
+            <div class="btn_wrap">
+               <button type="button" class="btn_pop_dark ui-close">확인</button>
+            </div>
+         </div>
+      </div>
+      <!-- // 설명 팝업 -->
+      <script type="text/javascript" src="/resources/js/chart.min.js"></script>
+      <script>
+         $(function () {
+            //물결차오르는 효과
+            function progressAnimation(total) {
+               var $total = total;
+               $(".progress_now").each(function (i, block) {
+                  $(block).after('<span class="progress_bar"></div>');
+                  var $el = $(block);
+                  var $elBar = $(block).siblings(".progress_bar");
+                  var $elText = $el.text();
+                  if (Math.sign($elText) == -1) {
+                     $elText = 0;
+                  };
+                  var $now = parseInt(onlyNumber($elText), 10);
+                  if ($now > $total) {
+                     $now = $total;
+                  } else if ($now <= 0) {
+                     $elBar.css({ "-webkit-animation": "none" }, { "-moz-animation": "none" }, { "-ms-animation": "none" }, { "animation": "none" })
+                  };
+                  var $perNow = ($now / $total) * 100;
+                  var $nowWidth = $(this).height();
+                  if (isNaN($now)) $perNow = 0;
+                  $elBar.animate({ bottom: $perNow + '%' }, 3000, 'linear', function () {
+                     setTimeout(function () {
+                        $elBar.animate({ borderRadius: 0 + '%' }, 3000)
+                     }, 100);
+                  });
+                  // countUpFn($el, $now, 3000)
+               })
+            }
+            //숫자만
+            var onlyNumber = function (num) {
+               return num.toString().replace(/[^0-9]/g, '');
+            };
+            //콤마넣기
+            var addComma = function (num) {
+               return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            };
+            //프로그레스 animation
+            var progressAnimation001002 = function () {
+               var $now = parseInt(onlyNumber($('#healthScoreFull .now').text()), 10);
+               var $avg = parseInt(onlyNumber($('#healthScoreFull .avg').text()), 10);
+               var $total = parseInt(onlyNumber($('#healthScoreFull .total').text()), 10);
+               var $per = ($now / $total) * 100;
+               var $avgPer = ($avg / $total) * 100;
+               $('#healthScoreFull progress').val($per);
+               $('#healthScoreFull .progress i').animate({
+                  width: $per + '%',
+               }, {
+                  duration: Math.max(500, 1000), //속도
+                  step: function (now, fx) {
+                     var $nowval = Math.round(($now / fx.end) * now);
+                     if (isNaN($nowval)) $nowval = 0;
+                     $('#healthScoreFull .now span').text(addComma($nowval));
+                     var $nowWidth = $('#healthScoreFull .now').width();
+                     var $avgWidth = $('#healthScoreFull .avg').width();
+                     var $nowMargin = $nowWidth / 2;
+                     var $nowLeft = $('#healthScoreFull .progress i').width() - $nowMargin;
+                     var $nowRight = $('#healthScoreFull .progress i').width() + $nowMargin
+                     var $wrapWidth = $('#healthScoreFull .progress').width();
+                     if ($nowLeft > 0 && $nowRight < $wrapWidth) {
+                        // 20210830 삭제
+                        // $('.now').css({
+                        //   'left': now + '%',
+                        //   'margin-left': -($nowMargin)
+                        // });
+                     }
+                     //이용자 평균 data가 0일 경우
+                     if ($avgPer <= 20) {
+                        $(this).find('#healthScoreFull .avg').addClass('minimum');
+                     } else {
+                        $(this).find('#healthScoreFull .avg').removeClass('minimum');
+                     }
+                     //이용자 평균      
+                     $('#healthScoreFull .avg_progress').css({ 'width': $avgPer + '%' });
+                  }
+               });
+            }
+
+            $(document).ready(function () {
+               //스트레스지수 슬라이드
+               var swiper = new Swiper(".check_slide", {
+                  slidesPerView: "auto",
+                  spaceBetween: 11,
+                  observer: true,
+                  observeParents: true
+               });
+
+               //물결차오르는 효과 호출
+               if ($('.progress_now').length > 0) {
+                  progressAnimation(1000);//총점 100%이냐 1000점이냐
+               }
+            });
+
+            //숫자카운트업
+            function countUpFn(div, num, time) {
+               var cnt0 = 0;
+               var $now = num;
+               var $div = div;
+               var $time = time;
+               var id0 = setInterval(count0Fn, 40);
+               cnt0++;
+               function count0Fn() {
+                  cnt0++;
+                  if (cnt0 > $now) {
+                     clearInterval(id0);
+                  } else {
+                     $div.text(cnt0)
+                  }
+               }
+               setTimeout(function () {
+                  clearInterval(id0);
+               }, $time);
+            }
+         });
+      </script>
+      <script>
+         $(document).ready(function () {
+            var th = (window.innerHeight - 173) + 'px';
+            var th2 = (window.innerHeight - 240) + 'px';
+            $('.text_box').css({ 'height': th });
+      
+            //20210825 text 타이핑 효과 (load 후 바로 실행)
+            $('.textEffect1').textEffect({
+               type: 'typing',
+               delay: 0.1
+            });
+      
+            $('.more_serv').on('click', function () {
+               $('.main_bottom').fadeIn();
+               var offset = $('.main_bottom').offset();
+               $('html').animate({ scrollTop: (offset.top - 136) + 'px' }, 800);
+               $('.main_bottom').css('transform', 'translateY(-96px)');
+            });
+      
+            //20210825 텍스트 효과 1
+            setTimeout(function () {
+               $(".textEffect1 .tb01").fadeOut(1500, 0);
+               $(".textEffect1 .tb02").fadeIn(2500);
+               $('.text_box').fadeIn(3500).css({
+                  'height': th2,
+                  'transition': 'height 1.5s'
+               });
+            }, 4500);
+      
+            //20210825 텍스트 효과 2
+            setTimeout(function () {
+               $(".textEffect1").fadeOut(1000);
+               $(".textEffect2").fadeIn(1500);
+               $('.textEffect2').textEffect({
+                  type: 'typing',
+                  delay: 0.1
+               });
+               $('.coin').fadeIn(500);
+            }, 3500);
+      
+         });
+      </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 케어안내(팝업)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <!-- 케어단계설정 팝업 -->
+  <div class="health_full thyroid_pop actived" id="full001">
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap type_center">
+            <h1>케어 안내</h1>
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container"><!-- 20230831 bgcolor_bg 클래스 삭제 -->
+          <div class="con_inner">
+            <div class="con_box">
+              <div class="pop_con"> 
+                <!-- 팝업 내용 -->
+                  <div class="thyroid_pop_inner">
+                    <!-- 20230831 케어단계 추가 -->                  
+                    <div class="frm_input_wrap care_step">
+                      <label for="" class="frm_label">케어 단계</label>
+                      <select name="#" id="" class="frm_select">
+                        <option value="">케어 단계 선택</option>
+                        <option value="">진단 전</option>
+                        <option value="">진단 시</option>
+                        <option value="">수술</option>
+                        <option value="">방사성 동위원소 치료</option>
+                        <option value="">외부 방사선 치료</option>
+                        <option value="">항암 약물 치료</option>
+                        <option value="">추적 관리</option>
+                      </select>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- //20230831 케어단계 추가 -->
+                    
+                    <div class="swiper-container care_guide">
+                      <div class="swiper-pagination"></div><!-- 20230831 태그 위치 수정 -->
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">진단 전<!-- <span><em>1</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">건강콜센터 서비스를 <br>나와 내 가족이 이용할 수 있어요!</p><!-- 20230831 문구수정 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-01.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_detail box_container">
+                              <p class="box_tit">건강 콜센터</p>
+                              <p>해당 서비스는 Tune H 가입 고객 및 가족에게만 특별히 제공되는 서비스입니다.</p><!-- 20230831 문구수정 -->
+                              <!-- <p class="tag_wrap">#명의안내 #진료과 #진료예약#장기요양 #시설안내</p> --><!-- 20230831 문구삭제 -->
+                            </div><!-- //.guide_detail -->
+                            <button type="button" class="btn_base_02 line">자세히보기</button>
+                          </div>
+                        </div><!-- //.swiper-slide -->
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">진단 시<!-- <span><em>2</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">상급종합병원으로 쉽고 빠르게<br>예약을 도와 드려요.</p>
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-02.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <!-- 20230831 삭제 <div class="guide_detail box_container">
+                              <p>고객님 일정에 맞춘 건강 케어콜 드립니다.</p>
+                            </div> -->
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>진료(초진) 1일 전</li>
+                                <li><span>2</span>진료(초진) 후 당일</li>
+                                <li><span>3</span>진료(재진) 당일</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">수술<!-- <span><em>3</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">수술 전 후 주의사항, 증상관리 등 <br>궁금증을 쉽게 해결해 드려요.</p><!-- 20230831 <br>추가 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-03.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>입원 전날</li>
+                                <li><span>2</span>수술 당일</li>
+                                <li><span>3</span>퇴원 당일</li>
+                                <li><span>4</span>수술 후 첫 외래 진료</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">방사성 동위원소 치료<!-- <span><em>4</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">치료 전 후 주의사항,<br> 올바른 식이 방법 등 쉽게 알려 드려요.</p><!-- 20230831 <br>추가 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-04.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>방사성 동위원소 치료 판정 시</li>
+                                <li><span>2</span>치료 시작 1일 전</li>
+                                <li><span>3</span>치료 당일</li>
+                                <li><span>4</span>치료 완치일</li>
+                                <li><span>5</span>치료 후 다음 진료 1일 전</li>
+                                <li><span>6</span>진료 당일</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">외부 방사선 치료<!-- <span><em>5</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">방사선 치료 전 후 주의사항, <br>치료 후 증상관리 등에 대해 쉽게 알려 드려요.</p><!-- 20230831 문구수정 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-05.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>치료 시작 1일 전</li>
+                                <li><span>2</span>N차 치료 종료 후 당일</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">항암 약물 치료<!-- <span><em>6</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">항암 약물 치료 전 후 주의사항, <br>치료 후 증상관리 등에 대해 쉽게 알려 드려요.</p><!-- 20230831 문구수정 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-06.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>치료 시작 1일 전</li>
+                                <li><span>2</span>N차 치료 종료 후 당일</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                        <div class="swiper-slide box_container"><!-- 20230831 is_shadow 클래스 삭제 -->
+                          <div class="inner">
+                            <div class="guide_step">추적 관리<!-- <span><em>7</em>/7</span> --></div><!-- 20230831 수정 숫자 삭제 -->
+                            <p class="guide_tit">일상 생활을 빠르게 복귀하실 수 있도록<br>건강 관리 방법을 안내해 드려요.</p><!-- 20230831 문구수정 -->
+                            <div class="img_area">
+                              <img src="../../resources/img/v3_img-careinfo-visual-area-07.png" alt><!-- 20230831 이미지 수정 -->
+                            </div>
+                            <div class="guide_careCall box_container">
+                              <p class="tit">고객님 일정에 맞춘 건강 케어콜 드립니다.</p><!-- 20230831 문구수정 -->
+                              <ul>
+                                <li><span>1</span>치료 종료 후 ~3년간 매월 1회</li>
+                                <li><span>2</span>정기 외래 진료 1일 전</li>
+                                <li><span>2</span>진료 당일</li>
+                              </ul>
+                            </div><!-- //.guide_careCall -->
+                            <p class="add_desc">※ 건강 케어콜 연락 부재 시 해당 단계에서 다시 연락 드리지 않고, 바로 다음 단계로 넘어갑니다.</p>
+                          </div>
+                        </div><!-- //.swiper-slide -->                      
+                      </div>                      
+                    </div><!-- //.service_slider -->
+                  </div>
+                <!-- //팝업내용 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_black2">추가하기</button><!-- 20230831 문구 수정 -->
+        </div>
+        <!-- // pop btn -->
+      </div>
+     
+    </div>
+  </div>
+ <!-- //케어단계설정 팝업 -->
+  </div>
+  <script>
+    // 20230822 수정 :서비스 슬라이드 추가
+    var swiper = new Swiper(".care_guide", {
+      slidesPerView: 1,//20230831 숫자수정 
+      centeredSlides: true,
+      spaceBetween: 24,//20230831 숫자수정  
+      loop: false,
+      pagination: { //20230831 type수정  
+        el: ".care_guide .swiper-pagination",
+        type: 'fraction',
+      },
+      observer: true,	// 추가
+      observeParents: true,	// 추가
+    });
+    //20230906 셀렉트박스 스와이퍼 연결
+    $('.frm_select').on('change', function(){
+      slideToselect($(this).find("option:selected").index() - 1) 
+    })
+    function slideToselect(idx) {
+        swiper.slideTo(idx, 1000, false)
+    }
+  </script>
+</body>
+</html>

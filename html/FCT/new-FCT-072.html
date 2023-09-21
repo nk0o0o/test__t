@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리 - 복약 알림</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>복약 관리</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">
+          복약 알림
+          <button type="button" class="tooltip" onclick="netiveUI.plugins.popAlert('#alertModal');"></button>
+        </p>
+        <div class="list_desc">※ 알림내역 0건<button type="button">알림 추가</button></div><!-- 20230906 문구수정 -->
+        <div class="box_nodata">
+          <span class="box_nodata_icon">
+            <img src="../../resources/img/v3_ic_48_fill_common_empty.svg" alt>
+          </span>
+          <p>등록된 일정이 없습니다.</p>
+        </div><!-- //.box_nodata -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <!-- 복약 알림? 모달팝업 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+       <h2 class="pop_tit">복약 알림이란?
+        <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+       </h2>
+       <div class="msg">
+        <strong>복약 중인 약 정보, 시간을 설정해주세요.</strong><br>
+        정해진 시간에 복약 알림도 받고, 꾸준하게 복약 관리도 할 수 있습니다.
+       </div>
+    </div>
+ </div>
+ <!-- //복약 알림? 모달팝업 -->
+</body>
+</html>

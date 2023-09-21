@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <linearGradient id="xuai7mpima" x2="1" y2="1.148" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#19d3c5"/>
+            <stop offset=".36" stop-color="#0095ff"/>
+            <stop offset=".732" stop-color="#cb8bda"/>
+            <stop offset="1" stop-color="gray"/>
+        </linearGradient>
+    </defs>
+    <g data-name="ico_26_wellness/active">
+        <g data-name="vuesax/linear/book">
+            <path data-name="합치기 14" d="M1782.881-4243.419c-1.595 0-3.009-1.437-3.009-3.571v-.032h-.015v-11.915c0-3.811 1.356-5.406 5.269-5.406h7.516c4.294 0 5.778.81 5.778 5.1l-.005.793h.01a2.183 2.183 0 0 1 1.172 1.524v2.527a1.955 1.955 0 0 1-1.172 1.361h-.047l-.022 3.233v2.47c0 1.869-2.258 3.91-4.127 3.91z" transform="translate(-1776.726 4266.881)" style="fill:url(#xuai7mpima)"/>
+            <path d="M0 0h8" transform="translate(8.402 6.804)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+            <path data-name="Vector" d="M2.429 1.576h12.716v1.805a2.631 2.631 0 0 1-2.481 2.412H2.429A2.113 2.113 0 0 1 .455 3.971c.005-.609.008-2.395 1.974-2.395z" transform="translate(4.634 15.951)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

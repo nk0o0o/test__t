@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필수정보</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap login_wrap footer_no"> 
+        <!-- <header></header> -->
+		<div class="health_container pt0">
+            <div class="signup_wrap">
+                <div class="step02">
+                    <h2>Tune H 이용을 위한<br />필수 정보를 입력해주세요.</h2>
+                    <div class="form_wrap">
+                        <div class="inp_wrap type_box">
+                            <div class="inp_item">
+                                <label for="signupEmail" class="inp_label">이메일</label>
+                                <input id="signupEmail" name="inqFrm" class="inp_base" type="text" placeholder="lina@example.com">
+                                <!-- <p class="notice err">사용 불가능한 이메일 입니다.</p> 사용 불가능 한 경우 -->
+                                <p class="notice pass">사용 가능한 이메일 입니다.</p><!-- 사용 가능 한 경우 -->
+                            </div>
+
+                            <div class="inp_item">
+                                <label for="signupPw" class="inp_label">비밀번호</label>
+                                <input id="signupPw" name="inqFrm" class="inp_base" type="password" placeholder="영문자 및 숫자 조합(8자 이상)">
+                                <p class="notice err">사용 불가능한 비밀번호 입니다.</p><!-- 사용 불가능 한 경우-->
+                                <!-- <p class="notice pass">사용 가능한 비밀번호 입니다.</p>사용 가능 한 경우 -->
+                            </div>
+
+                            <div class="inp_item">
+                                <label for="signupPwRe" class="inp_label">비밀번호 확인</label>
+                                <input id="signupPwRe" name="inqFrm" class="inp_base" type="password" placeholder="영문자 및 숫자 조합(8자 이상)">
+                                <p class="notice err">비밀번호가 일치 합니다.</p><!-- 사용 불가능 한 경우-->
+                                <!-- <p class="notice pass">비밀번호가 일치하지 않습니다.</p>사용 가능 한 경우 -->
+                            </div>
+
+                            <div class="inp_item">
+                                <label for="signupNickname" class="inp_label">닉네임</label>
+                                <input id="signupNickname" name="inqFrm" class="inp_base" type="text" placeholder="국문 및 영문, 숫자 사용 가능">
+                                <p class="notice err">사용 불가능한 닉네임 입니다.</p><!-- 사용 불가능 한 경우-->
+                                <!-- <p class="notice pass">사용 가능한 닉네임 입니다.</p>사용 가능 한 경우 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <div class="btn_btm_fixed">
+            <button type="button" class="btn" disabled>다음</button>
+        </div>
+
+	</div>
+
+</body>
+</html>

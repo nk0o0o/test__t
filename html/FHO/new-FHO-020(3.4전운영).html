@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건강 걸음</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+<script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/guide.css">
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i type_home">
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div>
+    </header>
+    <div class="health_container align_right">
+      <div class="swiper-container sect_cate">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n" class="nav walk on">
+              <p class="ico"></p>
+              <span>건강 걸음</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav ai">
+              <p class="ico"></p>
+              <span>AI 건강카메라</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav bmi">
+              <p class="ico"></p>
+              <span>BMI</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav mbti">
+              <p class="ico"></p>
+              <span>Dental MBTI</span>
+            </a>
+          </li>
+        </ul>
+        <div class="cate_next"></div>
+        <div class="cate_prev"></div>
+      </div>
+      <!-- //.sect_cate -->
+      <div class="health_walk">
+        <div class="hc_head">
+          <h3 class="stt">
+            건강 걸음<a href="#n" class="link" onclick="netiveUI.plugins.popAlert('#alert01');"></a>
+            <span>마지막 업데이트 : 2023-06-07 10:30</span>
+          </h3>
+        </div>
+        <div class="inner">
+          <div class="section">
+            <div class="infom">
+              <dl class="today">
+                <dt>Today</dt>
+                <dd>
+                  <span>걸음</span>
+                  <p class="count">9,876</p>
+                </dd>
+              </dl>
+              <!-- 20230816 수정 : 디자인수정 이동 -->
+              <!-- <a href="#n" class="link">
+                건강 걸음 미션<br>확인하기
+              </a> -->
+              <!-- //20230816 수정 : 디자인수정 이동 -->
+            </div>
+            <ul class="total_rec">
+              <li>
+                <p class="ico dis">거리</p>
+                <div>
+                  <strong>4.56</strong><em>km</em>
+                </div>
+              </li>
+              <li>
+                <p class="ico time">시간</p>
+                <div>
+                  <strong>89</strong><em>min</em>
+                </div>
+              </li>
+              <li>
+                <p class="ico cal">칼로리</p>
+                <div>
+                  <strong>3.098</strong><em>kcal</em>
+                </div>
+              </li>
+            </ul>
+            <!-- 20230816 수정 : 디자인수정 이동 -->
+            <a href="#n" class="link">
+              건강 걸음 미션 확인하기
+            </a>
+            <!-- 20230816 수정 : 디자인수정 이동 -->
+          </div>
+        </div>
+      </div>
+      <!-- //.health_walk -->
+      <div class="health_cam_wrap">
+        <div class="hc_head">
+          <h3 class="stt">
+            걸음 히스토리<a href="#n" class="link" onclick="netiveUI.plugins.popAlert('#alert02');"></a>
+          </h3>
+        </div>
+        <!-- //.hc_head -->
+        <div class="tab_wrap">
+          <div class="tabs dep1">
+            <ul class="tab_menulist">
+              <li class="active"><a class="tab_control" href="#tab-1">일간</a></li>
+              <li><a class="tab_control" href="#tab-2">주간</a></li>
+              <li><a class="tab_control" href="#tab-3">월간</a></li>
+            </ul>
+            <!-- 일간 tab 내용 -->
+            <div class="tab_panel active" id="tab-1">
+              <!-- 20230821 수정: 연령별 tab추가 -->
+              <div class="tabs brand_name_swiper">
+                <ul class="tab_menulist brand_list">
+                  <li class="tab active"><a class="tab_control" href="#tab-a1" aria-controls="">전체</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a2" aria-controls="">10대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a3" aria-controls="">20대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a4" aria-controls="">30대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a5" aria-controls="">40대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a6" aria-controls="">50대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-a7" aria-controls="">가나다</a></li>
+                </ul>
+                <!-- 일간 전체탭 -->
+                <div class="tab_panel active" id="tab-a1">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 전체탭 -->
+                <!-- 일간 10대 -->
+                <div class="tab_panel" id="tab-a2">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 10대 -->
+                <!-- 일간 20대 -->
+                <div class="tab_panel" id="tab-a3">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 20대 -->
+                <!-- 일간 30대 -->
+                <div class="tab_panel" id="tab-a4">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 30대 -->
+                <!-- 일간 40대 -->
+                <div class="tab_panel" id="tab-a5">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 40대 -->
+                <!-- 일간 50대 -->
+                <div class="tab_panel" id="tab-a6">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 50대 -->
+                <!-- 일간 가나다 -->
+                <div class="tab_panel" id="tab-a7">
+                  <div class="my_bmi_body bg_gray">
+                    <!-- 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="date_range"> 
+                      <button type="button" class="btn_cht left"></button>
+                      <span>5월 25일 ~ 5월 31일</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <!--// 20230821 수정: data_range을 bg_gray안으로 이동 -->
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunWeek" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- //.my_bmi_body.bg_gray -->
+                </div>
+                <!-- //일간 가나다 -->
+              </div>
+              <!-- //.tabs.brand_name_swiper -->
+              <!-- //20230821 수정: 연령별 tab추가 -->
+              <!-- 20230821 수정 :.walk_total을 bg_gray와 연령별 tab내용 밖으로 이동 -->
+              <div class="walk_total">
+                <div class="tab_wrap">
+                  <div class="tabs brand_name_swiper">
+                    <ul class="tab_menulist brand_list">
+                      <li class="active"><a class="tab_control" href="#tab-11">평균</a></li>
+                      <li><a class="tab_control" href="#tab-12">합계 </a></li>
+                    </ul>
+                    <div class="tab_panel active" id="tab-11">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>345,345</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab_panel" id="tab-12">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>4,345</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //.walk_total -->
+              <!-- //20230821 수정 :.walk_total을  bg_gray와 연령별 tab내용 밖으로 이동  -->
+            </div>
+            <!-- //일간 tab 내용 -->            
+            <!-- 주간 tab 내용 -->
+            <div class="tab_panel" id="tab-2">
+              <div class="tabs brand_name_swiper">
+                <ul class="tab_menulist brand_list">
+                  <li class="tab active"><a class="tab_control" href="#tab-b1" aria-controls="">전체</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b2" aria-controls="">10대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b3" aria-controls="">20대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b4" aria-controls="">30대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b5" aria-controls="">40대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b6" aria-controls="">50대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-b7" aria-controls="">가나다</a></li>
+                </ul>
+                <div class="tab_panel active" id="tab-b1">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b2">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b3">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b4">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b5">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b6">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+                <div class="tab_panel" id="tab-b7">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년 08월</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunMonth" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>              
+              </div>        
+              <!-- 20230718 수정 -->
+              <div class="walk_total">
+                <div class="tab_wrap">
+                  <div class="tabs brand_name_swiper">
+                    <ul class="tab_menulist brand_list">
+                      <li class="active"><a class="tab_control" href="#tab-21">평균</a></li>
+                      <li><a class="tab_control" href="#tab-22">합계 </a></li>
+                    </ul>
+                    <div class="tab_panel active" id="tab-21">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>525</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab_panel" id="tab-22">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>8,234</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //20230718 수정 -->
+            </div>
+            <!-- //주간 tab 내용 -->
+            <!-- 월간 tab 내용 -->
+            <div class="tab_panel" id="tab-3">
+              <div class="tabs brand_name_swiper">
+                <ul class="tab_menulist brand_list">
+                  <li class="tab active"><a class="tab_control" href="#tab-c1" aria-controls="">전체</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c2" aria-controls="">10대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c3" aria-controls="">20대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c4" aria-controls="">30대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c5" aria-controls="">40대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c6" aria-controls="">50대</a></li>
+                  <li class="tab"><a class="tab_control" href="#tab-c7" aria-controls="">가나다</a></li>
+                </ul>
+                <div class="tab_panel active" id="tab-c1">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c2">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c3">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c4">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c5">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c6">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab_panel" id="tab-c7">
+                  <div class="my_bmi_body bg_gray">
+                    <div class="date_range">
+                      <button type="button" class="btn_cht left"></button>
+                      <span>2023년</span>
+                      <button type="button" class="btn_cht right"></button>
+                    </div>
+                    <div class="my_bmi_chart">
+                      <div class="summary">
+                        <p class="group01">본인</p>
+                        <p class="group02">Tune H 이용자 평균</p>
+                      </div>
+                      <figure>
+                        <canvas id="myRunYear" style="width:100%; height:250px;"></canvas>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 20230718 수정 -->
+              <div class="walk_total">
+                <div class="tab_wrap">
+                  <div class="tabs brand_name_swiper">
+                    <ul class="tab_menulist brand_list">
+                      <li class="active"><a class="tab_control" href="#tab-31">평균</a></li>
+                      <li><a class="tab_control" href="#tab-32">합계 </a></li>
+                    </ul>
+                    <div class="tab_panel active" id="tab-31">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>12,345</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="caut">※월간 통계는 최근 6개월까지 조회 가능합니다.</div><!-- 20230718 월간통계 문구추가 -->
+                    </div>
+                    <div class="tab_panel" id="tab-32">
+                      <ul class="result">
+                        <li>
+                          <p class="ico walk">걸음</p>
+                          <div>
+                            <strong>23,345</strong><em>total</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico cal">칼로리</p>
+                          <div>
+                            <strong>30,098</strong><em>kcal</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico dis">거리</p>
+                          <div>
+                            <strong>14.56</strong><em>km</em>
+                          </div>
+                        </li>
+                        <li>
+                          <p class="ico time">시간</p>
+                          <div>
+                            <strong>1,289</strong><em>Min</em>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //20230718 수정 -->
+            </div>
+            <!-- //월간 tab 내용 -->
+          </div>
+          <!-- //.tabs.dep1 -->
+        </div><!-- //.tab_wrap -->
+        <div class="svc_desc acco_list_wrap">
+          <div class="item_head">
+            <p>건강 걸음 서비스 자세히 보기</p>
+            <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+          </div>
+          <ul class="item_cont" style="display: none;">
+            <li>활동 거리 : 걸음수 X 보폭 = 총 이동거리 (예상) (보폭 = 성인 남성 기준 약 70cm, 여성 약 60cm)
+            </li>
+            <li>활동 시간 : 이동 거리 / 걷는 속도 = 걸은 시간 (걷는 보통 속도 : 시속 4 ~ 6 km/h)
+            </li>
+            <li>소비칼로리 : 체중(kg) X 0.57 X 이동거리(m)/1,000
+            </li>
+            <li>걸음수 측정 기능을 제공하는 단말기에서만 건강 걸음을 이용하실 수 있습니다.
+            </li>
+            <li>단말기, 운영체제, 기타 주변기기(워치 등)에 따라 걸음수 반영의 차이가 발생할 수 있습니다.
+            </li>
+            <li>걸음수 데이터 측정 및 계산 방식에 따라 결과가 다른 앱과 차이가 있을 수 있습니다.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //.health_cam_wrap -->
+      <div class="main_footer acco_list_wrap">
+        <div class="item_head">
+          <a id="popFull01" href="#"><span>이용약관</span></a>
+          <a id="popFull04" href="#"><span class="footer_tit">위치기반 서비스 이용 약관</span></a>
+          <a id="popFull02" href="#"><span class="footer_tit">개인정보처리방침</span></a>
+          <br>
+          <a id="popFull03" href="#"><span class="footer_tit">이전 개인정보처리방침</span></a>
+          <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+        </div>
+        <div class="item_cont" style="display: none;">
+          <div>
+              <p>
+                <span>라이나생명보험 주식회사</span>
+                <span class="cigna_president">대표이사 :  조지은</span>
+              </p>
+              <p class="address">서울 종로구 삼봉로 48 라이나타워</p>
+              <p><span>사업자등록번호 : </span>104-81-85673</p>
+              <p><span>통신판매업신고 </span>제2022-서울종로-0938호</p>
+              <p><a class="arrow_link" href="#">사업자정보확인</a></p>
+          </div>
+          <div class="footer_call_center">
+            <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+            <p><span>이메일 : </span><a class="arrow_link" href="#">문의하기</a></p>
+            <p class="copy">ⓒLINA Life Insurance Co., Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //.health_container -->
+    <footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home on">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- 건강 걸음이란 모달팝업-->
+  <div class="health_alert" id="alert01" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        건강 걸음이란?<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        매일 하루동안 활동한 걸음수를 기록하여, 활동거리, 활동시간, 소비칼로리를 계산합니다.<br><br>
+        매일 건강 관리에 도움이 될 수 있도록 해당 데이터를 제공합니다.
+      </p>
+    </div>
+  </div>
+  <!-- 걸음 히스토리란 모달팝업-->
+  <div class="health_alert" id="alert02" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        걸음 히스토리란?<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        사용자 휴대폰 기기의 걸음수를 기반으로 매일 기록된 걸음수를 주간, 월간, 연간 기준으로 걸음 히스토리, 합계 조회가 가능합니다.
+      </p>
+    </div>
+  </div>
+
+<!-- 상단 카테고리 슬라이드 -->
+<script>
+  $(document).ready(function () {
+    var cateSwiper = new Swiper(".sect_cate", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".cate_next",
+        prevEl: ".cate_prev",
+        disabledClass: "disabled"
+      },
+    });
+  });
+</script>
+
+<!-- 주간 차트 -->
+<script>
+  var ctx = document.getElementById("myRunWeek").getContext("2d");
+  var bgGradient = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient.addColorStop(0, 'rgb(184,255,255)');
+  bgGradient.addColorStop(1, 'rgb(213,205,233)');
+  
+  var bgGradient2 = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient2.addColorStop(0, 'rgb(0,149,255)');
+  bgGradient2.addColorStop(1, 'rgb(155,120,240)');
+
+  var myRunWeek = new Chart(ctx, {
+    type: 'line',
+    plugins:[ChartDataLabels],
+    data: {
+      labels: ['일', '월', '화', '수', '목', '금', '토'],
+      datasets: [{
+        data: [3800, 2250, 3000, 7500, 8100, 2800, 5400],
+        borderWidth: 2, //라인 두께
+        backgroundColor: '#f8ab7c',
+      }, {
+        data: [4000, 2400, 3300, 7900, 6100, 8000, 7400],
+        scales: false,
+        pointLabelFontSize : 40,
+        type: 'bar',
+        barThickness: 12, //막대 최소가로값
+        borderRadius: 6, //막대 둥글기
+        backgroundColor: [
+          bgGradient, bgGradient, bgGradient, bgGradient, bgGradient, bgGradient2, bgGradient
+        ],
+      }]
+    },
+    options: {
+      plugins: {
+        datalabels:{
+          align: function(context) {
+            var index = context.dataIndex;
+            var value = context.dataset.data[index];
+            var invert = Math.abs(value) <= 1;
+            return value < 1 ? 'end' : 'start'
+          },
+          color: '#222',
+          labels: {
+            title: {
+              font: {
+                size: 12,
+                weight: 400
+              },
+            },
+          },
+          anchor: 'end',
+          offset: -20,
+          formatter:function(value,context){
+            var idx = context.dataIndex;
+            return context.chart.data[idx];
+          }
+        },
+        legend: {
+          display: false,
+        },
+        tooltip: { //막대 상태값
+          enabled: false,
+        },
+      },
+      scales: {
+        x: { //xc축
+          offset: true,
+          ticks: {
+            font: {
+              size: 13
+            },
+            color: '#222',
+          },
+          grid: {
+            display: false,
+            offset: false
+          },
+        },
+        y: { //y축
+          min: 0, //최소값
+          max: 10000, //최대값
+          position: 'left',
+          ticks: {
+            autoSkip: false,
+            stepSize: 2500, //data 숫자 간격
+            font: {
+              size: 12
+            },
+            color: '#999',
+          },
+          grid: {
+            display: true,
+            offset: false
+          },
+        }
+      },
+    },
+  });
+</script>
+
+<!-- 월간 차트 -->
+<script>
+  var ctx = document.getElementById("myRunMonth").getContext("2d");
+  var bgGradient = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient.addColorStop(0, 'rgb(174,210,208)');
+  bgGradient.addColorStop(1, 'rgb(228,205,233)');
+  
+  var bgGradient2 = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient2.addColorStop(0, 'rgb(25,211,197)');
+  bgGradient2.addColorStop(1, 'rgb(203,139,218)');
+
+  var myRunMonth = new Chart(ctx, {
+    type: 'bar',
+    plugins:[ChartDataLabels],
+    data: {
+      labels: ['', ''],
+      datasets: [{
+        data: [6000, 9500],
+        barPercentage: 1,
+        barThickness: 24, //막대 최소가로값
+        borderRadius: 12, //막대 둥글기
+        backgroundColor: [
+        '#e9d0c1', bgGradient2
+        ]
+      }]
+    },
+    options: {
+      plugins: {
+        datalabels:{
+          align: function(context) {
+            var index = context.dataIndex;
+            var value = context.dataset.data[index];
+            var invert = Math.abs(value) <= 1;
+            return value < 1 ? 'end' : 'start'
+          },
+          color: '#222',
+          labels: {
+            title: {
+              font: {
+                size: 12,
+                weight: 400
+              },
+            },
+          },
+          anchor: 'end',
+          offset: -20,
+          formatter:function(value,context){
+            var idx = context.dataIndex;
+            return context.chart.data[idx];
+          }
+        },
+        legend: {
+          display: false,
+        },
+        tooltip: { //막대 상태값
+          enabled: false,
+        },
+      },
+      scales: {
+        x: { //xc축
+          offset: true,
+          ticks: {
+            font: {
+              size: 13
+            },
+            color: '#222',
+          },
+          grid: {
+            display: false,
+            offset: false
+          },
+          title: {
+            display: true,
+            text: '월간 일 평균 걸음 수',
+            font: {
+              size: 13
+            },
+            color: '#222',
+            align: 'center',
+          }
+        },
+        y: { //y축
+          min: 0, //최소값
+          max: 10000, //최대값
+          position: 'left',
+          ticks: {
+            autoSkip: false,
+            stepSize: 2500, //data 숫자 간격
+            font: {
+              size: 12
+            },
+            color: '#999',
+          },
+          grid: {
+            display: true,
+            offset: false
+          },
+        }
+      },
+    },
+  });
+</script>
+
+<!-- 연간 차트 -->
+<script>
+  var ctx = document.getElementById("myRunYear").getContext("2d");
+  var bgGradient = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient.addColorStop(0, 'rgb(174,210,208)');
+  bgGradient.addColorStop(1, 'rgb(228,205,233)');
+  
+  var bgGradient2 = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient2.addColorStop(0, 'rgb(25,211,197)');
+  bgGradient2.addColorStop(1, 'rgb(203,139,218)');
+
+  var myRunYear = new Chart(ctx, {
+    type: 'bar',
+    plugins:[ChartDataLabels],
+    data: {
+      labels: ['', ''],
+      datasets: [{
+        data: [6000, 9500],
+        barPercentage: 1,
+        barThickness: 24, //막대 최소가로값
+        borderRadius: 12, //막대 둥글기
+        backgroundColor: [
+        '#e9d0c1', bgGradient2
+        ]
+      }]
+    },
+    options: {
+      plugins: {
+        datalabels:{
+          align: function(context) {
+            var index = context.dataIndex;
+            var value = context.dataset.data[index];
+            var invert = Math.abs(value) <= 1;
+            return value < 1 ? 'end' : 'start'
+          },
+          color: '#222',
+          labels: {
+            title: {
+              font: {
+                size: 12,
+                weight: 400
+              },
+            },
+          },
+          anchor: 'end',
+          offset: -20,
+          formatter:function(value,context){
+            var idx = context.dataIndex;
+            return context.chart.data[idx];
+          }
+        },
+        legend: {
+          display: false,
+        },
+        tooltip: { //막대 상태값
+          enabled: false,
+        },
+      },
+      scales: {
+        x: { //xc축
+          offset: true,
+          ticks: {
+            font: {
+              size: 13
+            },
+            color: '#222',
+          },
+          grid: {
+            display: false,
+            offset: false
+          },
+          title: {
+            display: true,
+            text: '연간 일 평균 걸음 수',
+            font: {
+              size: 13
+            },
+            color: '#222',
+            align: 'center',
+          }
+        },
+        y: { //y축
+          min: 0, //최소값
+          max: 10000, //최대값
+          position: 'left',
+          ticks: {
+            autoSkip: false,
+            stepSize: 2500, //data 숫자 간격
+            font: {
+              size: 12
+            },
+            color: '#999',
+          },
+          grid: {
+            display: true,
+            offset: false
+          },
+        }
+      },
+    },
+  });
+</script>
+</body>
+</html>

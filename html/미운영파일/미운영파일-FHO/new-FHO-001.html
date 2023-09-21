@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 - 시작하기(HRA 전)</title>
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+<body>
+    <div class="health_wrap type_main_i">
+        <header class="health_header">
+            <h1>hello</h1>
+            <div class="user_rank red">
+               <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+               <button type="button">Red 3,567</button>
+            </div>   
+            <!-- 230120 추가 -->
+            <div class="user" id="mytoggle2" onclick="fnNavClick();">
+	            <button type="button" id="user_my_button">MY</button>
+	         </div>
+            <!-- //230120 추가 -->
+        </header>
+        <div class="health_container align_right">
+            <!-- 상단 시작하기 버튼 영역 -->
+            <div class="con">
+               <h2 class="tit_wellness">
+                  <span class="txt_gradient">웰니스 지수 456점</span>
+                  <button type="button" onclick="netiveUI.plugins.popAlert('#popWellness');"><span class="blind">웰니스지수란?</span></button>
+               </h2>
+               <div class="circle_dash_wrap circle_start larger">
+                  <ul class="circle_outer">
+                     <!-- 지수 항목별 id : nutrition, sleep, competence, competence, heart, mental, body, activity -->
+                     <li id="nutrition" class="circle_cont">
+                     </li>
+                     <li id="sleep" class="circle_cont">
+                     </li>
+                     <li id="competence" class="circle_cont">
+                     </li>
+                     <li id="heart" class="circle_cont">
+                     </li>
+                     <li id="mental" class="circle_cont">
+                     </li>
+                     <li id="body" class="circle_cont">
+                     </li>
+                     <li id="activity" class="circle_cont">
+                     </li>
+                     <li id="bmi" class="circle_cont"></li>
+                     <li id="bio" class="circle_cont"></li>
+                     <li id="tunHStart" class="circle_cont"></li>
+                     <!-- 가운데 원 -->
+                     <div class="circle_center">
+                        <div class="inner">
+                           <a href="#" class="txt_box">
+                              <span class="desc">앱 이용을 위한<br>첫걸음</span>
+                              <span class="tit">건강설문<br>시작하기</span>
+                           </a>
+                        </div>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+            <!-- // 상단 시작하기 버튼 영역 -->
+             <!-- 서비스 살펴보기 영역 -->
+            <div class="con pt40 pb40 txt_center">
+               <a href="#" class="service_link">주요 서비스 살펴보기</a>
+            </div>
+            <!-- 서비스 살펴보기 영역 -->
+            <!-- 20211026 푸터 개선 -->
+            <div class="main_footer acco_list_wrap">
+                <div class="item_head">
+                    <span>이용약관</span>
+                    <span class="footer_tit">개인정보처리방침</span>
+                    <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+                </div>
+                <div class="item_cont" style="display: none;">
+                    <div>
+                        <p>
+                            <span>시그나 코리아</span>
+                            <span class="cigna_president">대표이사 :  김양호</span>
+                        </p>
+                        <p class="address">서울 종로구 삼봉로 48 시그나타워 16층</p>
+                        <p><span>사업자등록번호 : </span>396-86-00109</p>
+                        <p><span>통신판매업신고 </span>2020-서울종로-2242</p>
+                        <p><a class="arrow_link" href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=3968600109" target="_blank">사업자정보확인</a></p>
+                    </div>
+                    <div class="footer_call_center">
+                        <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+                        <p><span>이메일 : </span><a class="arrow_link" href="../FMY/FMY-008.html">문의하기</a></p>
+                        <p>Tune H에서 운영되는 APP 내 판매되는 모든 상품은 시그나 코리아에서 책임지고 있습니다.</p>
+                        <p class="copy">ⓒ Cigna Korea All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- //20211026 푸터 개선 -->
+        </div>
+        <footer class="health_footer">
+            <div class="scroll_nav_item">
+                <a href="javascript:void(0)" class="btn_top"><span class="hidden">상단 위로 이동</span></a>
+                <a href="javascript:void(0)" class="nav_item"><span class="hidden">패키지</span></a>
+            </div>
+            <div class="health_footer_nav">
+                <!-- 20221121 푸터 내비수정 -->
+               <ul>
+                  <li>
+                     <a href="#" class="nav_item home on"> <!--'on' class 추가시 해당 메뉴 활성화-->
+                        <span class="icon"></span>
+                        <strong>홈</strong>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav_item goal">
+                        <span class="icon"></span>
+                        <strong>목표</strong>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav_item contents">
+                        <span class="icon"></span>
+                        <strong>콘텐츠</strong>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav_item package">
+                        <span class="icon"></span>
+                        <strong>패키지</strong>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav_item coach">
+                        <span class="icon"></span>
+                        <strong>코치</strong>
+                     </a>
+                  </li> 
+               </ul>
+               <!-- 말풍선 -->
+               <div class="footer_bubbleBox">
+                  <span>나와 맞는 코치를 선택해보세요!</span>
+               </div>
+               <!-- //말풍선 -->
+            </div>
+        </footer>
+    </div>
+
+    <!-- 설명 팝업 -->
+      <!-- 웰니스 지수란? 설명 팝업 -->
+   <div class="health_alert" id="popWellness" style="display: none;">
+      <div class="inner">
+         <p class="msg">
+            웰니스 지수는 현재 회원님의 건강 
+            상태를 나타냅니다.<br>
+            회원님의 건강관련 정보가 모이면 모일수록 더욱 더 정교한 건강 스코어 및 
+            다양한 정보 제공이 가능합니다.<br>
+            신체 건강 및 정신 건강은 5가지 라이프 스타일 영역에서 선택된 항목에 영향을 받습니다.
+         </p>
+         <div class="btn_wrap">
+            <button type="button" class="btn_pop_dark ui-close">확인</button>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

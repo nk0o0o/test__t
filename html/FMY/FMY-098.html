@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>건강지표 - 신체정보수정 팝업</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap footer_no type_mypage">
+      <p class="tooltip"><a href="#" onclick="netiveUI.plugins.popAlert('#alertModal');">BMI (체질량지수)란?</a></p>      
+   </div>
+  <!-- BMI 체질량지수란? 모달팝업 -->
+  <div id="alertModal" class="health_alert bmi_q_popup" style="display: none;">
+   <div class="inner">
+      <h2 class="pop_tit">BMI 체질량지수란?<button type="button" class="btn_close ui-close"><span
+               class="hidden">닫기</span></button>
+      </h2>
+      <div class="pop_cont">
+         체질량지수(body mass index, BMI)는 자신의 몸무게(kg)를 키의 제곱(㎡)으로 나눈 값입니다.<br>
+         체질량 지수는 근육과 지방의 무게를 구별하지 못하여 건강을 측정하는 절대 지표는
+         아니지만, 실제 지방량을 정확히 측정하기는 어렵습니다. 체질량 지수는 체지방량과
+         상관관계가 높기 떄문에 간접적으로 비만 정도를 평가하는 방법으로 가장 널리 사용됩니다.
+      </div>
+   </div>
+</div>
+<!-- //BMI 체질량지수란? 모달팝업 -->
+</body>
+
+</html>

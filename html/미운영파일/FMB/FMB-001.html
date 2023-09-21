@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>패키지</title>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+	<div class="health_wrap type_package type_main"> <!--20210805 'type_package' class 추가-->
+		<header class="health_header"> <!--20210805 'type_multiple', 'type_flex' class 삭제-->
+			<h1 class="ver01">Tune H 패키지</h1> <!-- 220506 수정 : 텍스트 수정 -->
+			<!-- 230120 삭제
+			<div class="user package on"><button type="button">홍길동</button></div>-->
+			<!-- user class 가이드
+			패키지 구매회원의 경우 : .package 추가
+			신규 알림 있을 시 : .on 추가
+			-->
+			<!-- 230120 추가 -->
+			<div class="user_rank white" id="mytoggle">
+				<!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+				<button type="button" id="user_rank_btn">White 660</button>
+			</div>
+			<!-- //230120 추가 -->
+		</header>
+		<div class="health_container">
+			<!-- 20210818 배너 수정, banner_area_wrap 추가 -->
+			<div class="banner_area_wrap">
+				<div class="banner_area">
+					<button type="button" class="close_btn"><span class="hidden">닫기</span></button>
+					<div class="swiper-container banner_slider">
+						<div class="swiper-wrapper">
+              <!-- 220324 수정: 상단 슬라이드 이미지 100%에 맞게 이미지 변경 -->
+              <div class="swiper-slide new_card">
+								<a href="#">
+									<img src="../../resources/img/banner_package_img01.png" alt="라이프 샐러드 쉐이크 천원"><!-- 220506 수정 : 상단 배너 이미지 수정 -->
+								</a>
+							</div>
+              <!--// 220324 수정: 상단 슬라이드 이미지 100%에 맞게 이미지 변경 -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //20210818 배너 수정 -->
+
+			<div class="goal_list_wrap type_each">
+				<!-- 20211021 -->
+				<div class="tit_imgwrap mb30"> <!-- 220506 수정 : mb30 클래스 수정-->
+					<img src="../../resources/img/img_title_seventeen.png" alt="">
+					<p>Tune H 패키지로 <br>시작하는 나만의 <br>맞춤 건강관리</p>
+				</div>
+        <!-- 220506 추가 -->
+        <!-- <p class="subtit">
+          전문간호사의 건강 컨시어지 서비스에 더해 전문 건강상담, 굿즈, 홈PT, 콘텐츠로 구성된 다양한 패키지의 혜택을 누려보세요
+        </p> --> <!-- 20220511 삭제 -->
+        <ul class="pack_list">
+          <li data-tab="tab1">
+            <a href="#none">
+              <p></p>
+              <span>ALL</span>
+            </a>
+          </li>
+          <li  class="on" data-tab="tab2">
+            <a href="#none">
+              <p></p>
+              <span>웰니스</span>
+            </a>
+          </li>
+          <li data-tab="tab3">
+            <a href="#none">
+              <p></p>
+              <span>마인드케어</span>
+            </a>
+          </li>
+          <li data-tab="tab4" class="in_ready" onclick="netiveUI.plugins.popAlert('#alert001');"><!-- 20221110 패키지 준비중 클래스 in_ready, 클릭이벤트 추가 -->
+            <a href="javascript:void(0);">
+              <p></p>
+              <span>슬립케어</span>
+            </a>
+          </li>
+          <li data-tab="tab5">
+            <a href="#none">
+              <p></p>
+              <span>푸드테크</span>
+            </a>
+          </li>
+          <li data-tab="tab6">
+            <a href="#none">
+              <p></p>
+              <span>바디핏</span>
+            </a>
+          </li>
+        </ul>
+        <!--// 220506 추가 -->
+				<!-- //20211021 -->
+				<!-- 220506 수정 : 아이템 리스트 변경 -->
+				<div id="tab1" class="pack_main_wrap">
+					<!-- 20210729 패키지 아이템 마크업 변경 -->
+					<ul class="pack_main_cont item_wrap current" id="tab3">
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type_img01.png" alt="테마가 있는 심리상담 비기너">
+								<div class="items_label">
+									<span>NEW</span>
+									<span>BEST</span>
+								</div>
+								<div class="items">
+									<h3 class="item_tit">테마가 있는 심리상담 비기너 테마가 있는 심리상담 비기너</h3>
+									<p class="item_price">
+										<em>20% OFF</em>
+										<span class="sale">120,000원</span>
+										50,000원
+									</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type_img02.png" alt="테마가 있는 심리상담 매니아">
+								<div class="items">
+									<strong class="item_tit">테마가 있는 심리상담 매니아</strong>
+									<p class="item_price">150,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type_img03.png" alt="테마가 있는 심리상담 프리미엄">
+								<div class="items">
+									<strong class="item_tit">테마가 있는 심리상담 프리미엄</strong>
+									<p class="item_price">240,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type02_img01.png" alt="마인드케어 비기너">
+								<div class="items">
+									<strong class="item_tit">마인드케어 비기너</strong>
+									<p class="item_price">40,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type02_img02.png" alt="마인드케어 매니아">
+								<div class="items">
+									<strong class="item_tit">마인드케어 매니아</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type02_img03.png" alt="마인드케어 프리미엄">
+								<div class="items">
+									<strong class="item_tit">마인드케어 프리미엄</strong>
+									<p class="item_price">180,000원</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="pack_main_cont item_wrap current" id="tab4">
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type03_img01.png" alt="슬립케어 비기너">
+								<div class="items">
+									<strong class="item_tit">슬립케어 비기너</strong>
+									<p class="item_price">60,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type03_img02.png" alt="슬립케어 매니아">
+								<div class="items">
+									<strong class="item_tit">슬립케어 매니아</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type03_img03.png" alt="슬립케어 프리미엄">
+								<div class="items">
+									<strong class="item_tit">슬립케어 프리미엄</strong>
+									<p class="item_price">180,000원</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="pack_main_cont item_wrap current" id="tab5">
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type04_img01.png" alt="푸드테크 비기너">
+								<div class="items">
+									<strong class="item_tit">푸드테크 비기너</strong>
+									<p class="item_price">60,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type04_img02.png" alt="푸드테크 매니아">
+								<div class="items">
+									<strong class="item_tit">푸드테크 매니아</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type04_img03.png" alt="푸드테크 프리미엄">
+								<div class="items">
+									<strong class="item_tit">푸드테크 프리미엄</strong>
+									<p class="item_price">180,000원</p>
+								</div>
+							</a>
+						</li>
+                        <!-- 20220511 추가 -->
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type04_img04.png" alt="푸드테크 프리미엄">
+								<div class="items">
+									<strong class="item_tit">뉴트리션 단백질과자점 세트</strong>
+									<p class="item_price">10,000원</p>
+								</div>
+							</a>
+						</li>
+                        <!--// 20220511 추가 -->
+                        <!-- 20220513 추가 -->
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type04_img05.png" alt="푸드테크 프리미엄">
+								<div class="items">
+									<strong class="item_tit">[프로모션] 라이프샐러드 패키지</strong>
+									<p class="item_price">
+                                        <em>98% OFF</em>
+										<span class="sale">51,600원</span>
+										1,000원
+                                    </p>
+								</div>
+							</a>                           
+						</li>
+                        <!--// 20220513 추가 -->
+					</ul>
+					<ul class="pack_main_cont item_wrap current" id="tab6">
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type05_img01.png" alt="바디핏 홈 PT 비기너">
+								<div class="items">
+									<strong class="item_tit">바디핏 홈 PT 비기너</strong>
+									<p class="item_price">80,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type05_img02.png" alt="바디핏 홈 PT 매니아">
+								<div class="items">
+									<strong class="item_tit">바디핏 홈 PT 매니아</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type05_img03.png" alt="바디핏 홈 PT 프리미엄">
+								<div class="items">
+									<strong class="item_tit">바디핏 홈 PT 프리미엄</strong>
+									<p class="item_price">150,000원</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="pack_main_cont item_wrap current" id="tab2">
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type01_img01.png" alt="Seventeen 레벨 Up 팩 바디핏">
+								<div class="items">
+									<strong class="item_tit">Seventeen 레벨 Up 팩 바디핏</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type01_img02.png" alt="Seventeen 레벨 Up 팩 슬립케어">
+								<div class="items">
+									<strong class="item_tit">Seventeen 레벨 Up 팩 슬립케어</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type01_img03.png" alt="Seventeen 레벨 Up 팩 마인드케어">
+								<div class="items">
+									<strong class="item_tit">Seventeen 레벨 Up 팩 마인드케어</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<li class="goal_list_box">
+							<a href="#" class="package_box">
+								<img src="../../resources/img/pakage/pack_main_type01_img04.png" alt="Seventeen 레벨 Up 팩 푸드테크">
+								<div class="items">
+									<strong class="item_tit">Seventeen 레벨 Up 팩 푸드테크</strong>
+									<p class="item_price">120,000원</p>
+								</div>
+							</a>
+						</li>
+						<!-- // 20210729 패키지 아이템 마크업 변경 -->
+					</ul>
+				</div>
+				<!--// 220506 수정 : 아이템 리스트 변경 -->
+			</div>
+			<div class="info_get_wrap">
+				<div class="info_box">
+					<p class="h2">패키지에 대해서<br>알려드릴게요</p>
+					<!-- 20210902 tuneH 텍스트 수정 -->
+					<span>전문간호사의 건강 컨시어지 서비스에 더해 전문 건강상담, 굿즈, 홈PT, 콘텐츠로 구성된 다양한 패키지의 혜택을 누려보세요.</span><!-- 20220511 문구 수정 -->
+					<ul class="circle_wrap">
+						<li>디지털<br>콘텐츠</li>
+						<li>다양한<br>상품</li>
+						<li>컨시어지<br>서비스</li>
+					</ul>
+					<hr class="hr_line_03">
+					<p class="notice">만 19세 미만의 미성년자가 유료서비스를 이용하고자 하는 경우, 법정대리인의 동의가 필요합니다.</p>
+					<p class="notice">관련 자세한 내용은 고객센터(02-6330-3410)으로 문의 바랍니다.</p>
+				</div>
+			</div>
+		</div>
+		<!-- 20210729 footer 추가 -->
+		<footer class="health_footer">
+			<div class="scroll_nav_item">
+			  <a href="#" class="btn_top"><span class="hidden">상단 위로 이동</span></a>
+			  <a href="#" class="nav_item"><span class="hidden">패키지</span></a>
+			</div>
+         <div class="health_footer_nav">
+            <!-- 20230310 푸터 내비수정 -->
+            <ul>
+               <li>
+                  <a href="#" class="nav_item home"> <!--'on' class 추가시 해당 메뉴 활성화-->
+                     <span class="icon"></span>
+                     <strong>홈</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item contents">
+                     <span class="icon"></span>
+                     <strong>건강콘텐츠</strong>
+                  </a>
+               </li>
+            </ul>
+            <!-- 말풍선 -->
+            <!-- <div class="footer_bubbleBox">
+               <span>나와 맞는 코치를 선택해보세요!</span>
+            </div> -->
+            <!-- //말풍선 -->
+            <!--// 20230310 푸터 내비수정 -->
+         </div>
+         <!-- //.health_footer_nav -->
+		  </footer>
+		  <!-- //20210729 footer 추가 -->
+	</div>
+   <!--  20221110 패키지 준비중 알럿 팝업 추가-->
+   <div class="health_alert" id="alert001" style="display: none;">
+      <div class="inner">
+         <p class="msg">
+            패키지 준비 중입니다.
+         </p>
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_dark ui-close">확인</button>
+        </div>
+      </div>
+   </div>
+   <!--  20221110 패키지 준비중 알럿 팝업 추가 -->
+
+
+	<script>
+		var swiper = new Swiper(".banner_slider", {
+			slidePerView:1,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			}
+		});
+
+		//220506 추가
+		$(function() {
+			$('.pack_list li').click(function() {
+            // 20221110 패키지 준비중일때 on 효과 제거
+            if($(this).hasClass('in_ready')){
+               return false;
+            }
+				var activeTab = $(this).attr('data-tab');
+            var dataImg = $(this).find('img').attr('data-src');
+				$('.pack_list li').removeClass('on');
+				$('.pack_main_cont').removeClass('current');
+            $('.pack_main_wrap').removeClass('current');
+				$(this).addClass('on');
+				$('#' + activeTab).addClass('current');
+            if($('.pack_main_wrap').hasClass('current')){
+					$('.pack_main_cont').addClass('current');
+				}
+         /* $(this).find('img').attr('src',function(index, attr){
+            if(attr.match('on')){
+               return attr.replace('_on.svg','_off.svg');
+            }else{
+               return attr.replace('_off.svg','on.svg');
+            }
+         }); */
+			});
+		});
+	</script>
+</body>
+</html>

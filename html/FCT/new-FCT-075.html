@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리 - 복약 달성 현황 - 주간 - 리스트</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>복약 관리</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <div class="toggle_title"></div>
+        <div class="section_tit">
+          복약 달성 현황
+          <label class="frm_toggle is_text toggle_WM" for="toggle01">
+            <input type="checkbox" id="toggle01">
+            <div class="toggle_slider round">
+              <div class="toggle_text"><span>주간</span><span>월간</span></div>
+            </div>
+          </label>
+        </div><!-- //.section_tit -->
+        <div class="medicine_card_wrap">
+          <!-- 주간 -->
+          <div class="toggle_week show">
+            <div class="date_range"> 
+              <button type="button" class="btn_cht left"></button>
+              <span>2023.08.07 ~ 2023.08.13</span><!-- 20230831 주간 월간 표시 잘못드림 -->
+              <button type="button" class="btn_cht right"></button>
+            </div><!-- //.date_range -->
+            <div class="box_container medicine_card">
+              <div class="sub_tit">처방</div>
+              <div class="tit">비스포스포네이트, 콤지로이드정</div>
+              <div class="medicine_card_time">
+                <div class="info"><span>복약주기</span><em>월화수목금토</em></div>
+                <div class="info"><span>복약시간</span>아침, 점심, 저녁, 취짐 전</div>
+                <div class="progress_wrap">
+                  <div class="step_wrap top">
+                    <span class="now_percent">30%</span>
+                    &#40;<!-- 괄호(&#40; &#41;) -->
+                    <span class="now">7</span>
+                    <span class="total">21&#41;</span>
+                  </div>
+                  <div class="progress">
+                    <i class="result_progress" style="width: 30%;">
+                      <span class="value now hidden">30</span>
+                    </i>
+                  </div>
+                  <div class="step_wrap">
+                    <span>0%</span>
+                    <span class="total">100%</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.medicine_card -->
+            <div class="box_container medicine_card">
+              <div class="sub_tit">비처방</div>
+              <div class="tit">아스피린, 아시클로버</div>
+              <div class="medicine_card_time">
+                <div class="info"><span>복약주기</span><em>월화수목금토</em></div>
+                <div class="info"><span>복약시간</span>아침, 점심, 저녁, 취짐 전</div>
+                <div class="progress_wrap">
+                  <div class="step_wrap top">
+                    <span class="now_percent">30%</span>
+                    &#40;<!-- 괄호(&#40; &#41;) -->
+                    <span class="now">7</span>
+                    <span class="total">21&#41;</span>
+                  </div>
+                  <div class="progress">
+                    <i class="result_progress" style="width: 30%;">
+                      <span class="value now hidden">30</span>
+                    </i>
+                  </div>
+                  <div class="step_wrap">
+                    <span>0%</span>
+                    <span class="total">100%</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.medicine_card -->
+          </div><!-- //.toggle_week -->
+          <!-- 월간 -->
+          <div class="toggle_month">
+            <div class="date_range"> 
+              <button type="button" class="btn_cht left"></button>
+              <span>2023.08</span><!-- 20230831 주간 월간 표시 잘못드림 -->
+              <button type="button" class="btn_cht right"></button>
+            </div><!-- //.date_range -->
+            <div class="box_container medicine_card">
+              <div class="sub_tit">처방</div>
+              <div class="tit">비스포스포네이트, 콤지로이드정</div>
+              <div class="medicine_card_time">
+                <div class="info"><span>복약주기</span><em>월화수목금토</em></div>
+                <div class="info"><span>복약시간</span>아침, 점심, 저녁, 취짐 전</div>
+                <div class="progress_wrap">
+                  <div class="step_wrap top">
+                    <span class="now_percent">30%</span>
+                    &#40;<!-- 괄호(&#40; &#41;) -->
+                    <span class="now">7</span>
+                    <span class="total">21&#41;</span>
+                  </div>
+                  <div class="progress">
+                    <i class="result_progress" style="width: 30%;">
+                      <span class="value now hidden">30</span>
+                    </i>
+                  </div>
+                  <div class="step_wrap">
+                    <span>0%</span>
+                    <span class="total">100%</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.medicine_card -->
+          </div><!-- //.toggle_month -->          
+        </div><!-- //.medicine_card_wrap -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <script>
+    $(document).ready(function(){
+      //복약달성현황 주간/월간 토글
+      function toggleMedicine(){
+        let checked = $('.toggle_WM').find("input[type=checkbox]").is(':checked');
+        if(checked){
+          $('.toggle_week').removeClass('show');
+          $('.toggle_month').addClass('show');
+        }else{
+          $('.toggle_week').addClass('show');
+          $('.toggle_month').removeClass('show');
+        }
+      }
+      toggleMedicine()
+      $('.toggle_WM').on('click', ()=>toggleMedicine())
+    })
+ </script>
+</body>
+</html>

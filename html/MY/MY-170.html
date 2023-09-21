@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문/결제</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap pointshop_wrap footer_no type_mypage"> 
+		<!-- <header></header> -->
+		<div class="health_container pt0">
+			<div class="order_info">
+                <div class="point">
+                    <strong class="tit">포인트</strong>
+                    <dl>
+                        <dt>결제 포인트</dt>
+                        <dd><span class="point_label">1,000P</span></dd>
+                    </dl>
+                    <dl class="bold">
+                        <dt>잔여 포인트</dt>
+                        <dd><span class="point_label">4,500P</span></dd>
+                    </dl>
+                </div>
+                <div class="delivery">
+                    <strong class="tit">포인트</strong>
+                    <dl>
+                        <dt>이름</dt>
+                        <dd>홍길동</dd>
+                    </dl>
+                    <dl>
+                        <dt>휴대폰</dt>
+                        <dd>010-1234-4567</dd>
+                    </dl>
+                    <dl>
+                        <dt>주소</dt>
+                        <dd>서울시 중구 삼봉로 48 라이나타워 1층</dd>
+                    </dl>
+
+                    <a href="javascript:;" class="btn_addchange">배송지 변경하기</a>
+
+                    <div class="form_wrap">
+                        <div class="select_wrap">
+                            <select name="#" id="deliveryMemoSel" class="selectbox">
+                                <option value="">배송시 요청사항을 선탹해 주세요</option>
+                                <option value="etc">기타</option>
+                            </select>
+                            <div class="inp_item">
+                                <input id="deliveryMemoInp" name="inqFrm" class="inp_base" type="text" placeholder="내용을 입력하세요" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+
+        <div class="st_infobox">
+            <p>주문 내용 및 결제 조건을 확인했으며, 결제진행에 동의합니다.</p>
+        </div>
+
+        <div class="btn_btm_fixed">
+            <button type="button" class="btn">포인트로 구입</button>
+        </div>
+	</div>
+
+    <script>
+        let deliverySel = document.getElementById('deliveryMemoSel');
+        let deliveryInp = document.getElementById('deliveryMemoInp');
+        deliverySel.addEventListener('change', function(){
+            if( this.value == 'etc' ){
+                deliveryInp.style.display="block";
+            }else{
+                deliveryInp.style.display="none";
+            }
+        })
+    </script>
+
+</body>
+</html>

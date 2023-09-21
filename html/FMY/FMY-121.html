@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진단/상담 설문 - 온라인 심리상담</title>
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="dent_land"><!-- 20230220 page class "dent_land" 추가 -->
+        <img src="../../resources/img/dental_landing_img.png" alt="덴탈 시작하기">
+        <div class="dent_btn_wrap">
+            <button type="button" class="btn_base_02">
+                <span>MBTI 참여하기</span><!-- 20230321 문구수정 -->
+            </button>
+        </div>
+        <!-- 진단/상담 완료 컨펌 팝업 --><!-- 20230220 팝업 주석 처리
+        <div id="alertConfirm" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">'{진단/상담}'의 상담예약을 완료하시겠습니까?</h1>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_light ui-close">취소</button>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alertComplete');" class="btn_pop_dark ui-close">상담예약 완료</button>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- //진단/상담 완료 컨펌 팝업 -->
+        <!-- 예약완료 팝업 --><!-- 20230220 팝업 주석 처리 
+        <div id="alertComplete" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">예약을 완료 했습니다.</h1>
+                <p class="msg">
+                    부득이한 사정으로 예약을 취소하시려<br>
+                    면 진단/상담 예약일 하루 전 오후 6시<br>
+                    까지 취소가 가능합니다.
+                </p>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_dark ui-close">확인</button>
+                </div>
+            </div>
+        </div>-->
+        <!-- //예약완료 팝업 -->
+    </div>
+    <script>
+         $(document).ready(function(){
+            //2level 옵션 영역
+            $(".radio_box").on("click", function(){               
+                if(!!$(this).parent().find(".radio_box_detail")){
+                    var $inputName = $(this).find("input[type='radio']").attr('name');                             
+                    $(this).parent('.survey_wrap').find('.radio_box_detail input[name=' + $inputName + '-1]').removeAttr("disabled");
+                }
+            });
+            //질문 당 하나 이상 답 클릭시 하단 고정 버튼 활성화
+            $(".radio_box").on("click", function(){
+                var $questionNum = $('.radio_box').length;               
+                if($(".radioItem:checked").length == $questionNum){     
+                    $('.btn_btm_fixed button').removeAttr("disabled");              
+                }
+            });
+            //질문 페이징
+            var $surveyNum = $('.survey_wrap').length;
+            $('.survey-pagination-total').html($surveyNum);
+            var $surveyFirstOT = parseFloat($('.survey_wrap').eq(0).offset().top) + parseFloat($('.survey_wrap .content_tit').eq(1).css('margin-top'))
+            var $surOT = new Array();
+            var $surOTB = new Array();
+
+            for(var i=0; i< $('.survey_wrap').length; i++) {
+                ot = $('.survey_wrap').eq(i).offset().top;
+                oth = $('.survey_wrap').eq(i).offset().top + $('.survey_wrap').eq(i).height();
+                $surOT.push(ot);
+                $surOTB.push(oth)
+            }
+
+            $('.survey_slider').on('scroll', function(){
+                var $sT = $(this).scrollTop() + $surveyFirstOT;
+
+                if( $sT > $surOT[$('.survey_wrap').length - 1]){
+                    $('.survey-pagination-current').html($surveyNum);
+                }else {
+                    for (let i = 0; i <= $('.survey_wrap').length-1; i++) {
+                        if($sT > $surOT[i] && $sT < $surOTB[i]  ){
+                            var $currentNum = $('.survey_wrap').eq(i).index() + 1;
+                            $('.survey-pagination-current').html($currentNum);
+                        }                    
+                    }
+                }
+                if($(this).scrollTop() + $('.survey_slider').innerHeight() >= $(this).prop('scrollHeight')){
+                    $('.survey-pagination-current').html($surveyNum);
+                }
+            })  
+        })                     
+    </script>
+</body>
+
+</html>

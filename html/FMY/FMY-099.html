@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진단/상담 설문 - 온라인 심리상담</title>
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/swiper.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="health_wrap type_goal type_survey type_diagnosis dent_mbti"><!-- 20230220 page class "dent_mbti" 추가 -->
+        <header class="health_header">
+            <div class="inbtn">
+                <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+                <h1>Dental MBTI</h1><!-- 20230220 문구수정 -->
+            </div>
+            <div class="user"><button type="button">홍길동</button></div>
+            <!-- user class 가이드
+        패키지 구매회원의 경우 : .package 추가
+        신규 알림 있을 시 : .on 추가
+      -->
+        </header>
+        <div class="health_container pt0 pb0">
+            <!-- 20230220 추가 -->
+            <div class="survey_dent_wrap"><!-- 20230220 survey_dent_wrap class 추가 -->
+                <div class="survey_dent_inner"><!-- 20230328 survey_dent_inner 추가 -->
+                    <h2 class="survey_tit"><a href="#">시작하기</a></h2><!-- 20230328 문구 수정 --> 
+                    <div class="survey-pagination">
+                        <span class="survey-pagination-current">1</span>
+                        /
+                        <span class="survey-pagination-total">13</span>
+                    </div>
+                </div>
+                <div class="progress_wrap">
+					<div class="progress"><i style="width:8%;"></i></div>
+				</div>
+            </div>
+            <!-- //20230220 추가 -->
+                <div class="survey_slider">
+                    <div class="survey_wrapper">
+                        <div class="survey_wrap">
+                                <div class="content_tit">
+                                    <h3 class="tit_cont_02">현재 본인에게 해당되는 내용을 선택해주세요</h3><!-- 20230220 문구수정 -->
+                                </div>
+                                <div class="radio_box col-1">
+                                    <div class="item">
+                                        <input type="radio" id="rdo_01" class="radioItem" name="answer1">
+                                        <label for="rdo_01">최근 3개월 내에 잇몸에서 피가 난 적이 있어요</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_02" class="radioItem" name="answer1">
+                                        <label for="rdo_02">최근 3개월 내에 잇몸이 부은 적이 있어요</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_03" class="radioItem" name="answer1">
+                                        <label for="rdo_03">최근 3개월 내에 잇몸에서 고름이 나온 적이 있어요</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="rdo_04" class="radioItem" name="answer1">
+                                        <label for="rdo_04">해당없음</label>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- 20230220 삭제 -->
+                        <!--<div class="survey_wrap">
+                            <div class="content_tit">
+                                <h3 class="tit_cont_02">이번 상담예약은 몇&nbsp;번째 예약이신가요?</h3>
+                            </div>
+                            <div class="radio_box col-2">
+                                <div class="item">
+                                    <input type="radio" id="rdo_07" class="radioItem" name="answer2">
+                                    <label for="rdo_07">첫 번째 상담</label>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" id="rdo_08" class="radioItem" name="answer2">
+                                    <label for="rdo_08">두 번째 상담</label>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" id="rdo_09" class="radioItem" name="answer2">
+                                    <label for="rdo_09">세 번째 상담</label>
+                                </div>
+                                <div class="item">
+                                    <input type="radio" id="rdo_10" class="radioItem" name="answer2">
+                                    <label for="rdo_10">3회 이상 상담했음</label>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- //20230220 삭제 -->
+                    </div>                    
+                </div>
+        </div>
+        <div class="btn_btm_fixed"><!-- 20230328 수정 -->
+            <div class="btn_type_half">
+                <button type="button" onclick="netiveUI.plugins.popToast('#toast001');" class="btn dent_prev" disabled>이전</button><!-- 20230328 class 추가 -->
+                <button type="button" onclick="netiveUI.plugins.popToast('#toast002');" class="btn dent_next" disabled>다음</button><!-- 20230328 class 추가 -->
+            </div>
+        </div>
+
+        <!-- 진단/상담 완료 컨펌 팝업 --><!-- 20230220 팝업 주석 처리
+        <div id="alertConfirm" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">'{진단/상담}'의 상담예약을 완료하시겠습니까?</h1>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_light ui-close">취소</button>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alertComplete');" class="btn_pop_dark ui-close">상담예약 완료</button>
+                </div>
+            </div>
+        </div>
+        -->
+        <!-- //진단/상담 완료 컨펌 팝업 -->
+        <!-- 예약완료 팝업 --><!-- 20230220 팝업 주석 처리 
+        <div id="alertComplete" class="health_alert mypage_popup" style="display: none;">
+            <div class="inner">
+                <h1 class="tit_cont_03">예약을 완료 했습니다.</h1>
+                <p class="msg">
+                    부득이한 사정으로 예약을 취소하시려<br>
+                    면 진단/상담 예약일 하루 전 오후 6시<br>
+                    까지 취소가 가능합니다.
+                </p>
+                <div class="btn_wrap">
+                    <button type="button" class="btn_pop_dark ui-close">확인</button>
+                </div>
+            </div>
+        </div>-->
+        <!-- //예약완료 팝업 -->
+    </div>
+    <script>
+         $(document).ready(function(){
+            //2level 옵션 영역
+            $(".radio_box").on("click", function(){               
+                if(!!$(this).parent().find(".radio_box_detail")){
+                    var $inputName = $(this).find("input[type='radio']").attr('name');                             
+                    $(this).parent('.survey_wrap').find('.radio_box_detail input[name=' + $inputName + '-1]').removeAttr("disabled");
+                }
+            });
+            //질문 당 하나 이상 답 클릭시 하단 고정 버튼 활성화
+            $(".radio_box").on("click", function(){
+                var $questionNum = $('.radio_box').length;               
+                if($(".radioItem:checked").length == $questionNum){     
+                    $('.btn_btm_fixed button').removeAttr("disabled");              
+                }
+            });
+
+            /*
+            //질문 페이징
+            var $surveyNum = $('.survey_wrap').length;
+            $('.survey-pagination-total').html($surveyNum);
+            var $surveyFirstOT = parseFloat($('.survey_wrap').eq(0).offset().top) + parseFloat($('.survey_wrap .content_tit').eq(1).css('margin-top'))
+            var $surOT = new Array();
+            var $surOTB = new Array();
+
+            for(var i=0; i< $('.survey_wrap').length; i++) {
+                ot = $('.survey_wrap').eq(i).offset().top;
+                oth = $('.survey_wrap').eq(i).offset().top + $('.survey_wrap').eq(i).height();
+                $surOT.push(ot);
+                $surOTB.push(oth)
+            }
+            */ /* 20230328 질문 페이징 삭제(한 페이지에 여러개의 설문이 있을 경우 필요한 부분이므로 삭제함) */
+
+            $('.survey_slider').on('scroll', function(){
+                var $sT = $(this).scrollTop() + $surveyFirstOT;
+
+                if( $sT > $surOT[$('.survey_wrap').length - 1]){
+                    $('.survey-pagination-current').html($surveyNum);
+                }else {
+                    for (let i = 0; i <= $('.survey_wrap').length-1; i++) {
+                        if($sT > $surOT[i] && $sT < $surOTB[i]  ){
+                            var $currentNum = $('.survey_wrap').eq(i).index() + 1;
+                            $('.survey-pagination-current').html($currentNum);
+                        }                    
+                    }
+                }
+                if($(this).scrollTop() + $('.survey_slider').innerHeight() >= $(this).prop('scrollHeight')){
+                    $('.survey-pagination-current').html($surveyNum);
+                }
+            })  
+        })                     
+    </script>
+</body>
+
+</html>

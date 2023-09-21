@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>튜토리얼 </title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/jquery-circle-progress.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/guide.css">
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+    <div class="swiper intro">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box_01">
+          <div class="health_wrap tutorial type1">
+            <div class="visual"><img src="../../resources/img/v3_img_vis_tutorial01.png" alt=""></div>
+            <div class="tuto_msg">휴대폰 카메라를 이용한 AI생체인식<br>
+              기능을 통해서 나의 건강상태를<br><strong>지금 바로 확인</strong>해 보세요.
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide box_02">
+          <div class="health_wrap tutorial type2">
+            <div class="visual"><img src="../../resources/img/v3_img_vis_tutorial02.png" alt=""></div>
+            <div class="tuto_msg">나에게 필요한 <strong>맞춤형 미션, 건강정보</strong>를<br> 
+              확인하고, 건강관리 리워드도 받으세요.
+            </div>
+          </div>
+          <button type="button" class="btn_intro_next"></button>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+<script>
+  var swiper = new Swiper(".intro", {
+    spaceBetween: 0,
+    slidesPerView: 'auto',
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+</script>
+</body>
+
+</html>

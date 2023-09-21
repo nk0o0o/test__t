@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 통합 케어 알림 - 전체</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>케어 플랜</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">통합 케어 알림</p><!-- 20230829 문구수정 -->
+
+        <div class="tab_wrap">
+          <div class="tabs dep1 brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab active"><a class="tab_control" href="#tab-1" aria-controls="tab-con01">전체</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-2" aria-controls="">병원 일정</a></li><!-- 20230829 문구수정 -->
+              <li class="tab"><a class="tab_control" href="#tab-3" aria-controls="">케어 메시지</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-4" aria-controls="">1:1 케어 문의</a></li>
+            </ul>
+            <div class="tab_panel active" id="tab-1">              
+              <!-- 리스트 설명 -->
+              <div class="list_desc">※ 최근 1년 내역</div>
+              <!-- 리스트 -->
+              <div class="dayplan_list">
+                <div class="dayplan_wrap">
+                  <div class="dayplan_tit">
+                    <p class="box_tit">병원 일정</p><span>2023.06.28 (토)</span><!-- 20230829 병원 일정 문구수정 -->
+                  </div>
+                  <div class="box_container plan_card">
+                    <div class="plan_card_badge is_planer"><span class="badge badge_orange">항암 1차 치료</span></div>
+                    <div class="plan_card_detail">
+                      <div class="info">
+                        <span>의료진</span>
+                        <p>홍길동</p>
+                      </div>
+                      <div class="info">
+                        <span>병원명</span>
+                        <p>삼성서울병원 암병원</p>
+                      </div>
+                    </div><!-- //.plan_card_detail -->
+                    <div class="plan_card_time">
+                      오전<span>08:00</span>
+                      <div class="btn_wrap">
+                        <button type="button">수정</button>
+                        <button type="button" onclick="netiveUI.plugins.popAlert('#alert001')">삭제</button>
+                      </div></div>
+                  </div><!-- //.plan_card -->                  
+                </div><!-- //.dayplan_wrap -->
+                <div class="dayplan_wrap careQna"><!-- 1:1문의: careQna -->
+                  <div class="dayplan_tit">
+                    <p class="box_tit">1:1 케어 문의</p><span>2023.06.25 (수)</span><!-- 20230829 1:1 케어 문의 문구수정 -->
+                  </div>
+                  <div class="box_container box_fold plan_card is_open"><!-- 열린 메시지: is_open -->
+                    <div class="box_fold_cont">
+                      <div class="careQna_Q">
+                        <p class="box_cate">갑상선 케어 프로그램</p><!-- 20230912 카테고리와 제목 구분 태그 추가 -->
+                        <p class="box_tit">물어보고싶은게 있어요.</p><!-- 20230912 카테고리와 제목 구분 태그 추가 -->
+                        <p class="box_desc">씬지로이드를 식전 1시간에 먹고 
+                          악토넬EC정을 식후즉시 복용하면 갑상선과 골다공증 2개를 같이 복용해도 되나요?
+                        </p>
+                        <img src="../../resources/img/@dummy.jpg" alt>
+                      </div><!-- //.careQna_Q -->
+                      <div class="careQna_A">
+                        <p class="box_desc">안녕하세요 고객님<br/>라이나 생명 케어플래너 홍길동입니다<br/>
+                          이용해주셔서 감사합니다.</p>
+                      </div><!-- //.careQna_A -->
+                    </div>
+                    <div class="box_fold_bottom">
+                      <div class="badge badge_blue">답변완료</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->
+
+                  <div class="box_container box_fold plan_card">
+                    <div class="box_fold_cont">
+                      <div class="careQna_Q">
+                        <p class="box_cate">갑상선 케어 프로그램</p><!-- 20230912 카테고리와 제목 구분 태그 추가 -->
+                        <p class="box_tit">물어보고싶은게 있습니다.</p><!-- 20230912 카테고리와 제목 구분 태그 추가 -->
+                        <p class="box_desc">이용중인 서비스 종료 일자는 어디서 확인하나요?</p>
+                        <img src="../../resources/img/@dummy.jpg" alt>
+                      </div><!-- //.careQna_Q -->
+                    </div>
+                    <div class="box_fold_bottom">
+                      <div class="badge badge_gray">답변대기</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->
+                </div><!-- //.dayplan_wrap -->
+                <div class="dayplan_wrap caremsg"><!-- 케어메시지: caremsg -->
+                  <div class="dayplan_tit">
+                    <p class="box_tit">케어 메시지</p><span>2023.06.18 (일)</span>
+                  </div>
+                  <div class="box_container box_fold plan_card">
+                    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !</div>
+                    <div class="box_fold_bottom">
+                      <div class="caremsg_status">안읽음</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->   
+                  <div class="box_container box_fold plan_card on_read is_open"><!-- 열린 메시지: is_open -->
+                    <div class="box_fold_cont">라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                      라이나 고객님, 오늘은 수술 후 도움이 되는 목 운동 동영상을 추천 드립니다 !
+                    </div>
+                    <div class="box_fold_bottom">
+                      <div class="caremsg_status">읽음</div>
+                      <button type="button" class="box_fold_btn"></button>
+                    </div>
+                  </div><!-- //.plan_card -->               
+                </div><!-- //.dayplan_wrap -->
+              </div><!-- //.dayplan_list -->
+            </div><!-- //.tab_panel -->
+            <div class="tab_panel" id="tab-2"></div>
+            <div class="tab_panel" id="tab-3"></div>
+            <div class="tab_panel" id="tab-4"></div>
+          </div>
+        </div><!-- //.tab_wrap -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+
+  <!-- alert 팝업 : 일정 삭제 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">일정 삭제</h2><!-- 20230912 문구수정 -->
+      <p class="alert_msg">
+        일정을 삭제하면 고객님의 케어 플랜이 변경될 수 있으며, 지급된 포인트는 차감됩니다.<!-- 20230912 문구수정 -->
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_line_dark ui-close">취소</button>
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!--// alert 팝업 : 일정 삭제-->
+
+  <script>
+    var swiper = new Swiper(".plan_step_slider", {      
+      slidesPerView: 4,
+      spaceBetween: 22,
+      centeredSlides: true,
+      loop: false,
+    });
+  </script>
+</body>
+</html>

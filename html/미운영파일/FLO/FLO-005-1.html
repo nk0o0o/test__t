@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비밀번호 생성</title>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+
+</head>
+<body>
+  <div class="health_wrap type_signup enter_info"><!-- 20230331 enter_info 클래스 추가 -->
+    <header class="health_header"><!-- 20210526-<header>태그 추가 -->
+      <!-- 07/29 타이틀 추가 -->
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>비밀번호 생성</h1><!-- 20230331 텍스트 수정 -->
+      </div>
+      <div class="step_wrap"> <!--20230302 step 수정-->
+        <span class="now">2</span>3
+        <span class="hidden">총 3페이지 중 현재 2페이지</span>
+      </div>
+    </header>
+    <div class="health_container">
+      <h1 class="tit_cont_02">아래 정보를<br> 입력해주세요.</h1><!-- 20230331 텍스트 수정 -->
+  
+      <div class="inp_wrap type_large mt60"><!-- 20230331 mt60 클래스명 수정 -->
+         <!-- 20230302 닉네임 입력칸 추가 -->
+         <div class="inp_item">
+            <input class="inp_base" type="text" placeholder="닉네임">
+            <!-- <p class="notice err">이미 사용중인 닉네임입니다.</p> -->
+         </div>
+         <!--// 20230302 닉네임 입력칸 추가 -->
+
+         <!-- 20230331 키/몸무게 입력칸 추가 -->
+         <div class="inp_item add_attr">
+            <input class="inp_base" type="number" placeholder="키">
+            <em class="attr">cm</em>
+         </div>
+         <div class="inp_item add_attr">
+            <input class="inp_base" type="number" placeholder="몸무게"> 
+            <em class="attr kg">kg</em>
+         </div>
+          <!--// 20230331 키/몸무게 입력칸 추가 -->
+
+        <div class="inp_item">
+          <input class="inp_base" type="password" placeholder="비밀번호">
+         
+          <p class="info_txt">
+            영문 대소문자 조합과 숫자 또는 특수문자를<br>
+            포함하여 8자리 이상을 조합하여 생성해주세요.
+          </p>
+         <!--  <p class="notice err">사용불가 합니다</p> --><!-- 20210526-위치수정 -->
+        </div>
+        <div class="inp_item">
+          <input class="inp_base" type="password" placeholder="비밀번호 확인">
+          <!-- <p class="notice err">비밀번호가 일치하지 않습니다.</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn_btm_fixed">
+    <div class="progress_wrap"><!-- 20210526-위치 수정 -->
+      <progress max="300" value="200"></progress> <!--20230302 값 수정-->
+    </div>
+    <button type="button" class="btn" disabled="disabled">다음</button><!-- 20210526-ver02 클래스 삭제 -->
+  </div>
+ 
+</body>
+</html>

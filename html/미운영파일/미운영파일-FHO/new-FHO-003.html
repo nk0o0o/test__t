@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>메인 - HRA완료후 </title>
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+   <script src="../../resources/js/jquery-circle-progress.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+   <div class="health_wrap type_main_i type_home">
+      <header class="health_header">      
+         <p class="txt_hello">라이나님 반갑습니다.</p>
+         <div class="user" id="mytoggle2" onclick="fnNavClick();">
+            <button type="button" id="user_my_button">MY</button>
+         </div> 
+      </header>
+      <div class="health_container align_right">
+
+        <!-- 공지 -->
+        <div class="con pt20 pb20">
+          <!-- notice_box -->
+          <div class="notice_box">
+            <span class="notice_badge">공지</span>
+            <p class="notice_txt">2차 앵콜[프로모션] 널담 디저트 패키지 구매하고 향초도 받으세요! 2차 앵콜[프로모션] 널담 디저트 패키지 구매하고 향초도 받으세요!</p>
+          </div>
+          <!-- // notice_box -->
+        </div>
+        <!-- // 공지 -->
+
+        <!-- 헬스케어 -->
+        <div class="con pt10 pb30">
+          <!-- health_care -->
+          <div id="dental" class="health_care"><!--  메뉴별 ID : h_score, bio, dental -->
+            <!-- 20230405 텍스트 수정 -->
+            <h2 class="tit_cont_02">Wellness</h2>
+            <p class="txt_cont_03">
+               <em>Tune Your Health!</em>
+               <br>쉽고 간편하게 다양한 건강관리 서비스를 이용해 보세요!
+            </p>
+            <!-- care_box -->
+            <div class="care_box mt10">
+              <div class="hexa_wrap">
+                  <div class="btn_wrap" data-care="h_score">
+                     <button type="button" class="hexagon"></button>
+                     <span class="hexagon_tit">웰니스 다이어리</span>
+                  </div>
+                  <div class="btn_wrap" data-care="bio">
+                     <button type="button" class="hexagon"></button>
+                     <span class="hexagon_tit">AI 건강 카메라</span>
+                  </div>
+                  <div class="btn_wrap" data-care="dental">
+                     <button type="button" class="hexagon" ></button>
+                     <span class="hexagon_tit">Dental MBTI</span>
+                  </div>
+              </div>
+            </div>
+            <!-- // care_box -->
+
+            <!-- care_detail -->
+            <!-- 웰니스 다이어리 : 측정전 -->
+            <div class="care_detail" data-care="h_score">
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">웰니스 다이어리</p>
+                  <button type="button" class="btn_view" onclick="netiveUI.plugins.popFull('#alert003')">분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <figure class="icon_box">
+                    <img src="../../resources/img/ico_diary.png" alt>
+                  </figure>
+                  <p class="txt_box">3억명의 Global 빅데이터 기반으로 만들어진 건강 설문을 통해 <strong>건강 점수를 측정</strong>하고, 건강한 라이프 스타일을 위한 미션에 참여하세요.</p>
+                </div>
+              </div>
+            </div>
+            <!-- // 웰니스 다이어리 : 측정전 -->
+             <!--웰니스 다이어리 : 측정후 -->
+            <div class="care_detail care_after" data-care="h_score"> <!-- 측정 후 클래스 care_after -->
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">웰니스 다이어리</p>
+                  <button type="button" class="btn_view" onclick="netiveUI.plugins.popFull('#alert003')">분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <figure class="icon_box">
+                    <img src="../../resources/img/ico_diary.png" alt>
+                  </figure>
+                  <p class="txt_box">
+                     3억명의 Global 빅데이터 기반으로 만들어진 건강 설문을 통해 <strong>건강 점수를 측정</strong>하고, 건강한 라이프 스타일을 위한 미션에 참여하세요.</p>
+                </div>
+                <div class="state">
+                   <!-- progress_wrap -->
+                   <div class="progress_wrap">
+                     <div class="step_wrap">
+                       <span class="total">0</span>
+                       <span class="total">1000</span>
+                     </div>
+                     <div class="progress">
+                       <i class="avg_progress">
+                         <span class="avg">이용자 평균 <em>870</em></span>
+                         <!--평균값-->
+                       </i>
+                       <i class="result_progress">
+                         <span class="value now">644</span>
+                         <!--사용자값-->
+                       </i>
+                     </div>
+                   </div>
+                   <!-- //progress_wrap -->
+                </div>
+              </div>
+            </div>
+            <!-- // 웰니스 다이어리 : 측정후 -->
+            <!-- 20230322 서비스 준비중 추가 -->
+            <!-- Dental MBTI : 서비스 준비중 -->
+            <div class="care_detail care_ready" data-care="dental">
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">서비스 준비중 입니다.</p>
+                </div>
+                <div class="desc">
+                  <figure class="icon_box">
+                    <img src="../../resources/img/ico_dental_p.png" alt>
+                  </figure>
+                  <p class="txt_box">Comming Soon</p>
+                </div>
+              </div>
+            </div>
+            <!-- // Dental MBTI : 서비스 준비중 -->
+            <!-- Dental MBTI : 측정전 -->
+            <div class="care_detail" data-care="dental">
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">Dental MBTI</p>
+                  <button type="button" class="btn_view">분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <figure class="icon_box">
+                    <img src="../../resources/img/icon_dental_purple_text.png" alt>
+                  </figure>
+                  <p class="txt_box">치과 의사가 개발한 <strong>Dental MBTI</strong>를 통해 나의 구강 타입에 꼭 맞는 관리 
+                     방법을 확인해 보세요.</p><!-- 20230411 텍스트 수정 -->
+                </div>
+              </div>
+            </div>
+            <!-- // Dental MBTI : 측정전 -->
+            <!-- Dental MBTI : 측정후 -->
+            <!-- 20230413 타입별 덴탈MBTI UI 추가 -->
+            <!-- Dental MBTI - Red 타입 -->
+            <div class="care_detail care_after d_red" data-care="dental"><!-- 측정 후 클래스care_after -->
+               <!-- 20230413 치아 타입별 클래스 : d_red, d_black, d_blue, d_yellow -->
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">Dental MBTI</p>
+                  <button type="button" class="btn_view">다시 분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <!-- 20230413 구조 수정 -->
+                <div class="desc">
+                  <div class="flex_box">
+                     <figure class="icon_box">
+                         <img src="../../resources/img/icon_dental_red_text.png" alt>
+                     </figure>
+                     <p class="txt_box">잇몸이 부어 있거나 출혈, 고름 등이 
+                        나오나요? 원인과 관리방법을 확인
+                        해보세요!</p>
+                  </div>
+                  <a href="#" class="get_result">결과보기</a>
+               </div>
+               <ul class="more_info">
+                  <li><a href="#">MB와 기타 방법의 플라그 제거 효과 비교</a></li>
+                  <li><a href="#">치주 질환과 전신 질환</a></li>
+                  <li><a href="#" class="btn_info_more">더 보기</a></li>
+               </ul>
+                <!-- //20230413 구조 수정 -->
+               </div>
+            </div>
+            <!--// Dental MBTI - Red 타입 -->
+            <!-- Dental MBTI - Black 타입 -->
+            <div class="care_detail care_after d_black" data-care="dental"><!-- 측정 후 클래스care_after -->
+               <!-- 20230413 치아 타입별 클래스 : d_red, d_black, d_blue, d_yellow -->
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">Dental MBTI</p>
+                  <button type="button" class="btn_view">다시 분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <div class="flex_box">
+                     <figure class="icon_box">
+                         <img src="../../resources/img/icon_dental_black_text.png" alt>
+                     </figure>
+                     <p class="txt_box">치아에 변색이 있거나, 통증을 느끼고 계시나요? 원인과 관리 방법을 확인해보세요!</p>
+                  </div>
+                  <a href="#" class="get_result">결과보기</a>
+               </div>
+               <ul class="more_info">
+                  <li><a href="#">불소와 충치</a></li>
+                  <li><a href="#">칫솔모 마모에 따른 치태 제거 감소효과</a></li>
+                  <li><a href="#" class="btn_info_more">더 보기</a></li>
+               </ul>
+               </div>
+            </div>
+            <!--// Dental MBTI - Black 타입 -->
+            <!-- Dental MBTI - Blue 타입 -->
+            <div class="care_detail care_after d_blue" data-care="dental"><!-- 측정 후 클래스care_after -->
+               <!-- 20230413 치아 타입별 클래스 : d_red, d_black, d_blue, d_yellow -->
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">Dental MBTI</p>
+                  <button type="button" class="btn_view">다시 분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <div class="flex_box">
+                     <figure class="icon_box">
+                         <img src="../../resources/img/icon_dental_blue_text.png" alt>
+                     </figure>
+                     <p class="txt_box">바람이 불거나 찬 물을 마실 때 치아가 시리나요? 원인과 관리 방법을 확인해보세요!</p>
+                  </div>
+                  <a href="#" class="get_result">결과보기</a>
+               </div>
+               <ul class="more_info">
+                  <li><a href="#">칫솔질 횟수, 방법별 abrasion</a></li>
+                  <li><a href="#">시린이 원인과 치약 매커니즘</a></li>
+                  <li><a href="#" class="btn_info_more">더 보기</a></li>
+               </ul>
+               </div>
+            </div>
+            <!--// Dental MBTI - Blue타입 -->
+            <!-- Dental MBTI - Yellow 타입 -->
+            <div class="care_detail care_after d_yellow" data-care="dental"><!-- 측정 후 클래스care_after -->
+               <!-- 20230413 치아 타입별 클래스 : d_red, d_black, d_blue, d_yellow -->
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">Dental MBTI</p>
+                  <button type="button" class="btn_view">다시 분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <div class="flex_box">
+                     <figure class="icon_box">
+                         <img src="../../resources/img/icon_dental_yellow_text.png" alt>
+                     </figure>
+                     <p class="txt_box">치아에 변색이 있거나, 통증을 느끼고 계시나요? 원인과 관리 방법을 확인해보세요!</p>
+                  </div>
+                  <a href="#" class="get_result">결과보기</a>
+               </div>
+               <ul class="more_info">
+                  <li><a href="#">입냄새의 원인</a></li>
+                  <li><a href="#">시린이 원인과 치약 매커니즘</a></li>
+                  <li><a href="#" class="btn_info_more">더 보기</a></li>
+               </ul>
+               </div>
+            </div>
+            <!--// Dental MBTI - Yellow 타입 -->
+            <!-- // 20230413 타입별 덴탈MBTI UI 추가 -->
+            <!-- // Dental MBTI : 측정후 -->
+            <!-- AI 건강 카메라 -->
+            <div class="care_detail" data-care="bio">
+              <div class="box_inner">
+                <div class="top">
+                  <p class="tit">AI 건강 카메라</p>
+                  <button type="button" class="btn_view">분석하기</button><!-- 20230413 텍스트 수정 -->
+                </div>
+                <div class="desc">
+                  <figure class="icon_box">
+                    <img src="../../resources/img/ico_bio3.png" alt>
+                  </figure>
+                  <p class="txt_box">AI 건강 카메라를 통해 스트레스 지수, 심박수, 산소포화도 등 <strong>건강 상태를 측정</strong>해 보세요.</p>
+                </div>
+              </div>
+            </div>
+            <!-- // AI 건강 카메라 -->
+            <!-- // care_detail -->
+          </div>
+          <!-- // health_care -->
+        </div>
+        <!-- // 헬스케어 -->
+
+        <!-- 비엠아이 -->
+        <!-- con_bmi 측정전 -->
+         <div class="con_bmi pt30 pb40">
+           <div class="con">
+              <h2 class="tit_cont_02">BMI</h2>
+              <p class="txt_cont_03">AI가 분석한 BMI 지수와 주요 발병 통계 지수를 확인해 보세요.</p><!-- 20230328 텍스트 수정 -->
+              <button class="btn_form_line btn_add_bmi" onclick="netiveUI.plugins.popFull('#full002')">키 몸무게 입력하기 </button>
+            </div>
+         </div>
+         <!-- // con_bmi 측정전 -->
+        <!-- con_bmi 측정후 -->
+         <div class="con_bmi pt30 pb40">
+           <div class="con">
+               <button class="btn_modify btn_form_line">수정</button>
+              <h2 class="tit_cont_02">BMI</h2>
+              <div class="more_cont bmi_cont normal"><!-- 상태값 클래스 normal,before_obesity,obesity_lev_1,obesity_lev_2,obesity_lev_3,low_weight -->
+               <div class="bmi_card">
+                  <div class="bmi_state">
+                     <p class="bmi_tit">나의 체질량 지수</p>
+                     <div class="bmi_state_figure">
+                        <p class="bmi_state_num">BMI <em>22.<span>0</span></em></p>
+                        <div class="bmi_state_emot"> 
+                           <div class="emot_area"></div><!-- 이모티콘자리 -->
+                           <p></p><!-- 상태값 자리 -->                        
+                        </div>
+                     </div>
+                  </div>
+                  <div class="bmi_range_wrap">
+                     <div class="bmi_range">
+                        <div class="bmi_range_tit">정상 범위</div>
+                        <div class="bmi_range_num">18.5~22.9</div>
+                     </div>
+                     <div class="bmi_range">
+                        <div class="bmi_range_tit">또래 평균대비</div>
+                        <div class="bmi_range_num">-3.0<i class="bmi_icon_arr down"></i></div> <!-- 화살표 클래스 up, down -->
+                     </div>
+                  </div>                     
+               </div>
+               <div class="bmi_card">
+                  <p class="bmi_tit">주요질환 상대위험도</p>
+                  <ul class="bmi_disease_list">
+                     <li class="bmi_disease">
+                        <p class="bmi_disease_tit">본태성 고혈압</p>
+                        <p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+                     </li>
+                     <li class="bmi_disease">
+                        <p class="bmi_disease_tit">고지혈증</p>
+                        <p>+2.5 배 <i class="bmi_icon_arr down"></i></p> <!-- 화살표 클래스 up, down -->
+                     </li>
+                  </ul>
+                  <a href="#" class="bmi_more_btn">주요질환 더보기<i class="ico_arr_666"></i></a>
+               </div>
+            </div>
+            </div>
+         </div>
+         <!-- // con_bmi 측정후 -->
+         <!-- // 비엠아이 -->
+
+         
+
+         <!-- 포인트 -->
+         <!-- con_point -->
+         <div class="con con_point pt30 pb30">
+            <h2 class="tit_cont_02">My Tune Point</h2>
+            <!-- 레벨별 클래스: lv_red, lv_black, lv_dia, lv_purple, lv_white, lv_green -->
+            <!-- progress_wrap -->
+            <div class="point_bar progress_wrap lv_red">
+               <div class="my_level">Red 레벨</div>
+               <div class="step_wrap">
+                  <span class="total">5,000</span>
+                  <span class="total">30,000</span>
+               </div>
+               <div class="progress">
+               <i class="result_progress">
+                  <span class="value now">
+                     <span>8,000</span>
+                  </span>
+               </i>
+               </div>
+            </div>
+            <!-- //progress_wrap -->
+            <button type="button" class="btn_point_pop" onclick="netiveUI.plugins.popFull('#full001')">Tune Point 란?</button><!-- 20230328 텍스트 수정 -->
+         </div>
+        <!-- // con_point -->
+        <!-- // 포인트 -->
+
+         <!-- 하단 이용약관 -->
+         <div class="main_footer acco_list_wrap">
+            <div class="item_head">
+               <a id="popFull01" href="#"><span>이용약관</span></a>
+               <a id="popFull04" href="#"><span class="footer_tit">위치기반 서비스 이용 약관</span></a>
+                <a id="popFull02" href="#"><span class="footer_tit">개인정보처리방침</span></a>
+                <br>
+                <a id="popFull03" href="#"><span class="footer_tit">이전 개인정보처리방침</span></a>
+               <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+            </div>
+            <div class="item_cont" style="display: none;">
+               <div>
+                  <p>
+                      <span>라이나생명보험 주식회사</span>
+                      <span class="cigna_president">대표이사 :  조지은</span>
+                  </p>
+                  <p class="address">서울 종로구 삼봉로 48 라이나타워</p>
+                  <p><span>사업자등록번호 : </span>104-81-85673</p>
+                  <p><span>통신판매업신고 </span>제2022-서울종로-0938호</p>
+                  <p><a class="arrow_link" href="#">사업자정보확인</a></p>
+              </div>
+               <div class="footer_call_center">
+                  <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+                  <p><span>이메일 : </span><a class="arrow_link" href="#">문의하기</a></p>
+                  <p class="copy">ⓒLINA Life Insurance Co., Ltd. All rights reserved.</p>
+              </div>
+            </div>
+         </div>         
+         <!-- //하단 이용약관 -->
+      </div>
+      <footer class="health_footer">
+         <!-- 토스트 팝업  -->
+         <!-- <div class="bottom_pop">
+                <div class="pop_inner">
+                    <p>목표를 추가했습니다.</p>
+                </div>
+            </div> -->
+         <!-- //토스트 팝업  -->
+         <div class="scroll_nav_item">
+            <a href="javascript:void(0)" class="btn_top"><span class="hidden">상단 위로 이동</span></a>
+            <a href="javascript:void(0)" class="nav_item"><span class="hidden">패키지</span></a>
+         </div>
+         <div class="health_footer_nav">
+            <!-- 20230310 푸터 내비수정 -->
+            <ul>
+               <li>
+                  <a href="#" class="nav_item home on"> <!--'on' class 추가시 해당 메뉴 활성화-->
+                     <span class="icon"></span>
+                     <strong>홈</strong>
+                  </a>
+               </li>
+               <li>
+                  <a href="#" class="nav_item contents">
+                     <span class="icon"></span>
+                     <strong>건강콘텐츠</strong>
+                  </a>
+               </li>
+            </ul>
+            <!-- 말풍선 -->
+            <!-- <div class="footer_bubbleBox">
+               <span>나와 맞는 코치를 선택해보세요!</span>
+            </div> -->
+            <!-- //말풍선 -->
+            <!--// 20230310 푸터 내비수정 -->
+         </div>
+         <!-- //.health_footer_nav -->
+      </footer>
+    </div>
+  <!-- 포인트 쌓는 방법 full 팝업 -->
+  <div class="health_full get_point_pop" id="full001" style="display: none;">
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap">
+            <h2 class="tit_cont_01">Tune Point 및 회원 등급 안내</h2>
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container">
+          <div class="con_inner">
+            <div class="con_box">
+              <div class="pop_con">
+               <!-- 20230330 획득 방법 이미지 -> 코드 -->
+               <!-- 팝업내용 -->
+                <h3 class="txt_gradient">Tune Point 획득 방법</h3>
+                <ul class="point_guide_list mt10">
+                   <li class="wellness">
+                     <div class="tit">웰니스 다이어리</div>
+                     <p class="txt">
+                        건강설문 참여하고 건강점수(웰니스지수) 확인하면<br><em>Tune Point 500점 Get! (최초 1회만 지급)</em><br><br>
+                        웰니스 다이어리 목표 추가하고 달성하면 목표당<br><em>Tune Point 100점 Get!</em>
+                     </p>
+                     <button class="btn_base_02" onclick="" type="button">측정하기</button>
+                   </li>
+                   <!-- //.wellness -->
+                   <li class="aicamera">
+                     <div class="tit">AI 건강 카메라</div>
+                     <p class="txt">
+                        AI 건강 카메라로 건강 상태 측정하면<br><em>Tune Point 1,000점 Get! (최초 1회만 지급)</em>
+                     </p>
+                     <button class="btn_base_02" onclick="" type="button">측정하기</button>
+                   </li>
+                   <!-- //.aicamera -->
+                   <!-- 20230413 덴탈 MBTI 개발 후 주석 삭제-->
+                     <li class="dentalmbti">
+                     <div class="tit">Dental MBTI</div>
+                     <p class="txt">
+                        Dental MBTI 참여하고, 나만의 구강 타입 확인하면<br><em>Tune Point 1,000점 Get! (최초 1회만 지급)</em>
+                     </p>
+                     <button class="btn_base_02" onclick="" type="button">측정하기</button>
+                   </li> 
+                   <!-- //.dentalmbti -->
+                </ul>
+                <!-- //.point_guide_list -->
+                <div class="img_box mt50">
+                  <img src="../../resources/img/info_memberlevel.png" alt="">
+                </div>
+                <!-- //.img_box -->
+                <h3 class="tit_sub_02">기프트 신청방법</h3>
+                <ul class="txt_box">
+                    <li>MY>기프트>획득 기프트 확인 및 주소 입력</li>
+                    <li>기프트 획득 후 배송지 입력을 완료하셔야 물품이 발송됩니다.</li>
+                    <li>기프트는 당사의 사정에 따라 변동될 수 있습니다.</li>
+                </ul>
+                <button type="button" class="btn_base_02  ui-close">확인</button>
+                <!-- //팝업내용 -->
+                <!-- // 20230330 획득 방법 이미지 -> 코드 -->
+              </div>
+              <!-- //.pop_con -->
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+      </div>
+    </div>
+  </div>
+  <!-- // 포인트 쌓는 방법 full 팝업 -->
+  <!-- 키/몸무게 full 팝업 -->
+  <div class="health_full" id="full002" style="display: none;">
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap">
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container">
+          <div class="con_inner">
+            <div class="con_box">
+              <div class="pop_con">                
+                <!-- 팝업 내용 -->
+                <h2 class="tit_cont_01">키와 몸무게를<br>입력해주세요.</h2>
+                <div class="inp_wrap type_box mt60">
+                  <div class="inp_item">
+                    <label class="inp_label">키(cm)</label>
+                    <input class="inp_base" type="number" placeholder="현재 키 입력">
+                  </div>
+                  <div class="inp_item">
+                    <label class="inp_label">몸무게(kg)</label>
+                    <input class="inp_base" type="number" placeholder="현재 몸무게 입력">
+                  </div>
+                </div>
+                <!-- //팝업내용 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_black2" onclick="netiveUI.plugins.popFull('#alert001')">확인</button>
+        </div>
+        <!-- // pop btn -->
+      </div>
+    
+    </div>
+  </div>
+  <!-- // 키/몸무게 full 팝업 -->
+  <!-- 팝업 -->
+	<!-- 키 정보가 없을 시 alert 팝업 -->
+	<div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+      <p class="msg">
+				정확한 건강 점수를 체크하기 위해
+				회원님의 키 정보를 입력해주세요.
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- // 키 정보가 없을 시 alert 팝업 -->
+	<!-- 몸무게 정보가 없을 시 alert 팝업 -->	
+	<div class="health_alert" id="alert002" style="display: none;">
+    <div class="inner">
+      <p class="msg">
+				정확한 건강 점수를 체크하기 위해
+				회원님의 몸무게 정보를 입력해주세요.				
+      </p>
+
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- // 몸무게 정보가 없을 시 alert 팝업 -->
+  <!-- 본인인증 alert 팝업 -->
+  <div class="health_alert" id="alert003" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+         본인인증
+         <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+       </h2>
+      <p class="msg">정확한 AI 분석을 위해 반드시 본인인증을 진행해 주세요.</p>
+      <div class="check_box">
+        <input type="checkbox" id="chk1" class="chkItem" name="">
+        <label for="chk1" onclick="netiveUI.plugins.popFull('#alert004')">(선택) 보험약관 동의</label>
+      </div>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- // 본인인증 alert 팝업 -->
+ <!-- 20230323 개인정보 동의 alert 팝업-->
+ <div class="health_alert scroll_alert" id="alert004" style="display: none;"> 
+   <div class="inner">
+      <h2 class="pop_tit">마케팅목적 개인정보 수집·이용 동의 
+         <button type="button" class="btn_close ui-close" onclick="netiveUI.plugins.popFull('#alert003')">
+            <span class="hidden">닫기</span>
+         </button>
+      </h2>
+      <!-- ./pop_tit -->
+      <div class="pop_con">
+         <div class="inner_scroll">
+            <!-- 마케팅목적 개인정보 수집, 이용 동의 -->
+            <div class="point_item terms">
+               <p>회사는 마케팅 목적의 정보활용을 위하여 아래 명시된 내용에 따라 귀하의 정보를 수집 및 이용하고자 합니다.</p>
+               <h3 class="tit_cont_03">1. 수집·이용목적</h3>
+               <p><strong class="terms_boldtype">Tune H에서 제공하는 이벤트, 혜택 안내 등 광고성 정보 활용</strong></p>
+               <h3 class="tit_cont_03">2. 수집·이용항목</h3>
+               <p>성명, 이메일, 휴대전화번호</p>
+               <h3 class="tit_cont_03">3. 보유 및 이용기간</h3>
+               <p><strong class="terms_boldtype">이용자의 동의철회 또는 이용계약 해지(회원탈퇴 등)시까지</strong></p>
+               <ul class="dash_list">
+                  <li>귀하는 선택 수집, 이용에 대해 동의하지 않으실 수 있으며, 동의하지 않더라도 서비스 이용과 관련한 불이익은 없습니다.</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!-- ./pop_con -->
+   </div>
+ </div>
+  <!-- // 개인정보 동의 alert 팝업-->
+  
+
+  <script>
+   $(function () {
+      progressAnimation();
+      mainHealthCare()
+   });
+   //숫자만
+   var onlyNumber = function (num) {
+     return num.toString().replace(/[^0-9]/g, '');
+   };
+   //콤마넣기
+   var addComma = function (num) {
+     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+   };
+
+   $('.btn_toggle').each(function (index, item) {
+        var toggleDis = $(item).find('input[type=checkbox]').is(":disabled");
+        if (toggleDis) {
+            $(item).addClass('disabled');
+        } else {
+            $(item).removeClass('disabled');
+        }
+    });
+
+   var progressAnimation = function () {
+      $('.progress_wrap').each(function(index, item){
+         var $now = parseInt(onlyNumber($(item).find('.now').text()), 10);
+         var $nowText = $now;/* 20230323 수정 */
+         var $avg = parseInt(onlyNumber($(item).find('.avg').text()), 10);
+         var $total = parseInt(onlyNumber($(item).find('.total').eq(1).text()), 10);
+         $now = $now - parseInt(onlyNumber($(item).find('.total').eq(0).text()), 10);//20230322 추가
+         $total = $total - parseInt(onlyNumber($(item).find('.total').eq(0).text()), 10);
+         var $per = ($now / $total) * 100;
+         var $avgPer = ($avg / $total) * 100;
+         $(item).find('.progress').val($per);
+         $(item).find('.progress i').animate({
+           width: $per + '%',
+         }, {
+           duration: Math.max(500, 1000), //속도
+           step: function (now, fx) {
+             var $nowval = Math.round(($now / fx.end) * now);
+             if (isNaN($nowval)) $nowval = 0;
+             $(item).find('.now span').text(addComma($nowText)); /* 20230323 수정 */
+             var $nowWidth = $('.now').width();
+             var $avgWidth = $('.avg').width();
+             var $nowMargin = $nowWidth / 2;
+             var $nowLeft = $(item).find('.progress i').width() - $nowMargin;
+             var $nowRight = $(item).find('.progress i').width() + $nowMargin
+             var $wrapWidth = $(item).find('.progress').width();
+             //이용자 평균 data가 0일 경우
+             if ($avgPer <= 20) {
+               $(item).find('.avg').addClass('minimum');
+             } else {
+               $(item).find('.avg').removeClass('minimum');
+             }
+             //이용자 평균
+             $(item).find('.avg_progress').css({ 'width': $avgPer + '%' });
+           }
+         });
+      })
+   }
+
+   function mainHealthCare(){
+      $('.hexagon').click(function(e){
+         var $menuName = $(this).parents('.btn_wrap').attr('data-care');
+         if(!$('.health_care').attr('id', $menuName)){
+            $('.health_care').attr('id', $menuName)
+         }
+      })
+   }
+ </script>
+</body>
+
+</html>

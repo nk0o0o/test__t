@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="327" height="64" viewBox="0 0 327 64">
+    <defs>
+        <linearGradient id="0yx32c17pa" y1=".324" x2="1" y2=".322" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#24a7ff"/>
+            <stop offset="1" stop-color="#4b87f8"/>
+        </linearGradient>
+        <linearGradient id="lus4mmuobb" x1=".081" y1=".076" x2="1" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#19d3c5"/>
+            <stop offset=".52" stop-color="#0095ff"/>
+            <stop offset=".82" stop-color="#9b78f0"/>
+            <stop offset="1" stop-color="#cb8bda"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-24 -444)">
+        <rect width="327" height="64" rx="12" transform="translate(24 444)" style="fill:#e8f2fd"/>
+        <g data-name="그룹 1275">
+            <g data-name="그룹 1269">
+                <text data-name="Tune Point 혜택 받기" transform="translate(93 490)" style="fill:#303030;font-size:14px;font-family:Roboto-Bold,Roboto;font-weight:700;letter-spacing:-.043em"><tspan x="0" y="0">Tune Point </tspan><tspan y="0" style="font-family:SUIT-Bold,SUIT">혜택 받기</tspan></text>
+                <text data-name="다양한 포인트 혜택을 누려보세요." transform="translate(93 470)" style="fill:#999;font-size:13px;font-family:SUIT-Regular,SUIT;letter-spacing:-.058em"><tspan x="0" y="0">다양한 포인트 혜택을 누려보세요.</tspan></text>
+            </g>
+            <g data-name="그룹 2374">
+                <path data-name="사각형 798" transform="translate(37 452)" style="fill:transparent" d="M0 0h48v48H0z"/>
+                <path data-name="사각형 351" d="M0 0h30v16.451A1.549 1.549 0 0 1 28.451 18H1.548A1.548 1.548 0 0 1 0 16.452V0z" transform="translate(44 471.987)" style="fill:url(#0yx32c17pa)"/>
+                <path data-name="사각형 352" d="M1.548 0h30.9A1.549 1.549 0 0 1 34 1.549v4.9A1.549 1.549 0 0 1 32.451 8H1.548A1.548 1.548 0 0 1 0 6.452v-4.9A1.548 1.548 0 0 1 1.548 0z" transform="translate(42.001 463.987)" style="fill:#2c70e6"/>
+                <path data-name="패스 8668" d="m145.107 98.043-1.474-3.017a1.7 1.7 0 0 0-2.663-.625l-5.537 4.264c-.059.044-.111.09-.161.133-.049-.043-.1-.088-.161-.133l-5.538-4.265a1.7 1.7 0 0 0-2.662.625l-1.474 3.017a1.245 1.245 0 0 0 1.214 1.942h17.243a1.245 1.245 0 0 0 1.214-1.942" transform="translate(-76.272 364.002)" style="fill:#fcb72a"/>
+                <path data-name="사각형 353" transform="translate(56.5 460.993)" style="fill:#ffc400" d="M0 0h5v29.008H0z"/>
+                <g transform="translate(64.036 478.229)">
+                    <circle cx="8.5" cy="8.5" r="8.5" transform="translate(-.035 -.728)" style="fill:url(#lus4mmuobb)"/>
+                    <path d="M1.56 6.372H.106L0 6.265V.109L.106 0h2.41l.2.006a2.768 2.768 0 0 1 1.07.265 2.047 2.047 0 0 1 .869.781A2.167 2.167 0 0 1 4.96 2.2a1.909 1.909 0 0 1-.67 1.524 2.6 2.6 0 0 1-1.615.56H1.666v1.981l-.106.107zm.14-5.011v1.56h.864a.822.822 0 0 0 .583-.186.694.694 0 0 0 .193-.531.881.881 0 0 0-.2-.617.68.68 0 0 0-.456-.22l-.1-.006z" transform="translate(6.369 4.615)" style="fill:#fff"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

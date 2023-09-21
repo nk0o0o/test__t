@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>참여중/참여완료 - 챌린지 상세 순위 - 챌린지</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+<body>
+   <div class="health_wrap footer_no type_goal type_chall_detail">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+            <h1>계단 오르기 챔피언</h1>
+         </div>
+         <!-- 230120 추가 -->
+         <div class="user_rank white" id="mytoggle">
+            <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+            <button type="button" id="user_rank_btn">White 660</button>
+         </div>
+         <!-- //230120 추가 -->
+         <div class="user"><button type="button">홍길동</button></div>
+         <!-- user class 가이드
+		      패키지 구매회원의 경우 : .package 추가
+		      신규 알림 있을 시 : .on 추가
+		    -->
+      </header>
+      <div class="health_container">
+         <div class="tab_wrap">
+            <div class="tabs">
+               <ul class="tab_menulist">
+                  <li><a class="tab_control" href="#tab-1">설명</a></li>
+                  <li class="active"><a class="tab_control" href="#tab-2">순위</a></li>
+                 <!--  <li><a class="tab_control" href="#tab-3">토론</a></li> -->
+               </ul>
+               <!-- 설명탭 -->
+               <div class="tab_panel" id="tab-1">
+
+               </div>
+               <!-- //설명탭 -->
+               <!-- 순위탭 -->
+               <div class="rank_tab tab_panel active" id="tab-2">
+                  <div class="goal_list_wrap">
+                     <ul class="rank_list_top">
+                        <li class="my_rank_top01"> <!-- my_rank_top01 : 내순위가 1위일때 -->
+                           <div class="rank_icon"><img src="../../resources/img/challenge/reach_01.png" alt="1위"></div>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>서동규</span>
+                           </div>
+                           <p class="rank_record">4,790.1 METh</p>
+                        </li>
+                        <li class="my_rank_top02"> <!-- my_rank_top02 : 내순위가 2위일때 -->
+                           <div class="rank_icon"><img src="../../resources/img/challenge/reach_02.png" alt="2위"></div>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="2위 프로필사진">    
+                              </div>
+                              <span>김응규</span>
+                           </div>
+                           <p class="rank_record">3,216.1 METh</p>
+                        </li>
+                        <li class="my_rank_top03"> <!-- my_rank_top03 : 내순위가 3위일때 -->
+                           <div class="rank_icon"><img src="../../resources/img/challenge/reach_03.png" alt="3위"></div>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="3위 프로필사진">    
+                              </div>
+                              <span>박구환</span>
+                           </div>
+                           <p class="rank_record">2,393.9 METh</p>
+                        </li>
+                     </ul>
+                     <ul class="rank_list">
+                        <li class="rank_mine"><!-- rank_mine : 내순위 표시 -->
+                           <p class="rank_num">4</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>서동규</span>
+                           </div>
+                           <p class="rank_record">4,790.1 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">5</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>하태규</span>
+                           </div>
+                           <p class="rank_record">1,271.3 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">6</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>박성철</span>
+                           </div>
+                           <p class="rank_record">1,171.3 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">7</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>윤보경</span>
+                           </div>
+                           <p class="rank_record">1,171.3 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">8</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>장세선</span>
+                           </div>
+                           <p class="rank_record">1,171.3 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">9</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>한장원</span>
+                           </div>
+                           <p class="rank_record">1,171.3 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">10</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>배성빈</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">11</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">12</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">13</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">14</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">15</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">16</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">17</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">18</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">19</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">20</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">21</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                        <li>
+                           <p class="rank_num">22</p>
+                           <div class="user_name">
+                              <div class="avata">
+                                 <img src="../../resources/img/@img_profile.png" alt="1위 프로필사진">                                 
+                              </div>
+                              <span>USER</span>
+                           </div>
+                           <p class="rank_record">671.7 METh</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="my_rank_area">
+                     <p>내 순위 : <span><em>1위</em> / 182명 중</span></p>
+                  </div>
+               </div>
+               <!-- //순위탭 -->
+               <!-- 토론탭 -->
+               <!-- <div class="tab_panel" id="tab-3"></div> -->
+               <!-- //토론탭 -->
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

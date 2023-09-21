@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 서비스 소개</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>갑상선 케어 프로그램</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care">
+        <div class="tab_wrap">
+          <div class="tabs brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab"><a class="tab_control" href="#tab-a1" aria-controls="tab-con01">케어 플랜</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a2" aria-controls="">복약 관리</a></li>
+              <li class="tab active"><a class="tab_control" href="#tab-a3" aria-controls="">서비스 소개</a></li>
+            </ul>
+            <div class="tab_panel bg_gray" id="tab-a1">...케어 플랜...</div>
+            <div class="tab_panel bg_gray" id="tab-a2">...복약 관리...</div>           
+            <div class="tab_panel bg_gray active" id="tab-a3">              
+              <div class="service_swiper">
+                <p class="section_tit">라이나 생명과<br><em>함께 관리하는 건강한 생활 습관</em></p>
+                <div class="txt_hello">
+                  <em class="user_name">라*나</em>님, 안녕하세요.
+                  <div class="swiper-pagination"></div>
+                </div><!-- //.txt_hello -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#"><img src="../../resources/img/v3_Introduce_service_promotion_banner01.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#"><img src="../../resources/img/v3_Introduce_service_promotion_banner02.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#"><img src="../../resources/img/v3_Introduce_service_promotion_banner03.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#"><img src="../../resources/img/v3_Introduce_service_promotion_banner04.png" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- //.service_swiper -->
+
+            </div> <!-- //.tab_panel : 서비스 소개 -->
+          </div>
+        </div>
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <script>
+    $(document).ready(function () {
+      //복약 전체 체크박스
+      $('.ui-allCheck').uiCheckAll();
+      //복약알림 슬라이드
+      var swiper1 = new Swiper(".service_swiper .swiper-container", {
+        loop: false,
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        observer: true,
+        observeParents: true,
+        pagination: {        
+          el: ".service_swiper .swiper-pagination",
+          type: 'fraction',
+        },
+      });
+    })
+  </script>
+</body>
+</html>

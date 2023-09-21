@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../resources/css/guide.css">
+  <script type="text/javascript" src="../resources/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="../resources/js/ui.common.js"></script>
+  <title>Document</title>
+  <style>
+    body{padding:20px; white-space: nowrap;}
+    h1{font-size: 1.75rem;color: #222;}
+    p{display: flex;align-items: center;}
+    span{font-size: 16px;margin-left: 200px;color: #222;position: absolute;}
+    .typo_h1_EB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.875rem;font-weight: 800;line-height: 1.47;}
+    .typo_h1_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.875rem;font-weight: 700;line-height: 1.47;}
+    .typo_h2_EB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.5rem;font-weight: 800;line-height: 1.33;}
+    .typo_h2_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.5rem;font-weight: 700;line-height: 1.33;}
+    .typo_h2_SB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.5rem;font-weight: 600;line-height: 1.33;}
+    .typo_h3_EB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.375rem;font-weight: 800;line-height: 1.36;}
+    .typo_h3_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.375rem;font-weight: 700;line-height: 1.36;}
+    .typo_h4_EB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.1875rem;font-weight: 800;line-height: 1.37;}
+    .typo_h4_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.1875rem;font-weight: 700;line-height: 1.37;}
+    .typo_h5_EB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.0625rem;font-weight: 800;line-height: 1.56;}
+    .typo_h5_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.0625rem;font-weight: 700;line-height: 1.56;}
+    .typo_h5_M {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1.0625rem;font-weight: 500;line-height: 1.56;}
+    .typo_h6_B {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 700;line-height: 1.5;}
+    .typo_h6_SB {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 600;line-height: 1.5;}
+    .typo_h6_M {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.5;}
+    .typo_B {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 700;line-height: 1.5;}
+    .typo_SB {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 600;line-height: 1.5;}
+    .typo_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.5;}
+    .typo_R {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 400;line-height: 1.5;}
+    .typo_small_B {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 700;line-height: 1.57;}
+    .typo_small_SB {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 600;line-height: 1.57;}
+    .typo_small_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 500;line-height: 1.57;}
+    .typo_small_R {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 400;line-height: 1.57;}
+    .typo_btn_S_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.8125rem;font-weight: 500;line-height: 1.54;}
+    .typo_btn_L_B {letter-spacing: -0.05375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 700;line-height: 1.5;}
+    .typo_btn_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 500;line-height: 1.57;}
+    .typo_btn_B {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 700;line-height: 1.57;}
+    .typo_btn_S_fill_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.8125rem;font-weight: 500;line-height: 1.54;}
+    .typo_btn_fill_B {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 700;line-height: 1.57;}
+    .typo_btn_fill_L_B {letter-spacing: -0.05375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 700;line-height: 1.5;}
+    .typo_caption_SB {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.8125rem;font-weight: 600;line-height: 1.54;}
+    .typo_caption_M {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.8125rem;font-weight: 500;line-height: 1.54;}
+    .typo_caption_R {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.8125rem;font-weight: 400;line-height: 1.54;}
+    .typo_listData {letter-spacing: normal;font-family: "Roboto";font-size: 0.8125rem;font-weight: normal;line-height: 1.38;}
+    .typo_list_sub {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: normal;}
+    .typo_textfeild_title {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.5;}
+    .typo_textfeild_focus {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.5;}
+    .typo_textfeild_disabled {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.5;}
+    .typo_textfeild_enabled {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: normal;line-height: 1.5;}
+    .typo_textfeild_success {letter-spacing: -0.0375rem;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: normal;line-height: 1.57;}
+    .typo_textfeild_hint {letter-spacing: normal;font-family: "Roboto";font-size: 0.875rem;font-weight: normal;line-height: 1.57;}
+    .typo_tab_1 {letter-spacing: normal;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.25;}
+    .typo_tab_1_active {letter-spacing: -0.05375rem;font-family: "Suit tuneh";font-size: 1rem;font-weight: 600;line-height: 1.25;}
+    .typo_tab_2 {letter-spacing: normal;font-family: "Suit tuneh";font-size: 1rem;font-weight: 500;line-height: 1.25;}
+    .typo_tab_2_active {letter-spacing: normal;font-family: "Suit tuneh";font-size: 1rem;font-weight: 600;line-height: 1.25;}
+    .typo_table_th {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.9375rem;font-weight: normal;line-height: 1.6;}
+    .typo_table_td {letter-spacing: -0.046875rem;font-family: "Suit tuneh";font-size: 0.9375rem;font-weight: normal;line-height: 1.6;}
+    .typo_alert_msg {letter-spacing: normal;font-family: "Suit tuneh";font-size: 0.875rem;font-weight: 400;line-height: 1.57;}
+  </style>
+</head>
+<body>
+  <p>폰트이름 | 폰트사이즈(16px기준 rem) | 글자두께 | Line Height | Letter Spacing | 폰트패밀리(기본 "Suit tuneh")</p>
+  <h1>[ TYPO - HEADING ]</h1>
+  <p class="typo_h1_EB">typo_h1_EB<span>1.875rem, 800, 1.47, -0.0375rem</span></p>
+  <p class="typo_h1_B">typo_h1_B<span>1.875rem, 700, 1.47, -0.0375rem</span></p>
+  <p class="typo_h2_EB">typo_h2_EB<span>1.5rem, 800, 1.33, -0.0375rem</span></p>
+  <p class="typo_h2_B">typo_h2_B<span>1.5rem, 700, 1.33, -0.0375rem</span></p>
+  <p class="typo_h2_SB">typo_h2_SB<span>1.5rem, 600, 1.33, -0.0375rem</span></p>
+  <p class="typo_h3_EB">typo_h3_EB<span>1.375rem, 800, 1.36, -0.0375rem</span></p>
+  <p class="typo_h3_B">typo_h3_B<span>1.375rem, 700, 1.36, -0.0375rem</span></p>
+  <p class="typo_h4_EB">typo_h4_EB<span>1.1875rem, 800, 1.37, -0.0375rem</span></p>
+  <p class="typo_h4_B">typo_h4_B<span>1.1875rem, 700, 1.37, -0.0375rem</span></p>
+  <p class="typo_h5_EB">typo_h5_EB<span>1.0625rem, 800, 1.56, -0.0375rem</span></p>
+  <p class="typo_h5_B">typo_h5_B<span>1.0625rem, 700, 1.56, -0.0375rem</span></p>
+  <p class="typo_h5_M">typo_h5_M<span>1.0625rem, 500, 1.56, -0.0375rem</span></p>
+  <p class="typo_h6_B">typo_h6_B<span>1rem, 700, 1.5, -0.0375rem</span></p>
+  <p class="typo_h6_SB">typo_h6_SB<span>1rem, 600, 1.5, -0.0375rem</span></p>
+  <p class="typo_h6_M">typo_h6_M<span>1rem, 500, 1.5, -0.0375rem</span></p>
+  <br/>
+  <h1>[ TYPO - BODY ]</h1>
+  <p class="typo_B">typo_B<span>1rem, 700, 1.5, -0.046875rem</span></p>
+  <p class="typo_SB">typo_SB<span>1rem, 600, 1.5, -0.046875rem</span></p>
+  <p class="typo_M">typo_M<span>1rem, 500, 1.5, -0.046875rem</span></p>
+  <p class="typo_R">typo_R<span>1rem, 400, 1.5, -0.046875rem</span></p>
+  <p class="typo_small_B">typo_small_B<span>0.875rem, 700, 1.57, -0.046875rem</span></p>
+  <p class="typo_small_SB">typo_small_SB<span>0.875rem, 600, 1.57, -0.046875rem</span></p>
+  <p class="typo_small_M">typo_small_M<span>0.875rem, 500, 1.57, -0.046875rem</span></p>
+  <p class="typo_small_R">typo_small_R<span>0.875rem, 400, 1.57, -0.046875rem</span></p>
+  <br/>
+  
+  <h1>[ TYPO - BUTTON ]</h1>
+  <p class="typo_btn_S_M">typo_btn_S_M<span>0.8125rem, 500, 1.54, -0.046875rem</span></p>
+  <p class="typo_btn_L_B">typo_btn_L_B<span>1rem, 700, 1.5, -0.05375rem</span></p>
+  <p class="typo_btn_M">typo_btn_M<span>0.875rem, 500, 1.57, -0.046875rem</span></p>
+  <p class="typo_btn_B">typo_btn_B<span>0.875rem, 700, 1.57, -0.046875rem</span></p>
+  <p class="typo_btn_S_fill_M">typo_btn_S_fill_M<span>0.8125rem, 500, 1.54, -0.046875rem</span></p>
+  <p class="typo_btn_fill_B">typo_btn_fill_B<span>0.875rem, 700, 1.57, -0.046875rem</span></p>
+  <p class="typo_btn_fill_L_B">typo_btn_fill_L_B<span>1rem, 700, 1.5, -0.05375rem</span></p>
+  <br/>
+  
+  <h1>[ TYPO - CAPTION ]</h1>
+  <p class="typo_caption_SB">typo_caption_SB<span>0.8125rem, 600, 1.54, -0.046875rem</span></p>
+  <p class="typo_caption_M">typo_caption_M<span>0.8125rem, 500, 1.54, -0.046875rem</span></p>
+  <p class="typo_caption_R">typo_caption_R<span>0.8125rem, 400, 1.54, -0.046875rem</span></p>
+  <br/>
+  
+  <h1>[ TYPO - LIST DATA ]</h1>
+  <p class="typo_listData">typo_listData<span>0.8125rem, normal, 1.38, normal, "Roboto"</span></p>
+  <p class="typo_list_sub">typo_list_sub  <span>1rem, 500, normal, -0.046875rem</span></p>
+  <br/>
+  
+  <h1>[ TYPO - TEXT FEILD ]</h1>
+  <p class="typo_textfeild_title">typo_textfeild_title<span>1rem, 500, 1.5, -0.0375rem</span></p>
+  <p class="typo_textfeild_focus">typo_textfeild_focus<span>1rem, 500, 1.5, -0.0375rem</span></p>
+  <p class="typo_textfeild_disabled">typo_textfeild_disabled<span>1rem, 500, 1.5, -0.0375rem</span></p>
+  <p class="typo_textfeild_enabled">typo_textfeild_enabled<span>1rem, normal, 1.5, -0.0375rem</span></p>
+  <p class="typo_textfeild_success">typo_textfeild_success<span>0.875rem, normal, 1.57, -0.0375rem</span></p>
+  <p class="typo_textfeild_hint">typo_textfeild_hint<span>0.875rem, normal, 1.57, normal, "Roboto"</span></p>
+  <br/>
+  
+  <h1>[ TYPO - TAB ]</h1>
+  <p class="typo_tab_1">typo_tab_1<span>1rem, 500, 1.25, normal</span></p>
+  <p class="typo_tab_1_active">typo_tab_1_active<span>1rem, 600, 1.25, -0.05375rem</span></p>
+  <p class="typo_tab_2">typo_tab_2<span>1rem, 500, 1.25, normal</span></p>
+  <p class="typo_tab_2_active">typo_tab_2_active<span>1rem, 600, 1.25, normal</span></p>
+  <br/>
+  
+  <h1>[ TYPO - TABLE ]</h1>
+  <p class="typo_table_th">typo_table_th<span>0.9375rem, normal, 1.6, -0.046875rem</span></p>
+  <p class="typo_table_td">typo_table_td<span>0.9375rem, normal, 1.6, -0.046875rem</span></p>
+  <br/>
+  
+  <h1>[ TYPO - Alert Pop msg ]</h1>
+  <p class="typo_alert_msg">typo_alert_msg<span>0.875rem, 400, 1.57, normal</span></p>
+</body>
+</html>

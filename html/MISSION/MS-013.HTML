@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미션(3.4) - 특별미션 - 참여중상세 - 사진업로드(팝업)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script>
+<link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+<div class="health_wrap type_content">
+    <div class="health_container">
+      <button type="button" class="btn_base_02" onclick="netiveUI.plugins.popFull('#full001');">사진업로드 팝업</button>
+    </div>
+  </div>
+  <!-- 사진 업로드 팝업 -->
+  <div class="health_full thyroid_pop actived" id="full001" style="display:none;">
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap type_center">
+            <h1>사진 업로드</h1>
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container">
+          <div class="con_inner">
+            <div class="con_box n_ms">
+              <div class="pop_con"> 
+                <form action=""><!-- 20230911 form 태그 추가 -->
+                  <div class="swiper-container type_upload">
+                    <div class="swiper-wrapper" id="mySwiperFile">
+                        <!-- 하위 내용 script 에서 출력 -->
+                    </div>
+                  </div>
+                </form>
+                <div class="contents">
+                  <p class="section_tit">어떻게 인증해야 하나요?</p>
+                  관리자 html 별도 등록 영역
+                </div>
+                <div class="svc_desc acco_list_wrap">
+                  <div class="item_head">
+                    <p>꼭 확인해주세요!</p>
+                    <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+                  </div>
+                  <!-- 20230920 문구 수정 -->
+                  <ul class="item_cont" style="display: none;">
+                    <li>미션과 관련 없는 사진을 업로드할 경우 미션 달성이 되지 않습니다.</li>
+                    <li>관리자가 미션을 확인하고 미션 달성 여부를 최종 확정합니다.</li>
+                    <li>동일한 사진을 중복으로 올릴 경우 미션 달성 되지 않습니다.</li>
+                  </ul>
+                  <!-- // 20230920 문구 수정 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_black2">업로드 하기</button>
+        </div>
+        <!-- // pop btn -->
+      </div>
+    </div>
+  </div>
+  <!-- //사진 업로드 팝업 -->
+</body>
+
+<script>
+//이미지 파일 업로드
+var myFileUpLoad = {
+    $targetAppend: null,
+    targetSlide: null,
+    swiperFile: null,
+    showFile: function (input, idx) {
+        var o = this,
+            $slide = $('#' + (o.targetSlide + idx));
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $slide.find('.img_upload_wrap').hide();
+                $slide.find('.file_upload_img').attr('src', e.target.result);
+                $slide.find('.file_upload_cont').show();
+                $slide.find('.img_title').html(input.files[0].name);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    },
+    deleteFile: function (idx) {
+        var o = this,
+            $slide = $('#' + (o.targetSlide + idx));
+
+        o.swiperFile.removeSlide($(o.swiperFile.slides).index($slide));
+    },
+    createFile: function (idx) {
+        var o = this;
+
+        // 새로운 파일 영역 prepend
+        o.swiperFile.prependSlide(o.picHtml(idx));
+    },
+    readURL: function (input, idx) { // 파일 선택시 실행
+        var o = this;
+
+        // swiper 최초 1회 실행(첫 이미지 등록)
+        if (input.files.length === 1) {
+            o.swiperFile = new Swiper(".type_upload", {
+                loop: false,
+                slidesPerView: "auto",
+                spaceBetween: 11,
+                observer: true,
+                observeParents: true,
+            });
+        }
+
+        o.showFile(input, idx); // file 숨기고, 이미지 보여주기
+
+        o.createFile(idx + 1);
+
+    },
+    fileNumChk: function () { // 첨부파일 갯수 제한
+        var o = this,
+            len = o.$targetAppend.find('.file_upload_img').length;
+
+        if (len > 3) {
+            alert('파일 첨부는 최대 3개까지 등록이 가능합니다.');
+            return false;
+        }
+    },
+    picHtml: function (idx) {
+        var o = this;
+        var picHtml = ''
+            + '<div class="swiper-slide" id="' + (o.targetSlide + idx) + '">'
+            + '  <div class="inp_wrap file_upload">'
+            + '    <div class="img_upload_wrap" onclick="return myFileUpLoad.fileNumChk()">' // 첨부파일 갯수 제한
+            + '      <input type="file" name="myPic' + idx + '" onchange="myFileUpLoad.readURL(this, ' + idx + ');" accept="image/*" class="ipt_upload_file">'
+            + '    </div>'
+            + '    <div class="file_upload_cont">'
+            + '      <img class="file_upload_img" src="#" alt="your image">'
+            + '      <button type="button" onclick="myFileUpLoad.deleteFile(' + idx + ');" class="remove_img"><span class="img_title">Uploaded Image</span></button>'
+            + '    </div>'
+            + '  </div>'
+            + '</div>';
+        return picHtml;
+    },
+    init: function (idx) {
+        var o = this;
+        o.$targetAppend = $('#mySwiperFile');
+        o.targetSlide = 'myPic';
+
+        o.$targetAppend.append(o.picHtml(idx));
+    }
+}
+$(document).ready(function () {
+    myFileUpLoad.init(0);
+});
+</script>
+<script>
+  var swiper = new Swiper(".type_upload", {
+      loop: false,
+      slidesPerView: "auto",
+      spaceBetween: 11,
+      observer: true,
+      observeParents: true,
+  });
+</script>
+</html>

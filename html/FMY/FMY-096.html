@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BMI(체질량지수)관리 - 히스토리</title>
+   <link rel="stylesheet" href="../../resources/css/guide.css">
+   <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+   <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+   <script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+   <script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+   <script src="../../resources/js/ui.common.js"></script>
+   <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+   <div class="health_wrap footer_no type_mypage">
+      <header class="health_header">
+         <div class="inbtn">
+            <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+            <h1>BMI(체질량지수)관리</h1><!-- 20220811 텍스트 수정 -->
+         </div>
+			<!-- <div class="user"><button type="button">홍길동</button></div> --><!-- 20230602 삭제 -->
+      </header>
+      <div class="health_container my_bmi_container">
+         <div class="my_bmi_head">
+            <h1>홍길동 님의<br>BMI History</h1>
+               <a href="FMY-090.html" class="bmi_date_current">현재 BMI</a>
+         </div>
+         <div class="my_bmi_body my_bmi_history">
+            <div class="my_bmi_chart">
+               <p class="tit">일주일간 나의 BMI를 확인해보세요!</p>
+               <figure id="chartBMILegend">
+                  <p class="y_label">BMI</p>
+                  <p class="x_label">날짜</p>
+                  <canvas id="myChartBMI" style="width:100%;height: 200px;"></canvas>
+               </figure>
+            </div>
+            <div class="my_bmi_bnr">
+               <div class="bnr_txt txt_gradient">
+                  건강한 식이요법, 꾸준한&nbsp;운동을 TuneH와&nbsp;함께 해보아요!<br>
+                  몸이&nbsp;점점 달라지시는&nbsp;게 느껴질 거에요<!-- 20230328 텍스트수정 -->
+               </div>
+               <!-- 20230602 슬라이드 배너 삭제 -->
+            </div>
+         </div>
+      </div>
+   </div>  
+   <script>
+      var ctx = document.getElementById("myChartBMI").getContext("2d"); //chart g 호출
+      //bg 그라디언트 효과 생성
+      var bgGradient = ctx.createLinearGradient(0, 0, 0, 170); //20210909
+      bgGradient.addColorStop(0, 'rgb(25,211,197)');
+      bgGradient.addColorStop(1, 'rgb(203,139,218)');
+
+      var myChartBMI = new Chart(ctx, {
+         type: 'bar',
+         plugins:[ChartDataLabels],/* 20220801 데이터라벨 플러그인 추가 */
+         data: {
+            labels: ['07.07', '07.08', '07.09', '07.10', '07.11', '07.12', '07.13'],
+            datasets: [{
+               data: [20, 25, 30, 25, 21, 28, 28],
+               barPercentage: 0.5,
+               barThickness: 12, //막대 최소가로값
+               borderRadius: 16, //막대 둥글기        
+               backgroundColor: bgGradient, 
+            }]
+         },
+         options: {
+            plugins: {
+               /* 20220801 데이터라벨 플러그인 추가 */
+               datalabels:{
+                  align: function(context) {
+                     var index = context.dataIndex;
+                     var value = context.dataset.data[index];
+                     var invert = Math.abs(value) <= 1;
+                     return value < 1 ? 'end' : 'start'
+                  },
+                  backgroundColor: '#222',
+                  color: '#fff',
+                  labels: {
+                     title: {
+                        font: {
+                           size: 11,
+                           weight: 400
+                        },
+                     },
+                  },
+                  borderRadius: 4,
+                  anchor: 'end',
+                  offset: -20,
+                  padding:{
+                     top: 3,
+                     bottom:3,
+                     left:8,
+                     right:8
+                  },
+                  formatter:function(value,context){
+                     var idx = context.dataIndex;           
+                     return context.chart.data[idx];
+                  }
+               }, 
+               /* //20220801 데이터라벨 플러그인 추가 */
+               legend: {
+                  display: false,
+               },
+               tooltip: { //막대 상태값
+                  enabled: false //20220801
+                 /*  displayColors: false,
+                  xAlign: 'center',
+                  yAlign: 'bottom',
+                  boxWidth: 0,
+                  backgroundColor: '#222',
+                  titleAlign: 'top',
+                  titleColor: '#222',
+                  titleFont: {
+                     size: 0, //20210909
+                  },
+                  bodyColor: '#fff', //20210909
+                  bodyFont: {
+                     size: 11, //20210909
+                  }, */
+               },
+            },
+            scales: {
+               x: { //xc축
+                  offset: true,
+                  ticks: {
+                     font: {
+                        size: 13
+                     },
+                     color: '#b5b5b5',
+                  },
+                  grid: {
+                     display: false,
+                     offset: false
+                  },
+                  /* title: {
+                     display: true,
+                     text: '날짜',
+                     font: {
+                        size: 13
+                     },
+                     color: '#b5b5b5',
+                     align: 'end',
+                  } */
+               },
+               y: { //y축
+                  min: 10, //최소값
+                  max: 40, //최대값
+                  position: 'left',
+                  ticks: {
+                     autoSkip: false,
+                     stepSize: 5, //data 숫자 간격
+                     font: {
+                        size: 13
+                     },
+                     color: '#b5b5b5',
+                  },
+                  grid: {
+                     display: true,
+                     offset: false
+                  },
+                 /*  title: {
+                     display: true,
+                     text: 'BMI',
+                     font: {
+                        size: 13
+                     },
+                     color: '#b5b5b5',
+                     align: 'end',
+                  } */
+               }
+            },
+         },
+      });
+   //20220810 슬라이드 배너추가
+   var swiper = new Swiper(".banner_slider", {
+      slidePerView:1,
+      spaceBetween: 0,
+      loop: true,
+      autoplay: {
+         delay: 2000,
+         disableOnInteraction: false,
+      }
+   });
+   </script>
+</body>
+
+</html>

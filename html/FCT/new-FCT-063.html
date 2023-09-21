@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 케어 플랜 - 통합 케어 알림(데이터 없음)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>케어 플랜</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">통합 케어 알림</p><!-- 20230829 문구수정 -->
+        <div class="tab_wrap">
+          <div class="tabs dep1 brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab"><a class="tab_control" href="#tab-1" aria-controls="tab-con01">전체</a></li>
+              <li class="tab active"><a class="tab_control" href="#tab-2" aria-controls="">병원 일정</a></li><!-- 20230829 문구수정 -->
+              <li class="tab"><a class="tab_control" href="#tab-3" aria-controls="">케어 메시지</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-4" aria-controls="">1:1 케어 문의</a></li>
+            </ul>
+            <div class="tab_panel" id="tab-1"></div>
+            <div class="tab_panel active" id="tab-2">
+              <!-- 리스트 설명 -->
+              <div class="list_desc">※ 최근 1년 내역<button type="button">일정추가</button></div>
+              <div class="box_nodata">
+                <span class="box_nodata_icon">
+                  <img src="../../resources/img/v3_ic_48_fill_common_empty.svg" alt>
+                </span>
+                <p>등록된 일정이 없습니다.</p>
+              </div><!-- //.box_nodata -->
+            </div><!-- //.tab_panel -->
+            <div class="tab_panel" id="tab-3"></div>
+            <div class="tab_panel" id="tab-4"></div>
+          </div>
+        </div><!-- //.tab_wrap -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <script>
+    var swiper = new Swiper(".plan_step_slider", {      
+      slidesPerView: 4,
+      spaceBetween: 22,
+      centeredSlides: true,
+      loop: false,
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <linearGradient id="u0kvnari3a" x1=".171" y1=".098" x2=".788" y2=".9" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#19d3c5"/>
+            <stop offset=".498" stop-color="#0095ff"/>
+            <stop offset="1" stop-color="#cb8bda"/>
+        </linearGradient>
+        <linearGradient id="azhb23kx5b" x1="-.074" y1="-.058" x2=".989" y2="1.114" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#19d3c5"/>
+            <stop offset=".49" stop-color="#0095ff"/>
+            <stop offset="1" stop-color="#cb8bda"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-619 -187)" data-name="ico_26_mission/active">
+        <path d="M.83 2.96A5.92 5.92 0 0 0 0 6a6 6 0 1 0 6-6 5.883 5.883 0 0 0-2.55.57" transform="translate(626 194)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;stroke:#292d32;fill:none"/>
+        <path data-name="타원 73" d="M11 2a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9m0-2A11 11 0 1 1 0 11 11 11 0 0 1 11 0z" transform="translate(621 189)" style="fill:url(#u0kvnari3a)"/>
+        <circle data-name="타원 71" cx="7" cy="7" r="7" transform="translate(625 193)" style="fill:url(#azhb23kx5b)"/>
+        <path data-name="Vector" d="M.4 4.305 10 10" transform="translate(622 190)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+    </g>
+</svg>

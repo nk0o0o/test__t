@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필수정보</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap login_wrap footer_no"> 
+        <!-- <header></header> -->
+		<div class="health_container pt0">
+            <div class="signup_wrap">
+                <div class="step02">
+                    <h2>정확한 AI 분석을 위해 <br />
+                        현재 정보를 입력해주세요.</h2>
+                    <div class="form_wrap">
+                        <div class="inp_wrap type_box">
+                            <div class="inp_item">
+                                <label for="signupEmail" class="inp_label">키</label>
+                                <input id="signupEmail" name="inqFrm" class="inp_base align_right" type="text" value="194">
+                                <span class="unit">cm</span>
+                                <p class="notice err">숫자를 입력해 주세요.</p>
+                            </div>
+
+                            <div class="inp_item">
+                                <label for="signupPw" class="inp_label">몸무게</label>
+                                <input id="signupPw" name="inqFrm" class="inp_base align_right" type="password">
+                                <span class="unit">kg</span>
+                                <p class="notice err">숫자를 입력해 주세요.</p>
+                            </div>
+
+                            <div class="inp_item">
+                                <label for="signupMarri" class="inp_label">결혼 유무</label>
+                                <div class="radio_box">
+                                    <div class="item">
+                                        <input type="radio" id="signupMarriY" class="radioItem" name="signupMarri" checked>
+                                        <label for="signupMarriY">기혼</label>
+                                    </div>
+                                    <div class="item">
+                                        <input type="radio" id="signupMarriN" class="radioItem" name="signupMarri">
+                                        <label for="signupMarriN">미혼</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <div class="btn_btm_fixed">
+            <button type="button" class="btn" disabled>회원 가입 완료 하기</button>
+        </div>
+
+	</div>
+
+</body>
+</html>

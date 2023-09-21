@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송지 변경</title>
+    <link rel="stylesheet" href="../../resources/css/guide.css">
+    <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+    <script src="../../resources/js/ui.common.js"></script>
+</head>
+<body>
+	<div class="health_wrap pointshop_wrap footer_no type_mypage"> 
+		<!-- <header></header> -->
+		<div class="health_container pt0">
+            <div class="addchange_wrap">
+                <div class="form_wrap">
+                    <div class="inp_wrap type_box">
+                        <span class="inp_label">이름</span>
+                        <input type="text" class="inp_base" value="홍길동">
+                    </div>
+                    <div class="inp_wrap type_box">
+                        <span class="inp_label">연락처</span>
+                        <input type="tel" class="inp_base" value="010-1111-9999">
+                    </div>
+                    <div class="inp_wrap type_box postcode">
+                        <span class="inp_label">주소</span>
+                        <a href="#none" class="post_search">
+                            <input type="search" class="inp_base address" readonly disabled value="서울시 중구 삼봉로 48">
+                            <button type="button" onclick="netiveUI.plugins.popFull('#addressApi');"><span class="hidden" >우편번호 검색</span></button>
+                        </a>
+                        <input type="text" class="inp_base" placeholder="상세주소 입력" value="라이나타워 1층">
+                    </div>
+
+                    <div class="select_wrap">
+                        <select name="#" id="deliveryMemoSel" class="selectbox">
+                            <option value="etc">기타</option>
+                        </select>
+                        <div class="inp_item">
+                            <p>기타내용 입력 후 내용 출력 내용 입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+        <div class="btn_btm_fixed">
+            <button type="button" class="btn">저장</button>
+        </div>
+	</div>
+
+    <div id="addressApi" class="health_full scroll address_popup" style="display: none;">
+        <div class="inner">
+            <div class="pop_wrap">
+                <div class="pop_header">
+                    <div class="header_wrap">
+                        <h1>우편번호 검색</h1>
+                        <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+                    </div>
+                </div>
+                <div class="pop_container">
+                    <div class="con_inner">
+                        <div class="con_box">
+                            <div class="pop_con">
+                                <div class="search post_search">
+                                    <input type="search" class="inp_bg search_field" placeholder="도로명, 건물명, 지번">
+                                    <button type="button" class="search_clear"><span class="hidden">지우기</span></button>
+                                    <button type="button" id="searchAddr" class="btn_base_03">검색</button>
+                                </div>
+                                <p class="notice">예시 : 도로명(반포대로 58), 건물명(독립기념관), <br>지번(삼성동 25)</p>
+                                <!-- 검색결과 영역 -->
+                                <div class="search_list_wrap" style="display: none;">
+                                    <p class="search_total">총 <span>14</span>건</p>
+                                    <ul class="search_list">
+                                        <li class="search_item">
+                                            <em>(우)02211</em>
+                                            <a href="#none">[도로명] 서울특별시 구로구 신도림로 16 (신도림동, 신도림 대림아파트)</a>
+                                            <a href="#none">[지번] 서울특별시 구로구 구로동 1264</a>
+                                        </li>
+                                        <li class="search_item">
+                                            <em>(우)02211</em>
+                                            <a href="#none">[도로명] 서울특별시 구로구 신도림로 16 (신도림동, 신도림 대림아파트)</a>
+                                            <a href="#none">[지번] 서울특별시 구로구 구로동 1264</a>
+                                        </li>
+                                        <li class="search_item">
+                                            <em>(우)02211</em>
+                                            <a href="#none">[도로명] 서울특별시 구로구 신도림로 16 (신도림동, 신도림 대림아파트)</a>
+                                            <a href="#none">[지번] 서울특별시 구로구 구로동 1264</a>
+                                        </li>
+                                        <li class="search_item">
+                                            <em>(우)02211</em>
+                                            <a href="#none">[도로명] 서울특별시 구로구 신도림로 16 (신도림동, 신도림 대림아파트)</a>
+                                            <a href="#none">[지번] 서울특별시 구로구 구로동 1264</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //필드 초기화
+        $('.search_clear').click(function () {
+                $(this).prev().val('');
+                $(this).parent().addClass('empty');
+            });
+    </script>
+
+</body>
+</html>

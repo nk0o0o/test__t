@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>내 구강타입에 맞는 관리법 보기</title>
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+</head>
+<body>
+	<div class="health_wrap footer_no type_mypage dent_res_view"><!-- 20230412 class 'dent_res_view' 추가 -->
+		<header class="health_header">
+			<div class="inbtn">
+				<button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+				<h1>내 구강타입에 맞는 관리법 보기</h1>
+			</div>
+		</header>
+		<div class="dent_view"><!-- 20230412 class 'dent_view' 추가 -->
+			<h2><span class="dent_view_yellow">YELLOW</span> 타입</h2>
+			<ul class="btn_arr_wrap">
+				<!-- 20210924 문구 수정 및 메뉴 순서 변경 -->
+				<li>
+					<a href="#">
+						입냄새의 원인
+						<div class="dent_items_label">
+							<span>NEW</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						시린이 원인과 치약 매커니즘
+						<div class="dent_items_label">
+							<span>NEW</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						양치질 횟수
+						<div class="dent_items_label">
+							<span>NEW</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						이갈이 문제와 변화
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						불소와 시린이
+					</a>
+				</li>
+				<li>
+					<a href="#none">
+						올바른 치약의 양
+					</a>
+				</li>
+			</ul>
+			<dl class="other_dent_type">
+				<dt>다른 구강 타입 관리법 보기</dt>
+				<dd>
+					<a href="#none">
+							<img src="../../resources/img/icon_dental_red_text.png" alt="dental_red">
+					</a>
+				</dd>
+				<dd>
+					<a href="#none">
+							<img src="../../resources/img/icon_dental_black_text.png" alt="dental_black">
+					</a>
+				</dd>
+				<dd>
+					<a href="#none">
+							<img src="../../resources/img/icon_dental_blue_text.png" alt="dental_blue">
+					</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!-- 20210830 -->
+	<script>
+		//20210830 마이페이지 nav
+		function fnNavClick() {
+				var $t = $('.fullscreen'),
+						$btnClose = $t.find('.btn_close'),
+						wH = window.innerHeight,
+						$body = $('body');
+						
+				$body.addClass('scrollOff');
+				$body.height(wH).css('overflow','hidden');
+				
+				$t.show().addClass('open');          
+
+				$btnClose.off().on('click', function() {
+					$body.removeClass('scrollOff');
+					$t.removeClass('open');
+					$body.height('auto').css('overflow','visible');
+					setTimeout(function() {
+						$t.hide(300);
+						// $('#fullscreen').html(''); //20210830 개발 코드에 있던 구문 추가
+						$plugins.pageReload.init(function() { //touch end 이후 실행될 내용 작성
+							location.reload();
+						});
+					}, 300);
+				});
+				$plugins.pageReload.destroy();
+		}
+	</script>
+</body>
+</html>

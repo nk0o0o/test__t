@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리스트 있는 경우 - 챌린지 리스트 - 챌린지</title>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+  <div class="health_wrap footer_no type_goal type_chall_list"><!-- 클래스 type_chall_list -->
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>챌린지</h1>
+      </div>
+      <div class="user_rank red">
+            <!-- 레벨별 클래스 : red, purple, green, diamond, black, white -->
+            <button type="button">Red 3,567</button>
+         </div>      
+      <div class="user"><button type="button">홍길동</button></div>
+      <!-- user class 가이드
+        패키지 구매회원의 경우 : .package 추가
+        신규 알림 있을 시 : .on 추가
+      -->
+    </header>
+    <!-- 플로팅 메세지-->
+    <div class="msg_floating">
+      <p><a href="#">공유하기</a></p>
+    </div>
+    <!--//플로팅 메세지-->
+    <div class="health_container">
+      <!-- 20221110 건강앱 연동안내 추가 -->
+      <!-- 연결전 -->
+     <!--
+         20221118 before_link 클래스 추가
+        <div class="info_linkApp before_link">
+         <p>
+            현재 연결된 건강앱이 없습니다.<br>
+            앱 연결 후 챌린지에 참여해 주세요.
+         </p>
+         <button type="button" class="btn_form_line">앱연결</button>
+      </div> -->
+       <!-- 연결후 -->
+       <div class="info_linkApp">
+         <p>
+            <!-- 20221117 수정 -->
+            <button class="btn_refresh"></button>
+            <span>마지막 동기화: 10-31 14:15 <em>Fit bit</em></span>
+            <span class="icon_app app_fitbit"></span>
+            <!-- 앱별이미지 클래스 
+               애플헬스: app_appleh
+               핏빗: app_fitbit 
+               구글핏: app_googlefit -->
+            <!-- // 20221117 수정 -->
+         </p>
+         <button type="button" class="btn_form_line">앱연결</button>
+      </div>
+     
+      <!--// 20221110 건강앱 연동안내 추가 -->
+      <!-- 참여중 -->
+      <div class="list_wrap">
+        <p class="list_label">참여 중인 챌린지(<span>1</span>)</p>
+        <ul class="chall_list">
+          <li>
+            <a href="#">
+              <div class="chall_con">
+                <div class="img_wrap">
+                  <img src="../../resources/img/challenge/icon_chall_steps.png" alt="">
+                </div>
+                <div class="txt_wrap">
+                  <p class="tit">걷기 챔피언</p>
+                  <p class="sub solo">개인 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                  <p class="rank">내 순위 : <span>25</span>위</p>
+                </div>
+              </div>
+              <div class="chall_desc">
+                <span class="data">2022.11.30 ~ 2022.12.31</span>
+                <div class="group">224명</div>
+              </div>
+              <button type="button" class="btn_next">
+                <span class="hidden">다음화면으로 이동</span>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //참여중 -->      
+      <!-- 참여가능 -->
+      <div class="list_wrap">
+        <p class="list_label">참여 가능한 챌린지(<span>2</span>)</p>        
+        <ul class="chall_list">
+          <li>
+            <a href="#">
+              <div class="chall_con">
+                <div class="img_wrap">
+                  <img src="../../resources/img/challenge/icon_chall_ascent.png" alt="">
+                </div>
+                <div class="txt_wrap">
+                  <p class="tit">두줄말줄임 테스트 계단오르기 챔피언 계단오르기 챔피언 계단오르기 챔피언</p>
+                  <p class="sub team">팀 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                </div>
+              </div>
+              <div class="chall_desc">
+                <span class="data">2022.11.30 ~ 2022.12.31</span>
+                <div class="group">224명</div>
+              </div>
+              <button type="button" class="btn_next">
+                <span class="hidden">다음화면으로 이동</span>
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="chall_con">
+                <div class="img_wrap">
+                  <img src="../../resources/img/challenge/icon_chall_duration.png" alt="">
+                </div>
+                <div class="txt_wrap">
+                  <p class="tit">지구력 챔피언</p>
+                  <p class="sub solo">개인 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                </div>
+              </div>
+              <div class="chall_desc">
+                <span class="data">2022.11.30 ~ 2022.12.31</span>
+                <div class="group">224명</div>
+              </div>
+              <button type="button" class="btn_next">
+                <span class="hidden">다음화면으로 이동</span>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //참여가능 -->
+      <!-- 참여 완료 -->
+      <div class="list_wrap">
+        <p class="list_label">완료한 챌린지(<span>1</span>)</p>        
+        <ul class="chall_list">
+          <li>
+            <a href="#">
+              <div class="chall_con">
+                <div class="img_wrap">
+                  <img src="../../resources/img/challenge/icon_chall_steps.png" alt="">
+                </div>
+                <div class="txt_wrap">
+                  <p class="tit">정신건강+두뇌훈련</p>
+                  <p class="sub solo">개인 챌린지</p> <!-- 개인 챌린지:solo,팀 챌린지: team -->
+                  <p class="rank">내 순위 : <span>25</span>위</p>
+                </div>
+              </div>
+              <div class="chall_desc">
+                <span class="data">2022.11.30 ~ 2022.12.31</span>
+                <div class="group">224명</div>
+              </div>
+              <button type="button" class="btn_next">
+                <span class="hidden">다음화면으로 이동</span>
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- //참여 완료 -->
+    </div>
+  </div>
+</body>
+
+</html>

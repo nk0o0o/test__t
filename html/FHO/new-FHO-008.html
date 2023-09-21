@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 건강카메라 </title>
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+  <script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+  <script src="../../resources/js/ui.common.js"></script>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i type_home">
+    <!-- 헤더영역 신규 디자인변경 -->
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+    <!-- //헤더영역 신규 디자인변경 -->
+    <div class="health_container align_right">
+      <div class="swiper-container sect_cate">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
+            <a href="#n" class="nav walk">
+              <p class="ico"></p>
+              <span>건강 걸음</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav ai on">
+              <p class="ico"></p>
+              <span>AI 건강카메라</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav bmi">
+              <p class="ico"></p>
+              <span>BMI</span>
+            </a>
+          </li>
+          <li class="swiper-slide">
+            <a href="#n" class="nav mbti">
+              <p class="ico"></p>
+              <span>Dental MBTI</span>
+            </a>
+          </li>
+        </ul>
+        <div class="cate_next"></div>
+        <div class="cate_prev"></div>
+      </div>
+      <!-- //.sect_cate -->
+      <div class="stress_level">
+        <h3 class="stt">
+          스트레스 레벨<a href="#n" class="link"></a>
+        </h3>
+        <div class="inner">
+          <div class="inform">
+            <span class="ic_lev"></span><!-- 측정전 기본값 -->
+            <!-- <span class="ic_lev lev02">Normal</span> --><!-- lev01 ~ lev05 -->
+            <p>스트레스 지수가 보통 수준으로 나왔습니다. 지금처럼 꾸준한 관리가 필요합니다.</p>
+          </div>
+          <button type="button" class="btn_check">측정하기</button>
+        </div>
+        <ul class="desc">
+          <li>안면(지문) 인식 기능으로 나의 건강상태를 확인 할 수 있어요.</li>
+          <li>지문인식은 스트레스를 제외한 건강상태만 측정됩니다.</li>
+        </ul>
+      </div>
+      <div class="stress_monitor">
+        <div class="check_slide_wrap">
+          <div class="check_info">
+            <div class="check_type type_finger"></div>
+            <div class="check_date">
+              <strong>지문인식</strong>
+              <span>최근 측정일 : 2022-09-22 10:30</span>
+            </div>
+          </div>
+          <div class="align_right_wrap">
+            <div class="swiper-container check_slide brand_name_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="check_wrap">
+											<strong>Low</strong>
+											<span>스트레스<br>레벨</span>
+											<button type="button" onclick="netiveUI.plugins.popAlert('#alert01');" class="btn_tooltip">스트레스 레벨</button>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>Normal</strong>
+                    <span>스트레스<br>반응도</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert02');" class="btn_tooltip">스트레스 반응도</button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>Mild</strong>
+                    <span>회복<br>탄력성</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert03');" class="btn_tooltip">회복 탄력성</button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>83</strong>
+                    <span>심박수</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert04');" class="btn_tooltip">심박수</button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>7</strong>
+                    <span>분당<br>호흡수</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert05');" class="btn_tooltip">분당 호흡수</button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>98</strong>
+                    <span>산소<br>포화도</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert06');" class="btn_tooltip">산소 포화도</button>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="check_wrap">
+                    <strong>77.6</strong>
+                    <span>심박<br>변이도</span>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert0');" class="btn_tooltip">심박 변이도</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="btn_view_det">측정 더보기</button>
+        </div>
+        <!-- // 측정 후 결과 -->
+      </div>
+      <div class="health_cam_wrap">
+        <div class="hc_head">
+          <h3 class="stt">
+            히스토리<a href="#n" class="link"></a>
+          </h3>
+        </div>
+        <div class="tab_wrap">
+          <div class="tabs dep1">
+            <ul class="tab_menulist">
+              <li class="active"><a class="tab_control" href="#tab-1">일간</a></li>
+              <li><a class="tab_control" href="#tab-2">주간</a></li>
+              <li><a class="tab_control" href="#tab-3">월간</a></li>
+            </ul>
+            <div class="tab_panel active" id="tab-1">
+              <!-- 20230612 차트기간 위치변경 -->
+              <div class="date_range">
+                <button type="button" class="btn_cht left"></button>
+                <span>5월 8일 ~ 5월 14일</span>
+                <button type="button" class="btn_cht right"></button>
+              </div>
+              <!-- //20230612 차트기간 위치변경 -->
+              <div class="tab_wrap">
+                <div class="tabs brand_name_swiper">
+                  <ul class="tab_menulist brand_list">
+                    <li class="tab active"><a class="tab_control" href="#tab-a1" aria-controls="tab-con01">스트레스레벨</a></li>
+                    <li class="tab"><a class="tab_control" href="#tab-a2" aria-controls="">스트레스반응도</a></li>
+                    <li class="tab"><a class="tab_control" href="#tab-a3" aria-controls="">회복탄력성</a></li>
+                    <li class="tab"><a class="tab_control" href="#tab-a4" aria-controls="">심박수</a></li>
+                    <li class="tab"><a class="tab_control" href="#tab-a5" aria-controls="">분당 호흡수</a></li>
+                    <li class="tab"><a class="tab_control" href="#tab-a6" aria-controls="">산소 포화도</a></li>
+                  </ul>
+                  <!-- 스트레스레벨 -->
+                  <div class="tab_panel active" id="tab-a1">
+                    <div class="my_bmi_body">
+                      <div class="my_bmi_chart">
+                        <figure id="chartBMILegend">
+                          <canvas id="myChartBMI" style="width:100%;height: 200px;"></canvas>
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 스트레스반응도 -->
+                  <div class="tab_panel" id="tab-a2">
+                    스트레스반응도
+                  </div>
+                  <!-- 회복탄력성 -->
+                  <div class="tab_panel" id="tab-a3">
+                    회복탄력성
+                  </div>
+                  <!-- 심박수 -->
+                  <div class="tab_panel" id="tab-a4">
+                    심박수
+                  </div>
+                  <!-- 분당 호흡수 -->
+                  <div class="tab_panel" id="tab-a5">
+                    분당 호흡수
+                  </div>
+                  <!-- 산소 포화도 -->
+                  <div class="tab_panel" id="tab-a6">
+                    산소 포화도
+                  </div>
+                  <!-- 심박변이도 -->
+                  <div class="tab_panel" id="tab-a7">
+                    심박변이도
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 월간 -->
+            <div class="tab_panel" id="tab-2">
+              월간
+            </div>
+            <!-- 연간 -->
+            <div class="tab_panel" id="tab-3">
+              연간
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 하단 이용약관 -->
+      <div class="main_footer acco_list_wrap">
+        <div class="item_head">
+          <a id="popFull01" href="#"><span>이용약관</span></a>
+          <a id="popFull04" href="#"><span class="footer_tit">위치기반 서비스 이용 약관</span></a>
+          <a id="popFull02" href="#"><span class="footer_tit">개인정보처리방침</span></a>
+          <br>
+          <a id="popFull03" href="#"><span class="footer_tit">이전 개인정보처리방침</span></a>
+          <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+        </div>
+        <div class="item_cont" style="display: none;">
+          <div>
+              <p>
+                <span>라이나생명보험 주식회사</span>
+                <span class="cigna_president">대표이사 :  조지은</span>
+              </p>
+              <p class="address">서울 종로구 삼봉로 48 라이나타워</p>
+              <p><span>사업자등록번호 : </span>104-81-85673</p>
+              <p><span>통신판매업신고 </span>제2022-서울종로-0938호</p>
+              <p><a class="arrow_link" href="#">사업자정보확인</a></p>
+          </div>
+          <div class="footer_call_center">
+            <p><span>고객센터 : 전화번호 </span><a href="tel:1833-4030">1833-4030</a></p>
+            <p><span>이메일 : </span><a class="arrow_link" href="#">문의하기</a></p>
+            <p class="copy">ⓒLINA Life Insurance Co., Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+      <!-- //하단 이용약관 -->
+    </div>
+    <!-- 푸터영역 신규 디자인변경 -->
+    <footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home on">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary">
+              <span class="icon"></span>
+              <strong>웰니스다이어리</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>건강콘텐츠</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>마이페이지</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- //푸터영역 신규 디자인변경 -->
+  </div>
+  <!-- 스트레스 지수 모달팝업 -->
+  <div class="health_alert" id="alert01" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        스트레스 지수<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        육체적 및 정신적 스트레스 정도를 생체 신호를 이용하여 간접적으로 측정한 값으로 나의 스트레스 정도를 파악할 수 있습니다.
+      </p>
+    </div>
+  </div>
+  <!-- 스트레스 반응도 모달팝업 -->
+  <div class="health_alert" id="alert02" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        스트레스 반응도<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+      </p>
+    </div>
+  </div>
+  <!-- 회복 탄력성 모달팝업 -->
+  <div class="health_alert" id="alert03" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        회복 탄력성<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+      </p>
+    </div>
+  </div>
+  <!-- 심박수 모달팝업 -->
+  <div class="health_alert" id="alert04" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        심박수<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        1분간의 심장 박동수를 의미하며 정상 심박수는 성인 기준 60~100회/1분 입니다.<br>>
+        정상 박동이더라도 운동을 하거나 화가나서 흥분하면 맥박이 100회 이상으로도 증가할 수 있으며, 이는 정상 반응입니다.
+      </p>
+    </div>
+  </div>
+  <!-- 분당 호흡수 모달팝업 -->
+  <div class="health_alert" id="alert05" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        분당 호흡수<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        1분간의 호흡수를 의미하며 성인 기준 정상 호흡수는 12~20회/분입니다. 호흡수와 깊이 등은 신체의 산소 요구와 이산화탄소 농도 등에 의해 조절됩니다.
+      </p>
+    </div>
+  </div>
+  <!-- 산소 포화도 모달팝업 -->
+  <div class="health_alert" id="alert06" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        산소 포화도<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        산소포화도는 혈액 내 적혈구의 헤모글로빈에 결합된 산소의 양을 의미합니다. 즉 적혈구에 의해 운반되는 산소의 양으로 얼마나 효과적으로 호흡하고 있는지, 산소가 전신에 잘 전달되고 있는지 등을 알아볼 수 있습니다. 산소포화도의 정상 수치는 95% 이상입니다.
+      </p>
+    </div>
+  </div>
+  <!-- 심박변이도 모달팝업 -->
+  <div class="health_alert" id="alert07" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        심박변이도<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        심장 박동의 변이 정도를 의미하며, 즉 하나의 심장 주기로부터 다음 심장 주기 사이의 미세한 변이를 말합니다. 심장 박동의 미세한 변화를 분석하여 심신에 누적되는 과도한 스트레스의 영향을 파악할 수 있습니다.
+      </p>
+    </div>
+  </div>
+
+<!-- 상단 카테고리 슬라이드 -->
+<script>
+  $(document).ready(function () {
+    var cateSwiper = new Swiper(".sect_cate", {
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".cate_next",
+        prevEl: ".cate_prev",
+        disabledClass: "disabled"
+      },
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    //스트레스지수 슬라이드
+      var swiper = new Swiper(".check_slide", {
+      slidesPerView: "auto",
+      spaceBetween: 11,
+      observer: true,
+      observeParents: true,
+      slideToClickedSlide: true
+    });
+  });
+</script>
+<script>
+  var ctx = document.getElementById("myChartBMI").getContext("2d");
+  var bgGradient = ctx.createLinearGradient(0, 0, 0, 170);
+  bgGradient.addColorStop(0, 'rgb(25,211,197)');
+  bgGradient.addColorStop(1, 'rgb(203,139,218)');
+
+  var myChartBMI = new Chart(ctx, {
+  type: 'bar',
+  plugins:[ChartDataLabels],
+  data: {
+    labels: ['07.07', '07.08', '07.09', '07.10', '07.11', '07.12', '07.13'],
+    datasets: [{
+      data: [20, 25, 30, 25, 21, 28, 28],
+      barPercentage: 0.5,
+      barThickness: 12, //막대 최소가로값
+      borderRadius: 16, //막대 둥글기
+      backgroundColor: bgGradient,
+    }]
+  },
+  options: {
+    plugins: {
+      datalabels:{
+        align: function(context) {
+          var index = context.dataIndex;
+          var value = context.dataset.data[index];
+          var invert = Math.abs(value) <= 1;
+          return value < 1 ? 'end' : 'start'
+        },
+        backgroundColor: '#222',
+        color: '#fff',
+        labels: {
+          title: {
+            font: {
+              size: 11,
+              weight: 400
+            },
+          },
+        },
+        borderRadius: 4,
+        anchor: 'end',
+        offset: -20,
+        padding:{
+          top: 3,
+          bottom:3,
+          left:8,
+          right:8
+        },
+        formatter:function(value,context){
+          var idx = context.dataIndex;
+          return context.chart.data[idx];
+        }
+      },
+      legend: {
+        display: false,
+      },
+      tooltip: { //막대 상태값
+        enabled: false //20220801
+        /*  displayColors: false,
+        xAlign: 'center',
+        yAlign: 'bottom',
+        boxWidth: 0,
+        backgroundColor: '#222',
+        titleAlign: 'top',
+        titleColor: '#222',
+        titleFont: {
+            size: 0, //20210909
+        },
+        bodyColor: '#fff', //20210909
+        bodyFont: {
+            size: 11, //20210909
+        }, */
+      },
+    },
+    scales: {
+      x: { //xc축
+        offset: true,
+        ticks: {
+          font: {
+            size: 13
+          },
+          color: '#b5b5b5',
+        },
+        grid: {
+          display: false,
+          offset: false
+        },
+        /* title: {
+          display: true,
+          text: '날짜',
+          font: {
+            size: 13
+          },
+          color: '#b5b5b5',
+          align: 'end',
+        } */
+      },
+      y: { //y축
+        min: 10, //최소값
+        max: 40, //최대값
+        position: 'left',
+        ticks: {
+          autoSkip: false,
+          stepSize: 5, //data 숫자 간격
+          font: {
+            size: 13
+          },
+          color: '#b5b5b5',
+        },
+        grid: {
+          display: true,
+          offset: false
+        },
+        /*  title: {
+          display: true,
+          text: 'BMI',
+          font: {
+            size: 13
+          },
+          color: '#b5b5b5',
+          align: 'end',
+        } */
+      }
+    },
+  },
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리 - 복약 일정</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/fullcalendar-6.1.8.min.js"></script><!-- 20230831 달력 플러그인 추가 -->
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>복약관리</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care care_plan">
+        <p class="section_tit">복약 일정</p>
+        <div id="calendar" class="calendar_wrap"></div>
+        <div class="calendar_desc">
+          <span class="check_none">미확인</span>
+          <span class="check_part">부분확인</span>
+          <span class="check_all">전체확인</span>
+        </div>
+        <div class="divider"></div>
+        <div class="plan_record_list">
+          <!-- 하루 -->
+          <div class="plan_record">
+            <p class="box_tit"><span>2023.08.17 (목)</span></p>
+            <div class="check_box morning"><!-- 오전 : morning, 오후: lunch, 취침전: night -->
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>오전 08:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+            <div class="check_box lunch">
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>오후 02:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+            <div class="check_box night">
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>취침 전 10:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+          </div><!-- //.plan_record -->
+          <!-- 하루 -->
+          <div class="plan_record">
+            <p class="box_tit"><span>2023.08.16 (수)</span></p>
+            <div class="check_box morning"><!-- 오전 : morning, 오후: lunch, 취침전: night -->
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>오전 08:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+            <div class="check_box lunch">
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>오후 02:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+            <div class="check_box night">
+              <div class="item_cont ui-allCheck">
+                <div class="item ui-allBtn">
+                  <label for="CheckAll_01" class="frm_check">
+                    <span>취침 전 10:00</span>
+                    <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                  </label>
+                </div>
+                <div class="box_container ui-checkList">
+                  <div class="item">
+                    <label for="Check01_1" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>비스포스포네이트, 콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_2" class="frm_check">
+                      <dl>
+                        <dt>처방</dt>
+                        <dd>콤지로이드정</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label for="Check01_3" class="frm_check">
+                      <dl>
+                        <dt>영양제</dt>
+                        <dd>유산균</dd>
+                      </dl>
+                      <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div><!-- //.check_box -->
+          </div><!-- //.plan_record -->
+        </div><!-- //.plan_record_list -->
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+
+
+  <!-- 복약일정 달력 -->
+  <script>
+    $(document).ready(function () {
+      //복약 전체 체크박스
+      $('.ui-allCheck').uiCheckAll();
+    })
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale:'ko',//언어 설정
+        height: 'auto',
+        editable:false,//수정 불가능
+        selectable:true,//선택가능
+        fixedWeekCount:false,//월 주수에 따라 4~5주 (true는 6주고정)
+        customButtons: {
+          btnChangeWeek: {
+            text: '달력 접기',
+            click: function(e) {
+              $(e.target).parents('.calendar_wrap').addClass('calendar_wrap_week')
+              calendar.changeView('dayGridWeek');              
+            }
+          },
+          btnChangeMonth: {
+            text: '달력 펼치기',
+            click: function(e) {
+              $(e.target).parents('.calendar_wrap').removeClass('calendar_wrap_week')
+              calendar.changeView('dayGridMonth');              
+            }
+          },
+        },
+        eventDisplay:'list-item',// 이벤트 점 표시
+        headerToolbar: {
+          start:'',
+          center: 'prev title next',
+          end:'btnChangeWeek btnChangeMonth'
+        }, 
+        dayHeaderFormat: { 
+          weekday: 'short',
+        },
+        monthStartFormat :{
+          month: 'long', day: 'numeric'
+        },
+        views: {
+          dayGridMonth: {
+            titleFormat: { year: 'numeric',  month: "short"},
+          },
+          dayGridWeek: { 
+            titleFormat: { year: 'numeric', month: 'short'}
+          }
+        },
+        dateClick: function(info) {
+          $('.fc-daygrid-day').removeClass('fc_selected')
+          $(info.dayEl).addClass('fc_selected')
+          if(!$(info.dayEl).hasClass('fc-day-other')){
+            alert(info.dateStr);
+          }
+        },
+        events:[
+          {
+            groupId:'미확인',
+            className: "check_none",
+            title: '미확인',
+            start: '2023-08-23'
+          },
+          {
+            groupId:'부분확인',
+            className: "check_part",
+            title: '부분확인',
+            start: ' 2023-09-01',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-09-02',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-08-24',
+          },
+          {
+            groupId:'전체확인',
+            className: "check_all",
+            title: '전체확인',
+            start: ' 2023-08-30',
+          }
+        ]
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리 - 나의 복약 알림 추가(팝업)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script><!-- 20230829 데이터픽커플러그인추가 -->
+<link rel="stylesheet" href="../../resources/css/jquery-ui.css"><!-- 20230829 데이터픽커플러그인추가 -->
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_full thyroid_pop actived" id="full001" >
+    <div class="inner">
+      <div class="pop_wrap">
+        <div class="pop_header">
+          <div class="header_wrap type_center">
+            <h1>나의 복약 알림 추가</h1>
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+          </div>
+        </div>
+        <!-- //pop header -->
+        <div class="pop_container">
+          <div class="con_inner">
+            <div class="con_box">
+              <div class="pop_con"> 
+                <!-- 팝업 내용 -->
+                <div class="appsetting_list_item">
+                  <em>알림설정</em>
+                  <label class="frm_toggle" for="appNoti01">
+                    <input type="checkbox" id="appNoti01" checked onclick="netiveUI.plugins.popAlert('#alertModal');">                    
+                    <div class="toggle_slider round"></div>
+                  </label>
+                </div>
+                <div class="thyroid_pop_inner">
+                  <form action="">
+                    <div class="frm_container medicine_routine">
+                      <p class="tit">나만의 복약 루틴을<br>등록하세요</p>
+                      <div class="medicine_type flex_box">
+                        <label for="radio_01" class="frm_radio prescript">
+                          <input type="radio" name="radioName1" id="radio_01" checked>
+                          <span>처방</span>
+                        </label>
+                        <label for="radio_02" class="frm_radio nonprescript">
+                          <span>비처방</span>
+                          <input type="radio" name="radioName1" id="radio_02">
+                        </label>
+                        <label for="radio_03" class="frm_radio tonic">
+                          <span>영양제</span>
+                          <input type="radio" name="radioName1" id="radio_03">
+                        </label>  
+                      </div><!-- //.medicine_type -->
+                      <div class="frm_input_wrap flex_box">
+                        <label for="" class="frm_label">횟수</label>
+                        <div class="frm_counter">
+                          <button type="button" class="btn_minus"></button>
+                          <input type="number" name="" id="" value="0">
+                          <button type="button" class="btn_plus"></button>
+                        </div>
+                      </div>
+                      <div class="frm_input_wrap flex_box">
+                        <label for="time01" class="frm_label">시간1</label>
+                        <input type="text" id="time01" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="오전 07:30">
+                      </div>
+                      <div class="frm_input_wrap flex_box">
+                        <label for="time02" class="frm_label">시간2</label>
+                        <input type="text" id="time02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="오전 07:30">
+                      </div>
+                      <div class="frm_input_wrap flex_box">
+                        <label for="time03" class="frm_label">시간3</label>
+                        <input type="text" id="time03" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetTime" placeholder="오전 07:30">
+                      </div>
+                    </div><!-- //.medicine_routine -->
+                      
+                    <div class="divider"></div>
+
+                    <div class="frm_container medicine_period">
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">기간</label>
+                        <div class="flex_box">
+                          <div class="is_datepicker">
+                            <input type="text" id="date02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="2023.01.01">
+                          </div>
+                          <span class="period_division">~</span>
+                          <div class="is_datepicker">
+                            <input type="text" id="date02" class="btn_btm_sheet frm_input" data-btmsheet="btmSheetDate" placeholder="2023.01.01">
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- //.medicine_period -->
+                      
+                      <div class="divider"></div>
+
+                    <div class="frm_container medicine_cycle">
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">복약 주기</label>
+                        <div class="item_cont ui-allCheck">
+                          <div class="item ui-allBtn">
+                            <label for="CheckAll_01" class="frm_check">
+                              <input type="checkbox" id="CheckAll_01" class="chkItem" name="CheckAll_01">
+                              <span>매일 섭취해요</span>
+                            </label>
+                          </div>
+                          <div class="ui-checkList flex_box">
+                            <div class="item">
+                              <label for="Check01_1" class="frm_check">
+                                <input type="checkbox" id="Check01_1" class="chkItem" name="checkBox01" checked>
+                                <span>월</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_2" class="frm_check">
+                                <input type="checkbox" id="Check01_2" class="chkItem" name="checkBox01">
+                                <span>화</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_3" class="frm_check">
+                                <input type="checkbox" id="Check01_3" class="chkItem" name="checkBox01">
+                                <span>수</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_4" class="frm_check">
+                                <input type="checkbox" id="Check01_4" class="chkItem" name="checkBox01">
+                                <span>목</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_5" class="frm_check">
+                                <input type="checkbox" id="Check01_5" class="chkItem" name="checkBox01">
+                                <span>금</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_6" class="frm_check">
+                                <input type="checkbox" id="Check01_6" class="chkItem" name="checkBox01">
+                                <span>토</span>                                
+                              </label>
+                            </div>
+                            <div class="item">
+                              <label for="Check01_7" class="frm_check">
+                                <input type="checkbox" id="Check01_7" class="chkItem" name="checkBox01">
+                                <span>일</span>                                
+                              </label>
+                            </div>
+                          </div><!-- //.ui-checkList -->
+                        </div><!-- //.ui-allCheck -->
+                      </div>
+                      <p>※ 격주 또는 3주에 한번 복약 알림은 제공되지 않습니다.</p>
+                    </div><!-- //.medicine_cycle -->
+                      
+                    <div class="divider"></div>
+                      
+                    <div class="frm_container medicine_name">
+                      <div class="frm_input_wrap">
+                        <label for="" class="frm_label">약물명 <button class="btn_txt_sm" type="button">추가하기</button></label>
+                        <input type="text" id="input_06" class="frm_input" placeholder="약물명 입력 (선택 사항)" value="비스포스포네이트" name="">
+                        <input type="text" id="input_06" class="frm_input" placeholder="약물명 입력 (선택 사항)" value="" name="">
+                      </div>
+                    </div>
+
+                  </form>
+                </div><!-- //.thyroid_pop_inner -->
+                <!-- //팝업내용 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //pop container -->
+        <div class="btn_wrap">
+          <button type="button" class="btn_pop_black2">추가하기</button><!-- 20230831 문구 수정 -->
+        </div>
+        <!-- // pop btn -->
+      </div>
+    </div>
+  </div>
+  <!-- 알람설정 모달팝업 -->
+  <div class="health_alert" id="alert001" style="display: none;">
+    <div class="inner">
+      <p class="pop_tit">알람 설정</p><!-- 20230912 제목추가 -->
+      <p class="msg">
+        알람을 설정하시면 복약 관리에 큰 도움이 되실거에요! <br>알람을 설정하시겠어요?
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_line_dark">취소</button>
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>  
+ <!-- //알람설정 모달팝업 -->
+</body>
+<script>
+  $(document).ready(function() {   
+    //복약 전체 체크박스
+    $('.ui-allCheck').uiCheckAll();
+    // 날짜선택/시간선택 호출
+    $('.btn_btm_sheet').on('click', function() {
+      getPicker($(this).data('btmsheet'), $(this).attr('id'));
+    });
+  })
+</script>
+</html>

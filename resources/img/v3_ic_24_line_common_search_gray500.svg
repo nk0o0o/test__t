@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path data-name="Element/icon/1.Outline/search background" style="fill:transparent" d="M0 0h24v24H0z"/>
+    <path style="opacity:.484;fill:none" d="M0 0h24v24H0z"/>
+    <g data-name="타원 277" transform="translate(2 2)" style="stroke:#666;stroke-width:1.5px;fill:none">
+        <circle cx="8.5" cy="8.5" r="8.5" style="stroke:none"/>
+        <circle cx="8.5" cy="8.5" r="7.75" style="fill:none"/>
+    </g>
+    <path data-name="선 64" transform="translate(15.5 15.5)" style="stroke:#666;stroke-width:1.5px;fill:none" d="m0 0 6 6"/>
+</svg>

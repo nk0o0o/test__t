@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마이페이지</title>
+  <link rel="stylesheet" href="../../resources/css/guide.css">
+  <link rel="stylesheet" href="../../resources/css/swiper.min.css">
+  <script src="../../resources/js/jquery-3.6.0.min.js"></script>
+  <script src="../../resources/js/ui.common.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+</head>
+
+<body>
+  <div class="health_wrap type_mypage footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" onClick="history.back();" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>마이기프트</h1>
+      </div>
+      <div class="user"><button type="button">홍길동</button></div>
+      <!-- user class 가이드
+          패키지 구매회원의 경우 : .package 추가
+          신규 알림 있을 시 : .on 추가
+        -->
+    </header>
+    <div class="health_container">
+      <div class="between_wrap"><!-- 태크 추가 2021-11-12 -->
+        <h1 class="tit_cont_02">기프트를<br>확인해보세요</h1>
+        <p class="tooltip"><a href="#" onclick="netiveUI.plugins.popFull('#popPointInfo');">Tune Point란?</a></p>
+      </div>
+      <!-- <p class="new_gift_txt">획득하신 기프트는 개별 연락을 통해 <br>분기별 일괄 배송 예정입니다.</p> --><!-- 문구 추가 2021-11-12 --><!-- 20220510 삭제 -->
+      <!-- 20211021 레벨별 class guide 변경
+        [AS IS - my_basic, my_jupiter, my_mercury, my_mars, my_pluto]
+        [TO BE - mygift_white, mygift_green, mygift_red, mygift_purple, mygift_black]
+      -->
+      <div class="reward_info"><span class="level mygift_white">White</span><span class="point_ico">4,000</span></div> 
+      <!-- <div class="reward_info"><span class="level mygift_green">Green</span><span class="point_ico">9,000</span></div> 
+      <div class="reward_info"><span class="level mygift_red">Red</span><span class="point_ico">12,000</span></div>
+      <div class="reward_info"><span class="level mygift_purple">Purple</span><span class="point_ico">17,000</span></div>
+      <div class="reward_info"><span class="level mygift_black">Black</span><span class="point_ico">25,000</span></div> -->
+     
+      <div class="content_box">
+        <span class="inp_label">획득</span>
+        <div class="itemlist rewardlist">
+          <ul class="item_wrap">
+            <!-- 20220510 기프트 배송 case 추가 -->
+            <li class="reward_item">              
+                <a href="#" onclick="netiveUI.plugins.popToast('#popGift');" class="item_box">
+                    <div class="img_wrap coupon"><img src="../../resources/img/img_reward_05.png" alt=""></div>                
+                    <P class="item_txt"><strong>숙면베게와 베개커버</strong><span class="date">2022.05.01</span></P>
+            </a>
+            </li>
+            <!--// 20220510 기프트 배송 case 추가 -->
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popPlayer');" class="item_box">
+                <div class="img_wrap voice"><img src="../../resources/img/img_reward_01.png" alt=""></div>
+                <!-- 20210729 기프트 정보 표시 - 음성 : 'voice' class 부여-->
+                <P class="item_txt"><strong>민규의 응원 음성</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popProductAcq');" class="item_box">
+                <div class="img_wrap coupon"><img src="../../resources/img/img_reward_02.png" alt=""></div> <!--20210716 'coupon' class 추가-->
+                <!-- 기프트 정보 표시 - 쿠폰 : 'coupon' class 부여-->
+                <P class="item_txt"><strong>KF94 마스크</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popBadgeAcq');" class="item_box">
+                <div class="img_wrap badge"><img src="../../resources/img/img_reward_01.png" alt=""></div> <!--20210716 'badge' class 추가-->
+                <!-- 기프트 정보 표시 - 뱃지 : 'badge' class 부여-->
+                <P class="item_txt"><strong>세븐틴 민규의 뱃지</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popVideoAcq');" class="item_box">
+                <div class="img_wrap video"><img src="../../resources/img/img_reward_04.png" alt=""></div>
+                <!-- 기프트 정보 표시 - 동영상 : 'video' class 부여-->
+                <P class="item_txt"><strong>민규의 응원 동영상</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popVideoAcq');" class="item_box">
+                <div class="img_wrap lock"><img src="../../resources/img/img_reward_01.png" alt=""></div>
+                <!-- 획득하지 못함 - 'lock' 클래스 부여-->
+                <P class="item_txt"><strong>민규의 응원 동영상</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+            <li class="reward_item">
+              <a href="#" onclick="netiveUI.plugins.popToast('#popVideoAcq');" class="item_box">
+                <div class="img_wrap lock"><img src="../../resources/img/img_reward_01.png" alt=""></div>
+                <!-- 획득하지 못함 - 'lock' 클래스 부여-->
+                <P class="item_txt"><strong>BTS 정국의 뱃지</strong><span class="date">2021.04.04</span></P>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20220510 팝업 추가 -->
+    <!-- 배송지 정보 입력 팝업 -->
+    <div class="health_toast scroll address_toast actived" id="popGift" style="display: block;">
+        <div class="inner">
+            <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+            <div class="inner_header">
+            <span class="hidden">콘텐츠 필터</span>
+            <div class="toast_tit">
+                <h2>배송지 정보 입력</h2>
+                <p>받으시는 분 정보를 정확히 입력하세요.</p>
+            </div>
+            </div>
+            <div class="inner_container">
+            <div class="con_inner">
+                <div class="con_box">
+                <div class="pop_con">
+                    <!-- 팝업 내용 -->
+                    <div class="health_wrap type_package">
+                    <div class="delivery_info inp_form">
+                        <div class="delivery_list">
+                        <div class="inp_wrap search">
+                            <span class="inp_label">이름</span>
+                            <input type="text" class="inp_bg search_field" value="홍길동">
+                        </div>
+                        <div class="inp_wrap search">
+                            <span class="inp_label">휴대폰번호</span>
+                            <input type="tel" class="inp_bg search_field" value="010-1111-9999">
+                        </div>
+                        <div class="inp_wrap postcode">
+                            <span class="inp_label">주소</span>
+                            <a href="#none" class="post_search">
+                                <input type="search" class="inp_bg address" readonly="" disabled="">
+                                <button type="button" class="btn_base_03" onclick="netiveUI.plugins.popFull('#addressApi');">우편번호 검색</button>
+                            </a>
+                            <input type="text" class="inp_bg" title="우편번호 입력" readonly="" disabled="">
+                            <input type="text" class="inp_bg" readonly="" disabled="" placeholder="상세주소 입력">
+                        </div>
+                        </div>
+                    </div>
+                    <!-- 결제약관 동의 -->
+                    <div id="termCheckArea" role="group" aria-labelledby="약관" class="check_box term acco_list_wrap">
+                        <div class="item_head">
+                            <input type="checkbox" id="termCheckAll" class="chkItem" name="termAgreeAll">
+                            <label for="termCheckAll">약관에 모두 동의</label>
+                        </div>
+                
+                        <div class="item_cont">
+                        <div class="item">
+                            <input type="checkbox" id="termCheck01" class="chkItem" name="termAgree">
+                            <label for="termCheck01"><span onclick="netiveUI.plugins.popFull('#popPaymentTerms1');" class="poplink">(필수) 개인정보 수집·이용 동의</span></label>
+                        </div>
+                        <div class="item">
+                            <input type="checkbox" id="termCheck05" class="chkItem" name="termAgree">
+                            <label for="termCheck05"><span onclick="netiveUI.plugins.popFull('#popPaymentTerms5');" class="poplink">(선택) 개인정보 제3자 제공 동의</span></label>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- //결제약관 동의 -->
+                    <p class="notice info">“미성년자와의 거래의 경우 법정대리인이 동의하지
+                        않으면 미성년자 본인 또는 법정대리인이 그 계약을
+                        취소할 수 있습니다.”</p>
+                    <div class="btn_wrap half">
+                        <button type="button" class="btn bg-gray6">취소</button>
+                        <button type="button" class="btn">입력완료</button>
+                    </div>
+                    </div>
+                    <!-- //팝업 내용 --> 
+                </div>
+                </div>
+            </div>
+            </div>
+            <!-- // pop container -->
+        </div>
+    </div>    
+    <!--// 배송지 정보 입력 팝업 -->
+    <!--// 20220510 팝업 추가 -->
+</body>
+
+</html>

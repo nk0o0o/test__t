@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>갑상선 케어 - 복약 관리(초기세팅)</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+
+<body>
+  <div class="health_wrap type_content footer_no">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>갑상선 케어 프로그램</h1>
+      </div>
+    </header>
+    <div class="health_container">
+      <div class="thyroid_care">
+        <div class="tab_wrap">
+          <div class="tabs brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab"><a class="tab_control" href="#tab-a1" aria-controls="tab-con01">케어 플랜</a></li>
+              <li class="tab active"><a class="tab_control" href="#tab-a2" aria-controls="">복약 관리</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-a3" aria-controls="">서비스 소개</a></li>
+            </ul>
+            <div class="tab_panel bg_gray" id="tab-a1">...케어 플랜...</div>
+            <div class="tab_panel bg_gray active" id="tab-a2">
+              <!-- 복약 관리 탭내용 -->
+              <div class="box_container is_shadow plan_medicine">
+                <a href="#" class="box_tit">내 복약 일정<span>전체보기</span></a>                
+              </div><!-- //.plan_myplan -->
+              <div class="box_container is_shadow plan_record">
+                <p class="box_tit">오늘의 기록<button type="button">복약 알림 추가</button></p>
+                <ul class="record_list">
+                 <li>
+                  <div class="box_nodata">
+                    <span class="box_nodata_icon">
+                      <img src="../../resources/img/v3_ic_48_fill_common_empty.svg" alt="">
+                    </span>
+                    <p>등록된 복약 기록이 없습니다.</p>
+                  </div>
+                 </li>
+                </ul>
+              </div><!-- //.plan_record -->
+              <div class="plan_slide">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide box_container is_shadow slide01">
+                      <a href="#" class="flex_box">
+                        <p class="tit">복약알림</p>
+                        <span><em class="is_zero">0</em>건</span><!-- 0일때 em 에 is_zero -->
+                        <button class="btn_txt_sm">확인하기</button>
+                      </a>
+                    </div>
+                    <div class="swiper-slide box_container is_shadow slide02">
+                      <a href="#" class="flex_box">
+                        <p class="tit">복용중인 약</p>
+                        <span><em class="is_zero">0</em>건</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide box_container is_shadow slide03">
+                      <a href="#" class="flex_box">
+                        <p class="tit">처방약</p>
+                        <span><em class="is_zero">0</em>건</span>
+                      </a>
+                    </div>
+                    <!-- 20230906 슬라이드 추가-->
+                    <div class="swiper-slide box_container is_shadow slide04">
+                      <a href="#" class="flex_box">
+                        <p class="tit">비처방약</p>
+                        <span><em class="is_zero">0</em>건</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide box_container is_shadow slide05">
+                      <a href="#" class="flex_box">
+                        <p class="tit">영양제</p>
+                        <span><em class="is_zero">0</em>건</span>
+                      </a>
+                    </div>
+                    <!-- 20230906 슬라이드 추가 -->
+                  </div>
+                </div>             
+              </div><!-- //.plan_slide -->
+
+              <!-- 20230831 bnr_img 추가 -->
+              <div class="box_container is_shadow bnr_img">
+                <a href="#">
+                 <img src="../../resources/img/v3_take_medicine_promotion_banner01.png" alt="">
+                </a>
+              </div><!-- //.bnr_img -->
+              <!-- //20230831 bnr_img 추가 -->
+
+              <!-- 20230831 삭제 
+                <div class="box_container is_shadow care_direct bnr_medicine">
+                <a href="#">
+                  <p class="box_desc">약은 꼬박꼬박 챙겨드세요?</p>
+                  <p class="box_tit">통계로 한눈에 확인하기</p>
+                </a>
+              </div> -->
+              
+            </div><!-- //.tab_panel : 복약 관리 -->
+            <div class="tab_panel" id="tab-a3">...서비스소개...</div>
+          </div>
+        </div>
+      </div><!-- //.thyroid_care -->
+    </div><!-- //.health_container -->
+  </div>
+  <script>
+    $(document).ready(function () {
+      //복약 전체 체크박스
+      $('.ui-allCheck').uiCheckAll();
+      //복약알림 슬라이드
+      var swiper1 = new Swiper(".plan_slide .swiper-container", {
+        loop: false,
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        observer: true,
+        observeParents: true,
+      });
+    })
+  </script>
+</body>
+</html>
