@@ -28012,6 +28012,7 @@ a.cs {
   line-height: 2.25rem;
   font-weight: 500;
   padding: 0 1.25rem;
+  border-radius: 9999px;
   background: #efefef;
   border-bottom: 0;
   color: #666666;
