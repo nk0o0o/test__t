@@ -851,6 +851,20 @@
     line-height: 1;
     color: $color-gray-950;
   }
+  .fc_selected:not(.fc-day-other){
+    .fc-daygrid-day-top::before{
+      content: '';
+      display: block;
+      width:1.75rem;
+      height: 1.75rem;
+      border-radius: 100%;
+      position:absolute;
+      background-color:#1e1e1e;
+    }
+    .fc-daygrid-day-number{
+      color: $color-white;
+    }
+  }
 }
 .fc-daygrid-body {
   width:100% !important;
@@ -864,20 +878,6 @@
 .fc-day {
   color:$color-gray-400;  
   @include typo(0.875rem, normal, 1.43, normal);
-}
-.fc_selected:not(.fc-day-other){
-  .fc-daygrid-day-top::before{
-    content: '';
-    display: block;
-    width:1.75rem;
-    height: 1.75rem;
-    border-radius: 100%;
-    position:absolute;
-    background-color:#1e1e1e;
-  }
-  .fc-daygrid-day-number{
-    color: $color-white;
-  }
 }
 .fc-daygrid-dot-event{
   justify-content: center;

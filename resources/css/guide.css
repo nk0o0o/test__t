@@ -4074,6 +4074,18 @@ div > .banner_area.fixed {
   line-height: 1;
   color: #1f1f1f;
 }
+.fc .fc_selected:not(.fc-day-other) .fc-daygrid-day-top::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #1e1e1e;
+}
+.fc .fc_selected:not(.fc-day-other) .fc-daygrid-day-number {
+  color: #fff;
+}
 
 .fc-daygrid-body {
   width: 100% !important;
@@ -4094,19 +4106,6 @@ div > .banner_area.fixed {
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.43;
-}
-
-.fc_selected:not(.fc-day-other) .fc-daygrid-day-top::before {
-  content: "";
-  display: block;
-  width: 1.75rem;
-  height: 1.75rem;
-  border-radius: 100%;
-  position: absolute;
-  background-color: #1e1e1e;
-}
-.fc_selected:not(.fc-day-other) .fc-daygrid-day-number {
-  color: #fff;
 }
 
 .fc-daygrid-dot-event {
@@ -4910,7 +4909,7 @@ div > .banner_area.fixed {
   margin-top: 30px;
 }
 .health_full > .inner > .pop_wrap > .btn_wrap {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -27956,9 +27955,6 @@ a.cs {
 }
 
 /* 20230821 갑상선 케어프로그램 추가 */
-.thyroid_care {
-  padding-bottom: 5.25rem;
-}
 .thyroid_care .tabs .tab_menulist {
   padding: 0;
   display: -webkit-box;
@@ -28012,6 +28008,7 @@ a.cs {
   line-height: 2.25rem;
   font-weight: 500;
   padding: 0 1.25rem;
+  border-radius: 999px;
   background: #efefef;
   border-bottom: 0;
   color: #666666;
@@ -28019,7 +28016,8 @@ a.cs {
 .thyroid_care .tab_panel.bg_gray {
   background-color: #f2f5f9;
   padding: 1.25rem 1.5rem;
-  min-height: calc(100dvh - 220px);
+  min-height: calc(100dvh - 144px);
+  padding-bottom: 2.25rem;
 }
 .thyroid_care .plan_shortcut {
   display: -webkit-box;
@@ -28313,11 +28311,11 @@ a.cs {
   line-height: 1.18;
   color: #303030;
 }
-.thyroid_care .myplan_cnt.is_zero .cnt {
-  color: #c8c8c8;
-}
 .thyroid_care .myplan_cnt.is_past .cnt {
   color: #0095ff;
+}
+.thyroid_care .myplan_cnt.is_zero .cnt {
+  color: #c8c8c8;
 }
 .thyroid_care .myplan_cnt::before {
   content: "";
@@ -28434,6 +28432,9 @@ a.cs {
   padding: 0;
   margin: 0;
 }
+.thyroid_care .bnr_img.box_container {
+  background-color: transparent;
+}
 .thyroid_care .bnr_img a {
   display: block;
 }
@@ -28443,7 +28444,7 @@ a.cs {
   max-width: 100%;
 }
 .thyroid_care.care_plan {
-  padding: 1.5rem 0 5.25rem;
+  padding: 1.5rem 0 2.25rem;
 }
 .thyroid_care.care_plan .myplan_tab {
   margin-top: 0.5rem;
@@ -28908,6 +28909,7 @@ a.cs {
   margin: 0 -1.5rem 1rem;
 }
 .thyroid_care .plan_slide .swiper-container {
+  overflow: visible;
   height: 10rem;
   padding: 0 1.5rem;
 }

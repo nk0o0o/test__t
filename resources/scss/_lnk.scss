@@ -6562,7 +6562,7 @@
 }
 /* 20230821 갑상선 케어프로그램 추가 */
 .thyroid_care{
-	padding-bottom: 5.25rem;
+	//padding-bottom: 5.25rem;
 	//탭
 	.tabs{
 		.tab_menulist{
@@ -6607,6 +6607,7 @@
 						line-height: 2.25rem;
 						font-weight: $fw-m;
 						padding: 0 1.25rem;
+            border-radius: 999px;
 						background: $color-btn-contain;
 						border-bottom: 0;
 						color: $color-gray-500;
@@ -6618,7 +6619,8 @@
 	.tab_panel.bg_gray{
 		background-color: $color-bg;
 		padding: 1.25rem 1.5rem;
-		min-height: calc(100dvh - 220px);
+		min-height: calc(100dvh - 144px);
+    padding-bottom: 2.25rem;
 	}
 	.plan_shortcut{
 		display: flex;
@@ -6878,14 +6880,14 @@
 				@include typo(1.375rem, 700, 1.18, $letter-spacing: normal, $font-family: "Roboto");
 				color: $color-gray-900;
 			}
+      &.is_past{
+        .cnt{
+          color: $color-txt-impact-blue;
+        }
+      }
 			&.is_zero{
 				.cnt{
 					color: $color-btn-disabled;
-				}
-			}
-			&.is_past{
-				.cnt{
-					color: $color-txt-impact-blue;
 				}
 			}
 			&::before{
@@ -6992,6 +6994,9 @@
 		}
   }
 	.bnr_img{
+    &.box_container{
+      background-color: transparent;
+    }
 		padding: 0;
 		margin: 0;
 		a{
@@ -7005,7 +7010,7 @@
 	}
 	//나의 일정 페이지 //복약 알림
 	&.care_plan{
-		padding: 1.5rem 0 5.25rem;
+		padding: 1.5rem 0 2.25rem;
 		.myplan_tab{
 			margin-top: 0.5rem;
 			border: 0.0625rem solid $color-border;
@@ -7477,6 +7482,7 @@
 	.plan_slide{
 		margin: 0 -1.5rem 1rem;
 		.swiper-container{
+      overflow: visible;
 			height: 10rem;
 			padding: 0 1.5rem;
 		}
@@ -7531,7 +7537,7 @@
 			margin-top: 0.5rem;
 		}
 	}
-	//복약 관리 복약알림 카드
+	//복약 관리 복약 알림 카드
 	.medicine_card{
 		background-color: $color-containerbox;
 		&_wrap{
