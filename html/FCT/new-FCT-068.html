@@ -101,8 +101,250 @@
   $(document).ready(function() {
     // 날짜선택/시간선택 호출
     $('.btn_btm_sheet').on('click', function() {
-      getPicker($(this).data('btmsheet'), $(this).attr('id'));
+      $('.btm_sheet').remove();//230918 추가
+      if(!$(this).val()){
+        getPicker($(this).data('btmsheet'), $(this).attr('id'));
+      }else{
+        getPicker($(this).data('btmsheet'), $(this).attr('id'), $(this).val());
+      }
     });
   })
+</script>
+
+<script>
+  $(document).ready(function() {   
+    if($("[data-btmsheet='btmSheetDate']").length){
+      $.datepicker.setDefaults({
+        showButtonPanel: true,
+        dateFormat: 'yy.mm.dd',
+        showOtherMonths: true, 
+        showMonthAfterYear:true,
+        buttonText: "선택",
+        yearSuffix: "년",
+        monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+        dayNamesMin: ['일','월','화','수','목','금','토'],
+        dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+      });
+    }
+  })
+  //20230829 바텀시트 datepicker/ timepicker 기능 추가
+  const closePicker = function(sheet) {
+    $('#' + sheet).remove();
+    $("body").css('overflow','visible');
+  };
+
+  const setTimePicker = function(target, ampm, hours, minutes) {
+    hours = Number(hours);
+    minutes = Number(minutes);
+    if(hours < 10){
+      hours = '0'+ String(hours)
+    }
+    if(minutes < 10){
+      minutes = '0'+ String(minutes)
+    }
+    let time = ((ampm === '오후') ? '오후 ' + hours : '오전 ' + hours)
+            + ':' + minutes;
+
+    $('#' + target).val(time);
+  };
+
+  const getPicker = function(sheet, target) {
+    let picker;
+
+    // picker 영역 설정
+    if (sheet === 'btmSheetDate') {
+      picker = '<div class="frm_input_datepicker" id="btmDatePicker"></div>\n';
+    } else if (sheet === 'btmSheetTime') {
+      picker =  '<div class="timepicker">\n'
+            +  '  <div class="swiper-container ampm">\n'
+            +  '    <div class="swiper-wrapper">\n'
+            +  '     <div class="swiper-slide">오전</div>\n'
+            +  '     <div class="swiper-slide">오후</div>\n'
+            +  '    </div>\n'
+            +  '  </div>\n'
+            +  '  <div class="swiper-container hours">\n'
+            +  '    <div class="swiper-wrapper">\n';
+
+      for (let i=1; i<=12; i++) {
+        picker += '    <div class="swiper-slide">' + ((i > 9) ? i : '0' + i) + '</div>\n';
+      }
+
+      picker += '    </div>\n'
+            +  '  </div>\n'
+            +  '  <div class="swiper-container minutes">\n'
+            +  '    <div class="swiper-wrapper">\n';
+
+      for (let i=0; i<=55; i+=5) {
+        picker += '    <div class="swiper-slide">' + ((i > 9) ? i : '0' + i) + '</div>\n';
+      }
+
+      picker += '    </div>\n'
+            +  '  </div>\n'
+            +  '  <div class="selected_time"></div>\n'
+            +  '</div>\n';
+    }
+
+    if (picker !== undefined && picker !== null && picker !== '') {
+      //20230913 날짜 시간 제목 if추가
+      if(sheet == 'btmSheetDate'){ 
+        $('body').append(
+          '<div class="btm_sheet" id="' + sheet + '">\n'
+          + '  <div class="btm_sheet_back"></div>\n'
+          + '  <div class="inner">\n'
+          + '    <div class="btm_sheet_head">\n'
+          + '      <p class="tit">날짜 선택</p>\n'
+          + '      <button type="button" class="btm_sheet_close" onclick="closePicker(\'' + sheet + '\')"></button>\n'
+          + '    </div>\n'
+          + '    <div class="btm_sheet_cont">\n'
+          + picker
+          + '    </div>\n'
+          + '    <div class="btm_sheet_btns">\n'
+          + '      <button type="button" class="btm_sheet_close" onclick="closePicker(\'' + sheet + '\')">확인</button>\n'
+          + '    </div>\n'
+          + '  </div>\n'
+          + '</div>\n'
+        );
+      }else if (sheet === 'btmSheetTime') {
+        $('body').append(
+          '<div class="btm_sheet" id="' + sheet + '">\n'
+          + '  <div class="btm_sheet_back"></div>\n'
+          + '  <div class="inner">\n'
+          + '    <div class="btm_sheet_head">\n'
+          + '      <p class="tit">시간 선택</p>\n'
+          + '      <button type="button" class="btm_sheet_close" onclick="closePicker(\'' + sheet + '\')"></button>\n'
+          + '    </div>\n'
+          + '    <div class="btm_sheet_cont">\n'
+          + picker
+          + '    </div>\n'
+          + '    <div class="btm_sheet_btns">\n'
+          + '      <button type="button" class="btm_sheet_close" onclick="closePicker(\'' + sheet + '\')">확인</button>\n'
+          + '    </div>\n'
+          + '  </div>\n'
+          + '</div>\n'
+        );
+      }
+
+      if (sheet === 'btmSheetDate') {
+        $('#btmDatePicker').datepicker({
+          onSelect: function(selectedDate) {
+            $('#' + target).val(selectedDate);
+          }
+        });
+
+        $('#' + sheet).addClass('show');
+      } else if (sheet === 'btmSheetTime') {
+        let ampmSwiper = new Swiper('.swiper-container.ampm', {
+          initialSlide: 0,
+          slidesPerView: 3,
+          freeMode: true,
+          freeModeSticky: true,
+          freeModeMomentumRatio: 0.25,
+          freeModeVelocityRatio: 0.25,
+          freeModeMinimumVelocity: 0.1,
+          mousewheelControl: true,
+          mousewheelSensitivity: 0.5,
+          loop: false,
+          direction: 'vertical',
+          slideToClickedSlide: true,
+          centeredSlides: true,
+          slideActiveClass:'swiper-slide-active',
+          observer: true,	
+          observeParents: true,	
+          on: {//20230901 init 추가
+            init:function(){
+              setTimePicker(target, '오전', 9, 0)
+
+            },
+            slideChange: function () {      
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide')[this.realIndex].innerText,
+                $('.swiper-container.hours .swiper-slide-active').text(),
+                $('.swiper-container.minutes .swiper-slide-active').text() * 5
+              );
+            }
+          }
+        });
+
+        let hoursSwiper = new Swiper('.swiper-container.hours', {
+          initialSlide: 8,
+          slidesPerView: 3,
+          freeMode: true,
+          freeModeSticky: true,
+          freeModeMomentumRatio: 0.25,
+          freeModeVelocityRatio: 0.25,
+          freeModeMinimumVelocity: 0.1,
+          mousewheelControl: true,
+          mousewheelSensitivity: 0.5,
+          loop: true,
+          loopAdditionalSlides: 5,
+          direction: 'vertical',
+          slideToClickedSlide: true,
+          centeredSlides: true,
+          slideActiveClass:'swiper-slide-active',
+          observer: true,	
+          observeParents: true,	
+          on: {//20230901 init 추가
+            init:function(){
+              setTimePicker(target, '오전', 9, 0)
+            },
+            slideChange: function () {      
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide-active').text(),
+                this.realIndex + 1,
+                $('.swiper-container.minutes .swiper-slide-active').text() * 5
+              );
+            }
+          }
+        });
+
+        let minutesSwiper = new Swiper('.swiper-container.minutes', {
+          initialSlide: 0,
+          slidesPerView: 3,
+          freeMode: true,
+          freeModeSticky: true,
+          freeModeMomentumRatio: 0.25,
+          freeModeVelocityRatio: 0.25,
+          freeModeMinimumVelocity: 0.1,
+          mousewheelControl: true,
+          mousewheelSensitivity: 0.5,
+          loop: true,
+          loopAdditionalSlides: 5,
+          direction: 'vertical',
+          slideToClickedSlide: true,
+          centeredSlides: true,
+          slideActiveClass:'swiper-slide-active',
+          observer: true,	
+          observeParents: true,	
+          on: {//20230901 init 추가
+            init:function(){
+              setTimePicker(target, '오전', 9, 0)
+            },
+            slideChange: function () {
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide-active').text(),
+                $('.swiper-container.hours .swiper-slide-active').text(),
+                this.realIndex * 5
+              );
+            }
+          }
+        });
+        
+        setTimeout(function() {
+          setTimePicker(
+            target,
+            $('.swiper-container.ampm .swiper-slide-active').text(),
+            $('.swiper-container.hours .swiper-slide-active').text(),
+            $('.swiper-container.minutes .swiper-slide-active').text()
+          );
+        }, 500);
+      
+        $('#' + sheet).addClass('show');
+      }
+    }
+  }
 </script>
 </html>

@@ -6607,7 +6607,7 @@
 						line-height: 2.25rem;
 						font-weight: $fw-m;
 						padding: 0 1.25rem;
-            border-radius: 999px;
+						border-radius: 999px;
 						background: $color-btn-contain;
 						border-bottom: 0;
 						color: $color-gray-500;
@@ -6620,7 +6620,14 @@
 		background-color: $color-bg;
 		padding: 1.25rem 1.5rem;
 		min-height: calc(100dvh - 144px);
-    padding-bottom: 2.25rem;
+padding-bottom: 2.25rem;
+	}
+	.ui-btn.typeInfo::before{
+		width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.375rem;
+    margin-left: 0.25rem;
+		background: url("../img/v3_ico_question_line01.png") 50% 50%/contain no-repeat;
 	}
 	.plan_shortcut{
 		display: flex;
@@ -6880,11 +6887,11 @@
 				@include typo(1.375rem, 700, 1.18, $letter-spacing: normal, $font-family: "Roboto");
 				color: $color-gray-900;
 			}
-      &.is_past{
-        .cnt{
-          color: $color-txt-impact-blue;
-        }
-      }
+			&.is_past{
+				.cnt{
+					color: $color-txt-impact-blue;
+				}
+			}
 			&.is_zero{
 				.cnt{
 					color: $color-btn-disabled;
@@ -6994,7 +7001,7 @@
 		}
   }
 	.bnr_img{
-    &.box_container{
+		&.box_container{
       background-color: transparent;
     }
 		padding: 0;
@@ -7199,8 +7206,9 @@
 				}
 			}
 			.careQna_A{
+				display: none;
 				position: relative;
-				margin-top: 1rem;
+				margin-top: 2rem;
 				padding-top: 1rem;
 				border-top: 0.0625rem solid $color-border;
 				&::before{
@@ -7218,13 +7226,27 @@
 					background:url('../img/v3_ic_24_fill_qna.svg') center/contain no-repeat;
 				}
 			}
+			.box_fold{
+				&.is_open{
+					.careQna_A{
+						margin-top: 1rem;
+						display: block;
+					}
+					.box_tit + img{
+						margin-top: 0.75rem;
+					}	
+				}
+			}
 			.box_fold_cont{
 				padding-left: 1.5rem;
 				-webkit-line-clamp: 3;
 				.box_tit + .box_desc{
 					margin-top: 0.25rem;
 				}
-				.box_desc + img{
+				.box_tit + img{
+					margin-top: 2rem;
+				}
+				img{
 					margin-top: 0.75rem;
 				}
 			}
@@ -7452,7 +7474,7 @@
 			display: none;
 		}
 		&_week{
-      .fc-toolbar.fc-header-toolbar{
+			.fc-toolbar.fc-header-toolbar{
         margin-bottom: 0;
       }
 			.fc-btnChangeWeek-button{
@@ -7460,7 +7482,7 @@
 			}
 			.fc-btnChangeMonth-button{
 				display: inline-block;
-			} 
+			}
 			//min-height: 6.25rem !important;     
       min-height: auto !important;
       .fc-view-harness{
@@ -7482,7 +7504,7 @@
 	.plan_slide{
 		margin: 0 -1.5rem 1rem;
 		.swiper-container{
-      overflow: visible;
+			overflow: visible;
 			height: 10rem;
 			padding: 0 1.5rem;
 		}
@@ -7616,10 +7638,11 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				@include typo(0.8125rem, 400, 1, -0.0469rem);
+				@include typo(0.875rem, 400, 1, -0.0469rem);
 				color: $color-gray-900;
 				span{
 					@include typo_caption_R();
+					font-size: 0.875rem;
 					line-height: 1;
 					color: $color-gray-300;
 				}
@@ -8232,7 +8255,6 @@
 			}
 		}
 	}
-  
 	.align_right_wrap {
 		margin-right: -2rem;
 	}

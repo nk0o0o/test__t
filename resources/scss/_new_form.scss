@@ -150,21 +150,22 @@
         background-color: $color-white;
         text-align: left;
       }
-      &::after{
-        content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(calc(-50% + 0.25rem));
-        right: 1rem;
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        background: url('../img/v3_ic_24_line_common_calendar_gray500.svg') right center/contain no-repeat;
-      }
+      // &::after{
+      //   content: '';
+      //   position: absolute;
+      //   top: 50%;
+      //   transform: translateY(calc(-50% + 0.25rem));
+      //   right: 1rem;
+      //   display: block;
+      //   width: 1.5rem;
+      //   height: 1.5rem;
+      //   background: url('../img/v3_ic_24_line_common_calendar_gray500.svg') right center/contain no-repeat;
+      // } 
       .frm_input{
         position: relative;
         @include typo(1rem, 700, 1.5, normal,"Roboto");
         color: $color-gray-900;
+        background: url('../img/v3_ic_24_line_common_calendar_gray500.svg') right 1rem center/1.5rem no-repeat;
       }
     }
     .period_division{
@@ -851,7 +852,7 @@
     line-height: 1;
     color: $color-gray-950;
   }
-  .fc_selected:not(.fc-day-other){
+.fc_selected:not(.fc-day-other){
     .fc-daygrid-day-top::before{
       content: '';
       display: block;

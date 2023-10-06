@@ -175,7 +175,7 @@
           var $this = $(this),
               $itemView = $this.parent().next();
           $lists.each(function(i) {
-            if($item.index($this) !== i) { 
+            if($item.index($this) !== i) { // �대┃�� 踰꾪듉 �몃뜳�ㅼ� �ㅻⅨ 踰꾪듉, �곸꽭�� 媛먯텛湲�
               $item.eq(i).removeClass('on');
               $lists.eq(i).slideUp(300);
             }
@@ -183,14 +183,15 @@
           if($this.hasClass('on')) {
             $this.removeClass('on');
             $itemView.slideUp(300);
-            $this.find('span').text('상세약관 리스트 펼침');
+            $this.find('span').text('�곸꽭�쎄� 由ъ뒪�� �쇱묠');
           } else {
             $this.addClass('on');
             $itemView.slideDown(300);
-            $this.find('span').text('상세약관 리스트 닫힘');
+            $this.find('span').text('�곸꽭�쎄� 由ъ뒪�� �ロ옒');
           }
         });
       });
+      // 湲곕낯 �꾩퐫�붿뼵
       $('.acco_list_wrap').each(function() {
         var $target = $(this),
         $item = $target.find('.acco_btn');
@@ -208,7 +209,7 @@
               }, 300);
               $accoLine.removeClass('border'); //20210826
               $itemView.slideUp(300);
-              $this.find('span').text('리스트 펼침');
+              $this.find('span').text('由ъ뒪�� �쇱묠');
               
           } else {
               $this.addClass('on');
@@ -216,11 +217,11 @@
               $this.parents('.acco_list_wrap.type_check .acco_item_head').css("background-color","#f6f7f8");
               $accoLine.addClass('border'); //20210826
               $itemView.slideDown(300);
-              $this.find('span').text('리스트 닫힘');
+              $this.find('span').text('由ъ뒪�� �ロ옒');
           }
         });   
       });
-      //20210715 slide in accodian
+      //20210715 �꾩퐫�붿뼵 �� �щ씪�대뱶 �쎌엯��
       $('.acco_list_slide').each(function () {
         var $item = $(this).find('.acco_btn');
 
@@ -234,7 +235,7 @@
         });
       });
 
-      // no text accodian
+      // �띿뒪�� �녿뒗 �꾩퐫�붿뼵
       $('.acco_list_wrap').each(function() {
         var $target = $(this),
             $item = $target.find('.btn_txt');
@@ -253,7 +254,7 @@
       });
     },
     termAgree: function() {
-      //all item check
+      //�꾩껜�좏깮
       $(".check_box.term").on("change", "#termCheckAll", function () {
         var $target = $(this),
             checked = $target.is(':checked'),
@@ -265,7 +266,7 @@
           $inputItem.prop('checked', false);
         }
       });
-      //each item check
+      //媛쒕퀎 �좏깮
       $('.item_cont').on('change', '.chkItem', function() {
         var isChecked = true;
         $('.item_cont .chkItem').each(function() {
@@ -318,26 +319,26 @@
         $('.select_wrap.sel_type01 > a').text(value);
       });
     },
-    // top move button
+    // �곷떒�쇰줈 �대룞 踰꾪듉
     topMove: function() {
       var srollTop = $('.scroll_nav_item .btn_top'), //20210804
           docHeight = $(document).height(),
           winHeight = $(window).height();
       $(window).scroll(function () {
-        // scroll bottom
+        //�ㅽ겕濡� 留덉�留됱뿉 �꾨떖�덉쓣 ��
         if ($(window).scrollTop() + winHeight >= docHeight) {
-          srollTop.fadeIn();
-          srollTop.addClass('bottom') //20210819
+          srollTop.fadeIn(); //�ㅽ겕濡ㅽ깙 踰꾪듉
+          srollTop.addClass('bottom') //20210819 addClass 異붽�
           
-          // navItem.fadeOut() //20210819
-          // footerTxtbox.fadeOut() //20210819
+          // navItem.fadeOut() //20210819 湲곕뒫 以묐났�쇰줈 肄붾뱶 ��젣
+          // footerTxtbox.fadeOut() //20210819 湲곕뒫 以묐났�쇰줈 肄붾뱶 ��젣
         }
         else {        
-          //20210819 srollTop.fadeOut(); 
-          srollTop.removeClass('bottom') //20210819 
+          //20210819 srollTop.fadeOut(); ��젣
+          srollTop.removeClass('bottom') //20210819 removeClass 異붽�
           
-          // navItem.fadeIn(); //20210819 
-          // footerTxtbox.fadeIn() //20210819 
+          // navItem.fadeIn(); //20210819 湲곕뒫 以묐났�쇰줈 肄붾뱶 ��젣
+          // footerTxtbox.fadeIn() //20210819 湲곕뒫 以묐났�쇰줈 肄붾뱶 ��젣
         }        
 
         
@@ -365,22 +366,22 @@
     //pop alert
     popAlert: function(v) {
       /*
-        알럿과 레이어 팝업 형태를 같이 사용함
-        - 기본적으로 상하 중간에 떠야함
-        - 내용이 많아져서 화면을 넘치는 경우가 생길 수 있음
-          : 팝업의 최대 높이를 화면 높이의 90%로 설정
+        �뚮읉怨� �덉씠�� �앹뾽 �뺥깭瑜� 媛숈씠 �ъ슜��
+        - 湲곕낯�곸쑝濡� �곹븯 以묎컙�� �좎빞��
+        - �댁슜�� 留롮븘�몄꽌 �붾㈃�� �섏튂�� 寃쎌슦媛� �앷만 �� �덉쓬
+          : �앹뾽�� 理쒕� �믪씠瑜� �붾㈃ �믪씠�� 90%濡� �ㅼ젙
       */
-      var $t = $(v),                        // popup
-          $btnClose = $t.find('.ui-close'), // close button in popup
+      var $t = $(v),                        // �앹뾽
+          $btnClose = $t.find('.ui-close'), // �앹뾽 �� �リ린 踰꾪듉
           $tC = $t.children('.inner'),
-          wH = window.innerHeight,
+          wH = window.innerHeight,          // �붾㈃ �믪씠媛�
           $body = $('body');
 
       $body.height(wH).css('overflow','hidden');
       $tC.css({'top': '50%'});
       $t.show();
 
-      var $tH = $tC.innerHeight(),//height of popup
+      var $tH = $tC.innerHeight(),           // �앹뾽 �믪씠媛�
           $half = $tH/2;
 
       if($tH >= wH * 0.9) {
@@ -496,7 +497,7 @@
 
     },
     //header
-    //20210818 
+    //20210818 header scroll �섏젙
     headerScroll: function() {
       var sc = $(window).scrollTop();
 
@@ -516,7 +517,7 @@
       classNameCaseBottom: 'case_bottom', //20210819
       $bubbleBox: null, //20210819
       scrollDirection: function() {
-        // 스크롤 당시, 이전 scrollTop, 변경(현재) scrollTop의 크고 작음으로 scroll UP, DOWN 을 판단
+        // �ㅽ겕濡� �뱀떆, �댁쟾 scrollTop, 蹂�寃�(�꾩옱) scrollTop�� �ш퀬 �묒쓬�쇰줈 scroll UP, DOWN �� �먮떒
         var o = this;
         // console.log(o.className);
 
@@ -539,8 +540,9 @@
         $(window).on('touchend', function() {
           o.$scrollTopPrev = [];
         });
-        //20210819 스크롤 최하단 case 추가
+        //20210819 �ㅽ겕濡� 理쒗븯�� case 異붽�
         $(window).on('scroll', function() {
+          // �ㅽ겕濡ㅼ쓣 �앷퉴吏� �� 寃쎌슦 泥댄겕
           if(window.innerHeight + o.$scrollElement.scrollTop() === o.$scrollElement.height()) {
             o.$navi.addClass(o.classNameCaseBottom);
           } else {
@@ -588,7 +590,7 @@
             step:$step,
             range:'min',
             create:function(e){
-              $list.find('li').eq(($val-$min)/$step).addClass('on').find('a').attr('title','현재선택');
+              $list.find('li').eq(($val-$min)/$step).addClass('on').find('a').attr('title','�꾩옱�좏깮');
               $currentNum.text($currentNum.data('value'));
             },
             stop:function(event,ui){
@@ -596,7 +598,7 @@
               $currentNum.data('value',ui.value);
               $currentNum.text($currentNum.data('value'));
               $list.find('li').eq((ui.value-$min)/$step).siblings().removeClass('on').removeAttr('title');
-              $list.find('li').eq((ui.value-$min)/$step).addClass('on').find('a').attr('title','현재선택');
+              $list.find('li').eq((ui.value-$min)/$step).addClass('on').find('a').attr('title','�꾩옱�좏깮');
             },
             slide: function(event,ui) {
               $slider.data('value',ui.value);
@@ -613,14 +615,14 @@
             $currentNum.data('value',$txt);
             $currentNum.text($currentNum.data('value'));
             
-            $(this).parent().addClass('on').find('a').attr('title','현재선택');
+            $(this).parent().addClass('on').find('a').attr('title','�꾩옱�좏깮');
             $(this).parent().siblings().removeClass('on').find('a').removeAttr('title');
           });
   
         });
       }
     },
-    //20210817 app 스크롤제어 (100vh)
+    //20210817 app �ㅽ겕濡ㅼ젣�� (100vh)
     setScreenSize: function() {
       let vh = window.innerHeight * 0.01;   
 
@@ -677,12 +679,12 @@
           o.gItemObj = o.gItemObjParent.find('input[type=checkbox]');
           o.gLength = o.gItemObj.length;
 
-          // all item Check
+          // �꾩껜 泥댄겕, 泥댄겕 �댁젣
           o.gAllObj.on('click.allChk', function() {
             o.checkAllFn(this);
           });
             
-            // each item Check
+            // 媛쒕퀎 泥댄겕
           o.gItemObj.on('click.itemChk', function() {
             o.checkItemFn(this);
           });
@@ -706,19 +708,19 @@
         $mob = $('html').hasClass('ui-m'),
         edgePos = '30px',
         $winW = $(window).width(),
-        whiteSpace = 32;
+        whiteSpace = 32; // 紐⑤컮�쇱뿉�� �댄똻�� 醫뚯슦 �щ갚
 
       $t.on('click', function () {
 
         if ($tootip.is(':visible')) return;
 
         $tootip.show();
-        if ($tootip.offset().left + $tootip.innerWidth() > $(window).width()) { // 툴팁의 offset left 값 + 가로값이 브라우자 가로폭보도 큰경우, 즉 화면을 넘어간 경우
+        if ($tootip.offset().left + $tootip.innerWidth() > $(window).width()) { // �댄똻�� offset left 媛� + 媛�濡쒓컪�� 釉뚮씪�곗옄 媛�濡쒗룺蹂대룄 �곌꼍��, 利� �붾㈃�� �섏뼱媛� 寃쎌슦
           $tootip.css('right', '-' + edgePos);
           $edge.css('right', edgePos);
         } else {
           if ($mob) {
-            // $tootip position
+            // $tootip �꾩튂 �↔린
             console.log($winW, $tootip.offset().left, Math.floor($tootip.offset().left) + whiteSpace);
             $tootip.css({
               'width': $winW - (whiteSpace * 2),
@@ -747,7 +749,7 @@
     });
   }
   
-  // 공통 약관 전체선택
+  // 怨듯넻 �쎄� �꾩껜�좏깮
   $.fn.uiCheckSubAll = function() {
     return this.each(function() {
       $plugins.uiCheckSubAll = {
@@ -764,7 +766,7 @@
             o.gAllObj.prop('checked', false);
           }
         },
-        checkAllFn: function(v) { // all item check
+        checkAllFn: function(v) { // �꾩껜 泥댄겕
           var o = this,
             $t = $(v),
             $boolean = $t.is(':checked'),
@@ -782,13 +784,13 @@
             o.gCheckedLength = 0;
           }
         },
-        checkItemFn: function(v) { // each item check
+        checkItemFn: function(v) { // 媛쒕퀎 泥댄겕
           var o = this,
             $t = $(v),
             $boolean = $t.is(':checked'),
             $parent = $t.parent();
 
-          // 개별 서브
+          // 媛쒕퀎 �쒕툕
           o.gItemSubObjParent = $t.parent('.item').next('.item_detail').find('.item');
           o.gItemSubObj = o.gItemSubObjParent.find('input[type=checkbox]');
 
@@ -802,7 +804,7 @@
           
           o.checkAllConditionFn();
         },
-        checkItemSubFn: function(v) { // 개별 서브 체크
+        checkItemSubFn: function(v) { // 媛쒕퀎 �쒕툕 泥댄겕
           var o = this,
             $t = $(v),
             $boolean = $t.is(':checked'),
@@ -834,31 +836,31 @@
           var o = this;
           o.gTarget = $(v);
 
-          // all item
+          // �꾩껜
           o.gAllObjParent = o.gTarget.find('.item_head');
           o.gAllObj = o.gAllObjParent.find('input[type=checkbox]');
 
-          // each item
+          // 媛쒕퀎
           o.gItemObjParent = o.gTarget.find('.item_cont > .item');
           o.gItemObj = o.gItemObjParent.find('input[type=checkbox]');
 
-          // 개별 서브
+          // 媛쒕퀎 �쒕툕
           o.gItemSubObjParent = o.gTarget.find('.item_detail .item');
           o.gItemSubObj = o.gItemSubObjParent.find('input[type=checkbox]');
 
           o.gLength = o.gItemObj.length + o.gItemSubObj.length;
 
-          // all item check/uncheck
+          // �꾩껜 泥댄겕, 泥댄겕 �댁젣
           o.gAllObj.on('click.allChk', function() {
             o.checkAllFn(this);
           });
           
-          //  each item check
+          // 媛쒕퀎 泥댄겕
           o.gItemObj.on('click.itemChk', function() {
             o.checkItemFn(this);
           });
           
-          // 개별 서브 체크
+          // 媛쒕퀎 �쒕툕 泥댄겕
           o.gItemSubObj.on('click.itemSubChk', function() {
             o.checkItemSubFn(this);
           });
@@ -867,7 +869,7 @@
       $plugins.uiCheckSubAll.init(this);
     });
   }
-  //20210824 textEffect(type effect)
+  //20210824 textEffect(���댄븨 �④낵)
   $.fn.textEffect = function(opts) {
     var defaults = $.extend({
       type : 'default',
@@ -882,7 +884,7 @@
 
       var startFn = function(n) {
         var delay;
-        (Array.isArray(defaults.delay) && defaults.delay.length === childLength)  // delay 값이 배열인 경우, 즉 복수개의 item이 각각 다른 딜레이를 가져야 할 경우
+        (Array.isArray(defaults.delay) && defaults.delay.length === childLength)  // delay 媛믪씠 諛곗뿴�� 寃쎌슦, 利� 蹂듭닔媛쒖쓽 item�� 媛곴컖 �ㅻⅨ �쒕젅�대� 媛��몄빞 �� 寃쎌슦
           ? delay = defaults.delay[n] * 1000
           : delay = defaults.delay * 1000;
 
@@ -900,11 +902,12 @@
         }
       }
 
+      // typing �④낵瑜� �ъ슜�섎뒗 寃쎌슦
       if(checkType) {
         var childText = $child.html();
 
         if(childText.split('<br>').length > 1) {
-          childText = childText.replace(/<br>/gi,'^'); // from <br> to ^
+          childText = childText.replace(/<br>/gi,'^'); // <br> 瑜� ^ 濡� 移섑솚
         }
 
         var childTextLength = childText.length,
@@ -923,12 +926,12 @@
         childLength = $child.length;
           
         setTimeout(function() {
-          startFn(1); 
+          startFn(1); // 理쒖큹 �쒖옉
         }, 1000);
       }
-      // default 
+      // default �④낵瑜� �ъ슜�섎뒗 寃쎌슦
       else {
-        startFn(0);
+        startFn(0); // 理쒖큹 �쒖옉
       }
       
     });
@@ -944,7 +947,7 @@
     activeCondition: 200,
     touchStart: function () {
       var o = this;
-      o.$touchTarget.on('touchstart.reload', function (event) { //20210818 reload 
+      o.$touchTarget.on('touchstart.reload', function (event) { //20210818 reload 蹂�寃�
         if (!o.$scrollTarget.scrollTop()) {
           o.startX = event.originalEvent.changedTouches[0].pageX;
           o.startY = event.originalEvent.changedTouches[0].pageY;
@@ -954,8 +957,8 @@
     touchMove: function () {
       var o = this;
 
-      o.$touchTarget.on('touchmove.reload', function (event) { //20210818 reload
-        if (!o.$scrollTarget.scrollTop()) { // 취소는 안됨
+      o.$touchTarget.on('touchmove.reload', function (event) { //20210818 reload 蹂�寃�
+        if (!o.$scrollTarget.scrollTop()) { // 痍⑥냼�� �덈맖
           o.endX = event.originalEvent.changedTouches[0].pageX;
           o.endY = event.originalEvent.changedTouches[0].pageY;
 
@@ -971,7 +974,7 @@
     touchEnd: function (callback) {
       var o = this;
 
-      o.$touchTarget.on('touchend.reload', function (event) { //20210818 reload
+      o.$touchTarget.on('touchend.reload', function (event) { //20210818 reload 蹂�寃�
         if ($('.ui-reload').hasClass('active')) {
           o.endX = event.originalEvent.changedTouches[0].pageX;
           o.endY = event.originalEvent.changedTouches[0].pageY;
@@ -984,7 +987,7 @@
         }
       });
     },
-    // 20210818 destroy case 
+    // 20210818 destroy case 異붽�
     destroy: function () {
       var o = this;
 
@@ -1000,6 +1003,7 @@
 
       if (!$('.ui-reload').length) $('.health_container').before('<div class="ui-reload"></div>');
 
+      // 諛곌꼍�됱씠 �덈뒗 寃쎌슦 泥댄겕
       if (o.$touchTarget.hasClass('type_bg_purple') || o.$touchTarget.hasClass('type_bg_gray')) {
         $('.ui-reload').addClass('bgColor');
       }
@@ -1015,7 +1019,7 @@
     $plugins.device.deviceClass();
     $plugins.device.osClass();
 
-    netiveUI.plugins.accodian(); //accodian
+    netiveUI.plugins.accodian(); //�꾩퐫�붿뼵
     netiveUI.plugins.tabMenu(); //tabmenu
     netiveUI.plugins.jqRange();//range
     netiveUI.plugins.topMove();
@@ -1023,16 +1027,16 @@
     netiveUI.plugins.selectBox();
     netiveUI.plugins.footer_nav.init();
     netiveUI.plugins.setScreenSize(); //20210817 100vh
-    //20211019 tooltip
+    //20211019 �댄똻
     if (typeof $('.typeInfo').uiToolTip === 'function') {
     	$('.typeInfo').uiToolTip();
     }
 
-    $plugins.pageReload.init(function() {
+    $plugins.pageReload.init(function() { //touch end �댄썑 �ㅽ뻾�� �댁슜 �묒꽦
       location.reload();
     });
 
-    //20210818 banner close btn
+    //20210818 諛곕꼫 close btn
       $('.banner_area .close_btn').click(function () {
         $('.banner_area_wrap').fadeOut();
       });
@@ -1101,26 +1105,25 @@ var ui = {
 $(window).on('load', function(){
 	ui.init();
 
-  //20230823 box_fold
+  //20230823 �묓옒 �ロ옒 硫붿떆吏�
   if($('.box_fold').length){
     boxFold();
   }
-  /* //20230829 datepicker common option
-  20230925
+  //20230829 datepicker 怨듯넻 �듭뀡 異붽�
   if($("[data-btmsheet='btmSheetDate']").length){
     $.datepicker.setDefaults({
       showButtonPanel: true,
       dateFormat: 'yy.mm.dd',
       showOtherMonths: true, 
       showMonthAfterYear:true,
-      buttonText: "선택",
-      yearSuffix: "년",
-      monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-      monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-      dayNamesMin: ['일','월','화','수','목','금','토'],
-      dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+      buttonText: "�좏깮",
+      yearSuffix: "��",
+      monthNamesShort: ['1��','2��','3��','4��','5��','6��','7��','8��','9��','10��','11��','12��'],
+      monthNames: ['1��','2��','3��','4��','5��','6��','7��','8��','9��','10��','11��','12��'],
+      dayNamesMin: ['��','��','��','��','紐�','湲�','��'],
+      dayNames: ['�쇱슂��','�붿슂��','�붿슂��','�섏슂��','紐⑹슂��','湲덉슂��','�좎슂��'],
     });
-  } */
+  }
 
 });
 
@@ -1219,7 +1222,7 @@ function showToast(text, args = {}) {
   }, 250);
 })();
 
-//20230823 boxFold
+//20230823 �묓옒 �ロ옒 硫붿떆吏�
 function boxFold() {
   $('.box_fold_btn').each(function(){
     $(this).on('click',function(){
@@ -1227,9 +1230,8 @@ function boxFold() {
     })
   })  
 }
-/* 
-20230925
-//20230829 bottom sheet datepicker/ timepicker 
+
+//20230829 諛뷀��쒗듃 datepicker/ timepicker 湲곕뒫 異붽�
 const closePicker = function(sheet) {
   $('#' + sheet).remove();
   $("body").css('overflow','visible');
@@ -1245,23 +1247,23 @@ const setTimePicker = function(target, ampm, hours, minutes) {
     minutes = '0'+ String(minutes)
   }
   let time = ((ampm === '�ㅽ썑') ? '�ㅽ썑 ' + hours : '�ㅼ쟾 ' + hours)
-           + ':' + minutes;
+  + ':' + minutes;
 
   $('#' + target).val(time);
 };
 
-const getPicker = function(sheet, target) {
+const getPicker = function(sheet, target, val) {
   let picker;
 
-  // picker
+  // picker �곸뿭 �ㅼ젙
   if (sheet === 'btmSheetDate') {
     picker = '<div class="frm_input_datepicker" id="btmDatePicker"></div>\n';
   } else if (sheet === 'btmSheetTime') {
     picker =  '<div class="timepicker">\n'
            +  '  <div class="swiper-container ampm">\n'
            +  '    <div class="swiper-wrapper">\n'
-           +  '     <div class="swiper-slide">오전</div>\n'
-           +  '     <div class="swiper-slide">오후</div>\n'
+           +  '     <div class="swiper-slide">�ㅼ쟾</div>\n'
+           +  '     <div class="swiper-slide">�ㅽ썑</div>\n'
            +  '    </div>\n'
            +  '  </div>\n'
            +  '  <div class="swiper-container hours">\n'
@@ -1287,7 +1289,7 @@ const getPicker = function(sheet, target) {
   }
 
   if (picker !== undefined && picker !== null && picker !== '') {
-    //20230913 
+    //20230913 �좎쭨 �쒓컙 �쒕ぉ if異붽�
     if(sheet == 'btmSheetDate'){ 
       $('body').append(
         '<div class="btm_sheet" id="' + sheet + '">\n'
@@ -1335,8 +1337,42 @@ const getPicker = function(sheet, target) {
 
       $('#' + sheet).addClass('show');
     } else if (sheet === 'btmSheetTime') {
+      let timeValue;
+      let ampmVal;
+      let timeVal;
+      let hourVal;
+      let minVal;
+      let ampmInit;
+      let hourInit;
+      let minInit;
+
+      if(val != undefined || val != null){
+        timeValue = val.split(" ");
+        ampmVal = timeValue[0];
+        timeVal = timeValue[1].split(":");
+        hourVal = timeVal[0];
+        minVal = timeVal[1];
+      }
+
+      if(ampmVal == undefined || ampmVal == null || ampmVal == '�ㅼ쟾'){
+        ampmInit = 0;
+      }else if(ampmVal == '�ㅽ썑'){
+        ampmInit = 1;
+      }else{
+        ampmInit = 2;
+      }
+
+      if(val ==null && hourVal == undefined && minVal == undefined ){
+        minInit = 0;
+        hourInit = 9;
+      }else{      
+        hourInit = parseInt(hourVal)
+        minInit = parseInt(minVal)/5;
+      }
+     
+
       let ampmSwiper = new Swiper('.swiper-container.ampm', {
-        initialSlide: 0,
+        initialSlide: ampmInit,
         slidesPerView: 3,
         freeMode: true,
         freeModeSticky: true,
@@ -1352,23 +1388,31 @@ const getPicker = function(sheet, target) {
         slideActiveClass:'swiper-slide-active',
         observer: true,	
         observeParents: true,	
-        on: {//20230901 
-          init:function(){
-            setTimePicker(target, '오전', 1, 0)
+        on: {//20230901 init 異붽�          
+          init:function(){      
+            setTimePicker(target, 0, 0, 0)
+            setTimeout(function() {
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide-active').text(),
+                $('.swiper-container.hours .swiper-slide-active').text(),
+                $('.swiper-container.minutes .swiper-slide-active').text()
+              );
+            }, 300);
           },
           slideChange: function () {      
             setTimePicker(
               target,
               $('.swiper-container.ampm .swiper-slide')[this.realIndex].innerText,
               $('.swiper-container.hours .swiper-slide-active').text(),
-              $('.swiper-container.minutes .swiper-slide-active').text() * 5
+              $('.swiper-container.minutes .swiper-slide-active').text()
             );
           }
         }
       });
 
       let hoursSwiper = new Swiper('.swiper-container.hours', {
-        initialSlide: 8,
+        initialSlide: hourInit - 1,
         slidesPerView: 3,
         freeMode: true,
         freeModeSticky: true,
@@ -1385,23 +1429,31 @@ const getPicker = function(sheet, target) {
         slideActiveClass:'swiper-slide-active',
         observer: true,	
         observeParents: true,	
-        on: {//20230901 
+        on: {//20230901 init 異붽�
           init:function(){
-            setTimePicker(target, '오전', 1, 0)
+            setTimePicker(target, 0, 0, 0)
+            setTimeout(function() {
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide-active').text(),
+                $('.swiper-container.hours .swiper-slide-active').text(),
+                $('.swiper-container.minutes .swiper-slide-active').text()
+              );
+            }, 300);
           },
           slideChange: function () {      
             setTimePicker(
               target,
               $('.swiper-container.ampm .swiper-slide-active').text(),
               this.realIndex + 1,
-              $('.swiper-container.minutes .swiper-slide-active').text() * 5
+              $('.swiper-container.minutes .swiper-slide-active').text()
             );
           }
         }
       });
 
       let minutesSwiper = new Swiper('.swiper-container.minutes', {
-        initialSlide: 0,
+        initialSlide: minInit,
         slidesPerView: 3,
         freeMode: true,
         freeModeSticky: true,
@@ -1418,9 +1470,17 @@ const getPicker = function(sheet, target) {
         slideActiveClass:'swiper-slide-active',
         observer: true,	
         observeParents: true,	
-        on: {//20230901 init
+        on: {//20230901 init 異붽�
           init:function(){
-            setTimePicker(target, '오전', 1, 0)
+            setTimePicker(target, 0, 0, 0)
+            setTimeout(function() {
+              setTimePicker(
+                target,
+                $('.swiper-container.ampm .swiper-slide-active').text(),
+                $('.swiper-container.hours .swiper-slide-active').text(),
+                $('.swiper-container.minutes .swiper-slide-active').text()
+              );
+            }, 300);
           },
           slideChange: function () {
             setTimePicker(
@@ -1432,7 +1492,7 @@ const getPicker = function(sheet, target) {
           }
         }
       });
-      
+      /*
       setTimeout(function() {
         setTimePicker(
           target,
@@ -1441,8 +1501,8 @@ const getPicker = function(sheet, target) {
           $('.swiper-container.minutes .swiper-slide-active').text()
         );
       }, 500);
-     
+      */
       $('#' + sheet).addClass('show');
     }
   }
-}; */
+};

@@ -456,8 +456,10 @@
     &_cont {
       .sec {
         &::before {
+          position: relative;
+          right: -1.5rem;
           display:block;
-          width:calc(100% - 3rem);
+          width:calc(100% - 1.5rem);
           height:0.0625rem;
           margin:2rem auto 0;
           background:$color-border;
