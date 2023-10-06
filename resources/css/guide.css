@@ -3167,18 +3167,6 @@ div > .banner_area.fixed {
   background-color: #fff;
   text-align: left;
 }
-.frm_input_wrap .is_datepicker::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(calc(-50% + 0.25rem));
-          transform: translateY(calc(-50% + 0.25rem));
-  right: 1rem;
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url("../img/v3_ic_24_line_common_calendar_gray500.svg") right center/contain no-repeat;
-}
 .frm_input_wrap .is_datepicker .frm_input {
   position: relative;
   letter-spacing: normal;
@@ -3187,6 +3175,7 @@ div > .banner_area.fixed {
   font-weight: 700;
   line-height: 1.5;
   color: #303030;
+  background: url("../img/v3_ic_24_line_common_calendar_gray500.svg") right 1rem center/1.5rem no-repeat;
 }
 .frm_input_wrap .period_division {
   margin: 0 0.25rem;
@@ -28019,6 +28008,13 @@ a.cs {
   min-height: calc(100dvh - 144px);
   padding-bottom: 2.25rem;
 }
+.thyroid_care .ui-btn.typeInfo::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.375rem;
+  margin-left: 0.25rem;
+  background: url("../img/v3_ico_question_line01.png") 50% 50%/contain no-repeat;
+}
 .thyroid_care .plan_shortcut {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28665,8 +28661,9 @@ a.cs {
   background: url("../img/v3_ic_16_fill_careplan_q.svg") center/contain no-repeat;
 }
 .thyroid_care .dayplan_wrap.careQna .careQna_A {
+  display: none;
   position: relative;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 0.0625rem solid #E1E6EC;
 }
@@ -28682,6 +28679,13 @@ a.cs {
 .thyroid_care .dayplan_wrap.careQna .dayplan_tit::before {
   background: url("../img/v3_ic_24_fill_qna.svg") center/contain no-repeat;
 }
+.thyroid_care .dayplan_wrap.careQna .box_fold.is_open .careQna_A {
+  margin-top: 1rem;
+  display: block;
+}
+.thyroid_care .dayplan_wrap.careQna .box_fold.is_open .box_tit + img {
+  margin-top: 0.75rem;
+}
 .thyroid_care .dayplan_wrap.careQna .box_fold_cont {
   padding-left: 1.5rem;
   -webkit-line-clamp: 3;
@@ -28689,7 +28693,10 @@ a.cs {
 .thyroid_care .dayplan_wrap.careQna .box_fold_cont .box_tit + .box_desc {
   margin-top: 0.25rem;
 }
-.thyroid_care .dayplan_wrap.careQna .box_fold_cont .box_desc + img {
+.thyroid_care .dayplan_wrap.careQna .box_fold_cont .box_tit + img {
+  margin-top: 2rem;
+}
+.thyroid_care .dayplan_wrap.careQna .box_fold_cont img {
   margin-top: 0.75rem;
 }
 .thyroid_care .plan_medicine {
@@ -29098,7 +29105,7 @@ a.cs {
           align-items: center;
   letter-spacing: -0.0469rem;
   font-family: "Suit tuneh";
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1;
   color: #303030;
@@ -29109,6 +29116,7 @@ a.cs {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.54;
+  font-size: 0.875rem;
   line-height: 1;
   color: #999999;
 }
@@ -37540,8 +37548,10 @@ a.cs {
   line-height: 2.75rem;
 }
 .n_ms_main_cont .sec::before {
+  position: relative;
+  right: -1.5rem;
   display: block;
-  width: calc(100% - 3rem);
+  width: calc(100% - 1.5rem);
   height: 0.0625rem;
   margin: 2rem auto 0;
   background: #E1E6EC;
