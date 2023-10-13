@@ -334,9 +334,8 @@ $pop-color-default: #fff;
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        /* height: 99px; */
-        height: 84px;
+        right: 0;        
+        //height: 84px;
         box-sizing: border-box;
         z-index: 999;
         background: #fff;
@@ -344,10 +343,10 @@ $pop-color-default: #fff;
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          /* height: 99px; */
-          /* padding: 45px 24px 16px; */
-          height: 84px;
-          padding: 45px 20px 8px;
+          // height: 84px;
+          // padding: 45px 20px 8px;
+          height: 43px;
+          padding: 6px 20px 5px;
           &.type_center{
             justify-content: center;
           }
@@ -369,7 +368,7 @@ $pop-color-default: #fff;
           }
           .btn_close {
             position: absolute;
-            /* right: 24px; */
+            //right: 24px;
             right: 20px;
           }
         }
@@ -387,8 +386,8 @@ $pop-color-default: #fff;
       }
       & > .pop_container {
         position: absolute;
-        /* top: 99px; */
-        top: 84px;
+        //top: 84px;
+        top:43px;
         left: 0;
         right: 0;
         bottom: 0;

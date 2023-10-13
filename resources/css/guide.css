@@ -444,11 +444,11 @@ body {
 }
 
 .health_wrap {
-  padding: 84px 0 85px;
+  padding: 43px 0 85px;
 }
 @media screen and (max-width: 312px) {
   .health_wrap {
-    padding: 84px 0 65px;
+    padding: 43px 0 65px;
   }
 }
 .health_wrap .health_container {
@@ -575,8 +575,8 @@ body {
       justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 84px;
-  padding: 44px 20px 8px;
+  height: 43px;
+  padding: 6px 20px 5px;
   background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -665,7 +665,7 @@ body {
   position: relative;
   /* min-width: 79px; */
   max-width: 130px;
-  height: 42px;
+  height: 36px;
   padding: 0 17px;
   color: #222;
   background: #ebebeb;
@@ -678,7 +678,7 @@ body {
   color: #222;
   font-size: 14px;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 36px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -4790,8 +4790,6 @@ div > .banner_area.fixed {
   top: 0;
   left: 0;
   right: 0;
-  /* height: 99px; */
-  height: 84px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   z-index: 999;
@@ -4807,10 +4805,8 @@ div > .banner_area.fixed {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  /* height: 99px; */
-  /* padding: 45px 24px 16px; */
-  height: 84px;
-  padding: 45px 20px 8px;
+  height: 43px;
+  padding: 6px 20px 5px;
 }
 .health_full > .inner > .pop_wrap > .pop_header > .header_wrap.type_center {
   -webkit-box-pack: center;
@@ -4843,7 +4839,6 @@ div > .banner_area.fixed {
 }
 .health_full > .inner > .pop_wrap > .pop_header > .header_wrap .btn_close {
   position: absolute;
-  /* right: 24px; */
   right: 20px;
 }
 .health_full > .inner > .pop_wrap > .pop_header.ms_header {
@@ -4866,8 +4861,7 @@ div > .banner_area.fixed {
 }
 .health_full > .inner > .pop_wrap > .pop_container {
   position: absolute;
-  /* top: 99px; */
-  top: 84px;
+  top: 43px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -10193,12 +10187,6 @@ a.cs {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 32px;
-}
-
-.ms_header .ms_img {
-  width: 48px;
-  height: auto;
-  border-radius: 16px;
 }
 
 .fullscreen {
@@ -29818,10 +29806,30 @@ a.cs {
   width: 8.75rem;
 }
 
+.health_walk .hc_head {
+  position: relative;
+}
+.health_walk .btn_more_txt {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.health_walk .box_nodata {
+  margin-top: 16px;
+}
+
+.ms_box_list > li .box .desc .tit {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+  white-space: normal;
+}
+
 .type_survey.type_diagnosis.dent_mbti .health_container .survey_dent_wrap {
   position: fixed;
   width: 100%;
-  top: 84px;
+  top: 43px;
   left: 0;
   z-index: 1000;
   padding: 11px 24px 13px 24px;
@@ -37204,10 +37212,13 @@ a.cs {
 }
 .ms_box_list > li .box .desc .tit {
   color: #fff;
-  font-size: 0.875rem;
-  font-weight: 900;
-  line-height: 1.57;
+  letter-spacing: -0.046875rem;
+  font-family: "Suit tuneh";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
   white-space: normal;
+  word-break: keep-all;
 }
 .ms_box_list > li .box .desc .tit > strong {
   width: 100%;

@@ -3,9 +3,9 @@
 body {background-color: $bg-white;}
 
 .health_wrap {
-  padding: 84px 0 85px;
+  padding: 43px 0 85px;
   @media screen and (max-width: 312px) {
-    padding: 84px 0 65px;
+    padding: 43px 0 65px;
   }
   //content
   .health_container {
@@ -109,8 +109,8 @@ body {background-color: $bg-white;}
   @include flexBetween;
   align-items: center;
   width: 100%;
-  height: 84px;
-  padding: 44px 20px 8px;
+  height: 43px;
+  padding: 6px 20px 5px;
   background: $bg-white;
   box-sizing: border-box;
   z-index: 999;
@@ -175,7 +175,7 @@ body {background-color: $bg-white;}
   position: relative;
   /* min-width: 79px; */
   max-width: 130px;
-  height: 42px;
+  height: 36px;
   padding: 0 17px;
   color: $color-black2;
   background: $bg-white-eb;
@@ -187,7 +187,7 @@ body {background-color: $bg-white;}
     color: $color-black2;
     font-size: $fs-s;
     font-weight: $fw-b;
-    line-height: 42px;
+    line-height: 36px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

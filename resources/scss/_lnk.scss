@@ -8265,3 +8265,24 @@ padding-bottom: 2.25rem;
 		width: 8.75rem;
 	}
 }
+//수면관리
+.health_walk{
+	.hc_head{
+		position: relative;
+	}
+	.btn_more_txt{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.box_nodata{
+		margin-top: 16px;
+	}
+}
+.ms_box_list > li .box .desc .tit {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+  white-space: normal;
+}
