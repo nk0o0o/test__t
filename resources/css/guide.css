@@ -582,7 +582,7 @@ body {
           box-sizing: border-box;
   z-index: 999;
 }
-.health_header h1 {
+.health_header h1, .health_header h3 {
   max-width: calc(100% - 24px);
   color: #222;
   font-size: 16px;
@@ -4217,6 +4217,37 @@ div > .banner_area.fixed {
 }
 .calendar_desc .check_all::before {
   background-color: #0095ff;
+}
+
+.recommend_slide {
+  padding-bottom: 2rem;
+}
+.recommend_slide .swiper-wrapper {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+}
+.recommend_slide .swiper-wrapper li {
+  position: relative;
+  width: 9.5rem;
+}
+.recommend_slide .swiper-wrapper li img {
+  display: block;
+  width: 100%;
+}
+.recommend_slide .swiper-wrapper li .desc {
+  margin-top: 0.75rem;
+}
+.recommend_slide .swiper-wrapper li .desc .title {
+  letter-spacing: -0.046875rem;
+  font-family: "Suit tuneh";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1f1f1f;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .btn_sm {
@@ -10187,6 +10218,12 @@ a.cs {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 32px;
+}
+
+.ms_header .ms_img {
+  width: 48px;
+  height: auto;
+  border-radius: 16px;
 }
 
 .fullscreen {
@@ -27993,7 +28030,7 @@ a.cs {
 .thyroid_care .tab_panel.bg_gray {
   background-color: #f2f5f9;
   padding: 1.25rem 1.5rem;
-  min-height: calc(100dvh - 144px);
+  min-height: calc(100dvh - 102px);
   padding-bottom: 2.25rem;
 }
 .thyroid_care .ui-btn.typeInfo::before {
@@ -28069,7 +28106,7 @@ a.cs {
   line-height: 1.57;
   line-height: 1.5;
 }
-.thyroid_care .plan_step .box_tit button, .thyroid_care .plan_myplan .box_tit button, .thyroid_care .plan_record .box_tit button, .thyroid_care .plan_medicine .box_tit button {
+.thyroid_care .plan_record .box_tit button, .thyroid_care .plan_medicine .box_tit button {
   height: 1.75rem;
   padding: 0 0.75rem;
   border-radius: 999px;
@@ -28151,6 +28188,9 @@ a.cs {
 }
 .thyroid_care .plan_step .box_tit {
   background: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .thyroid_care .plan_step_slider {
   margin-top: 1rem;
@@ -29806,24 +29846,98 @@ a.cs {
   width: 8.75rem;
 }
 
-.health_walk .hc_head {
+.sleep_time {
+  border-bottom: 1px solid #E1E6EC;
+}
+.sleep_time .hc_head {
   position: relative;
 }
-.health_walk .btn_more_txt {
+.sleep_time .btn_more_txt {
   position: absolute;
   top: 0;
   right: 0;
 }
-.health_walk .box_nodata {
+.sleep_time .box_nodata {
   margin-top: 16px;
 }
-
-.ms_box_list > li .box .desc .tit {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 1.4;
-  white-space: normal;
+.sleep_time .state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 16px;
+}
+.sleep_time .state .time {
+  letter-spacing: -0.0375rem;
+  font-family: "Suit tuneh";
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.56;
+  color: #1f1f1f;
+}
+.sleep_time .state .time span {
+  letter-spacing: -0.0375rem;
+  font-family: "Suit tuneh";
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.47;
+}
+.sleep_time .state .icon {
+  width: 48px;
+  height: 48px;
+}
+.sleep_time .state .icon img {
+  width: 100%;
+  max-width: 100%;
+}
+.sleep_time .box_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 16px;
+  padding: 14px 12px;
+  border-radius: 8px;
+}
+.sleep_time .box_container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: -0.046875rem;
+  font-family: "Suit tuneh";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #666666;
+}
+.sleep_time .box_container .left::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 7px;
+  background: url("../img/v3_ic_24_line_common_clock_gray200.svg") center/contain no-repeat;
+}
+.sleep_time .box_container .right {
+  letter-spacing: -0.046875rem;
+  font-family: "Suit tuneh";
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.57;
+  color: #303030;
 }
 
 .type_survey.type_diagnosis.dent_mbti .health_container .survey_dent_wrap {
@@ -30143,7 +30257,7 @@ a.cs {
   }
 }
 .dent_mbti .header_box {
-  padding: 40px 24px 0;
+  padding: 2.5rem 1.5rem 0;
 }
 .dent_mbti .header_box .stt {
   display: -webkit-box;
@@ -30156,16 +30270,20 @@ a.cs {
       -ms-flex-pack: start;
           justify-content: flex-start;
   font-family: "Roboto";
-  font-size: 19px;
-  color: #222;
+  letter-spacing: -0.0375rem;
+  font-family: "Suit tuneh";
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.37;
+  color: #1f1f1f;
 }
 .dent_mbti .header_box .stt .link {
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 3px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.1875rem;
   background: url(../img/v3_ico_question_line01.png) 50% 50% no-repeat;
-  background-size: 24px;
+  background-size: 1.5rem;
 }
 
 .dent_result {
@@ -31060,7 +31178,7 @@ a.cs {
   color: #999;
 }
 .sect_cate ul li .nav.on span {
-  color: #222;
+  color: #303030;
 }
 .sect_cate ul li .nav.on p {
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
@@ -31101,6 +31219,15 @@ a.cs {
 }
 .sect_cate ul li .nav.walk.on p:after {
   background-image: url("../img/v3_ico_sect04_on.png");
+}
+.sect_cate ul li .nav.sleep p:after {
+  background-image: url("../img/v3_ico_sect05.png");
+}
+.sect_cate ul li .nav.sleep.on p {
+  background-image: linear-gradient(312deg, #0095ff 110%, #9b78f0 -26%);
+}
+.sect_cate ul li .nav.sleep.on p:after {
+  background-image: url("../img/v3_ico_sect05_on.png");
 }
 .sect_cate .cate_next, .sect_cate .cate_prev {
   display: -webkit-box;
@@ -31178,6 +31305,9 @@ a.cs {
   margin-left: 3px;
   background: url(../img/v3_ico_question_line01.png) 50% 50% no-repeat;
   background-size: 24px;
+}
+.stress_level .hc_head {
+  padding: 0;
 }
 .stress_level .inner {
   margin: 16px 0 24px;
@@ -31263,6 +31393,9 @@ a.cs {
   font-size: 14px;
   color: #fff;
   font-weight: 700;
+}
+.stress_level .inner.os_setting {
+  margin-bottom: 0;
 }
 .stress_level .desc {
   font-size: 13px;

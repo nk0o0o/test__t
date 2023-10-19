@@ -62,20 +62,34 @@
         <div class="hc_head">
           <h3 class="stt">
             Daily 수면 시간<a href="#n" class="link" onclick="netiveUI.plugins.popAlert('#alert01');"></a>
-            <span>최근 업데이트 2023.08.09 11:03</span>
           </h3>
           <a href="javascript:location.href='/fmy/FMY-130001.do'" class="btn_more_txt"><span>더보기</span></a>
         </div>
-          <div class="state">
-            <div class="time"><span class="hour">7</span>시간 <span class="minute">20</span>분</div>
-            <div class="icon"><img src="../../resources/img/v3_img_48_fill_sleep_management_dailytime.png" alt=""></div>
-          </div>
-          <div class="box_container bgcolor_bg">
-            <div class="left">수면 설정</div>
-            <div class="right">오후 10:00 ~ 오전 06:30</div>
-          </div>
-      </div>
-      <!-- //.sleep_time -->
+        <div class="inner os_setting">
+            <div class="swiper-container setting">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <p class="desc">수면 데이터 기능을 사용하려면</p>
+                  <img src="../../resources/img/v3_ios_setting01.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <p class="desc">건강 > 데이터 접근 및 기기</p>
+                  <img src="../../resources/img/v3_ios_setting02.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <p class="desc">데이터 소스 > Tune H 선택</p>
+                  <img src="../../resources/img/v3_ios_setting03.png" alt="">
+                </li>
+                <li class="swiper-slide">
+                  <p class="desc">Tune H의 데이터 읽기 허용 > 수면 부분을 ON 상태로 해주세요.</p>
+                  <img src="../../resources/img/v3_ios_setting04-sleep.png" alt="">
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+            </div>
+            <button type="button" class="btn_base_03">앱 설정으로 이동</button>          
+        </div><!-- //.os_setting -->
+      </div><!-- //.sleep_time -->
       <div class="health_cam_wrap">
         <div class="hc_head">
           <h3 class="stt">
@@ -162,52 +176,6 @@
           </div>
           <!-- //.tabs.dep1 -->
         </div><!-- //.tab_wrap -->
-        
-        <div class="recommend_slide">
-          <div class="section_tit">Tune H 건강 콘텐츠와 함께 운동해 보세요!</div>          
-          <div class="swiper-container set01">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <button role="button" class="btn_ico_bookmark_b on"></button>
-                <a href="#n">
-                  <img src="../../resources/img/v3_spc_list01.png" alt="운동가기">
-                  <div class="desc">
-                    <div class="title">무시하지 말아야 할 암을 알리는 4가지 위험신호</div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <button role="button" class="btn_ico_bookmark_b"></button>
-                <a href="#n">
-                  <img src="../../resources/img/v3_spc_list02.png" alt="운동가기">
-                  <div class="desc">
-                    <div class="title">무시하지 말아야 할 암을 알리는 4가지 위험신호</div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <button role="button" class="btn_ico_bookmark_b"></button>
-                <a href="#n">
-                  <img src="../../resources/img/v3_spc_list02.png" alt="운동가기">
-                  <div class="desc">
-                    <div class="title">무시하지 말아야 할 암을 알리는 4가지 위험신호</div>
-                  </div>
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <button role="button" class="btn_ico_bookmark_b"></button>
-                <a href="#n">
-                  <img src="../../resources/img/v3_spc_list02.png" alt="운동가기">
-                  <div class="desc">
-                    <div class="title">무시하지 말아야 할 암을 알리는 4가지 위험신호</div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-
         <div class="svc_desc acco_list_wrap">
           <div class="item_head">
             <p>수면 관리 서비스 자세히 보기</p>
@@ -322,10 +290,22 @@
     </div>
   </div>
 
-  <!-- 상단 카테고리 슬라이드 -->
+<!-- os설정 슬라이드 -->
 <script>
-  $(document).ready(function () {  
+  $(document).ready(function () {
+    var swiper = new Swiper(".setting", {
+      slidePerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  });
+</script>
 
+<!-- 상단 카테고리 슬라이드 -->
+<script>
+  $(document).ready(function () {
     var cateSwiper = new Swiper(".sect_cate", {
       slidesPerView: 3,
       navigation: {
@@ -336,18 +316,7 @@
     });
   });
 </script>
-<!-- 추천컨텐츠 슬라이드 -->
-<script>
-  $(document).ready(function () { 
-  var swiper = new Swiper(".detail_slide .set01", {
-      slidesPerView: "auto",
-      spaceBetween: 12,
-      slidesOffsetAfter: 24,
-      observer: true,
-      observeParents: true,
-    });
-  });
-</script>
+
 <!-- 주간 차트 -->
 <script>
   var ctx = document.getElementById("myRunWeek").getContext("2d");

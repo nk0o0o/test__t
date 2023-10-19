@@ -240,7 +240,7 @@
 				}
 				&.on {
 					span {
-						color: $color-black2;
+						color: $color-gray-900;
 					}
 					p {
 						box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
@@ -302,6 +302,21 @@
 							background-image: linear-gradient(312deg, #a987fb 110%, #cb8bda -26%);
 							&:after {
 								background-image: url('../img/v3_ico_sect04_on.png');
+							}
+						}
+					}
+				}
+				&.sleep {
+					p {
+						&:after {
+							background-image: url('../img/v3_ico_sect05.png');
+						}
+					}
+					&.on {
+						p {
+							background-image: linear-gradient(312deg, #0095ff 110%, #9b78f0 -26%);
+							&:after {
+								background-image: url('../img/v3_ico_sect05_on.png');
 							}
 						}
 					}
@@ -371,7 +386,9 @@
 			background-size: 24px;
 		}
 	}
-
+	.hc_head {
+		padding: 0;
+	}
 	.inner {
 		margin: 16px 0 24px;
 		padding: 20px 24px;
@@ -432,6 +449,9 @@
 			font-size: $fs-s;
 			color: $color-white;
 			font-weight: $fw-b;
+		}
+		&.os_setting{
+			margin-bottom: 0;
 		}
 	}
 	.desc {

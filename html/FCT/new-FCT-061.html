@@ -31,7 +31,28 @@
             <div class="tab_panel bg_gray active" id="tab-a1">
               <!-- 케어 플랜 탭내용 -->
               <div class="box_container is_shadow plan_step">                
-                <p class="box_tit">케어 단계</p><!-- 20230906 a에서 p태그로 교체 -->
+                <!-- 20231016 케어단계 툴팁 추가 -->
+                <div class="box_tit"><!-- div태그로 수정 -->
+                  케어 단계
+                  <div class="new_tool_wrap">
+                    <div class="new_tool_cont">
+                      <div class="ui-m">
+                        <div class="ui-tooltip-wrap">
+                          <button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+                          <div class="toolTip">
+                            <dl>
+                              <dt>케어 단계란?</dt>
+                              <dd>케어 단계 툴팁 설명 케어 단계 툴팁 설명<br>
+                                케어 단계 툴팁 설명 케어 단계 툴팁 설명 케어 단계 툴팁 설명</dd>
+                            </dl>
+                            <button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- //.box_tit -->
+                <!-- 20231016 케어단계 툴팁 추가 -->
                 <div class="current_step">
                   <p class="desc">고객님의 현재 케어 단계</p>
                   <p class="step">진단 전</p>

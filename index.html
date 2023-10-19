@@ -1,374 +1,445 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0">
-<title>Tune H 코딩리스트</title>
-<style type="text/css">
-* {margin: 0; padding: 0; box-sizing: border-box; line-height: 1.3;}
-body {min-width: 1024px; padding: 0 20px 75px 20px; font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic', '맑은 고딕', Verdana, Tahoma, "돋움", Dotum, "굴림", Gulim, Geneva, sans-serif, Apple Gothic, AppleGothic; font-size: 12px;}
-.ui-m body {min-width: auto; padding: 0;}
-a {color: #898989; text-decoration: none;}
-a:hover {color: #444;}
-a:visited,
-a:focus,
-a:active {color: #444;}
-caption {display: none;}
-h1 {position: relative; margin: 20px 0; font-size: 24px; letter-spacing: -1px;}
-.ui-m h1 {padding-left: 20px; font-size: 18px;}
-h1 span {color: #00907f;}
-.info_wrap {position: absolute; right: 10px; top: 30px;}
-.info_wrap span {
-	position: relative;
-	display: inline-block;
-	padding: 0 20px;
-	font-weight: bold;
-}
-.info_wrap span:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 1px;
-	left: 0;
-	width: 14px;
-	height: 14px;
-	background-color: #e4e4e4;
-}
-@media all and (max-width:900px) {
-	.info_wrap {
-		position: relative;
-		right: auto;
-		top: auto;
-		margin-top: -10px;
-		margin-bottom: 10px;
-	}
-}
-.ui-m .info_wrap {display: none;}
-.link_area {
-	overflow: hidden;
-	width: 100%;
-	margin-bottom: -5px;
-}
-.link_area.fixed {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: 10px 20px;
-	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.7);
-	z-index: 10;
-}
-.link_area li {
-	float: left;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	list-style: none;
-	font-weight: bold;
-}
-.link_area a {
-	display: inline-block;
-	padding: 0 10px;
-	height: 25px;
-	border-radius: 5px;
-	box-sizing: border-box;
-	background-color: #b8c6d6;
-	color: #222;
-	line-height: 25px;
-	transition: background 0.2s ease;
-}
-.link_area a.on,
-.link_area a:hover {
-	background-color: #78828d;
-}
-/* .toTop{display:none;} */
-.toTop a {
-	background-color: #ff8a18;
-}
-.link_area.fixed .toTop {
-	display: list-item;
-}
-.ui-m .link_area {
-	display: none;
-}
-div.cont {
-	padding: 15px 0;
-}
-.ui-m div.cont {
-	width: 100%;
-	padding: 0 20px 30px;
-	overflow-x: scroll;
-}
-h2 {
-	padding: 8px 15px;
-	background-color: #595959;
-	color: #fff;
-	font-size: 13px;
-	cursor: pointer;
-	transition: all 0.4s;
-}
-.ui-m h2 {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	padding-left: 20px;
-}
-h2:hover {
-	background-color: #444;
-}
-h2 div {
-	float: right;
-}
-h2 div span {
-	display: inline-block;
-}
-h2 div span:before {
-	content: "";
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	margin-right: 6px;
-}
-h2 div span+span:not(.modify_end) {
-	margin-left: 20px;
-}
-h2 div span.line {
-	font-weight: normal;
-	color: #aaa;
-}
-h2 div span.line:before {
-	display: none;
-}
-h2 div span.modify_end {
-	color: #ff8a18;
-}
-h2 div span.modify_end:before {
-	display: none;
-}
-h2 em {
-	color: #b8c6d6;
-	font-weight: normal;
-	font-style: normal;
-}
-/* table {display:none;} */
-table+h2 {
-	margin-top: 15px;
-}
-.rate {
-	display: block;
-	color: #595959;
-	font-size: 14px;
-	text-align: right;
-}
-.rate span {
-	color: #db4e69;
-	font-weight: bold;
-}
-.ui-m .rate {
-	margin-bottom: 20px;
-	padding-right: 20px;
-}
-table {
-	width: 100%;
-	border-spacing: 0;
-	border-collapse: collapse;
-}
-.ui-m table {
-	width: auto;
-	margin-top: 33px;
-}
-.ui-m table th,
-.ui-m table td {
-	white-space: nowrap;
-}
-table .col01 {width: 40px;}
-table .col02 {width: 10%;}
-table .col03 {width: 10%;}
-table .col04 {width: 10%;}
-table .col05 {width: 10%;}
-table .col06 {width: 10%;}
-table .col07 {width: 220px;}
-table .col08 {width: 160px;}
-table .col09 {width: 60px;}
-table .colEndDate {
-	width: 150px;
-	text-align: center;
-}
-table thead th {
-	padding: 6px 3px;
-	border: 1px solid #ccc;
-	background: #eee;
-	font-size: 13px;
-}
-table tbody td {
-	padding: 6px 10px;
-	border: 1px solid #ccc;
-	color: #898989;
-	font-size: 11px;
-	text-align: left;
-}
-table tbody td em {
-	font-style: normal;
-	font-weight: bold;
-	color: #222;
-}
-table tbody td:first-child {
-	text-align: center;
-	font-weight: bold;
-}
-table tbody td:last-child {
-	padding: 6px 10px 6px 6px;
-}
-table tbody td:last-child:before {
-	content: "";
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	margin-right: 6px;
-}
-table tbody tr:hover td {
-	background-color: #f9f9f9;
-}
-table tbody tr.hidden td {
-	background-color: #f9f9f9;
-	color: #bbb;
-	text-decoration: line-through;
-}
-table tbody td a:focus {
-	color: #db4e69 !important;
-}
-table tbody tr.hidden td:last-child:before {
-	display: none;
-}
-table tbody tr.pb_end td a,
-table tbody tr.confirm_end td a,
-table tbody tr.modify_end td a,
-table tbody tr.modify_end02 td a {color: #444;}
-table tbody tr.markup_end td:last-child:before,
-.info_wrap span.markup_end:before,
-h2 div span.markup_end:before {background-color: #f56238;}
-table tbody tr.pb_end td:last-child:before,
-.info_wrap span.pb_end:before,
-h2 div span.pb_end:before {background-color: #0cca0c;}
-table tbody tr.confirm_end td:last-child:before,
-.info_wrap span.confirm_end:before,
-h2 div span.confirm_end:before {background-color: #2b81e0;}
-table tbody tr.modify_end td:last-child:before,
-.info_wrap span.modify_end:before,
-h2 div span.modify_end:before {
-	background-color: #fff;
-	border: 1px solid #333;
-	box-sizing: border-box;
-}
-table tbody tr.modify_end02 td:last-child:before,
-.info_wrap span.modify_end02:before {background-color: #53b100;}
-table tbody tr.hidden td a {color: #bbb;}
-table tbody tr.off td {
-	background-color: #e8e8e8;
-	text-decoration: line-through;
-}
-table tbody tr.off:hover td {background-color: #e8e8e8;}
-table tbody td.vt {
-	vertical-align: top;
-	padding-top: 10px;
-	box-sizing: border-box;
-}
-.red {color: red !important;}
-.blue {color: blue !important;}
-.green {background-color: rgba(149, 224, 181, 0.7);}
-.yellow {background-color: yellow;}
-.bold {font-weight: bold;}
-</style>
-<script type="text/javascript" src="./resources/js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function () {
-		$('.link_area').append('<li class="toTop" ><a href="javascript:void(0);">↑ TOP</a></li>');
-
-		$('table tbody td > a').each(function () {
-			var href = $(this).attr('href');
-			$(this).text(href);
-		});
-
-		$(".cont").each(function () {
-			$(this).find("table tbody tr:not(.hidden)").each(function (index) {
-				$("td:first-child", this).text(index + 1);
-			});
-			$tr = $(this).find("table tbody tr:not(.hidden)");
-			$trIng = $(this).find("table tbody tr.pb_end:not(.hidden)");
-			$trEnd = $(this).find("table tbody tr.confirm_end:not(.hidden)");
-			$(".rate").html("<strong>총</strong> : " + $tr.length +
-				" page &nbsp;&nbsp; <strong>잔여</strong> : " + ($tr.length - ($trIng.length +
-					$trEnd.length)) + " page &nbsp;&nbsp; <strong>진행</strong> : " + ($trIng
-						.length + $trEnd.length) + " page ( <span>" + parseInt(($trIng.length +
-						$trEnd.length) / $tr.length * 100) +
-				"%</span> ) &nbsp;&nbsp; <strong>완료</strong> : " + $trEnd.length +
-				" page ( <span>" + parseInt($trEnd.length / $tr.length * 100) + "%</span> )");
-		});
-
-		$('h2').each(function () {
-			$(this).append('<div></div>');
-			$(this).children('div').append("<span class=\"line\">" + $(this).next('table').find(
-				"tbody tr:not(.hidden)").length + " line</span>");
-		});
-
-		$('h2').click(function () {
-			if (!$('html').hasClass('ui-m')) {
-				$(this).next('table').toggle();
-				return false;
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<title>Tune H 코딩리스트</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			line-height: 1.3;
+		}
+		body {
+			min-width: 1024px;
+			padding: 0 20px 75px 20px;
+			font-family: 'Nanum Gothic', '나눔고딕', 'Malgun Gothic', '맑은 고딕', Verdana, Tahoma, "돋움", Dotum, "굴림", Gulim, Geneva, sans-serif, Apple Gothic, AppleGothic;
+			font-size: 12px;
+		}
+		.ui-m body {
+			min-width: auto;
+			padding: 0;
+		}
+		a {
+			color: #898989;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #444;
+		}
+		a:visited,
+		a:focus,
+		a:active {
+			color: #444;
+		}
+		caption {
+			display: none;
+		}
+		h1 {
+			position: relative;
+			margin: 20px 0;
+			font-size: 24px;
+			letter-spacing: -1px;
+		}
+		.ui-m h1 {
+			padding-left: 20px;
+			font-size: 18px;
+		}
+		h1 span {
+			color: #00907f;
+		}
+		.info_wrap {
+			position: absolute;
+			right: 10px;
+			top: 30px;
+		}
+		.info_wrap span {
+			position: relative;
+			display: inline-block;
+			padding: 0 20px;
+			font-weight: bold;
+		}
+		.info_wrap span:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1px;
+			left: 0;
+			width: 14px;
+			height: 14px;
+			background-color: #e4e4e4;
+		}
+		@media all and (max-width:900px) {
+			.info_wrap {
+				position: relative;
+				right: auto;
+				top: auto;
+				margin-top: -10px;
+				margin-bottom: 10px;
 			}
-		});
-
-		$('ul.link_area li').find('a').each(function () {
-			$(this).click(function () {
-				if (!$(this).parent().hasClass('toTop')) {
-					var tabB = $(this).attr('href');
-					var tabT = $(tabB).offset();
-					$('body,html').animate({
-							scrollTop: (tabT.top) - 10
-					}, 400);
-				} else {
-					$('body,html').animate({
-							scrollTop: 0
-					}, 600);
+		}
+		.ui-m .info_wrap {
+			display: none;
+		}
+		.link_area {
+			overflow: hidden;
+			width: 100%;
+			margin-bottom: -5px;
+		}
+		.link_area.fixed {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			padding: 10px 20px;
+			box-sizing: border-box;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: 10;
+		}
+		.link_area li {
+			float: left;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			list-style: none;
+			font-weight: bold;
+		}
+		.link_area a {
+			display: inline-block;
+			padding: 0 10px;
+			height: 25px;
+			border-radius: 5px;
+			box-sizing: border-box;
+			background-color: #b8c6d6;
+			color: #222;
+			line-height: 25px;
+			transition: background 0.2s ease;
+		}
+		.link_area a.on,
+		.link_area a:hover {
+			background-color: #78828d;
+		}
+		/* .toTop{display:none;} */
+		.toTop a {
+			background-color: #ff8a18;
+		}
+		.link_area.fixed .toTop {
+			display: list-item;
+		}
+		.ui-m .link_area {
+			display: none;
+		}
+		div.cont {
+			padding: 15px 0;
+		}
+		.ui-m div.cont {
+			width: 100%;
+			padding: 0 20px 30px;
+			overflow-x: scroll;
+		}
+		h2 {
+			padding: 8px 15px;
+			background-color: #595959;
+			color: #fff;
+			font-size: 13px;
+			cursor: pointer;
+			transition: all 0.4s;
+		}
+		.ui-m h2 {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding-left: 20px;
+		}
+		h2:hover {
+			background-color: #444;
+		}
+		h2 div {
+			float: right;
+		}
+		h2 div span {
+			display: inline-block;
+		}
+		h2 div span:before {
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin-right: 6px;
+		}
+		h2 div span+span:not(.modify_end) {
+			margin-left: 20px;
+		}
+		h2 div span.line {
+			font-weight: normal;
+			color: #aaa;
+		}
+		h2 div span.line:before {
+			display: none;
+		}
+		h2 div span.modify_end {
+			color: #ff8a18;
+		}
+		h2 div span.modify_end:before {
+			display: none;
+		}
+		h2 em {
+			color: #b8c6d6;
+			font-weight: normal;
+			font-style: normal;
+		}
+		/* table {display:none;} */
+		table+h2 {
+			margin-top: 15px;
+		}
+		.rate {
+			display: block;
+			color: #595959;
+			font-size: 14px;
+			text-align: right;
+		}
+		.rate span {
+			color: #db4e69;
+			font-weight: bold;
+		}
+		.ui-m .rate {
+			margin-bottom: 20px;
+			padding-right: 20px;
+		}
+		table {
+			width: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+		}
+		.ui-m table {
+			width: auto;
+			margin-top: 33px;
+		}
+		.ui-m table th,
+		.ui-m table td {
+			white-space: nowrap;
+		}
+		table .col01 {
+			width: 40px;
+		}
+		table .col02 {
+			width: 10%;
+		}
+		table .col03 {
+			width: 10%;
+		}
+		table .col04 {
+			width: 10%;
+		}
+		table .col05 {
+			width: 10%;
+		}
+		table .col06 {
+			width: 10%;
+		}
+		table .col07 {
+			width: 220px;
+		}
+		table .col08 {
+			width: 160px;
+		}
+		table .col09 {
+			width: 60px;
+		}
+		table .colEndDate {
+			width: 150px;
+			text-align: center;
+		}
+		table thead th {
+			padding: 6px 3px;
+			border: 1px solid #ccc;
+			background: #eee;
+			font-size: 13px;
+		}
+		table tbody td {
+			padding: 6px 10px;
+			border: 1px solid #ccc;
+			color: #898989;
+			font-size: 11px;
+			text-align: left;
+		}
+		table tbody td em {
+			font-style: normal;
+			font-weight: bold;
+			color: #222;
+		}
+		table tbody td:first-child {
+			text-align: center;
+			font-weight: bold;
+		}
+		table tbody td:last-child {
+			padding: 6px 10px 6px 6px;
+		}
+		table tbody td:last-child:before {
+			content: "";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin-right: 6px;
+		}
+		table tbody tr:hover td {
+			background-color: #f9f9f9;
+		}
+		table tbody tr.hidden td {
+			background-color: #f9f9f9;
+			color: #bbb;
+			text-decoration: line-through;
+		}
+		table tbody td a:focus {
+			color: #db4e69 !important;
+		}
+		table tbody tr.hidden td:last-child:before {
+			display: none;
+		}
+		table tbody tr.pb_end td a,
+		table tbody tr.confirm_end td a,
+		table tbody tr.modify_end td a,
+		table tbody tr.modify_end02 td a {
+			color: #444;
+		}
+		table tbody tr.markup_end td:last-child:before,
+		.info_wrap span.markup_end:before,
+		h2 div span.markup_end:before {
+			background-color: #f56238;
+		}
+		table tbody tr.pb_end td:last-child:before,
+		.info_wrap span.pb_end:before,
+		h2 div span.pb_end:before {
+			background-color: #0cca0c;
+		}
+		table tbody tr.confirm_end td:last-child:before,
+		.info_wrap span.confirm_end:before,
+		h2 div span.confirm_end:before {
+			background-color: #2b81e0;
+		}
+		table tbody tr.modify_end td:last-child:before,
+		.info_wrap span.modify_end:before,
+		h2 div span.modify_end:before {
+			background-color: #fff;
+			border: 1px solid #333;
+			box-sizing: border-box;
+		}
+		table tbody tr.modify_end02 td:last-child:before,
+		.info_wrap span.modify_end02:before {
+			background-color: #53b100;
+		}
+		table tbody tr.hidden td a {
+			color: #bbb;
+		}
+		table tbody tr.off td {
+			background-color: #e8e8e8;
+			text-decoration: line-through;
+		}
+		table tbody tr.off:hover td {
+			background-color: #e8e8e8;
+		}
+		table tbody td.vt {
+			vertical-align: top;
+			padding-top: 10px;
+			box-sizing: border-box;
+		}
+		.red {
+			color: red !important;
+		}
+		.blue {
+			color: blue !important;
+		}
+		.green {
+			background-color: rgba(149, 224, 181, 0.7);
+		}
+		.yellow {
+			background-color: yellow;
+		}
+		.bold {
+			font-weight: bold;
+		}
+	</style>
+	<script type="text/javascript" src="./resources/js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.link_area').append('<li class="toTop" ><a href="javascript:void(0);">↑ TOP</a></li>');
+			$('table tbody td > a').each(function () {
+				var href = $(this).attr('href');
+				$(this).text(href);
+			});
+			$(".cont").each(function () {
+				$(this).find("table tbody tr:not(.hidden)").each(function (index) {
+					$("td:first-child", this).text(index + 1);
+				});
+				$tr = $(this).find("table tbody tr:not(.hidden)");
+				$trIng = $(this).find("table tbody tr.pb_end:not(.hidden)");
+				$trEnd = $(this).find("table tbody tr.confirm_end:not(.hidden)");
+				$(".rate").html("<strong>총</strong> : " + $tr.length +
+					" page &nbsp;&nbsp; <strong>잔여</strong> : " + ($tr.length - ($trIng.length +
+						$trEnd.length)) + " page &nbsp;&nbsp; <strong>진행</strong> : " + ($trIng
+							.length + $trEnd.length) + " page ( <span>" + parseInt(($trIng.length +
+								$trEnd.length) / $tr.length * 100) +
+					"%</span> ) &nbsp;&nbsp; <strong>완료</strong> : " + $trEnd.length +
+					" page ( <span>" + parseInt($trEnd.length / $tr.length * 100) + "%</span> )");
+			});
+			$('h2').each(function () {
+				$(this).append('<div></div>');
+				$(this).children('div').append("<span class=\"line\">" + $(this).next('table').find(
+					"tbody tr:not(.hidden)").length + " line</span>");
+			});
+			$('h2').click(function () {
+				if (!$('html').hasClass('ui-m')) {
+					$(this).next('table').toggle();
+					return false;
 				}
-				return false;
+			});
+			$('ul.link_area li').find('a').each(function () {
+				$(this).click(function () {
+					if (!$(this).parent().hasClass('toTop')) {
+						var tabB = $(this).attr('href');
+						var tabT = $(tabB).offset();
+						$('body,html').animate({
+							scrollTop: (tabT.top) - 10
+						}, 400);
+					} else {
+						$('body,html').animate({
+							scrollTop: 0
+						}, 600);
+					}
+					return false;
+				});
 			});
 		});
-
-	});
-
-	$(window).scroll(function () {
-		if ($(this).scrollTop() >= 81) {
-			$('.link_area').addClass('fixed');
-			$('h1').css('margin-bottom', '55px');
-		} else {
-			$('.link_area').removeClass('fixed');
-			$('h1').removeAttr('style')
-		};
-	});
-</script>
-<script>
-	// $(document).ready(function() {
-	// 	$('tr > td').each(function() {
-	// 		if($(this).text() == '2020-09-25' || $(this).text() == '2020-09-18' || $(this).text() == '2020-09-11' ||  $(this).text() == '2020-10-09' ||  $(this).text() == '2020-10-16') {
-	// 			$(this).parent().addClass('green');
-	// 		}
-	// 		if($(this).text() == '2020-10-23') {
-	// 			$(this).parent().addClass('yellow')
-	// 		}
-	// 	});
-	// });
-	$(document).ready(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() >= 81) {
+				$('.link_area').addClass('fixed');
+				$('h1').css('margin-bottom', '55px');
+			} else {
+				$('.link_area').removeClass('fixed');
+				$('h1').removeAttr('style')
+			};
+		});
+	</script>
+	<script>
+		// $(document).ready(function() {
+		// 	$('tr > td').each(function() {
+		// 		if($(this).text() == '2020-09-25' || $(this).text() == '2020-09-18' || $(this).text() == '2020-09-11' ||  $(this).text() == '2020-10-09' ||  $(this).text() == '2020-10-16') {
+		// 			$(this).parent().addClass('green');
+		// 		}
+		// 		if($(this).text() == '2020-10-23') {
+		// 			$(this).parent().addClass('yellow')
+		// 		}
+		// 	});
+		// });
+		$(document).ready(function () {
 			$('td').on('click', function () {
 				$(this).parent('tr').css('background', 'yellow');
 			});
 			if ($('html').hasClass('ui-m')) {
 				$('tr.off.hidden').hide();
 			}
-	});
-</script>
+		});
+	</script>
 </head>
-
 <body>
 	<h1><span>최근 작업한 파일</span> : List
 		<a href="/index_v1.html"
@@ -376,115 +447,79 @@ table tbody td.vt {
 			index_v1.html 이전 코딩리스트 모두 보기
 		</a>
 	</h1>
-
 	<div class="info_wrap">
 		<span class="markup_end"> : 마크업 선작업</span>
 		<span class="pb_end"> : 퍼블리싱 완료</span>
 		<span class="modify_end"> : 수정 완료</span>
 		<span class="confirm_end"> : 최종 완료</span>
 	</div>
-
 	<ul class="link_area" style="margin-bottom: 10px;">
+		<li><a href="#sectionHOME">HOME</a></li>
+		<li><a href="#sectionWell">웰니스 - 웰빙</a></li>
+		<li><a href="#sectionMind">웰니스-마음건강</a></li>
+		<li><a href="#sectionNutri">웰니스 - 영양관리</a></li>
+		<li><a href="#sectionPrim">웰니스 - 프리미엄</a></li>
+		<li><a href="#sectionMission">미션(new)</a></li>
+		<li><a href="#sectionContents">건강콘텐츠</a></li>
+		<li><a href="#sectionMypage">로그인/마이페이지</a></li>
+		<li><a href="#sectionTutorial">튜토리얼</a></li>
 		<li><a href="#guide">GUIDE</a></li>
 		<li><a href="#section00">공통</a></li>
-		<li><a href="#sectionCXdent">최근 반영한 컨텐츠</a></li>
-		<li><a href="#sectionHOME">HOME</a></li>
-		<li><a href="#sectionTutorial">튜토리얼</a></li>
-		<li><a href="#sectionCs">건강콜센터</a></li>
-		<li><a href="#sectionDiary">웰니스다이어리</a></li>
-		<li><a href="#sectionBMI">BMI</a></li>
-		<li><a href="#sectionDental">Dental</a></li>
-		<li><a href="#sectionHealth">건강컨텐츠</a></li>
-		<li><a href="#sectionThyroid">갑상선케어</a></li>
-		<li><a href="#sectionMission">미션</a></li>
-		<li><a href="#sectionMissionNew">미션(new)</a></li>
-		<li><a href="#sectionMypage">로그인/마이페이지</a></li>
 	</ul>
+	<p>&nbsp;</p>
 
-   <p>&nbsp;</p>
-
-   <h2 id="sectionCXdent">최근 반영한 컨텐츠</h2>
-   <table>
-      <colgroup>
-         <col span="1" class="col01">
-         <col span="1" class="col02">
-         <col span="1" class="col03">
-         <col span="1" class="col04">
-         <col span="1" class="col05">
-         <col span="1" class="col06">
-         <col span="1" class="col07">
-         <col span="1" class="colEndDate">
-         <col span="1" class="col08">
-         <col span="1" class="col09">
-      </colgroup>
-      <thead>
-         <tr>
-            <th scope="col">NO</th>
-            <th scope="col">2depth</th>
-            <th scope="col">3depth</th>
-            <th scope="col">4depth</th>
-            <th scope="col">5depth</th>
-            <th scope="col">6depth</th>
-            <th scope="col">URL</th>
-            <th scope="col">종료일</th>
-            <th scope="col">비고</th>
-            <th scope="col">상태</th>
-         </tr>
-      </thead>
-      <tbody>
-				<tr class="">
-					<td></td>
-					<td><a href="20230921_갑상선케어_퍼블_수정.zip" download></a></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-      </tbody>
-   </table><!-- //최근 반영한 컨텐츠 -->
-
-	 <h2 id="sectionHOME">HOME</h2>
-	 <table>
+	<h2 id="sectionHOME">HOME</h2>
+	<table>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
 		<thead>
 			<tr>
-					<th scope="col">NO</th>
-					<th scope="col">2depth</th>
-					<th scope="col">3depth</th>
-					<th scope="col">4depth</th>
-					<th scope="col">5depth</th>
-					<th scope="col">6depth</th>
-					<th scope="col">URL</th>
-					<th scope="col">종료일</th>
-					<th scope="col">비고</th>
-					<th scope="col">상태</th>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr class="">
 				<td></td>
-				<td rowspan="9" class="vt">메인</td>
+				<td rowspan="8" class="vt">메인</td>
 				<td>로그인 전</td>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td><a href="./html/FHO/new-FHO-010.html" target="_blank"></a></td>
 				<td>2023-06-08</td>
-				<td>20230919 배너 수정<br>20230824 컨텐츠영역 로그인 전 ui추가<br>20230824 ai영양소 추가<br>20230803 배너 수정<br>20230609 로그인 전/ 측정 전 기본<br>20230612 다시 분석하기 버튼추가<br>20230619 배너 수정</td>
+				<td>20230919 배너 수정<br>20230824 컨텐츠영역 로그인 전 ui추가<br>20230824 ai영양소 추가<br>20230803 배너 수정<br>20230609 로그인 전/ 측정 전
+					기본<br>20230612 다시 분석하기 버튼추가<br>20230619 배너 수정</td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
-				<td rowspan="4">로그인 후</td>
+				<td rowspan="3">로그인 후</td>
 				<td></td>
 				<td></td>
 				<td></td>
 				<td><a href="./html/FHO/new-FHO-011.html" target="_blank"></a></td>
 				<td>2023-06-08</td>
-				<td>20230919 배너 수정<br>20230824 ai영양소 추가<br>20230814 css(:has오류)스크립트처리<br/>20230609 측정 후<br>20230619 배너 수정</td>
+				<td>20230919 배너 수정<br>20230824 ai영양소 추가<br>20230814 css(:has오류)스크립트처리<br />20230609 측정 후<br>20230619 배너 수정</td>
 				<td></td>
 			</tr>
 			<tr class="">
@@ -505,16 +540,6 @@ table tbody td.vt {
 				<td><a href="./html/FHO/new-FHO-014.html" target="_blank"></a></td>
 				<td>2023-07-13</td>
 				<td>20230919 배너 수정<br>20230824 ai영양소 추가로 보험가입자 클래스 추가<br></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>프리미엄 서비스</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-020.html" target="_blank"></a></td>
-				<td>2023-07-20</td>
-				<td>20230927 링크영역 수정<br>20230922 아이콘 추가<br>20230822 디자인 수정(3.4)</td>
 				<td></td>
 			</tr>
 			<tr class="">
@@ -559,53 +584,23 @@ table tbody td.vt {
 				<td></td>
 			</tr>
 		</tbody>
-	 </table>
+	</table><!-- //HOME -->
 
-	 <h2 id="sectionTutorial">튜토리얼</h2>
-	 <table>
-		<thead>
-			<tr>
-					<th scope="col">NO</th>
-					<th scope="col">2depth</th>
-					<th scope="col">3depth</th>
-					<th scope="col">4depth</th>
-					<th scope="col">5depth</th>
-					<th scope="col">6depth</th>
-					<th scope="col">URL</th>
-					<th scope="col">종료일</th>
-					<th scope="col">비고</th>
-					<th scope="col">상태</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="">
-				<td></td>
-				<td rowspan="3" class="vt">튜토리얼</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FHO/new-FHO-200.html" target="_blank"></a></td>
-				<td>2023-06-19</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FHO/new-FHO-201.html" target="_blank"></a></td>
-				<td>2023-06-19</td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-	 </table>
-	 
-	 <h2 id="sectionCs">건강콜센터</h2>
-	 <table>
+	<h2 id="sectionWell">웰니스 - 웰빙</h2>
+	<table>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
 		<thead>
 			<tr>
 				<th scope="col">NO</th>
@@ -621,161 +616,21 @@ table tbody td.vt {
 			</tr>
 		</thead>
 		<tbody>
-		<tr class="">
-			<td></td>
-			<td rowspan="6" class="vt">건강콜센터</td>
-			<td>보험가입회원</td>
-			<td></zz>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-030.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td>20230911 문구수정<br>20230824 문구 수정<br></td>
-			<td></td>
-		 </tr>
-		 <tr class="">
-			<td></td>
-			<td>일반회원</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-031.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td>20230911 문구수정<br>20230824 문구 수정</td>
-			<td></td>
-		 </tr>		 
-
-		 <tr class="">
-			<td></td>
-			<td>상담간호사와건강상담</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-032.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td></td>
-			<td></td>
-		 </tr>
-		 <tr class="">
-			<td></td>
-			<td>전국 병원 & 장기요양시설 안내</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-033.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td></td>
-			<td></td>
-		 </tr>
-		 <tr class="">
-			<td></td>
-			<td>명의 안내 서비스</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-034.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td></td>
-			<td></td>
-		 </tr>
-		 <tr class="">
-			<td></td>
-			<td>전국상급종합병원진료예약</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FCT/new-FCT-035.html" target="_blank"></a></td>
-			<td>2023-07-20</td>
-			<td></td>
-			<td></td>
-		 </tr>
-		</tbody>
-	 </table>
-	
-	<h2 id="sectionDiary">웰니스다이어리</h2>
-	 <table>
-		<thead>
-			<tr>
-				<th scope="col">NO</th>
-				<th scope="col">2depth</th>
-				<th scope="col">3depth</th>
-				<th scope="col">4depth</th>
-				<th scope="col">5depth</th>
-				<th scope="col">6depth</th>
-				<th scope="col">URL</th>
-				<th scope="col">종료일</th>
-				<th scope="col">비고</th>
-				<th scope="col">상태</th>
-			</tr>
-		</thead>
-		<tbody>
-		<tr class="">
-			<td></td>
-			<td rowspan="12" class="vt">웰니스다이어리</td>
-			<td rowspan="4">건강카메라</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FHO/new-FHO-008.html" target="_blank"></a></td>
-			<td>2023-05-31</td>
-			<td>신규제작<br>헤더/푸터 디자인 신규변경<br>20230608 스트레스 레벨 기본값<br>20230612 차트기간 위치변경<br>
-			20230623 스몰배너추가</td>
-			<td></td>
-		 </tr>
-     <tr class="">
-       <td></td>
-       <td></td>
-       <td>측정하기</td>
-       <td></td>
-       <td><a href="./html/FMY/FMY-130.html" target="_blank"></a></td>
-       <td>2023-05-31</td>
-       <td>20230620 문구수정/물음표 추가</td>
-       <td></td>
-      </tr>
       <tr class="">
-       <td></td>
-       <td></td>
-       <td>건강신호 측정결과</td>
-       <td></td>
-       <td><a href="./html/FMY/FMY-131.html" target="_blank"></a></td>
-       <td>2023-05-31</td>
-       <td>신규제작</td>
-       <td></td>
-      </tr>
-      <tr class="">
-       <td></td>
-       <td></td>
-       <td>생체측정히스토리</td>
-       <td></td>
-       <td><a href="./html/FMY/FMY-132.html" target="_blank"></a></td>
-       <td>2023-05-31</td>
-       <td>신규제작</td>
-       <td></td>
-      </tr>
-		 <tr class="">
-			<td></td>
-			<td>BMI</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FHO/new-FHO-009.html" target="_blank"></a></td>
-			<td>2023-06-02</td>
-			<td>신규제작</td>
-			<td></td>
-		 </tr>
-    <tr class="">
-			<td></td>
-			<td rowspan="5" class="vt">웰니스다이어리 건강 걸음</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FHO/new-FHO-020.html" target="_blank"></a></td>
-			<td>2023-07-10</td>
-			<td>20230911 today영역 디자인 수정<br>20230816 연령별 tab추가<br/>20230816 today영역 디자인 수정<br/>20230718 문구및 차트영역 탭수정</td>
-			<td></td>
-		</tr>
-		<tr class="">
 				<td></td>
+				<td rowspan="36" class="vt">웰빙</td>
+				<td rowspan="5">건강 걸음</td>				
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-020.html" target="_blank"></a></td>
+				<td>2023-07-10</td>
+				<td>20230911 today영역 디자인 수정<br>20230816 연령별 tab추가<br />20230816 today영역 디자인 수정<br />20230718 문구및 차트영역 탭수정</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>권한허용안내</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -783,230 +638,89 @@ table tbody td.vt {
 				<td>2023-07-10</td>
 				<td></td>
 				<td></td>
-		</tr>
-		<tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>권한혀용</td>
 				<td>AOS</td>
+				<td></td>
 				<td></td>
 				<td><a href="./html/FHO/new-FHO-023.html" target="_blank"></a></td>
 				<td>2023-07-17</td>
 				<td>20230816 연령별 tab추가</td>
 				<td></td>
-		</tr>
-		<tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>권한허용</td>
 				<td>iOS</td>
+				<td></td>
 				<td></td>
 				<td><a href="./html/FHO/new-FHO-024.html" target="_blank"></a></td>
 				<td>2023-07-17</td>
 				<td>20230816 연령별 tab추가</td>
 				<td></td>
-		</tr>
-		<tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>권한허용</td>
 				<td>IOS 새로고침</td>
+				<td></td>
 				<td></td>
 				<td><a href="./html/FHO/new-FHO-025.html" target="_blank"></a></td>
 				<td>2023-08-01</td>
 				<td>20230816 연령별 tab추가</td>
 				<td></td>
-		</tr>
-    <tr class="">
-			<td></td>
-			<td rowspan="5" class="vt">수면관리</td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FHO/new-FHO-040.html" target="_blank"></a></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-    <tr class="">
-			<td></td>			
-			<td>수면 정보 없음</td>
-			<td></td>
-			<td></td>
-			<td><a href="./html/FHO/new-FHO-041.html" target="_blank"></a></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		</tbody>
-	 </table>
-	
-	<h2 id="sectionBMI">BMI</h2>
-	<table>
-		<caption></caption>
-		<colgroup>
-				<col span="1" class="col01">
-				<col span="1" class="col02">
-				<col span="1" class="col03">
-				<col span="1" class="col04">
-				<col span="1" class="col05">
-				<col span="1" class="col06">
-				<col span="1" class="col07">
-				<col span="1" class="colEndDate">
-				<col span="1" class="col08">
-				<col span="1" class="col09">
-		</colgroup>
-		<thead>
-				<tr>
-					<th scope="col">NO</th>
-					<th scope="col">2depth</th>
-					<th scope="col">3depth</th>
-					<th scope="col">4depth</th>
-					<th scope="col">5depth</th>
-					<th scope="col">6depth</th>
-					<th scope="col">URL</th>
-					<th scope="col">종료일</th>
-					<th scope="col">비고</th>
-					<th scope="col">상태</th>
-				</tr>
-		</thead>
-		<tbody class="web">
-				<tr class="pb_end">
-					<td></td>
-					<td rowspan="9">건강지표(BMI)</td>
-					<td>정상</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-090.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-					20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!--  <td></td> -->
-					<td>비만전단계</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-091.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-							20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!-- <td></td> -->
-					<td>비만 1단계</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-092.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-							20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!-- <td></td> -->
-					<td>비만 2단계</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-093.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-							20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!-- <td></td> -->
-					<td>비만 3단계</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-094.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-							20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!--  <td></td> -->
-					<td>저체중</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-095.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
-							20230602 디자인 수정</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!--  <td></td> -->
-					<td>히스토리</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-096.html" target="_blank"></a></td>
-					<td>2023-06-02</td>
-					<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br> 20220719 신규 작성<br>
-					20230602 헤더 유저 및 배너삭제</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!--  <td></td> -->
-					<td>신체정보수정 팝업</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-097.html" target="_blank"></a></td>
-					<td>2022-07-19~</td>
-					<td>20220719 신규 작성</td>
-					<td></td>
-				</tr>
-				<tr class="pb_end">
-					<td></td>
-					<!--  <td></td> -->
-					<td>BMI 체질량지수란? 모달팝업</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FMY/FMY-098.html" target="_blank"></a></td>
-					<td>2022-07-19~</td>
-					<td>20220719 신규 작성</td>
-					<td></td>
-				</tr>
-		</tbody>
-	</table><!-- //BMI -->
-
-	<h2 id="sectionDental">Dental</h2>
-	<table>
-		<thead>
-			 <tr>
-					<th scope="col">NO</th>
-					<th scope="col">2depth</th>
-					<th scope="col">3depth</th>
-					<th scope="col">4depth</th>
-					<th scope="col">5depth</th>
-					<th scope="col">6depth</th>
-					<th scope="col">URL</th>
-					<th scope="col">종료일</th>
-					<th scope="col">비고</th>
-					<th scope="col">상태</th>
-			 </tr>
-		</thead>
-		<tbody>
+			</tr>
 			<tr class="">
 				<td></td>
-				<td rowspan="23">Dental 컨텐츠</td>
-				<td>Dental - 시작하기</td>
+				<td rowspan="4">수면관리</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-040.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>수면 정보 없음</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-041.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>권한 허용</td>
+				<td>AOS</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-042.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>권한 허용</td>
+				<td>IOS</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-043.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="" id="sectionDental">
+				<td></td>
+				<td rowspan="27" class="vt">Dental MBTI</td>
+				<td>시작하기</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -1014,8 +728,8 @@ table tbody td.vt {
 				<td>20230303~</td>
 				<td>20230519 디자인변경 수정<br>20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>랜딩페이지</td>
 				<td></td>
@@ -1025,10 +739,10 @@ table tbody td.vt {
 				<td>20230303~</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
-				<td rowspan="2" class="vt">Dental - MBTI 예시</td>
+				<td rowspan="2" class="vt">질문지 예시</td>
 				<td>단일선택</td>
 				<td></td>
 				<td></td>
@@ -1036,8 +750,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>복수선택</td>
 				<td></td>
@@ -1046,10 +760,10 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
-				<td rowspan="19" class="vt">Dental - MBTI</td>
+				<td rowspan="15">질문지</td>
 				<td>단일) 1-1</td>
 				<td></td>
 				<td></td>
@@ -1057,8 +771,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단일) 2-1</td>
 				<td></td>
@@ -1067,8 +781,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단일) 2-2</td>
 				<td></td>
@@ -1077,8 +791,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단일) 2-3</td>
 				<td></td>
@@ -1087,8 +801,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>복수) 3-1</td>
 				<td></td>
@@ -1097,8 +811,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>복수) 3-2</td>
 				<td></td>
@@ -1107,8 +821,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>복수) 3-3</td>
 				<td></td>
@@ -1117,8 +831,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단수) 4-1</td>
 				<td></td>
@@ -1127,8 +841,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>복수) 4-2</td>
 				<td></td>
@@ -1137,8 +851,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단수) 4-3</td>
 				<td></td>
@@ -1147,8 +861,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단수) 5-1</td>
 				<td></td>
@@ -1157,8 +871,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단수) 5-2</td>
 				<td></td>
@@ -1167,8 +881,8 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>단수) 5-3</td>
 				<td></td>
@@ -1177,72 +891,114 @@ table tbody td.vt {
 				<td>~20230329</td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
-				<td>AI 단수] Dental - MBTI</td>
+				<td>AI 단수</td>
 				<td></td>
 				<td></td>
 				<td><a href="./html/FMY/FMY-114.html" target="_blank"></a></td>
 				<td>20230222 ~ 20230329</td>
 				<td>결혼유무, 완료 팝업 추가<br />swiper-ui 추가, 결혼유무 버튼 수정</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
-				<td>AI 복수] Dental - MBTI</td>
+				<td>AI 복수</td>
 				<td></td>
 				<td></td>
 				<td><a href="./html/FMY/FMY-115.html" target="_blank"></a></td>
 				<td>미완성 20230222 ~ </td>
 				<td></td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
-				<td rowspan="4" class="vt">MBTI 결과</td>
+				<td rowspan="8">MBTI 결과</td>
 				<td>Red</td>
+				<td></td>
 				<td></td>
 				<td><a href="./html/FMY/FMY-116.html" target="_blank"></a></td>
 				<td>미완성 20230223 ~ </td>
-				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br />20230407 추가<br /> 20230519  수정<br>
-				20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
+				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br />20230407 추가<br /> 20230519 수정<br>
+					20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>Black</td>
 				<td></td>
+				<td></td>
 				<td><a href="./html/FMY/FMY-117.html" target="_blank"></a></td>
 				<td>미완성 20230223 ~ </td>
-				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br /> 20230519  수정<br>
+				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br /> 20230519 수정<br>
 					20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>Blue</td>
 				<td></td>
+				<td></td>
 				<td><a href="./html/FMY/FMY-118.html" target="_blank"></a></td>
 				<td>미완성 20230223 ~ </td>
-				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br /> 20230519  수정<br>
+				<td>20230419 그래프패딩값 추가<br />20230413 수정<br />20230317 텍스트 수정<br /> 20230519 수정<br>
 					20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+			</tr>
+			<tr class="">
 				<td></td>
 				<td>Yellow</td>
 				<td></td>
+				<td></td>
 				<td><a href="./html/FMY/FMY-119.html" target="_blank"></a></td>
 				<td>미완성 20230223 ~ </td>
-				<td>20230317 텍스트 수정<br /> 20230519  수정<br>20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
+				<td>20230317 텍스트 수정<br /> 20230519 수정<br>20230609 이미지경로 수정<br>20230609 헤더/푸터 레이아웃 수정</td>
 				<td></td>
-		 </tr>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td rowspan="4">관리방법</td>
+				<td>Red</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-116-01.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>Black</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-116-01.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>Blue</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-116-01.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>Yellow</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-119-01.html" target="_blank"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr><!-- //dental -->
 		</tbody>
-	</table>
-	
-	<h2 id="sectionHealth">건강컨텐츠</h2>
+	</table><!-- //웰니스 - 웰빙-->
+
+	<h2 id="sectionMind">웰니스 - 마음건강</h2>
 	<table>
+		<caption></caption>
 		<colgroup>
 			<col span="1" class="col01">
 			<col span="1" class="col02">
@@ -1272,146 +1028,328 @@ table tbody td.vt {
 		<tbody>
 			<tr class="">
 				<td></td>
-				<td rowspan="8">건강콘텐츠</td>
-				<td rowspan="4">리스트</td>
-				<td>칼럼 컨텐츠 리스트</td>
+				<td rowspan="4" class="vt">마음 건강</td>
+				<td rowspan="4">AI 건강카메라</td>
 				<td></td>
 				<td></td>
-				<td><a href="./html/FCT/new-FCT-001.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td>20230824 태그 위치수정<br>20230623 스몰배너추가</td>
 				<td></td>
-		 </tr>
-		 <tr class="">
+				<td><a href="./html/FHO/new-FHO-008.html" target="_blank"></a></td>
+				<td>2023-05-31</td>
+				<td>신규제작<br>헤더/푸터 디자인 신규변경<br>20230608 스트레스 레벨 기본값<br>20230612 차트기간 위치변경<br>
+					20230623 스몰배너추가</td>
 				<td></td>
-				<td>영상/오디오 컨텐츠 리스트</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-002.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td>20230623 스몰배너추가</td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>영상/오디오 컨텐츠 리스트(로그인전)</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-002-1.html" target="_blank"></a></td>
-				<td>2023-08-24</td>
-				<td>20230824 로그인 전 추가</td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>전체 콘텐츠 리스트(팝업)</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-003.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td>20230824 태그 위치수정<br>20230623 스몰배너추가</td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td rowspan="4">상세</td>
-				<td>칼럼</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-004.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td></td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>영상</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-005.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td></td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>영상 - 운동관련 아닐때(컨텐츠정보 2개 인경우)</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-005-1.html" target="_blank"></a></td>
-				<td>2023-09-07</td>
-				<td></td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>오디오</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-006.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td></td>
-				<td></td>
-		 </tr>
-		 <tr class="">
-				<td></td>
-				<td>영상팝업</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-007.html" target="_blank"></a></td>
-				<td>2023-06-07</td>
-				<td></td>
-				<td></td>
-		 </tr>
-		</tbody>
-	</table>
-	
-	<h2 id="sectionThyroid">갑상선케어</h2>
-	<table>
-	 <thead>
-		 <tr>
-			 <th scope="col">NO</th>
-			 <th scope="col">2depth</th>
-			 <th scope="col">3depth</th>
-			 <th scope="col">4depth</th>
-			 <th scope="col">5depth</th>
-			 <th scope="col">6depth</th>
-			 <th scope="col">URL</th>
-			 <th scope="col">종료일</th>
-			 <th scope="col">비고</th>
-			 <th scope="col">상태</th>
-		 </tr>
-	 </thead>
-	 <tbody>
+			</tr>
 			<tr class="">
 				<td></td>
+				<td>측정하기</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-130.html" target="_blank"></a></td>
+				<td>2023-05-31</td>
+				<td>20230620 문구수정/물음표 추가</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>건강신호 측정결과</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-131.html" target="_blank"></a></td>
+				<td>2023-05-31</td>
+				<td>신규제작</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>생체측정히스토리</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-132.html" target="_blank"></a></td>
+				<td>2023-05-31</td>
+				<td>신규제작</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>Face 진행 중 화면</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-132.html" target="_blank"></a></td>
+				<td>	2021-06-21~2021-06-25</td>
+				<td>신규제작</td>
+				<td></td>
+			</tr>
+    </tbody>
+  </table><!-- 웰니스 - 마음건강 -->
+
+	<h2 id="sectionNutri">웰니스 - 영양관리</h2>
+	<table>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="" id="sectionBMI">
+				<td></td>
+				<td rowspan="10" class="vt">영양관리</td>
+				<td rowspan="10">BMI</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-009.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>신규제작</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>				
+				<td>BMI(체질량지수)관리</td>
+				<td>정상</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-090.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>비만전단계</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-091.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>비만 1단계</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-092.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>비만 2단계</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-093.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>비만 3단계</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-094.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>저체중</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-095.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br>20220719 신규 작성<br>
+					20230602 디자인 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>히스토리</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-096.html" target="_blank"></a></td>
+				<td>2023-06-02</td>
+				<td>20230328 텍스트 수정<br>20220810 슬라이드 배너 추가, 텍스트정렬수정<br> 20220719 신규 작성<br>
+					20230602 헤더 유저 및 배너삭제</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				 <td></td>
+				<td>신체정보수정 팝업</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-097.html" target="_blank"></a></td>
+				<td>2022-07-19~</td>
+				<td>20220719 신규 작성</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>BMI 체질량지수란? 모달팝업</td>
+				<td></td>
+				<td><a href="./html/FMY/FMY-098.html" target="_blank"></a></td>
+				<td>2022-07-19~</td>
+				<td>20220719 신규 작성</td>
+				<td></td>
+			</tr><!-- //bmi -->
+    </tbody>
+  </table><!-- 웰니스 - 영양관리 -->
+
+	<h2 id="sectionPrim">웰니스 - 프리미엄</h2>
+	<table>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
+			</tr>
+		</thead>
+		<tbody>
+      <tr class="">
+				<td></td>
+				<td rowspan="29" class="vt">프리미엄</td>
+				<td>프리미엄 서비스</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-020.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td>20230927 링크영역 수정<br>20230922 아이콘 추가<br>20230822 디자인 수정(3.4)</td>
+				<td></td>
+			</tr>
+       <!-- 프리미엄 - 건강 콜센터 -->
+			<tr class="">
+				<td></td>
+				<td rowspan="6">건강 콜센터</td>
+				<td>보험가입회원</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-030.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td>20230911 문구수정<br>20230824 문구 수정<br></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>일반회원</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-031.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td>20230911 문구수정<br>20230824 문구 수정</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td rowspan="4">상세</td>
+				<td>상담간호사와건강상담</td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-032.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>전국 병원 & 장기요양시설 안내</td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-033.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>명의 안내 서비스</td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-034.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>전국상급종합병원진료예약</td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-035.html" target="_blank"></a></td>
+				<td>2023-07-20</td>
+				<td></td>
+				<td></td>
+			</tr>
+      <!-- 프리미엄 - 갑상선 -->
+      <tr class="" id="sectionThyroid">
+				<td></td>
+				<td rowspan="22">갑상선 케어 프로그램</td>
 				<td rowspan="11">케어 플랜</td>
 				<td>메인</td>
 				<td></td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-060.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
-				<td>20230922 이미지교체<br> 20230911 문구수정<br>20230906 배너 슬라이드로 교체, 문구수정, 태그교체, swiper 옵션수정</td>
+				<td>20231016 갑상선툴팁추가<br>20230922 이미지교체<br> 20230911 문구수정<br>20230906 배너 슬라이드로 교체, 문구수정, 태그교체, swiper 옵션수정</td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
 				<td>메인(초기세팅)</td>
 				<td></td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-061.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
-				<td>20230922 이미지교체<br>20230911 문구수정<br>20230906 배너 슬라이드로 교체, 문구수정, 태그교체, swiper 옵션수정</td>
+				<td>20231016 갑상선툴팁추가<br>20230922 이미지교체<br>20230911 문구수정<br>20230906 배너 슬라이드로 교체, 문구수정, 태그교체, swiper 옵션수정</td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
 				<td rowspan="9">통합 케어 알림</td>
 				<td>전체</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-062-001.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1420,8 +1358,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>병원 일정</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-062.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1430,8 +1366,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>데이터 없음</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-063.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1440,8 +1374,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>케어메시지</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-064.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230906 문구수정</td>
@@ -1450,8 +1382,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>1:1문의</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-065.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1460,8 +1390,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>케어 단계 설정(팝업)</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-066.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1470,8 +1398,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>케어 안내(팝업)</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-067.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230927 문구수정<br> 20230906 셀렉트 스와이퍼 연결, 스크립트 추가</td>
@@ -1480,8 +1406,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>병원일정추가(팝업)</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-068.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230922 바텀시트 키보드빼기<br>20230906 문구수정</td>
@@ -1490,8 +1414,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>1:1문의하기(팝업)</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-069.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1502,8 +1424,6 @@ table tbody td.vt {
 				<td rowspan="10">복약 관리</td>
 				<td>메인(초기세팅)</td>
 				<td></td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-070.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230906 슬라이드 추가</td>
@@ -1512,8 +1432,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>메인</td>
-				<td></td>
-				<td></td>
 				<td></td>
 				<td><a href="./html/FCT/new-FCT-071.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
@@ -1524,8 +1442,6 @@ table tbody td.vt {
 				<td></td>
 				<td rowspan="2">복약 알림</td>
 				<td>등록 알림 없음</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-072.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230925 팝업삭제<br>20230906 문구수정</td>
@@ -1534,8 +1450,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>리스트</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-073.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230906 문구수정</td>
@@ -1545,8 +1459,6 @@ table tbody td.vt {
 				<td></td>
 				<td rowspan="4">복약 달성 현황</td>
 				<td>주간 - 데이터 없음</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-074.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1555,8 +1467,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>주간 리스트</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-075.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1565,8 +1475,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>월간 - 데이터 없음</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-076.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1575,8 +1483,6 @@ table tbody td.vt {
 			<tr class="">
 				<td></td>
 				<td>월간 리스트</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-077.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
@@ -1586,18 +1492,14 @@ table tbody td.vt {
 				<td></td>
 				<td rowspan="2">복약일정</td>
 				<td></td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-078.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td></td>
 				<td></td>
 			</tr>
-<tr class="">
+			<tr class="">
 				<td></td>
 				<td>복약 일정 추가 팝업</td>
-				<td></td>
-				<td></td>
 				<td><a href="./html/FCT/new-FCT-079.html" target="_blank"></a></td>
 				<td>2023-08-31</td>
 				<td>20230922 바텀시트 키보드빼기</td>
@@ -1605,9 +1507,7 @@ table tbody td.vt {
 			</tr>
 			<tr class="">
 				<td></td>
-				<td rowspan="1">서비스 소개</td>
-				<td></td>
-				<td></td>
+				<td>서비스 소개</td>
 				<td></td>
 				<td></td>
 				<td><a href="./html/FCT/new-FCT-080.html" target="_blank"></a></td>
@@ -1615,11 +1515,180 @@ table tbody td.vt {
 				<td></td>
 				<td></td>
 			</tr>
-		</tbody>
-	</table>
-	
-	<h2 id="sectionMission">건강 미션</h2>
+    </tbody>
+  </table><!-- 웰니스 - 프리미엄 -->
+  
+	<h2 id="sectionMission">미션 (new)</h2>
 	<table>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td rowspan="13" class="vt">미션</td>
+				<td>미션 있을 경우</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-001.HTML" target="_blank"></a></td>
+				<td>2023-09-01</td>
+				<td>20230919 배너이미지수정, 태그 위치 수정<br>20230906 태그 교체, 참여버튼 추가<br>230904 문구 수정 및 빈태그 삭제<br>맞춤 건강 미션 박스 수정 / 특별 미션 태그
+					추가</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>미션 없을 경우</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-002.HTML" target="_blank"></a></td>
+				<td>2023-09-01</td>
+				<td>20230919 배너이미지수정, 태그 위치 수정<br>20230906 태그 교체, 참여버튼 추가<br>230904 문구 수정 및 빈태그 삭제<br>맞춤 건강 미션 박스 수정 / 특별 미션 태그
+					추가</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>참여가능한<br>미션 없을 경우</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-002-1.HTML" target="_blank"></a></td>
+				<td>2023-09-19</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>참여가능한<br>미션 없을 경우</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-002-1.HTML" target="_blank"></a></td>
+				<td>2023-09-19</td>
+				<td>20230919 추가</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td rowspan="3">맞춤 건강 미션</td>
+				<td>리스트</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-003.HTML" target="_blank"></a></td>
+				<td>2023-09-04</td>
+				<td>20230907 링크이동 없음 수정<br>20230907 팝업추가<br>20230906 참여버튼 추가</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td rowspan="2">상세</td>
+				<td>맞춤 상세</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-004.HTML" target="_blank"></a></td>
+				<td>2023-09-04</td>
+				<td>20230920 문구수정<br>20230907 팝업추가<br>20230906 문구수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>달성 현황</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-005.HTML" target="_blank"></a></td>
+				<td>2023-09-04</td>
+				<td>20230920 문구수정<br>20230907 팝업추가<br>20230906 문구수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td rowspan="7">특별 미션</td>
+				<td>리스트</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-010.HTML" target="_blank"></a></td>
+				<td>2023-09-04</td>
+				<td>20230913 플친인증 버튼,클래스 추가<br>20230907 링크이동 없음 수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td rowspan="2">상세-참여 전</td>
+				<td>카카오 플친</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-011.HTML" target="_blank"></a></td>
+				<td>2023-09-05</td>
+				<td>20230907 관리자등록 영역수정<br>20230906 문구수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>직접</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-012.HTML" target="_blank"></a></td>
+				<td>2023-09-05</td>
+				<td>20230918 건강컨텐츠 관리자등록영역 클래스추가<br>20230907 관리자등록 영역수정, 팝업 추가<br>20230906 문구수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td rowspan="3">상세-참여 중<br>(미션 현황)</td>
+				<td>직접 인증</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-014.HTML" target="_blank"></a></td>
+				<td>2023-09-05</td>
+				<td>20230920 문구수정<br>20230918 사진업로드 리스트 수정<br>20230918 리스트 태그 수정<br>20230906 문구수정</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>사진업로드 팝업</td>
+				<td><a href="./html/MISSION/MS-013.HTML" target="_blank"></a></td>
+				<td>2023-09-05</td>
+				<td>20230920 문구수정<br></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>카카오플친 인증</td>
+				<td></td>
+				<td><a href="./html/MISSION/MS-015.HTML" target="_blank"></a></td>
+				<td>2023-09-13</td>
+				<td>20230920 문구수정<br></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table><!-- //미션 -->
+
+	<h2 id="sectionContents">건강컨텐츠</h2>
+	<table>
+		<caption></caption>
 		<colgroup>
 			<col span="1" class="col01">
 			<col span="1" class="col02">
@@ -1649,407 +1718,99 @@ table tbody td.vt {
 		<tbody>
 			<tr class="">
 				<td></td>
-				<td rowspan="23">미션</td>
-				<td rowspan="9">건강미션</td>
-				<td>메인</td>
+				<td rowspan="9" class="vt">건강콘텐츠</td>
+				<td rowspan="4">리스트</td>
+				<td>칼럼 컨텐츠 리스트</td>
 				<td></td>
 				<td></td>
-				<td><a href="./html/FHO/new-FHO-030.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
-				<td>20230801 기간 추가/header footer 변경</td>
+				<td><a href="./html/FCT/new-FCT-001.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
+				<td>20230824 태그 위치수정<br>20230623 스몰배너추가</td>
 				<td></td>
 			</tr>
+			<tr class="">
 				<td></td>
-				<td>안내</td>
+				<td>영상/오디오 컨텐츠 리스트</td>
 				<td></td>
 				<td></td>
-				<td><a href="./html/FCT/new-FCT-010.html" target="_blank"></a></td>
-				<td>2023-07-05</td>
+				<td><a href="./html/FCT/new-FCT-002.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
+				<td>20230623 스몰배너추가</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>영상/오디오 컨텐츠 리스트(로그인전)</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-002-1.html" target="_blank"></a></td>
+				<td>2023-08-24</td>
+				<td>20230824 로그인 전 추가</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td>전체 콘텐츠 리스트(팝업)</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-003.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
+				<td>20230824 태그 위치수정<br>20230623 스몰배너추가</td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td rowspan="5">상세</td>
+				<td>칼럼</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-004.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
-				<td>성공</td>
+				<td>영상</td>
 				<td></td>
 				<td></td>
-				<td><a href="./html/FCT/new-FCT-011.html" target="_blank"></a></td>
-				<td>2023-06-05</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td rowspan="6">상세</td>
-				<td>미션</td>
-				<td></td>
-				<td><a href="./html/FHO/new-FHO-031.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
+				<td><a href="./html/FCT/new-FCT-005.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
-				<td>건강 걸음</td>
-				<td>복수</td>
-				<td><a href="./html/FHO/new-FHO-032.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
+				<td>영상 - 운동관련 아닐때(컨텐츠정보 2개 인경우)</td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FCT/new-FCT-005-1.html" target="_blank"></a></td>
+				<td>2023-09-07</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
-				<td>기타</td>
-				<td></td>
-				<td><a href="./html/FHO/new-FHO-033.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
+				<td>오디오</td>
 				<td></td>
 				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>BMI</td>
-				<td>달성조건 복수</td>
-				<td><a href="./html/FHO/new-FHO-034.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
+				<td><a href="./html/FCT/new-FCT-006.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
-				<td>덴탈</td>
 				<td></td>
-				<td><a href="./html/FHO/new-FHO-035.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
+				<td>영상/오디오재생 팝업</td>
 				<td></td>
+				<td><a href="./html/FCT/new-FCT-007.html" target="_blank"></a></td>
+				<td>2023-06-07</td>
 				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>건강콘텐츠</td>
-				<td></td>
-				<td><a href="./html/FHO/new-FHO-036.html" target="_blank"></a></td>
-				<td>2023-07-13</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td rowspan="14">특별미션</td>
-				<td rowspan="2">특별미션 안내</td>
-				<td>coming soon</td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-012.html" target="_blank"></a></td>
-				<td>2023-07-17</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>종료</td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-013.html" target="_blank"></a></td>
-				<td>2023-07-17</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>특별미션</td>
-				<td>일반회원</td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-040.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>특별미션</td>
-				<td>보험가입회원</td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-041.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>운동하기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-050.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>체충1킬로 감량하기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-051.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230829 제목/내용 수정(체중재기)<br>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>10층 이상 계단오르기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-052.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>자전거 타기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-053.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230829 제목/내용 수정(주1회 등산하기)<br>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>스트레칭 하기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-054.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>건강한 샐러드</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-055.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230829 제목/내용 수정(식단 기록하기)<br>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>하루 세 번 물마시기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-056.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>견과류 먹기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-057.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230829 제목/내용 수정(영양제 챙기기)<br>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>명상하기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-058.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
-				<td></td>
-			</tr>
-			<tr class="">
-				<td></td>
-				<td>마음챙김 스트레칭 하기</td>
-				<td></td>
-				<td></td>
-				<td><a href="./html/FCT/new-FCT-059.html" target="_blank"></a></td>
-				<td>2023-08-01</td>
-				<td>20230822 카카오 플로팅버튼 추가</td>
 				<td></td>
 			</tr>
 		</tbody>
-	</table>
-
-	<h2 id="sectionMissionNew">미션 (new)</h2>
-	<table>
-		 <caption></caption>
-		 <colgroup>
-				<col span="1" class="col01">
-				<col span="1" class="col02">
-				<col span="1" class="col03">
-				<col span="1" class="col04">
-				<col span="1" class="col05">
-				<col span="1" class="col06">
-				<col span="1" class="col07">
-				<col span="1" class="colEndDate">
-				<col span="1" class="col08">
-				<col span="1" class="col09">
-		 </colgroup>
-		 <thead>
-				<tr>
-					 <th scope="col">NO</th>
-					 <th scope="col">2depth</th>
-					 <th scope="col">3depth</th>
-					 <th scope="col">4depth</th>
-					 <th scope="col">5depth</th>
-					 <th scope="col">6depth</th>
-					 <th scope="col">URL</th>
-					 <th scope="col">종료일</th>
-					 <th scope="col">비고</th>
-					 <th scope="col">상태</th>
-				</tr>
-		 </thead>
-		 <tbody>
-				<tr>
-					 <td></td>
-					 <td rowspan="4" class="vt">랜딩페이지</td>
-					 <td>미션 있을 경우</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./html/MISSION/MS-001.HTML" target="_blank"></a></td>
-					<td>2023-09-01</td>
-					<td>20230919 배너이미지수정, 태그 위치 수정<br>20230906 태그 교체, 참여버튼 추가<br>230904 문구 수정 및 빈태그 삭제<br>맞춤 건강 미션 박스 수정 / 특별 미션 태그 추가</td>
-					 <td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>미션 없을 경우</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-002.HTML" target="_blank"></a></td>
-					<td>2023-09-01</td>
-					<td>20230919 배너이미지수정, 태그 위치 수정<br>20230906 태그 교체, 참여버튼 추가<br>230904 문구 수정 및 빈태그 삭제<br>맞춤 건강 미션 박스 수정 / 특별 미션 태그 추가</td>
-					<td></td>
-				</tr>
-<tr>
-					<td></td>
-					<td>참여가능한<br>미션 없을 경우</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-002-1.HTML" target="_blank"></a></td>
-					<td>2023-09-19</td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>참여가능한<br>미션 없을 경우</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-002-1.HTML" target="_blank"></a></td>
-					<td>2023-09-19</td>
-					<td>20230919 추가</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td rowspan="3" class="vt">맞춤 건강 미션</td>
-					<td>리스트</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-003.HTML" target="_blank"></a></td>
-					<td>2023-09-04</td>
-					<td>20230907 링크이동 없음 수정<br>20230907 팝업추가<br>20230906 참여버튼 추가</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td rowspan="2">상세</td>
-					<td>맞춤 상세</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-004.HTML" target="_blank"></a></td>
-					<td>2023-09-04</td>
-					<td>20230920 문구수정<br>20230907 팝업추가<br>20230906 문구수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>달성 현황</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-005.HTML" target="_blank"></a></td>
-					<td>2023-09-04</td>
-					<td>20230920 문구수정<br>20230907 팝업추가<br>20230906 문구수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td rowspan="7" class="vt">특별 미션</td>
-					<td>리스트</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-010.HTML" target="_blank"></a></td>
-					<td>2023-09-04</td>
-					<td>20230913 플친인증 버튼,클래스 추가<br>20230907 링크이동 없음 수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td rowspan="2">참여 전<br>상세</td>
-					<td>카카오 플친</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-011.HTML" target="_blank"></a></td>
-					<td>2023-09-05</td>
-					<td>20230907 관리자등록 영역수정<br>20230906 문구수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>직접</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-012.HTML" target="_blank"></a></td>
-					<td>2023-09-05</td>
-					<td>20230918 건강컨텐츠 관리자등록영역 클래스추가<br>20230907 관리자등록 영역수정, 팝업 추가<br>20230906 문구수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td rowspan="3">참여 중<br>상세<br>(나의 미션 현황)</td>
-					<td>사진 업로드 팝업</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-013.HTML" target="_blank"></a></td>
-					<td>2023-09-05</td>
-					<td>20230920 문구수정<br></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>직접 인증</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-014.HTML" target="_blank"></a></td>
-					<td>2023-09-05</td>
-					<td>20230920 문구수정<br>20230918 사진업로드 리스트 수정<br>20230918 리스트 태그 수정<br>20230906 문구수정</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>카카오 플친 인증</td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/MISSION/MS-015.HTML" target="_blank"></a></td>
-					<td>2023-09-13</td>
-					<td>20230920 문구수정<br></td>
-					<td></td>
-				</tr>
-		 </tbody>
-	</table><!-- //미션 -->
+	</table><!-- //건강컨텐츠 -->
 
 	<h2 id="sectionMypage">로그인/마이페이지</h2>
 	<table>
@@ -2081,94 +1842,94 @@ table tbody td.vt {
 		</thead>
 		<tbody>
 			<tr class="">
-					<td></td>
-					<td rowspan="3">로그인</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-011.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td>20230609 이미지경로 수정<br>20230620 문구수정/SNS 로그인 안내 팝업</td>
-					<td></td>
+				<td></td>
+				<td rowspan="3">로그인</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-011.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td>20230609 이미지경로 수정<br>20230620 문구수정/SNS 로그인 안내 팝업</td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>이메일 인증</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-012.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>이메일 인증</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-012.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>로그인 변경된 약관 동의</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-026.html" target="_blank"></a></td>
-					<td>2023-08-10</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>로그인 변경된 약관 동의</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-026.html" target="_blank"></a></td>
+				<td>2023-08-10</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td rowspan="5">회원가입</td>
-					<td>앱 접근 권한 안내</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-020.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td rowspan="5">회원가입</td>
+				<td>앱 접근 권한 안내</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-020.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>약관동의</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-021.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>약관동의</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-021.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>본인인증</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-023.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>본인인증</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-023.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>필수정보01</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-024.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>필수정보01</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-024.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
-					<td></td>
-					<td>필수정보02</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td><a href="./html/FR/FR-025.html" target="_blank"></a></td>
-					<td>2023-06-05</td>
-					<td></td>
-					<td></td>
+				<td></td>
+				<td>필수정보02</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FR/FR-025.html" target="_blank"></a></td>
+				<td>2023-06-05</td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr class="">
 				<td></td>
@@ -2327,7 +2088,7 @@ table tbody td.vt {
 				<td></td>
 				<td></td>
 			</tr>
-			<tr class="pb_end">
+			<tr>
 				<td></td>
 				<td>자주 묻는 질문</td>
 				<td></td>
@@ -2355,7 +2116,7 @@ table tbody td.vt {
 				<td></td>
 				<td><a href="./html/MY/MY-151.html" target="_blank"></a></td>
 				<td>2023-06-05</td>
-				<td>20230821 문구 수정<br/></td>
+				<td>20230821 문구 수정<br /></td>
 				<td></td>
 			</tr>
 			<tr class="">
@@ -2409,7 +2170,7 @@ table tbody td.vt {
 				<td></td>
 				<td></td>
 			</tr>
-			<tr class="pb_end">
+			<tr>
 				<td></td>
 				<td>북마크</td>
 				<td></td>
@@ -2421,233 +2182,275 @@ table tbody td.vt {
 				<td></td>
 			</tr>
 		</tbody>
-	</table>
+	</table><!-- 로그인/마이페이지 -->
+
+	<h2 id="sectionTutorial">튜토리얼</h2>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="">
+				<td></td>
+				<td rowspan="3" class="vt">튜토리얼</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-200.html" target="_blank"></a></td>
+				<td>2023-06-19</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr class="">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./html/FHO/new-FHO-201.html" target="_blank"></a></td>
+				<td>2023-06-19</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table><!-- //튜토리얼 -->
 
 	<h2 id="guide">Guide</h2>
 	<table>
-		 <caption></caption>
-		 <colgroup>
-				<col span="1" class="col01">
-				<col span="1" class="col02">
-				<col span="1" class="col03">
-				<col span="1" class="col04">
-				<col span="1" class="col05">
-				<col span="1" class="col06">
-				<col span="1" class="col07">
-				<col span="1" class="colEndDate">
-				<col span="1" class="col08">
-				<col span="1" class="col09">
-		 </colgroup>
-		 <thead>
-				<tr>
-					 <th scope="col">NO</th>
-					 <th scope="col">2depth</th>
-					 <th scope="col">3depth</th>
-					 <th scope="col">4depth</th>
-					 <th scope="col">5depth</th>
-					 <th scope="col">6depth</th>
-					 <th scope="col">URL</th>
-					 <th scope="col">종료일</th>
-					 <th scope="col">비고</th>
-					 <th scope="col">상태</th>
-				</tr>
-		 </thead>
-		 <tbody>
-        <tr>
-          <td></td>
-          <td rowspan="16" class="vt">Guide</td>
-          <td>typography</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/typography.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>color</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/color.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>icon</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/icon.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>new_form</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/new_form.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>new_button</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/new_button.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>footer</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/footer.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td>20230911 푸터 웰니스명칭수정, 미션추가</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>header</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/header.html" target="_blank" style="color: blue;"></a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>button</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><a href="./guide/button.html" target="_blank">button.html</a></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-				<tr>
-					 <td></td>
-					 <td>form</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/form.html" target="_blank">form.html</a></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>layout</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/layout.html" target="_blank">layout.html</a></td>
-					 <td></td>
-					 <td>default</td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>layout</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/layout_a.html" target="_blank">layout_a.html</a></td>
-					 <td></td>
-					 <td>bg type</td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>layout</td>
-					 <td>Tab 01</td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/layout_tab-01.html" target="_blank">layout_tab-01.html</a></td>
-					 <td></td>
-					 <td>목표FMS(.type_goal)에서 탭 레이아웃</td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>layout</td>
-					 <td>Tab 02</td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/layout_tab-02.html" target="_blank">layout_tab-02.html</a></td>
-					 <td></td>
-					 <td>목표FMS(.type_goal)에서 탭 레이아웃</td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>nav</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/footer_nav.html" target="_blank">footer_nav.html</a></td>
-					 <td></td>
-					 <td>20210819 footer nav (scroll-top)인터랙션 변경<br>20210810 푸터 코치 이미지 추가, 말풍선 case
-							추가<br>20210802 scroll top
-							수정
-					 </td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>reload</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/reload.html" target="_blank">reload.html</a></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>loading</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/loading.html" target="_blank">loading.html</a></td>
-					 <td></td>
-					 <td>20210909 ui 수정<br>20210908 신규 제작</td>
-					 <td></td>
-				</tr>
-				<tr>
-					 <td></td>
-					 <td>loading</td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td><a href="./guide/loading2.html" target="_blank">loading2.html</a></td>
-					 <td></td>
-					 <td>20210909 페이지 loading</td>
-					 <td></td>
-				</tr>
-		 </tbody>
+		<caption></caption>
+		<colgroup>
+			<col span="1" class="col01">
+			<col span="1" class="col02">
+			<col span="1" class="col03">
+			<col span="1" class="col04">
+			<col span="1" class="col05">
+			<col span="1" class="col06">
+			<col span="1" class="col07">
+			<col span="1" class="colEndDate">
+			<col span="1" class="col08">
+			<col span="1" class="col09">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td rowspan="16" class="vt">Guide</td>
+				<td>typography</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/typography.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>color</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/color.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>icon</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/icon.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>new_form</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/new_form.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>new_button</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/new_button.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>footer</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/footer.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td>20230911 푸터 웰니스명칭수정, 미션추가</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>header</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/header.html" target="_blank" style="color: blue;"></a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>button</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/button.html" target="_blank">button.html</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>form</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/form.html" target="_blank">form.html</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>layout</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/layout.html" target="_blank">layout.html</a></td>
+				<td></td>
+				<td>default</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>layout</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/layout_a.html" target="_blank">layout_a.html</a></td>
+				<td></td>
+				<td>bg type</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>layout</td>
+				<td>Tab 01</td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/layout_tab-01.html" target="_blank">layout_tab-01.html</a></td>
+				<td></td>
+				<td>목표FMS(.type_goal)에서 탭 레이아웃</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>layout</td>
+				<td>Tab 02</td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/layout_tab-02.html" target="_blank">layout_tab-02.html</a></td>
+				<td></td>
+				<td>목표FMS(.type_goal)에서 탭 레이아웃</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>nav</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/footer_nav.html" target="_blank">footer_nav.html</a></td>
+				<td></td>
+				<td>20210819 footer nav (scroll-top)인터랙션 변경<br>20210810 푸터 코치 이미지 추가, 말풍선 case
+					추가<br>20210802 scroll top
+					수정
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>reload</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/reload.html" target="_blank">reload.html</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>loading</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/loading.html" target="_blank">loading.html</a></td>
+				<td></td>
+				<td>20210909 ui 수정<br>20210908 신규 제작</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>loading</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><a href="./guide/loading2.html" target="_blank">loading2.html</a></td>
+				<td></td>
+				<td>20210909 페이지 loading</td>
+				<td></td>
+			</tr>
+		</tbody>
 	</table><!-- //Guide -->
 
-	<!-- <span class="rate"></span> -->
 	<h2 id="section00">공통</h2>
 	<table style="display: none;">
 		<caption></caption>
@@ -2665,16 +2468,16 @@ table tbody td.vt {
 		</colgroup>
 		<thead>
 			<tr>
-					<th scope="col">NO</th>
-					<th scope="col">2depth</th>
-					<th scope="col">3depth</th>
-					<th scope="col">4depth</th>
-					<th scope="col">5depth</th>
-					<th scope="col">6depth</th>
-					<th scope="col">URL</th>
-					<th scope="col">종료일</th>
-					<th scope="col">비고</th>
-					<th scope="col">상태</th>
+				<th scope="col">NO</th>
+				<th scope="col">2depth</th>
+				<th scope="col">3depth</th>
+				<th scope="col">4depth</th>
+				<th scope="col">5depth</th>
+				<th scope="col">6depth</th>
+				<th scope="col">URL</th>
+				<th scope="col">종료일</th>
+				<th scope="col">비고</th>
+				<th scope="col">상태</th>
 			</tr>
 		</thead>
 		<tbody class="web">
@@ -2745,7 +2548,7 @@ table tbody td.vt {
 				<td>20211019 풀 팝업 내 풀 팝업 호출 테스트</td>
 				<td></td>
 			</tr>
-			<tr class="pb_end">
+			<tr>
 				<td></td>
 				<td>load</td>
 				<td></td>
@@ -2759,10 +2562,7 @@ table tbody td.vt {
 			</tr>
 		</tbody>
 	</table><!-- //공통 -->
-
 	<p>&nbsp;</p>
 	</div>
-
 </body>
-
 </html>

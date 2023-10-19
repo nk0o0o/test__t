@@ -6619,8 +6619,8 @@
 	.tab_panel.bg_gray{
 		background-color: $color-bg;
 		padding: 1.25rem 1.5rem;
-		min-height: calc(100dvh - 144px);
-padding-bottom: 2.25rem;
+		min-height: calc(100dvh - 102px);
+		padding-bottom: 2.25rem;
 	}
 	.ui-btn.typeInfo::before{
 		width: 1.5rem;
@@ -6671,6 +6671,10 @@ padding-bottom: 2.25rem;
 				@include typo_small_R();
 				line-height: 1.5;
 			}
+		}
+	}
+	.plan_record, .plan_medicine{
+		.box_tit{
 			button{
 				height: 1.75rem;
 				padding: 0 0.75rem;
@@ -6738,6 +6742,7 @@ padding-bottom: 2.25rem;
 		}
 		.box_tit{
       background: none;
+			display: inline-flex;
     }
 		&_slider{
 			margin-top: 1rem;
@@ -8265,8 +8270,9 @@ padding-bottom: 2.25rem;
 		width: 8.75rem;
 	}
 }
-//수면관리
-.health_walk{
+// 수면관리
+.sleep_time{
+	border-bottom: 1px solid $color-border;
 	.hc_head{
 		position: relative;
 	}
@@ -8278,11 +8284,47 @@ padding-bottom: 2.25rem;
 	.box_nodata{
 		margin-top: 16px;
 	}
-}
-.ms_box_list > li .box .desc .tit {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 1.4;
-  white-space: normal;
+	.state{
+		@include flexBetween;
+		margin-top: 16px;
+		.time{
+			@include typo_h5_M();
+			color: $color-gray-950;
+			span{
+				@include typo_h1_B();
+			}
+		}
+		.icon{
+			width: 48px;
+			height: 48px;
+			img{
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+	.box_container{		
+		@include flexBetween;
+		margin-top: 16px;
+		padding: 14px 12px;		
+		border-radius: 8px;
+		.left{
+			display: flex;
+			align-items: center;
+			@include typo_small_R();
+			color: $color-gray-500;
+			&::before{
+				content: '';
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin-right:  7px;
+				background: url($v3_ic_24_line_common_clock_gray200) center/contain no-repeat;				
+			}
+		}
+		.right{
+			@include typo_small_M();
+			color: $color-gray-900;
+		}
+	}
 }

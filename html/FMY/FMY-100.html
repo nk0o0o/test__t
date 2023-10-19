@@ -93,31 +93,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 20230220 삭제 -->
-                        <!--<div class="survey_wrap">
-                            <div class="content_tit">
-                                <h3 class="tit_cont_02">이번 상담예약은 몇&nbsp;번째 예약이신가요?</h3>
-                            </div>
-                            <div class="radio_box col-2">
-                                <div class="item">
-                                    <input type="radio" id="rdo_07" class="radioItem" name="answer2">
-                                    <label for="rdo_07">첫 번째 상담</label>
-                                </div>
-                                <div class="item">
-                                    <input type="radio" id="rdo_08" class="radioItem" name="answer2">
-                                    <label for="rdo_08">두 번째 상담</label>
-                                </div>
-                                <div class="item">
-                                    <input type="radio" id="rdo_09" class="radioItem" name="answer2">
-                                    <label for="rdo_09">세 번째 상담</label>
-                                </div>
-                                <div class="item">
-                                    <input type="radio" id="rdo_10" class="radioItem" name="answer2">
-                                    <label for="rdo_10">3회 이상 상담했음</label>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- //20230220 삭제 -->
                     </div>                    
                 </div>
         </div>
@@ -127,34 +102,6 @@
                 <button type="button" onclick="netiveUI.plugins.popToast('#toast002');" class="btn dent_next" disabled>다음</button><!-- 20230328 class 추가 -->
             </div>
         </div>
-
-        <!-- 진단/상담 완료 컨펌 팝업 --><!-- 20230220 팝업 주석 처리
-        <div id="alertConfirm" class="health_alert mypage_popup" style="display: none;">
-            <div class="inner">
-                <h1 class="tit_cont_03">'{진단/상담}'의 상담예약을 완료하시겠습니까?</h1>
-                <div class="btn_wrap">
-                    <button type="button" class="btn_pop_light ui-close">취소</button>
-                    <button type="button" onclick="netiveUI.plugins.popAlert('#alertComplete');" class="btn_pop_dark ui-close">상담예약 완료</button>
-                </div>
-            </div>
-        </div>
-        -->
-        <!-- //진단/상담 완료 컨펌 팝업 -->
-        <!-- 예약완료 팝업 --><!-- 20230220 팝업 주석 처리 
-        <div id="alertComplete" class="health_alert mypage_popup" style="display: none;">
-            <div class="inner">
-                <h1 class="tit_cont_03">예약을 완료 했습니다.</h1>
-                <p class="msg">
-                    부득이한 사정으로 예약을 취소하시려<br>
-                    면 진단/상담 예약일 하루 전 오후 6시<br>
-                    까지 취소가 가능합니다.
-                </p>
-                <div class="btn_wrap">
-                    <button type="button" class="btn_pop_dark ui-close">확인</button>
-                </div>
-            </div>
-        </div>-->
-        <!-- //예약완료 팝업 -->
     </div>
     <script>
          $(document).ready(function(){
@@ -173,22 +120,7 @@
                 }
             });
 
-            /*
-            //질문 페이징
-            var $surveyNum = $('.survey_wrap').length;
-            $('.survey-pagination-total').html($surveyNum);
-            var $surveyFirstOT = parseFloat($('.survey_wrap').eq(0).offset().top) + parseFloat($('.survey_wrap .content_tit').eq(1).css('margin-top'))
-            var $surOT = new Array();
-            var $surOTB = new Array();
-
-            for(var i=0; i< $('.survey_wrap').length; i++) {
-                ot = $('.survey_wrap').eq(i).offset().top;
-                oth = $('.survey_wrap').eq(i).offset().top + $('.survey_wrap').eq(i).height();
-                $surOT.push(ot);
-                $surOTB.push(oth)
-            }
-            */ /* 20230328 질문 페이징 삭제(한 페이지에 여러개의 설문이 있을 경우 필요한 부분이므로 삭제함) */
-
+            
             $('.survey_slider').on('scroll', function(){
                 var $sT = $(this).scrollTop() + $surveyFirstOT;
 

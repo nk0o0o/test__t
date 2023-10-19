@@ -322,19 +322,19 @@
     }
   }
   .header_box{
-    padding: 40px 24px 0;
+    padding: 2.5rem 1.5rem 0;
     .stt{
       @include flexStart;
       font-family: $font-roboto;
-      font-size: 19px;
-      color: $color-black2;
+      @include typo_h4_B();
+      color: $color-gray-950;
       .link{
         display: inline-block;
-        width: 24px;
-        height: 24px;
-        margin-left: 3px;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-left: 0.1875rem;
         background: url(../img/v3_ico_question_line01.png) 50% 50% no-repeat;
-        background-size: 24px;
+        background-size: 1.5rem;
       }
     }
   }

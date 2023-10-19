@@ -21,10 +21,29 @@
     </header>
     <div class="health_container">
       <div class="thyroid_care care_plan">
-        <p class="section_tit">
+        <!-- 20230925 복약알림 제목 툴팁 수정 -->
+        <div class="section_tit">
           복약 알림
-          <button type="button" class="tooltip" onclick="netiveUI.plugins.popAlert('#alertModal');"></button>
-        </p>
+          <!-- 삭제 <button type="button" class="tooltip" onclick="netiveUI.plugins.popAlert('#alert001');"></button> -->
+          <div class="new_tool_wrap">
+            <div class="new_tool_cont">
+              <div class="ui-m">
+                <div class="ui-tooltip-wrap">
+                  <button type="button" class="ui-btn typeInfo"><span class="hidden">설명 보기</span></button>
+                  <div class="toolTip">
+                    <dl>
+                      <dt>복약 알림이란?</dt>
+                      <dd>복약 중인 약 정보, 시간을 설정해주세요.<br>
+                        정해진 시간에 복약 알림도 받고, 꾸준하게 복약 관리도 할 수 있습니다.</dd>
+                    </dl>
+                    <button type="button" class="ui-btn typeModalClose"><span class="hidden">닫기</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// 20230925 복약알림 제목 툴팁 수정 -->
         <div class="list_desc">※ 알림내역 0건<button type="button">알림 추가</button></div><!-- 20230906 문구수정 -->
 
         <div class="medicine_card_wrap">
@@ -90,19 +109,5 @@
     </div>
   </div>
   <!--// alert 팝업 : 복약 알림 삭제-->
-
-  <!-- 복약 알림? 모달팝업 -->
-  <div class="health_alert" id="alert001" style="display: none;">
-    <div class="inner">
-       <h2 class="pop_tit">복약 알림이란?
-        <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
-       </h2>
-       <div class="msg">
-        <strong>복약 중인 약 정보, 시간을 설정해주세요.</strong><br>
-        정해진 시간에 복약 알림도 받고, 꾸준하게 복약 관리도 할 수 있습니다.
-       </div>
-    </div>
- </div>
- <!-- //복약 알림? 모달팝업 -->
 </body>
 </html>

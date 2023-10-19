@@ -1010,3 +1010,31 @@
     }
   }
 }
+
+//추천 컨텐츠 슬라이드
+.recommend_slide{
+  padding-bottom: 2rem;
+  .swiper-wrapper {
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    li {
+      position: relative;
+      width: 9.5rem;
+      img {
+        display: block;
+        width: 100%;
+      }
+      .desc {
+        margin-top: 0.75rem;
+        .title {
+          @include typo_SB();
+          color: $color-gray-950;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

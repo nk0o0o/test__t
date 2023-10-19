@@ -114,7 +114,7 @@ body {background-color: $bg-white;}
   background: $bg-white;
   box-sizing: border-box;
   z-index: 999;
-  h1 {
+  h1, h3 {
     max-width: calc(100% - 24px);
     @include fontStyle($color-black2, $fs-sm, $fw-b, 30px);
     letter-spacing: -0.6px;
