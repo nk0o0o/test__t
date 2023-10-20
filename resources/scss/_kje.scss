@@ -1361,9 +1361,9 @@ a.cs {
     cursor: pointer;
     z-index: 99;
   }
-  .btn_ico_bookmark_b.on {
+  /* .btn_ico_bookmark_b.on {
     background-position: 0 100%;
-  }
+  } */
   .txt_s {
     font-size: 14px;
     line-height: 22px;
@@ -2266,14 +2266,6 @@ a.cs {
     }
     .txt_wrap {
       padding-right: 48px;
-    }
-    .btn_ico_bookmark_b {
-      width: 24px;
-      height: 24px;
-      top: 30px;
-      right: 0;
-      left: auto;
-      bottom: auto;
     }
     &.history_no {
       .txt_wrap {
@@ -3195,16 +3187,17 @@ a.cs {
 }
 
 .btn_ico_bookmark_b {
-  width: 24px;
-  height: 24px;
-  background: url($imgpath + "ico_bookmark_big.png")center center/100% no-repeat;
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background-position: 0 0;
-  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: #fff url(../img/v3_ico_16_bookmark.png) center/16px no-repeat;
+  border-radius: 100%;
+  top: 8px;
+  right: 8px;
+  bottom: auto;
+  left: auto;
   z-index: 99;
-
+  cursor: pointer;
   // 20210906 pd_type 클래스 추가
   &.pd_type {
     right: 24px;
@@ -3212,10 +3205,10 @@ a.cs {
   }
 }
 
-.btn_ico_bookmark_b.on {
+/* .btn_ico_bookmark_b.on {
   background-position: 0 100%;
 }
-
+ */
 .health_info_wrap {
   display: block;
 

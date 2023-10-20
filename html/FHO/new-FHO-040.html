@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="../../resources/css/swiper.min.css">
 </head>
 <body>
-  <div class="health_wrap type_main_i type_home">
+  <div class="health_wrap type_main_i">
     <header class="health_header">
       <div class="user_point">
         <span>1,000</span>
@@ -163,9 +163,11 @@
           <!-- //.tabs.dep1 -->
         </div><!-- //.tab_wrap -->
         
-        <div class="recommend_slide">
-          <div class="section_tit">Tune H 건강 콘텐츠와 함께 운동해 보세요!</div>          
-          <div class="swiper-container set01">
+        <div class="recom_cont_slide">
+          <div class="hc_head">
+            <h3 class="stt"><em>XXX</em>님의 수면 관리를 위한 추천 콘텐츠</h3>
+          </div>
+          <div class="swiper set01">
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
                 <button role="button" class="btn_ico_bookmark_b on"></button>
@@ -322,7 +324,7 @@
     </div>
   </div>
 
-  <!-- 상단 카테고리 슬라이드 -->
+<!-- 상단 카테고리 슬라이드 -->
 <script>
   $(document).ready(function () {  
 
@@ -339,7 +341,7 @@
 <!-- 추천컨텐츠 슬라이드 -->
 <script>
   $(document).ready(function () { 
-  var swiper = new Swiper(".detail_slide .set01", {
+  var swiper = new Swiper(".recom_cont_slide .set01", {
       slidesPerView: "auto",
       spaceBetween: 12,
       slidesOffsetAfter: 24,

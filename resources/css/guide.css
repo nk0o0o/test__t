@@ -4219,25 +4219,24 @@ div > .banner_area.fixed {
   background-color: #0095ff;
 }
 
-.recommend_slide {
-  padding-bottom: 2rem;
+.recom_cont_slide {
+  padding: 2.5rem 0 2rem;
 }
-.recommend_slide .swiper-wrapper {
-  margin-top: 0.75rem;
+.recom_cont_slide .swiper-wrapper {
   padding-left: 1.5rem;
 }
-.recommend_slide .swiper-wrapper li {
+.recom_cont_slide .swiper-wrapper li {
   position: relative;
   width: 9.5rem;
 }
-.recommend_slide .swiper-wrapper li img {
+.recom_cont_slide .swiper-wrapper li img {
   display: block;
   width: 100%;
 }
-.recommend_slide .swiper-wrapper li .desc {
+.recom_cont_slide .swiper-wrapper li .desc {
   margin-top: 0.75rem;
 }
-.recommend_slide .swiper-wrapper li .desc .title {
+.recom_cont_slide .swiper-wrapper li .desc .title {
   letter-spacing: -0.046875rem;
   font-family: "Suit tuneh";
   font-size: 1rem;
@@ -6480,6 +6479,11 @@ a.cs {
 /**********************************
   마이페이지 .type_mypage
 ***********************************/
+.type_mypage {
+  /* .btn_ico_bookmark_b.on {
+    background-position: 0 100%;
+  } */
+}
 .type_mypage .btn_ico_bookmark_b {
   width: 24px;
   height: 24px;
@@ -6490,9 +6494,6 @@ a.cs {
   background-position: 0 0;
   cursor: pointer;
   z-index: 99;
-}
-.type_mypage .btn_ico_bookmark_b.on {
-  background-position: 0 100%;
 }
 .type_mypage .txt_s {
   font-size: 14px;
@@ -7423,14 +7424,6 @@ a.cs {
 .type_mypage .health_info_wrap .txt_wrap {
   padding-right: 48px;
 }
-.type_mypage .health_info_wrap .btn_ico_bookmark_b {
-  width: 24px;
-  height: 24px;
-  top: 30px;
-  right: 0;
-  left: auto;
-  bottom: auto;
-}
 .type_mypage .health_info_wrap.history_no .txt_wrap {
   width: 100%;
   padding-right: 0;
@@ -8257,25 +8250,27 @@ a.cs {
 }
 
 .btn_ico_bookmark_b {
-  width: 24px;
-  height: 24px;
-  background: url("../img/ico_bookmark_big.png") center center/100% no-repeat;
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  background-position: 0 0;
-  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: #fff url(../img/v3_ico_16_bookmark.png) center/16px no-repeat;
+  border-radius: 100%;
+  top: 8px;
+  right: 8px;
+  bottom: auto;
+  left: auto;
   z-index: 99;
+  cursor: pointer;
 }
 .btn_ico_bookmark_b.pd_type {
   right: 24px;
   bottom: 24px;
 }
 
-.btn_ico_bookmark_b.on {
+/* .btn_ico_bookmark_b.on {
   background-position: 0 100%;
 }
-
+ */
 .health_info_wrap {
   display: block;
 }
