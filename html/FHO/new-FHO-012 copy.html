@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메인 - 로그인후 전체결과 </title>
+	<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script src="../../resources/js/jquery-circle-progress.js"></script>
+	<script src="../../resources/js/ui.common.js"></script>
+	<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+	<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i type_home">
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti active">알림</div><!-- 알림이 있을경우 active -->
+    </header>
+
+    <div class="health_container align_right">
+			<div class="main_cont">
+				<div class="main_cont_type">
+					<div thumbsSlider="" class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<!-- 웰빙 - 건강걸음 -->
+							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
+								<span class="mtxt">웰빙</span>
+							</div>
+							<!-- 웰빙 - 수면관리 -->
+							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
+								<span class="mtxt">웰빙</span>
+							</div>
+							<!-- 웰빙 - Dental MBTI -->
+							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin04 결과에 따라 클래스 적용 -->
+								<span class="mtxt">웰빙</span>
+							</div>
+							<!-- 마음건강 - 마음피트니스 -->
+							<div class="swiper-slide menu_01 fin01"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+								<span class="mtxt">마음<br>건강</span>
+							</div>
+							<!-- 마음건강 - AI건강카메라 -->
+							<div class="swiper-slide menu_01 fin01"><!-- fin01 ~ fin05 결과에 따라 클래스 적용 -->
+								<span class="mtxt">마음<br>건강</span>
+							</div>
+							<!-- 영양관리 -  BMI -->
+							<div class="swiper-slide menu_04 fin01"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+								<span class="mtxt">영양<br>관리</span>
+							</div>
+							<!-- 영양관리 - AI영양소 설계 -->
+							<div class="swiper-slide menu_04">
+								<span class="mtxt">영양<br>관리</span>
+							</div>
+							<div class="swiper-slide menu_05 member"><!-- 일반고객 member(x) 라이나보험고객 member(0) 클래스 -->
+								<span class="mtxt">프리미엄</span>
+							</div>
+						</div>
+					</div>
+          <!-- 하단카드 -->
+					<div class="swiper mySwiper2">
+						<div class="swiper-wrapper">
+							<!-- 웰빙 -->
+							<div class="swiper-slide box_01">
+								<div class="inner">
+									<div class="htit">
+										<p>건강걸음</p>
+									</div>
+									<div class="desc">
+										AI 건강 카메라로 스트레스 레벨, 산소 포화도, 분당 호흡수, 심박수, 심박변이 등 현재 건강 상태를 측정합니다.
+									</div>
+								</div>
+								<button type="button" class="btn_more">측정하기</button>
+							</div>
+							<div class="swiper-slide box_01">
+								<div class="inner">
+									<div class="htit">
+										<p>수면관리</p>
+									</div>
+									<div class="desc">
+										<p class="ic_lev lev01">낮음</p><!-- lev01/Row, lev02/Normal, lev03/Mild, lev04/High, lev05/VeryHigh -->
+										평소 스트레스 관리를<Br>잘 하였군요!
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+							<div class="swiper-slide box_01">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+									</div>
+									<div class="desc">
+										치과 의사가 개발한 Dental MBTI를<br>통해 나의 구강 타입에 꼭 맞는 관리 방법을 확인해보세요.
+                  </div>
+								</div>
+								<button type="button" class="btn_more">분석하기</button>
+							</div>
+							<!-- 마음건강 -->
+							<div class="swiper-slide box_02">
+								<div class="inner bmi_cont normal">
+									<div class="htit">
+										<p>마음피트니스</p>
+									</div>
+                  <div class="desc">
+										AI가 분석한 BMI 지수와 주요 질환 발병 가능성을 확인해보세요
+									</div>
+								</div>
+								<button type="button" class="btn_more">분석하기</button>
+							</div>
+							<div class="swiper-slide box_02">
+								<div class="inner">
+									<div class="htit">
+										<p>AI 건강 카메라</p>
+									</div>
+									<div class="desc">
+										<p class="ic_lev lev01">낮음</p><!-- lev01/Row, lev02/Normal, lev03/Mild, lev04/High, lev05/VeryHigh -->
+										평소 스트레스 관리를<Br>잘 하였군요!
+									</div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+							<!-- 영양관리 -->
+							<div class="swiper-slide box_03">
+								<div class="inner bmi_cont normal">
+									<div class="htit">
+										<p>BMI<em>20.65</em></p>
+										<button type="button" class="btn_form_line">수정</button>
+									</div>
+									<div class="bmi_range_wrap">
+										<div class="bmi_range">
+											<div class="bmi_range_tit">정상 범위</div>
+											<div class="bmi_range_num">18.5~22.9</div>
+										</div>
+										<div class="bmi_range">
+											<div class="bmi_range_tit">또래 평균대비</div>
+											<div class="bmi_range_num">-3.0<i class="bmi_icon_arr down"></i></div>
+										</div>
+									</div>
+								</div>
+								<button type="button" class="btn_more">분석하기</button>
+							</div>
+							<div class="swiper-slide box_03">
+								<div class="inner">
+									<div class="htit">
+										<p>AI 영양소 설계</p>
+									</div>
+									<div class="desc">꾸준한 건강관리를 위해<br>나만의 맞춤형 영양성분 큐레이션 결과를<br>확인해보세요.</div>
+								</div>
+								<button type="button" class="btn_more">AI 영양소 설계 시작하기</button>
+							</div>
+              <!-- 프리미엄 -->
+              <div class="swiper-slide box_04">
+								<div class="inner">
+									<div class="htit">
+										<p>프리미엄</p>
+									</div>
+									<div class="desc">Tune H만의 특별하고 다양한 프리미엄 건강 관리 서비스를 이용해보세요.</div><!-- 프리미엄 일반고객 문구 -->
+								</div>
+								<button type="button" class="btn_more">프리미엄 서비스 자세히 보기</button>
+							</div>
+						</div><!-- //.swiper-wrapper -->
+						<div class="swiper-pagination"></div>
+					</div>
+          <!--// 하단카드 -->
+				</div>
+			</div>
+		</div>
+  </div>
+
+
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 0,
+			slidesPerView: 'auto',
+		});
+		var swiper2 = new Swiper(".mySwiper2", {
+			slidesPerView: 'auto',
+			spaceBetween: 16,
+			centeredSlides: true,
+			thumbs: {
+				swiper: swiper,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+			},
+      on:{
+        init: function(){
+          $('.mySwiper .swiper-wrapper').addClass('wellbeing');
+				
+        },
+        slideChangeTransitionEnd: function(){					
+          var $thumbsSlider = $('.mySwiper .swiper-wrapper');
+          
+          $thumbsSlider.removeClass('wellbeing nutrition mindcare premium');
+
+          function $slideResult(){
+            var $thumbsSlider = $('.mySwiper .swiper-wrapper');
+            var $swiperslide = $thumbsSlider.find('.slide-active');
+            $thumbsSlider.removeClass('fin01 fin02 fin03 fin04 fin05 member');
+            if($swiperslide.hasClass('fin01')) {
+              $thumbsSlider.addClass('fin01');
+            }else if($swiperslide.hasClass('fin02')) {
+              $thumbsSlider.addClass('fin02');
+            }else if($swiperslide.hasClass('fin03')) {
+              $thumbsSlider.addClass('fin03');
+            }else if($swiperslide.hasClass('fin04')) {
+              $thumbsSlider.addClass('fin04');
+            }else if($swiperslide.hasClass('fin05')) {
+              $thumbsSlider.addClass('fin05');
+            }else if($swiperslide.hasClass('member')) {
+              $thumbsSlider.addClass('member');
+            }
+          }
+          
+					var activeSlide = $(this)[0].slides[this.realIndex];
+					if($(activeSlide).hasClass('box_01')){
+						$thumbsSlider.addClass('wellbeing');
+						$slideResult()	
+					}else if($(activeSlide).hasClass('box_02')){
+						$thumbsSlider.addClass('mindcare');
+						$slideResult()
+					}else if($(activeSlide).hasClass('box_03')){
+						$thumbsSlider.addClass('nutrition');
+						$slideResult()	
+					}else if($(activeSlide).hasClass('box_04')){
+						$thumbsSlider.addClass('premium');
+						$slideResult()	
+					}
+        }
+      }
+		});
+		
+    // 20230803 메인 배너 슬라이드 추가
+		var swiper3 = new Swiper(".home_banner", {
+			spaceBetween: 24,
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+		var swiper4 = new Swiper(".notice_slide", {
+			direction: "vertical",
+			slidePerView: 1,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+		});
+		
+	</script>
+</body>
+
+</html>

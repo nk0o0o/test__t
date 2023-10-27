@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>웰니스 - 프리미엄</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+<script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+<link rel="stylesheet" href="../../resources/css/guide.css">
+</head>
+<body>
+  <div class="health_wrap type_main_i">
+    <header class="health_header">
+      <div class="user_point">
+        <span>1,000</span>
+      </div>
+      <div class="hd_noti">알림</div>
+    </header>
+    <div class="health_container align_right">
+      <!-- 20231024 상단 탭 수정 -->
+      <div class="wellness_tab">
+        <div class="sect_cate">
+          <ul>
+            <li>
+              <a href="#n" class="nav wellbeing"> <!-- 활성 탭 class: on -->
+                <p class="ico"></p>
+                <span>웰빙</span>
+              </a>
+            </li>
+            <li>
+              <a href="#n" class="nav mental">
+                <p class="ico"></p>
+                <span>마음건강</span>
+              </a>
+            </li>
+            <li>
+              <a href="#n" class="nav nutrition">
+                <p class="ico"></p>
+                <span>영양관리</span>
+              </a>
+            </li>
+            <li>
+              <a href="#n" class="nav premium on">
+                <p class="ico"></p>
+                <span>프리미엄</span>
+              </a>
+            </li>
+          </ul>
+        </div><!-- //.sect_cate -->
+      </div><!-- //.wellness_tab -->
+      <!-- //20231024 상단 탭 수정 -->
+      <div class="premium_service">
+        <!-- 20230822 수정 : 프리미엄 서비스 디자인변경 -->
+        <div class="service_slider_wrap">
+          <div class="swiper-container service_slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="inner">
+                  <!-- 20230927 내용 감싸는 a 태그 추가 -->
+                  <a href="#">
+                    <p class="box_desc">갑상선 케어 프로그램</p>
+                    <div class="section_tit">맞춤형 케어 프로그램</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner01.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">서비스 알아보기</button>
+                  </a>
+                  <!-- //20230927 내용 감싸는 a 태그 추가 -->
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <a href="#">
+                    <p class="box_desc">AI 영양소 설계</p>
+                    <div class="section_tit">필요 영양성분을 추천받는<br>건강 맞춤 큐레이션</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner02.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">서비스 알아보기</button>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <a href="#">
+                    <p class="box_desc">건강 콜센터</p>
+                    <div class="section_tit">쉽고 친절한 건강상담과<br/>상급종합병원 진료 예약까지</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner03.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">상담 및 예약하기</button>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <a href="#">
+                    <p class="box_desc">라이나생명 홈페이지</p>
+                    <div class="section_tit">꼭 필요한 보험상품과 쉽고 간편한 보험계약 관리까지!</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner04.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">홈페이지 바로가기</button>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <a href="#">
+                    <p class="box_desc">라이나생명 홈페이지</p>
+                    <div class="section_tit">꼭 필요한 보험상품과 쉽고 간편한 보험계약 관리까지!</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner05.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">홈페이지 바로가기</button>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="inner">
+                  <a href="#">
+                    <p class="box_desc">라이나생명 홈페이지</p>
+                    <div class="section_tit">꼭 필요한 보험상품과 쉽고 간편한 보험계약 관리까지!</div><!-- 20230918 div로 태그수정 -->
+                    <div class="img_area">
+                      <img src="../../resources/img/v3_premium_service_Introduce_service_banner06.png" alt="" style="width: 600px;">
+                    </div>
+                    <button type="button">홈페이지 바로가기</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div><!-- //.service_slider -->
+        </div><!-- //.service_slider_wrap -->
+        <div class="service_popular">
+          <h2 class="section_tit">인기 서비스</h2>
+          <ul class="service_popular_list">
+            <li class="ainutrient">
+              <a href="#">
+                <!-- 20230901 코드 수정 -->
+                <figure><img src="../../resources/img/v3_ic_48_fill_premiumsvc_tablet.png" alt></figure>
+                <div class="txt_area">
+                  <p class="box_tit">AI 영양소 설계 & 영양사 화상상담</p>
+                  <p class="box_desc">영양성분 맞춤 큐레이션 결과 확인하고 상담을 통해 맞춤 영양제를 신청하세요.</p>
+                </div>
+                <!-- 20230901 코드 수정 -->
+              </a>
+            </li>
+            <li class="callcenter">
+              <a href="#">
+                <figure><img src="../../resources/img/v3_ic_48_fill_premiumsvc_callcenter.png" alt></figure>
+                <div class="txt_area">
+                  <p class="box_tit">건강 콜센터</p>
+                  <p class="box_desc">#쉽고 친절한 #건강상담 #병원안내 #명의안내 #상급종합병원 진료 예약</p>
+                </div>
+              </a>
+            </li>
+            <li class="careprogram">
+              <a href="#">
+                <figure><img src="../../resources/img/v3_ic_48_fill_premiumsvc_carethyroi.png" alt></figure>
+                <div class="txt_area">
+                  <p class="box_tit">갑상선 케어 프로그램</p>
+                  <p class="box_desc">#갑상선 #케어 #병원안내 #명의안내 #갑상선케어</p>
+                </div>
+              </a>
+            </li>
+            <!-- 20230922 라이나 홈페이지 추가  -->
+            <li class="linahomepage">
+              <a href="#">
+                <figure><img src="../../resources/img/v3_ic_48_fill_premiumsvc_linalife_homepage.png" alt></figure>
+                <div class="txt_area">
+                  <p class="box_tit">라이나 홈페이지</p>
+                  <p class="box_desc">꼭 필요한 보험상품과 쉽고 간편한 보험계약 관리까지!</p>
+                </div>
+              </a>
+            </li>
+            <!-- // 20230922 라이나 홈페이지 추가  -->
+          </ul>
+        </div><!-- //.service_popular -->
+        <!-- 20230822 수정 : 프리미엄 서비스 디자인변경 -->
+      </div><!-- //.premium_service -->
+
+    </div>
+    <!-- //.health_container -->
+    <footer class="health_footer">
+      <div class="health_footer_nav">
+        <ul>
+          <li>
+            <a href="#n" class="nav_item home">
+              <span class="icon"></span>
+              <strong>홈</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item diary on">
+              <span class="icon"></span>
+              <strong>웰니스</strong><!-- 20230911 문구수정 -->
+            </a>
+          </li>
+          <!-- 20230911 미션 메뉴 추가 -->
+          <li>
+            <a href="#" class="nav_item mission">
+              <span class="icon"></span>
+              <strong>미션</strong>
+            </a>
+          </li>
+          <!-- //20230911 미션 메뉴 추가 -->
+          <li>
+            <a href="#n" class="nav_item health">
+              <span class="icon"></span>
+              <strong>콘텐츠</strong><!-- 20230911 문구수정 -->
+            </a>
+          </li>
+          <li>
+            <a href="#n" class="nav_item mypage">
+              <span class="icon"></span>
+              <strong>MY</strong><!-- 20230911 문구수정 -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- Daily 수면 시간이란 모달팝업-->
+  <div class="health_alert" id="alert01" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        Daily 수면 시간이란?<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        매일 하루동안 활동한 걸음수를 기록하여, 활동거리, 활동시간, 소비칼로리를 계산합니다.<br><br>
+        매일 건강 관리에 도움이 될 수 있도록 해당 데이터를 제공합니다.
+      </p>
+    </div>
+  </div>
+  <!-- 수면 히스토리란 모달팝업-->
+  <div class="health_alert" id="alert02" style="display: none;">
+    <div class="inner">
+      <h2 class="pop_tit">
+        수면 히스토리란?<button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+      </h2>
+      <p class="msg">
+        사용자 휴대폰 기기의 걸음수를 기반으로 매일 기록된 걸음수를 주간, 월간, 연간 기준으로 걸음 히스토리, 합계 조회가 가능합니다.
+      </p>
+    </div>
+  </div>
+
+<script>
+  // 20230822 수정 :서비스 슬라이드 추가
+  var swiper = new Swiper(".service_slider", {
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    spaceBetween: 20,
+    loop: false,
+    scrollbar: {
+      dragSize:'62',
+      el: ".service_slider .swiper-scrollbar",
+    },
+  });
+</script>
+</body>
+</html>
