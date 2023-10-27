@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>건강 걸음</title>
+<script src="../../resources/js/jquery-3.6.0.min.js"></script>
+<script src="../../resources/js/swiper.min.js"></script>
+<script src="../../resources/js/chart.min.js"></script>   <!--20220719 chart.js-->
+<script src="../../resources/js/chartjs-plugin-datalables@2.0.0.js"></script><!-- 20220801 chartjs데이터라벨플러그인추가 -->
+<script src="../../resources/js/ui.common.js"></script>
+<link rel="stylesheet" href="../../resources/css/guide.css">
+<link rel="stylesheet" href="../../resources/css/swiper.min.css">
+</head>
+<body>
+  <div class="health_wrap footer_no type_content">
+    <header class="health_header">
+      <div class="inbtn">
+        <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+        <h1>미션</h1>
+        <button type="button" class="btn_base_02 line">특별미션</button><!-- 20230801 버튼 추가 -->
+      </div>
+    </header>
+    <div class="health_container align_right">
+      <div class="health_cam_wrap pdt0">
+        <div class="hc_head">
+          <h3 class="stt">
+            미션<!-- 20230801 물음표 삭제 -->
+            <span>Tune H가 제안하는 맞춤 건강 미션을 달성하고,<br/>Tune Point를 받아보세요.</span>
+          </h3>
+        </div>
+        <div class="tab_wrap">
+          <div class="tabs dep1 brand_name_swiper">
+            <ul class="tab_menulist brand_list">
+              <li class="tab active"><a class="tab_control" href="#tab-1" aria-controls="tab-con01">건강 걸음</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-2" aria-controls="">AI 건강카메라</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-3" aria-controls="">BMI</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-4" aria-controls="">Dental MBTI</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-5" aria-controls="">건강 콘텐츠</a></li>
+              <li class="tab"><a class="tab_control" href="#tab-6" aria-controls="">기타</a></li>
+            </ul>
+            <div class="tab_panel active" id="tab-1">
+              <div class="cnt_mission">
+                <ul class="ms_walk">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">하루 동안 4,000걸음 이상 걷기</div>
+                    </a>
+                    <button type="button" class="btn_form_base" disabled>받기 완료</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">하루 동안 6,000걸음 이상 걷기</div>
+                    </a>
+                    <button type="button" onclick="netiveUI.plugins.popAlert('#alert01');" class="btn_form_base get"><span>50 P</span>받기</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">하루 동안 8,000걸음 이상 걷기</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>50 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">한달 동안 8,000걸음 이상 20일 걷기 한달 동안 8,000걸음 이상 20일 걷기</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>50 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_panel" id="tab-2">
+              <div class="cnt_mission">
+                <ul class="ms_ai">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">AI 건강카메라로 건강상태 측정하기</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">AI 건강카메라로 건강상태 측정하기</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_panel" id="tab-3">
+              <div class="cnt_mission">
+                <ul class="ms_bmi">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">BMI 10회 측정(일 1회 측정 가능)</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>500 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">BMI 30회 측정(일 1회 측정 가능)</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_panel" id="tab-4">
+              <div class="cnt_mission">
+                <ul class="ms_mbti">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">특정 콘텐츠(타입별) 보기</div>
+                    </a>
+                    <button type="button" class="btn_form_base get"><span>50 P</span>받기</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_panel" id="tab-5">
+              <div class="cnt_mission">
+                <ul class="ms_health">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">건강콘텐츠 좋아요 수 100회 달성</div>
+                    </a>
+                    <button type="button" class="btn_form_base" disabled>받기 완료</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">건강콘텐츠 좋아요 수 500회 달성</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>50 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">건강콘텐츠 북마크 등록 100건 달성</div>
+                    </a>
+                    <button type="button" class="btn_form_base get"><span>1,000 P</span>받기</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab_panel" id="tab-6">
+              <div class="cnt_mission">
+                <ul class="ms_etc">
+                  <li>
+                    <a href="#n">
+                      <div class="tit">매일 출석하기</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">생일 로그인</div>
+                    </a>
+                    <button type="button" class="btn_form_base dis"><span>1,000 P</span></button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">이용약관(선택) 마케팅 동의</div>
+                    </a>
+                    <button type="button" class="btn_form_base get"><span>1,000 P</span>받기</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                  <li>
+                    <a href="#n">
+                      <div class="tit">친구 공유</div>
+                    </a>
+                    <button type="button" class="btn_form_base get"><span>100 P</span>받기</button>
+                    <p class="date">2023.07.31 ~ 2023.08.30</p><!-- 20230801 기간 추가 -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="svc_desc acco_list_wrap">
+          <div class="item_head">
+            <p>안내사항</p>
+            <button type="button" class="btn_acco_more"><span class="hidden">열기</span></button>
+          </div>
+          <ul class="item_cont" style="display: none;">
+            <li>미션을 완료하면 포인트가 지급됩니다.</li>
+            <li>포인트가 지급되는 시점은 미션 완료 시점과 다소 차이가 있을 수 있습니다.</li>
+            <li>미션은 서비스 사정으로 미션 진행 도중에 변경 또는 종료될 수 있습니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 20230801 footer 삭제 -->
+  </div>
+  <!-- 건강 걸음이란 모달팝업-->
+  <div class="health_alert" id="alert01" style="display: none;">
+    <div class="inner">
+      <p class="msg">
+        <div class="lay_point">
+          <div class="num">1,000<em>+</em></div>
+          <p class="txt">1,000 Point를 받았습니다.</p>
+        </div>
+      </p>
+      <div class="btn_wrap">
+        <button type="button" class="btn_pop_dark ui-close">확인</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
