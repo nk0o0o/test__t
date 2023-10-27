@@ -1686,106 +1686,94 @@
 					background-position: 50%;
 					z-index: -1;
 				}
-				&.aicamera{
-					&:before { background-image: url('../img/v3_main_visual_01.png'); }
+				// &.aicamera{
+				// 	&:before { background-image: url('../img/v3_main_visual_01.png'); }
 					
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_camera01.png'); }
-					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_camera02.png'); }
-					}
-					&.fin03{
-						&:before { background-image: url('../img/v3_home_fin_camera03.png'); }
-					}
-					&.fin04{
-						&:before { background-image: url('../img/v3_home_fin_camera04.png'); }
-					}
-					&.fin05{
-						&:before { background-image: url('../img/v3_home_fin_camera05.png'); }
-					}
-				}
-				&.bmi {
-					&:before { background-image: url('../img/v3_main_visual_02.png'); }
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_bmi01.png'); }
-					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_bmi02.png'); }
-					}
-				}
-				&.dental{
-					&:before { background-image: url('../img/v3_main_visual_03.png'); }
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_mbti01.png'); }
-					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_mbti02.png'); }
-					}
-					&.fin03{
-						&:before { background-image: url('../img/v3_home_fin_mbti03.png'); }
-					}
-					&.fin04{
-						&:before { background-image: url('../img/v3_home_fin_mbti04.png'); }
-					}
-				}
-				&.premium{
-					&:before { background-image: url('../img/v3_main_visual_051.png'); }
-					&.member {
-						&:before { background-image: url('../img/v3_main_visual_052.png'); }
-					}
-				}
-				&.ainutrient{
-					&:before { background-image: url('../img/v3_main_visual_04.png'); }
-				}
+				// 	&.fin01{
+				// 		&:before { background-image: url('../img/v3_home_fin_camera01.png'); }
+				// 	}
+				// 	&.fin02{
+				// 		&:before { background-image: url('../img/v3_home_fin_camera02.png'); }
+				// 	}
+				// 	&.fin03{
+				// 		&:before { background-image: url('../img/v3_home_fin_camera03.png'); }
+				// 	}
+				// 	&.fin04{
+				// 		&:before { background-image: url('../img/v3_home_fin_camera04.png'); }
+				// 	}
+				// 	&.fin05{
+				// 		&:before { background-image: url('../img/v3_home_fin_camera05.png'); }
+				// 	}
+				// }
+				// &.bmi {
+				// 	&:before { background-image: url('../img/v3_main_visual_02.png'); }
+				// 	&.fin01{
+				// 		&:before { background-image: url('../img/v3_home_fin_bmi01.png'); }
+				// 	}
+				// 	&.fin02{
+				// 		&:before { background-image: url('../img/v3_home_fin_bmi02.png'); }
+				// 	}
+				// }
+				// &.dental{
+				// 	&:before { background-image: url('../img/v3_main_visual_03.png'); }
+				// 	&.fin01{
+				// 		&:before { background-image: url('../img/v3_home_fin_mbti01.png'); }
+				// 	}
+				// 	&.fin02{
+				// 		&:before { background-image: url('../img/v3_home_fin_mbti02.png'); }
+				// 	}
+				// 	&.fin03{
+				// 		&:before { background-image: url('../img/v3_home_fin_mbti03.png'); }
+				// 	}
+				// 	&.fin04{
+				// 		&:before { background-image: url('../img/v3_home_fin_mbti04.png'); }
+				// 	}
+				// }
+				// &.premium{
+				// 	&:before { background-image: url('../img/v3_main_visual_051.png'); }
+				// 	&.member {
+				// 		&:before { background-image: url('../img/v3_main_visual_052.png'); }
+				// 	}
+				// }
+				// &.ainutrient{
+				// 	&:before { background-image: url('../img/v3_main_visual_04.png'); }
+				// }
 
-
+        /* 3.5 홈 슬라이드 수정 */
 				&.wellbeing{
-					&:before { background-image: url('../img/v3_main_visual_01.png'); }
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_camera01.png'); }
+					&:before { background-image: url('../img/v3_main_visual_walk.png'); }
+					&.walk{
+						&:before { background-image: url('../img/v3_main_visual_walk.png'); }
 					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_camera02.png'); }
+					&.sleep{
+						&:before { background-image: url('../img/v3_main_visual_walk.png'); }
 					}
-					&.fin03{
-						&:before { background-image: url('../img/v3_home_fin_camera03.png'); }
-					}
-					&.fin04{
-						&:before { background-image: url('../img/v3_home_fin_camera04.png'); }
-					}
-					&.fin05{
-						&:before { background-image: url('../img/v3_home_fin_camera05.png'); }
+					&.dental{
+						&:before { background-image: url('../img/v3_main_visual_dental.png'); }
 					}
 				}
 				&.mindcare{
-					&:before { background-image: url('../img/v3_main_visual_02.png'); }
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_bmi01.png'); }
+					&:before { background-image: url('../img/v3_main_visual_mind.png'); }
+					&.mind{
+						&:before { background-image: url('../img/v3_main_visual_mind.png');}
 					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_bmi02.png'); }
+					&.aicamera{
+						&:before { background-image: url('../img/v3_main_visual_aicamera.png'); }
 					}
 				}
 				&.nutrition{
-					&:before { background-image: url('../img/v3_main_visual_03.png'); }
-					&.fin01{
-						&:before { background-image: url('../img/v3_home_fin_mbti01.png'); }
+					&:before { background-image: url('../img/v3_main_visual_ainutrition.png'); }
+					&.ainutrition{
+            &:before { background-image: url('../img/v3_main_visual_ainutrition.png'); }
 					}
-					&.fin02{
-						&:before { background-image: url('../img/v3_home_fin_mbti02.png'); }
-					}
-					&.fin03{
-						&:before { background-image: url('../img/v3_home_fin_mbti03.png'); }
-					}
-					&.fin04{
-						&:before { background-image: url('../img/v3_home_fin_mbti04.png'); }
+					&.bmi{
+            &:before { background-image: url('../img/v3_main_visual_bmi.png'); }
 					}
 				}
 				&.premium{
-					&:before { background-image: url('../img/v3_main_visual_051.png'); }
+					&:before { background-image: url('../img/v3_main_visual_primium.png'); }
 					&.member {
-						&:before { background-image: url('../img/v3_main_visual_052.png'); }
+						&:before { background-image: url('../img/v3_main_visual_primium_member.png'); }
 					}
 				}
 
@@ -1947,17 +1935,20 @@
 								background-image: linear-gradient(135deg, #09c7b8, #44b2ff);
 							}
 							&_03 {
-								background-image: linear-gradient(135deg, #ffc460, #fe953a);
+								//background-image: linear-gradient(135deg, #ffc460, #fe953a);
+                background-image: linear-gradient(136deg, #bea2ff, #7449de 90%);
 							}
 							&_04 {
-								background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+								// background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+                background-image: linear-gradient(137deg, #44b1fe, #3088f2 85%);
 							}
 							&_05 {
-								background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+								// background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+                background-image: linear-gradient(135deg, #e7b2f9, #9624d5);
 							}
-							&_06 {
-								background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
-							}
+							// &_06 {
+							// 	background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+							// }
 						}
 					}
 				}
@@ -1978,12 +1969,13 @@
 				box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
 				background-color: #fff;
 				overflow: hidden;
+        padding:8px;
 				@media screen and (max-width: 312px) {
 					height: 162px;
 				}
 				.inner {
 					max-height: 118px;
-					padding: 20px 24px 0;
+					padding: 12px 16px 0;
 					@media screen and (max-width: 312px) {
 						padding: 10px 14px 0;
 					}
@@ -2174,90 +2166,144 @@
 					height: 44px;
 					padding: 0;
 					border: 0;
-					border-top-left-radius: 0;
-					border-top-right-radius: 0;
 					text-align: center;
 					font-size: $fs-s;
 					color: $color-white;
 					font-weight: $fw-b;
+          border-radius: 999px;
 				}
+
+        &.walk{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_walk.png');
+              }
+            }
+            &>span{
+              font-size:$fs-s;
+              font-weight: $fs-sb;
+            }
+          }
+          .ic_lev{
+            flex: 0 0 52px;
+            height:52px; 
+            border:none;
+            background-image: linear-gradient(146deg, #cb8bda -54%, #9b78f0 114%);
+            color: $color-white;
+            padding-top: 0;
+            align-items: center;
+          }
+        }
+        &.sleep{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_sleep.png');
+              }
+            }
+          }
+        }
+        &.dental{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_dental.png');
+              }
+            }
+          }
+        }
+        &.mind{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_mind.png');
+              }
+            }
+          }
+        }
+        &.aicamera{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate01.png');
+              }
+            }
+          }
+        }
+        &.ainutrition{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_ainutrition.png');
+              }
+            }
+          }
+        }
+        &.bmi{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate02.png');
+              }
+            }
+          }
+        }
+        &.premium{
+          .htit {
+            p {
+              &:before {
+                background-image: url('../img/v3_ico_cate_primium.png');
+              }
+            }
+          }
+        }
+
 				&.box {
-					&_01 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate01.png');
-								}
-							}
+					&_01 {						
+						.btn_more {
+							background-color: #8862e5;
 						}
+					}
+					&_02 {
 						.btn_more {
 							background-color: #26c8a8;
 						}
 					}
-					&_02 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate02.png');
-								}
-								>em {
-									margin-left: 4px;
-									color: #0095ff;
-								}
-							}
-						}
+					&_03 {						
 						.btn_more {
-							background-color: #44b2ff;
+							background-color: #44b1fe;
 						}
 					}
-					&_03 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate03.png');
-								}
-							}
-						}
+					&_04 {						
 						.btn_more {
-							background-color: #fe953a;
+							background-color: #b15ac5;
 						}
 					}
-					&_04 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate04.png');
-								}
-							}
-						}
-						.btn_more {
-							background-color: #5b5df1;
-						}
-					}
-					&_05 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate05.png');
-								}
-							}
-						}
-						.btn_more {
-							background-color: #5b5df1;
-						}
-					}
-					&_06 {
-						.htit {
-							p {
-								&:before {
-									background-image: url('../img/v3_ico_cate04.png');
-								}
-							}
-						}
-						.btn_more {
-							background-color: #5b5df1;
-						}
-					}
+					// &_05 {
+					// 	.htit {
+					// 		p {
+					// 			&:before {
+					// 				background-image: url('../img/v3_ico_cate05.png');
+					// 			}
+					// 		}
+					// 	}
+					// 	.btn_more {
+					// 		background-color: #5b5df1;
+					// 	}
+					// }
+					// &_06 {
+					// 	.htit {
+					// 		p {
+					// 			&:before {
+					// 				background-image: url('../img/v3_ico_cate04.png');
+					// 			}
+					// 		}
+					// 	}
+					// 	.btn_more {
+					// 		background-color: #5b5df1;
+					// 	}
+					// }
 				}
 				&.total {
 					.total_graph {
@@ -2358,6 +2404,13 @@
 						font-family: $font-roboto;
 					}
 				}
+        .walk{
+          &_cont{
+            .walk_today{
+              @include flexBetween;
+            }
+          }
+        }
 			}
 		}
 		// .swiper-pagination {

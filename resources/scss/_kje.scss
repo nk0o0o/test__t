@@ -3199,6 +3199,9 @@ a.cs {
   z-index: 99;
   cursor: pointer;
   // 20210906 pd_type 클래스 추가
+  &.on {
+    background: #fff url('../img/v3_ico_16_bookmark_active.png') center/16px no-repeat;
+  }
   &.pd_type {
     right: 24px;
     bottom: 24px;

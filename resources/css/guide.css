@@ -8328,6 +8328,9 @@ a.cs {
   z-index: 99;
   cursor: pointer;
 }
+.btn_ico_bookmark_b.on {
+  background: #fff url("../img/v3_ico_16_bookmark_active.png") center/16px no-repeat;
+}
 .btn_ico_bookmark_b.pd_type {
   right: 24px;
   bottom: 24px;
@@ -32589,6 +32592,7 @@ a.cs {
   height: 286px;
   -webkit-transform: translate3d(0px, 0px, 0px) !important;
           transform: translate3d(0px, 0px, 0px) !important;
+  /* 3.5 홈 슬라이드 수정 */
 }
 @media screen and (max-width: 312px) {
   .main_cont_type .mySwiper .swiper-wrapper {
@@ -32608,104 +32612,41 @@ a.cs {
   background-position: 50%;
   z-index: -1;
 }
-.main_cont_type .mySwiper .swiper-wrapper.aicamera:before {
-  background-image: url("../img/v3_main_visual_01.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.aicamera.fin01:before {
-  background-image: url("../img/v3_home_fin_camera01.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.aicamera.fin02:before {
-  background-image: url("../img/v3_home_fin_camera02.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.aicamera.fin03:before {
-  background-image: url("../img/v3_home_fin_camera03.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.aicamera.fin04:before {
-  background-image: url("../img/v3_home_fin_camera04.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.aicamera.fin05:before {
-  background-image: url("../img/v3_home_fin_camera05.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.bmi:before {
-  background-image: url("../img/v3_main_visual_02.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.bmi.fin01:before {
-  background-image: url("../img/v3_home_fin_bmi01.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.bmi.fin02:before {
-  background-image: url("../img/v3_home_fin_bmi02.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.dental:before {
-  background-image: url("../img/v3_main_visual_03.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.dental.fin01:before {
-  background-image: url("../img/v3_home_fin_mbti01.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.dental.fin02:before {
-  background-image: url("../img/v3_home_fin_mbti02.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.dental.fin03:before {
-  background-image: url("../img/v3_home_fin_mbti03.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.dental.fin04:before {
-  background-image: url("../img/v3_home_fin_mbti04.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.premium:before {
-  background-image: url("../img/v3_main_visual_051.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.premium.member:before {
-  background-image: url("../img/v3_main_visual_052.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.ainutrient:before {
-  background-image: url("../img/v3_main_visual_04.png");
-}
 .main_cont_type .mySwiper .swiper-wrapper.wellbeing:before {
-  background-image: url("../img/v3_main_visual_01.png");
+  background-image: url("../img/v3_main_visual_walk.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.wellbeing.fin01:before {
-  background-image: url("../img/v3_home_fin_camera01.png");
+.main_cont_type .mySwiper .swiper-wrapper.wellbeing.walk:before {
+  background-image: url("../img/v3_main_visual_walk.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.wellbeing.fin02:before {
-  background-image: url("../img/v3_home_fin_camera02.png");
+.main_cont_type .mySwiper .swiper-wrapper.wellbeing.sleep:before {
+  background-image: url("../img/v3_main_visual_walk.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.wellbeing.fin03:before {
-  background-image: url("../img/v3_home_fin_camera03.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.wellbeing.fin04:before {
-  background-image: url("../img/v3_home_fin_camera04.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.wellbeing.fin05:before {
-  background-image: url("../img/v3_home_fin_camera05.png");
+.main_cont_type .mySwiper .swiper-wrapper.wellbeing.dental:before {
+  background-image: url("../img/v3_main_visual_dental.png");
 }
 .main_cont_type .mySwiper .swiper-wrapper.mindcare:before {
-  background-image: url("../img/v3_main_visual_02.png");
+  background-image: url("../img/v3_main_visual_mind.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.mindcare.fin01:before {
-  background-image: url("../img/v3_home_fin_bmi01.png");
+.main_cont_type .mySwiper .swiper-wrapper.mindcare.mind:before {
+  background-image: url("../img/v3_main_visual_mind.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.mindcare.fin02:before {
-  background-image: url("../img/v3_home_fin_bmi02.png");
+.main_cont_type .mySwiper .swiper-wrapper.mindcare.aicamera:before {
+  background-image: url("../img/v3_main_visual_aicamera.png");
 }
 .main_cont_type .mySwiper .swiper-wrapper.nutrition:before {
-  background-image: url("../img/v3_main_visual_03.png");
+  background-image: url("../img/v3_main_visual_ainutrition.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.nutrition.fin01:before {
-  background-image: url("../img/v3_home_fin_mbti01.png");
+.main_cont_type .mySwiper .swiper-wrapper.nutrition.ainutrition:before {
+  background-image: url("../img/v3_main_visual_ainutrition.png");
 }
-.main_cont_type .mySwiper .swiper-wrapper.nutrition.fin02:before {
-  background-image: url("../img/v3_home_fin_mbti02.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.nutrition.fin03:before {
-  background-image: url("../img/v3_home_fin_mbti03.png");
-}
-.main_cont_type .mySwiper .swiper-wrapper.nutrition.fin04:before {
-  background-image: url("../img/v3_home_fin_mbti04.png");
+.main_cont_type .mySwiper .swiper-wrapper.nutrition.bmi:before {
+  background-image: url("../img/v3_main_visual_bmi.png");
 }
 .main_cont_type .mySwiper .swiper-wrapper.premium:before {
-  background-image: url("../img/v3_main_visual_051.png");
+  background-image: url("../img/v3_main_visual_primium.png");
 }
 .main_cont_type .mySwiper .swiper-wrapper.premium.member:before {
-  background-image: url("../img/v3_main_visual_052.png");
+  background-image: url("../img/v3_main_visual_primium_member.png");
 }
 .main_cont_type .mySwiper .swiper-wrapper .swiper-slide {
   display: -webkit-box;
@@ -32883,16 +32824,13 @@ a.cs {
   background-image: linear-gradient(135deg, #09c7b8, #44b2ff);
 }
 .main_cont_type .mySwiper .swiper-wrapper .swiper-slide.slide-active.menu_03 {
-  background-image: linear-gradient(135deg, #ffc460, #fe953a);
+  background-image: linear-gradient(136deg, #bea2ff, #7449de 90%);
 }
 .main_cont_type .mySwiper .swiper-wrapper .swiper-slide.slide-active.menu_04 {
-  background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+  background-image: linear-gradient(137deg, #44b1fe, #3088f2 85%);
 }
 .main_cont_type .mySwiper .swiper-wrapper .swiper-slide.slide-active.menu_05 {
-  background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
-}
-.main_cont_type .mySwiper .swiper-wrapper .swiper-slide.slide-active.menu_06 {
-  background-image: linear-gradient(135deg, #b09ae0, #5b5df1);
+  background-image: linear-gradient(135deg, #e7b2f9, #9624d5);
 }
 .main_cont_type .mySwiper2 {
   position: relative;
@@ -32918,6 +32856,7 @@ a.cs {
           box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.06);
   background-color: #fff;
   overflow: hidden;
+  padding: 8px;
 }
 @media screen and (max-width: 312px) {
   .main_cont_type .mySwiper2 .swiper-slide {
@@ -32926,7 +32865,7 @@ a.cs {
 }
 .main_cont_type .mySwiper2 .swiper-slide .inner {
   max-height: 118px;
-  padding: 20px 24px 0;
+  padding: 12px 16px 0;
 }
 @media screen and (max-width: 312px) {
   .main_cont_type .mySwiper2 .swiper-slide .inner {
@@ -33143,52 +33082,63 @@ a.cs {
   height: 44px;
   padding: 0;
   border: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   text-align: center;
   font-size: 14px;
   color: #fff;
   font-weight: 700;
+  border-radius: 999px;
 }
-.main_cont_type .mySwiper2 .swiper-slide.box_01 .htit p:before {
+.main_cont_type .mySwiper2 .swiper-slide.walk .htit p:before {
+  background-image: url("../img/v3_ico_cate_walk.png");
+}
+.main_cont_type .mySwiper2 .swiper-slide.walk .htit > span {
+  font-size: 14px;
+}
+.main_cont_type .mySwiper2 .swiper-slide.walk .ic_lev {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 52px;
+          flex: 0 0 52px;
+  height: 52px;
+  border: none;
+  background-image: linear-gradient(146deg, #cb8bda -54%, #9b78f0 114%);
+  color: #fff;
+  padding-top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main_cont_type .mySwiper2 .swiper-slide.sleep .htit p:before {
+  background-image: url("../img/v3_ico_cate_sleep.png");
+}
+.main_cont_type .mySwiper2 .swiper-slide.dental .htit p:before {
+  background-image: url("../img/v3_ico_cate_dental.png");
+}
+.main_cont_type .mySwiper2 .swiper-slide.mind .htit p:before {
+  background-image: url("../img/v3_ico_cate_mind.png");
+}
+.main_cont_type .mySwiper2 .swiper-slide.aicamera .htit p:before {
   background-image: url("../img/v3_ico_cate01.png");
 }
-.main_cont_type .mySwiper2 .swiper-slide.box_01 .btn_more {
-  background-color: #26c8a8;
+.main_cont_type .mySwiper2 .swiper-slide.ainutrition .htit p:before {
+  background-image: url("../img/v3_ico_cate_ainutrition.png");
 }
-.main_cont_type .mySwiper2 .swiper-slide.box_02 .htit p:before {
+.main_cont_type .mySwiper2 .swiper-slide.bmi .htit p:before {
   background-image: url("../img/v3_ico_cate02.png");
 }
-.main_cont_type .mySwiper2 .swiper-slide.box_02 .htit p > em {
-  margin-left: 4px;
-  color: #0095ff;
+.main_cont_type .mySwiper2 .swiper-slide.premium .htit p:before {
+  background-image: url("../img/v3_ico_cate_primium.png");
+}
+.main_cont_type .mySwiper2 .swiper-slide.box_01 .btn_more {
+  background-color: #8862e5;
 }
 .main_cont_type .mySwiper2 .swiper-slide.box_02 .btn_more {
-  background-color: #44b2ff;
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_03 .htit p:before {
-  background-image: url("../img/v3_ico_cate03.png");
+  background-color: #26c8a8;
 }
 .main_cont_type .mySwiper2 .swiper-slide.box_03 .btn_more {
-  background-color: #fe953a;
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_04 .htit p:before {
-  background-image: url("../img/v3_ico_cate04.png");
+  background-color: #44b1fe;
 }
 .main_cont_type .mySwiper2 .swiper-slide.box_04 .btn_more {
-  background-color: #5b5df1;
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_05 .htit p:before {
-  background-image: url("../img/v3_ico_cate05.png");
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_05 .btn_more {
-  background-color: #5b5df1;
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_06 .htit p:before {
-  background-image: url("../img/v3_ico_cate04.png");
-}
-.main_cont_type .mySwiper2 .swiper-slide.box_06 .btn_more {
-  background-color: #5b5df1;
+  background-color: #b15ac5;
 }
 .main_cont_type .mySwiper2 .swiper-slide.total .total_graph {
   position: relative;
@@ -37030,8 +36980,8 @@ a.cs {
 }
 
 .type_mypage .health_info_wrap .btn_ico_bookmark_b {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   top: 8px;
   right: 8px;
   left: auto;

@@ -27,31 +27,31 @@
 					<div thumbsSlider="" class="swiper mySwiper">
 						<div class="swiper-wrapper">
 							<!-- 웰빙 - 건강걸음 -->
-							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_03 walk"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
 								<span class="mtxt">웰빙</span>
 							</div>
 							<!-- 웰빙 - 수면관리 -->
-							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_03 sleep"><!-- fin01 ~ fin03 결과에 따라 클래스 적용 -->
 								<span class="mtxt">웰빙</span>
 							</div>
 							<!-- 웰빙 - Dental MBTI -->
-							<div class="swiper-slide menu_03 fin01"><!-- fin01 ~ fin04 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_03 dental"><!-- fin01 ~ fin04 결과에 따라 클래스 적용 -->
 								<span class="mtxt">웰빙</span>
 							</div>
 							<!-- 마음건강 - 마음피트니스 -->
-							<div class="swiper-slide menu_01 fin01"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_01 mind"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
 								<span class="mtxt">마음<br>건강</span>
 							</div>
 							<!-- 마음건강 - AI건강카메라 -->
-							<div class="swiper-slide menu_01 fin01"><!-- fin01 ~ fin05 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_01 aicamera"><!-- fin01 ~ fin05 결과에 따라 클래스 적용 -->
 								<span class="mtxt">마음<br>건강</span>
 							</div>
 							<!-- 영양관리 -  BMI -->
-							<div class="swiper-slide menu_04 fin01"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
+							<div class="swiper-slide menu_04 bmi"><!-- fin01 ~ fin02 결과에 따라 클래스 적용 -->
 								<span class="mtxt">영양<br>관리</span>
 							</div>
 							<!-- 영양관리 - AI영양소 설계 -->
-							<div class="swiper-slide menu_04">
+							<div class="swiper-slide menu_04 nutrition">
 								<span class="mtxt">영양<br>관리</span>
 							</div>
 							<div class="swiper-slide menu_05 member"><!-- 일반고객 member(x) 라이나보험고객 member(0) 클래스 -->
@@ -63,18 +63,43 @@
 					<div class="swiper mySwiper2">
 						<div class="swiper-wrapper">
 							<!-- 웰빙 -->
-							<div class="swiper-slide box_01">
+              <!-- 웰빙 - 건강걸음 측정후-->
+              <div class="swiper-slide box_01 walk">
+                <div class="inner walk_cont">
+                  <div class="htit">
+                    <p>건강걸음</p>
+                    <span>최근 23.10.18</span>
+                  </div>
+                  <div class="desc">
+										<p class="ic_lev">Today</p>
+										<div class="walk_today">
+                      <div class="flex_box">
+                        <div class="tit">걸음</div>
+                        <div class="num"><span>13,021</span></div>
+                      </div>                      
+                      <div class="flex_box">
+                        <div class="tit">거리</div>
+                        <div class="num"><span>10.8</span>km</div>
+                      </div>                      
+                    </div>
+									</div>                 
+                </div>
+                <button type="button" class="btn_more">자세히 보기</button>
+              </div>
+              <!-- 웰빙 - 건강걸음 측정전 -->
+							<div class="swiper-slide box_01 walk">
 								<div class="inner">
 									<div class="htit">
 										<p>건강걸음</p>
 									</div>
 									<div class="desc">
-										AI 건강 카메라로 스트레스 레벨, 산소 포화도, 분당 호흡수, 심박수, 심박변이 등 현재 건강 상태를 측정합니다.
+										건강걸음 등 현재 건강 상태를 측정합니다.
 									</div>
 								</div>
 								<button type="button" class="btn_more">측정하기</button>
 							</div>
-							<div class="swiper-slide box_01">
+              <!-- 웰빙 - 수면관리 -->
+							<div class="swiper-slide box_01 sleep">
 								<div class="inner">
 									<div class="htit">
 										<p>수면관리</p>
@@ -86,7 +111,20 @@
 								</div>
 								<button type="button" class="btn_more">결과 자세히보기</button>
 							</div>
-							<div class="swiper-slide box_01">
+              <!-- 웰빙 - 덴탈 -->
+              <div class="swiper-slide box_01 dental">
+								<div class="inner">
+									<div class="htit">
+										<p>Dental MBTI</p>
+									</div>
+									<div class="desc">
+										<p class="ic_lev red_type">Red</p><!-- Red_type, Black_type, Blue_type, Yellow_type -->
+										잇몸이 부어있거나 출혈, 고름 등이 나오나요? 원인과 관리방법을 확인해보세요!
+                  </div>
+								</div>
+								<button type="button" class="btn_more">결과 자세히보기</button>
+							</div>
+							<!-- <div class="swiper-slide box_01 dental">
 								<div class="inner">
 									<div class="htit">
 										<p>Dental MBTI</p>
@@ -96,9 +134,10 @@
                   </div>
 								</div>
 								<button type="button" class="btn_more">분석하기</button>
-							</div>
+							</div> -->
 							<!-- 마음건강 -->
-							<div class="swiper-slide box_02">
+							<!-- 마음건강 - 마음피트니스-->
+							<div class="swiper-slide box_02 mind">
 								<div class="inner bmi_cont normal">
 									<div class="htit">
 										<p>마음피트니스</p>
@@ -109,7 +148,8 @@
 								</div>
 								<button type="button" class="btn_more">분석하기</button>
 							</div>
-							<div class="swiper-slide box_02">
+              <!-- 마음건강 - AI 건강 카메라-->
+							<div class="swiper-slide box_02 aicamera">
 								<div class="inner">
 									<div class="htit">
 										<p>AI 건강 카메라</p>
@@ -122,26 +162,28 @@
 								<button type="button" class="btn_more">결과 자세히보기</button>
 							</div>
 							<!-- 영양관리 -->
-							<div class="swiper-slide box_03">
-								<div class="inner bmi_cont normal">
-									<div class="htit">
-										<p>BMI<em>20.65</em></p>
+							<!-- 영양관리 - bmi -->
+							<div class="swiper-slide box_03 bmi">
+                <div class="inner bmi_cont normal">
+                  <div class="htit">
+                    <p>BMI<em>20.65</em></p>
 										<button type="button" class="btn_form_line">수정</button>
 									</div>
 									<div class="bmi_range_wrap">
 										<div class="bmi_range">
-											<div class="bmi_range_tit">정상 범위</div>
+                      <div class="bmi_range_tit">정상 범위</div>
 											<div class="bmi_range_num">18.5~22.9</div>
 										</div>
 										<div class="bmi_range">
-											<div class="bmi_range_tit">또래 평균대비</div>
+                      <div class="bmi_range_tit">또래 평균대비</div>
 											<div class="bmi_range_num">-3.0<i class="bmi_icon_arr down"></i></div>
 										</div>
 									</div>
 								</div>
 								<button type="button" class="btn_more">분석하기</button>
 							</div>
-							<div class="swiper-slide box_03">
+              <!-- 영양관리 - AI 영양소 설계 -->
+							<div class="swiper-slide box_03 ainutrition">
 								<div class="inner">
 									<div class="htit">
 										<p>AI 영양소 설계</p>
@@ -150,8 +192,8 @@
 								</div>
 								<button type="button" class="btn_more">AI 영양소 설계 시작하기</button>
 							</div>
-              <!-- 프리미엄 -->
-              <div class="swiper-slide box_04">
+              <!-- 프리미엄 - 일반 고객 -->
+              <div class="swiper-slide box_04 premium">
 								<div class="inner">
 									<div class="htit">
 										<p>프리미엄</p>
@@ -160,6 +202,16 @@
 								</div>
 								<button type="button" class="btn_more">프리미엄 서비스 자세히 보기</button>
 							</div>
+              <!-- 프리미엄 - 보험가입고객 -->
+              <!-- <div class="swiper-slide box_04 premium">
+								<div class="inner">
+									<div class="htit">
+										<p>프리미엄</p>
+									</div>
+									<div class="desc">라이나생명 고객에게만 제공하는 프리미엄 건강관리 서비스를 이용해보세요.</div>
+								</div>
+								<button type="button" class="btn_more">프리미엄 서비스 자세히 보기</button>
+							</div> -->
 						</div><!-- //.swiper-wrapper -->
 						<div class="swiper-pagination"></div>
 					</div>
@@ -198,17 +250,21 @@
           function $slideResult(){
             var $thumbsSlider = $('.mySwiper .swiper-wrapper');
             var $swiperslide = $thumbsSlider.find('.slide-active');
-            $thumbsSlider.removeClass('fin01 fin02 fin03 fin04 fin05 member');
-            if($swiperslide.hasClass('fin01')) {
-              $thumbsSlider.addClass('fin01');
-            }else if($swiperslide.hasClass('fin02')) {
-              $thumbsSlider.addClass('fin02');
-            }else if($swiperslide.hasClass('fin03')) {
-              $thumbsSlider.addClass('fin03');
-            }else if($swiperslide.hasClass('fin04')) {
-              $thumbsSlider.addClass('fin04');
-            }else if($swiperslide.hasClass('fin05')) {
-              $thumbsSlider.addClass('fin05');
+            $thumbsSlider.removeClass('walk sleep dental mind aicamera bmi ainutrition member');
+            if($swiperslide.hasClass('walk')) {
+              $thumbsSlider.addClass('walk');
+            }else if($swiperslide.hasClass('sleep')) {
+              $thumbsSlider.addClass('sleep');
+            }else if($swiperslide.hasClass('dental')) {
+              $thumbsSlider.addClass('dental');
+            }else if($swiperslide.hasClass('mind')) {
+              $thumbsSlider.addClass('mind');
+            }else if($swiperslide.hasClass('aicamera')) {
+              $thumbsSlider.addClass('aicamera');
+            }else if($swiperslide.hasClass('bmi')) {
+              $thumbsSlider.addClass('bmi');
+            }else if($swiperslide.hasClass('ainutrition')) {
+              $thumbsSlider.addClass('ainutrition');
             }else if($swiperslide.hasClass('member')) {
               $thumbsSlider.addClass('member');
             }
