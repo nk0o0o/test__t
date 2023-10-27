@@ -11,15 +11,78 @@
   <link rel="stylesheet" href="../resources/css/swiper.min.css">
   <title>Document</title>
   <style>
-    .health_header{border:1px solid red}
+    .health_header, .header_wrap{border:1px solid red; position: static;}
+    .guide_full_wrap{height: auto;bottom: 0; top: auto;}
+    .health_full.actived .inner{top: auto; position: static;}
   </style>
 </head>
 <body>
+  <h3>2뎁스 ASIS (=1뎁스 홈 asis)</h3>
   <header class="health_header">
     <div class="user_point">
       <span>1,000</span>
     </div>
     <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
   </header>
+
+<br><br>
+
+  <h3>2뎁스 TOBE </h3>
+  <header class="health_header depth_2">
+    <h3>미션</h3>
+    <div class="hd_noti">알림</div><!-- 알림이 있을경우 active -->
+  </header>
+
+<br><br>
+
+  <h3>3뎁스</h3>
+  <header class="health_header">
+    <div class="inbtn">
+      <button type="button" class="btn_prev"><span class="hidden">이전</span></button>
+      <h3>특별 미션</h3><!-- 20230913 문구수정 -->
+    </div>
+  </header>
+
+<br><br>
+  
+
+  <h3>Full 팝업 - 제목 없음</h3>
+  <div class="guide_full_wrap">
+
+    <div class="health_full actived" id="full001" style="display: block;">
+      <div class="inner">
+        <div class="pop_wrap">
+          <div class="pop_header">
+            <div class="header_wrap">
+              <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<br><br><br>
+  
+
+  <h3>Full 팝업 - 제목 있음</h3>
+  <div class="guide_full_wrap">
+
+    <div class="health_full actived" id="full001" style="display: block;">
+      <div class="inner">
+        <div class="pop_wrap">
+          <div class="pop_header">
+            <div class="header_wrap type_center">
+              <h1>케어 단계 설정</h1>
+              <button type="button" class="btn_close ui-close"><span class="hidden">닫기</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 </html>

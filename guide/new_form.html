@@ -16,53 +16,45 @@
   <title>New Form</title>
   <style>
     body{padding: 20px;}
+    h1{margin: 36px 0 24px;}
+    h3{margin: 24px 0 8px;}
+    h3::before{content: '《';display: inline-block;margin-right: 4px;}
+    h3::after{content: '》';display: inline-block;margin-left: 4px;}
   </style>
 </head>
 <body>
   <h1>텍스트 필드</h1>
-  <br/>
 
   <h3>라디오 버튼</h3>
   <label for="radio_01" class="frm_radio">
     <input type="radio" name="radioName1" id="radio_01">
     <span>라디오버튼1</span>
   </label>
-  <br>
   <label for="radio_02" class="frm_radio">
     <span>라디오버튼2</span>
     <input type="radio" name="radioName1" id="radio_02">
   </label>
-  <br/>
-  <br/>
 
   <h3>체크박스</h3>
   <label for="check_01" class="frm_check">
     <input type="checkbox" name="checkName2" id="check_01">
     <span>라디오버튼1</span>
   </label>
-  <br>
   <label for="check_02" class="frm_check">
     <span>라디오버튼2</span>
     <input type="checkbox" name="checkName2" id="check_02">
   </label>
-  <br/>
-  <br/>
 
 
   <h3>검색</h3>
-  <br/>
   <div class="frm_input_wrap">
     <label for="input_02" class="frm_label">검색</label>
     <div class="is_search">
       <input type="text" id="input_02" class="frm_input" placeholder="검색어입력" >
     </div>
   </div>
-  <br/>
-  <br/>
 
-  <br/>
   <h3>주소 인풋</h3>
-  <br/>
   <div class="frm_input_wrap">
     <label for="input_03" class="frm_label">주소</label>
     <div class="is_search">
@@ -71,35 +63,24 @@
     <input type="text" id="input_03" class="frm_input" placeholder="상세주소입력" name="" value="라이나타워 1층">
     <p class="notice err">상세주소를 입력해 주세요.</p>
   </div>
-  <br/>
-  <br/>
 
-  <br/>
   <h3>경고 문구</h3>
-  <br/>
   <div class="frm_input_wrap">
     <label for="input_04" class="frm_label">닉네임</label>
     <input type="text" id="input_04" class="frm_input" placeholder="닉네임 입력" name="">
     <p class="notice pass">사용가능한 닉네임입니다.</p> 
   </div>
-  <br/>
   <div class="frm_input_wrap">
     <label for="input_05" class="frm_label">닉네임</label>
     <input type="text" id="input_05" class="frm_input" placeholder="닉네임 입력" name="">
     <p class="notice err">이미 사용중인 닉네임입니다.</p>
   </div>
-  <br/>
-  <br/>
 
-  <br/>
   <h3>라벨 o</h3>
-  <br/>
   <div class="frm_input_wrap">
     <label for="input_06" class="frm_label">닉네임</label>
     <input type="text" id="input_06" class="frm_input" placeholder="닉네임 입력" name="">
   </div>
-  <br/>
-  <br/>
   
   <h3>시간</h3>
   <div class="frm_input_wrap">
@@ -108,8 +89,6 @@
       <span class="unit">2:23</span>
     </div>
   </div>
-  <br/>  
-  <br/>
 
   <h3>글자카운터</h3>
   <div class="frm_input_wrap">
@@ -118,18 +97,13 @@
       <span class="unit">0/10</span>
     </div>
   </div>
-  <br/>
-  <br/>
 
-  <h3>글자카운터</h3>
   <div class="frm_input_wrap">
     <div class="is_txtcnt">
       <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
-      <span class="unit"><em>2</em>/10</span>
+      <span class="unit"><em>8</em>/10</span>
     </div>
   </div>
-  <br/>
-  <br/>
 
   <h3>버튼 있을때</h3>
   <div class="frm_input_wrap ">
@@ -138,7 +112,6 @@
       <button type="button">재발송</button>
     </div>
   </div>
-  <br/>  
   <div class="frm_input_wrap">    
     <label for="input_07" class="frm_label">휴대번호 입력</label>
     <div class="is_btn">
@@ -146,8 +119,6 @@
       <button type="button">재발송</button>
     </div>
   </div>
-  <br/>  
-  <br/>
   
   <h3>라벨 x</h3>
   <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="">
@@ -158,15 +129,13 @@
 
   <input type="text" id="" class="frm_input" placeholder="닉네임 입력" name="" value="렐">
 
-  <br/>
-  <br/>
+
   <h3>Textarea</h3>
   <div class="frm_input_wrap">
     <label for="" class="frm_label">문의내용</label>
     <textarea type="text" id="" class="frm_textarea" placeholder="문의내용" name=""></textarea>
   </div>
-  <br/>
-  <br/>
+
   <h3>숫자 카운터</h3>
   <div class="frm_input_wrap flex_box">
     <label for="" class="frm_label">횟수</label>
@@ -176,8 +145,6 @@
       <button type="button" class="btn_plus"></button>
     </div>
   </div>
-  <br/>
-  <br/>
 
   <h3>Select Box</h3>
   <select name="#" id="" class="frm_select">
@@ -187,8 +154,6 @@
     <option value="">category 3</option>
     <option value="">category 4</option>
   </select>
-  <br/>
-  <br/>
 
   <h3>Select Box - Disabled</h3>
   <select name="#" id="" class="frm_select" disabled>
@@ -198,15 +163,9 @@
     <option value="">category 3</option>
     <option value="">category 4</option>
   </select>
-  <br/>
-  <br/>
-  <br/>
   
   <h3>디바이더 Divider</h3>
   <div class="divider"></div>
-  <br/>
-  <br/>
-  <br/>
   
   <h3>뱃지</h3>
   <div class="badge badge_blue">진료</div>
@@ -219,17 +178,11 @@
   <div class="badge badge_gray">급성기 치료 종료일</div>
 
   <div class="badge badge_gray">답변대기</div>
-<div class="badge badge_blue">답변완료</div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>  
+  <div class="badge badge_blue">답변완료</div>
+
   <h1>기타 공통</h1>
-  <br/>
-  <br/>
   
   <h3>기간 두칸</h3>
-  <br/>
   <div class="frm_input_wrap">
     <label for="" class="frm_label">기간</label>
     <div class="flex_box">
@@ -242,9 +195,6 @@
       </div>
     </div>
   </div>
-  <br/>
-  <br/>
-  
   
   <h3>Bottom Sheet</h3>  
   <button type="button" class="btn_btm_sheet" data-btmsheet="btmSheet02">바텀시트열기버튼</button><!-- data-btmsheet="btmSheet02" -->
@@ -263,8 +213,6 @@
       </div>
     </div>
   </div>
-  <br/>
-  <br/>
   <script>    
   $(document).ready(function() {
     $('.btn_btm_sheet').on('click', function() {
@@ -301,8 +249,6 @@
     }); */
   })
   </script>
-  <br/>
-  <br/>
 
   <h3>Bottom Sheet + TimePicker</h3>
   <div class="frm_input_wrap">
@@ -317,14 +263,12 @@
     $(document).ready(function() {
     //해당 페이지 하단에 추가 (바텀시트 여러개여도 아래 소스 한번만)
     // 날짜선택/시간선택 호출
- /* $('.btn_btm_sheet').on('click', function() {
+    /* $('.btn_btm_sheet').on('click', function() {
       $('.btm_sheet').remove();//230918 추가
       getPicker($(this).data('btmsheet'), $(this).attr('id'));
     }); */
   })
   </script>
-  <br/>
-  <br/>
 
   <h3>접히는 폴더 박스<span class="add_desc">.box_container  .box_fold  .is_shadow  .bgcolor_bg 있음</span></h3>
 
@@ -336,13 +280,10 @@
       <button type="button" class="box_fold_btn"></button>
     </div>
   </div>
-  <br/>
-  <br/>
   
   <h3>토글버튼</h3>
   <label class="frm_toggle" for="toggle01"><input type="checkbox" id="toggle01" checked><div class="toggle_slider round"></div></label>
-  <br/>
-  <br/>
+ 
   <h3>토글버튼 - 글자 포함</h3>
   <label class="frm_toggle is_text" for="toggle02">
     <input type="checkbox" id="toggle02" checked>
@@ -350,8 +291,6 @@
       <div class="toggle_text"><span>yes</span><span>no</span></div>
     </div>
   </label>
-  <br/>
-  <br/>
 
   <h3>데이터 없음</h3>
   <div class="box_nodata">
@@ -360,25 +299,17 @@
     </span>
     <p>등록된 일정이 없습니다.</p>
   </div><!-- //.box_nodata -->
-  <br/>
-  <br/>
 
   <h3>리스트설명</h3>
   <div class="list_desc">※ 최근 1년 내역<button type="button">일정추가</button></div>
-  <br/>
-  <br/>
 
-  <h3>플로팅 버튼</h3>
+  <h3>플로팅 버튼 (카카오톡 플친)</h3>
   <button type="button" class="btn_floating kakao">
     <span class="hidden">카카오톡 플친</span>
   </button>
-  <br/>
-  <br/>
   
   <h3>작은 설명</h3>
   <p class="add_desc">※ 고객님께서 설정한 치료 단계에 따라 맞춤 로드맵 영역에 자동 반영 됩니다</p>
-  <br/>
-  <br/>
 
   <h3>스와이퍼 페이지네이션</h3>
   <div class="swiper-container example_swiper">
@@ -401,14 +332,12 @@
         el: ".example_swiper .swiper-pagination",
       },
     });
-  </script> 
-  <br/>
-  <br/> 
+  </script>
 
   <h3>일정달력</h3>
   
   <div id='calendar'></div>
-<div class="calendar_desc">
+  <div div class="calendar_desc">
     <span class="check_none">미확인</span>
     <span class="check_part">부분확인</span>
     <span class="check_all">전체확인</span>
