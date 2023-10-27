@@ -1037,3 +1037,41 @@
     }
   }
 }
+
+//tab bar
+.tab_bar{
+  display: flex;  
+  position: relative;
+  li, .item{
+    position: relative;
+    flex:100%;
+    background-color: $color-inputbox;
+    height: 3.5rem;
+    & + li, & + .item{
+      &::before{
+        content: '';
+        display: block;
+        height: 0.75rem;
+        width: 0.0625rem;
+        background-color: $color-gray-100;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.on{
+      a{
+        color:$color-gray-950;
+        font-weight: $fw-b;
+      }
+    }
+    a{
+      @include flexCenter;
+      height: 100%;
+      width: 100%;
+      @include typo(0.938rem, $fw-m, 1.5);
+      color:$color-gray-300;
+    }
+  }
+}

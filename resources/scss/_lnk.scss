@@ -410,91 +410,91 @@
 }
 
 /* 20220511 패키지 아이콘 클래스 추가 */
-.health_wrap.type_package .health_container .package_bg {
-	.pack {
-		&.icon_pt {
-			background-image: url("../img/pakage/common/ico_package_01.png") !important;
-		}
-		&.icon_check {
-			background-image: url("../img/pakage/common/ico_package_02.png") !important;
-		}
-		&.icon_infinity {
-			background-image: url("../img/pakage/common/ico_package_03.png") !important;
-		}
-		&.icon_service {
-			background-image: url("../img/pakage/common/ico_package_04.png") !important;
-		}
-		&.icon_group {
-			background-image: url("../img/pakage/common/ico_package_05.png") !important;
-		}
-		&.icon_paint {
-			background-image: url("../img/pakage/common/ico_package_06.png") !important;
-		}
-		&.icon_sleep {
-			background-image: url("../img/pakage/common/ico_package_07.png") !important;
-		}
-		&.icon_mentor {
-			background-image: url("../img/pakage/common/ico_package_08.png") !important;
-		}
-		&.icon_sleep_class {
-			background-image: url("../img/pakage/common/ico_package_09.png") !important;
-		}
-		&.icon_personal {
-			background-image: url("../img/pakage/common/ico_package_10.png") !important;
-		}
-		&.icon_aroma {
-			background-image: url("../img/pakage/common/ico_package_11.png") !important;
-		}
-		&.icon_balance {
-			background-image: url("../img/pakage/common/ico_package_12.png") !important;
-		}
-		&.icon_nutrition {
-			background-image: url("../img/pakage/common/ico_package_13.png") !important;
-		}
-		&.icon_elastic {
-			background-image: url("../img/pakage/common/ico_package_14.png") !important;
-		}
-	}
-}
+// .health_wrap.type_package .health_container .package_bg {
+// 	.pack {
+// 		&.icon_pt {
+// 			background-image: url("../img/pakage/common/ico_package_01.png") !important;
+// 		}
+// 		&.icon_check {
+// 			background-image: url("../img/pakage/common/ico_package_02.png") !important;
+// 		}
+// 		&.icon_infinity {
+// 			background-image: url("../img/pakage/common/ico_package_03.png") !important;
+// 		}
+// 		&.icon_service {
+// 			background-image: url("../img/pakage/common/ico_package_04.png") !important;
+// 		}
+// 		&.icon_group {
+// 			background-image: url("../img/pakage/common/ico_package_05.png") !important;
+// 		}
+// 		&.icon_paint {
+// 			background-image: url("../img/pakage/common/ico_package_06.png") !important;
+// 		}
+// 		&.icon_sleep {
+// 			background-image: url("../img/pakage/common/ico_package_07.png") !important;
+// 		}
+// 		&.icon_mentor {
+// 			background-image: url("../img/pakage/common/ico_package_08.png") !important;
+// 		}
+// 		&.icon_sleep_class {
+// 			background-image: url("../img/pakage/common/ico_package_09.png") !important;
+// 		}
+// 		&.icon_personal {
+// 			background-image: url("../img/pakage/common/ico_package_10.png") !important;
+// 		}
+// 		&.icon_aroma {
+// 			background-image: url("../img/pakage/common/ico_package_11.png") !important;
+// 		}
+// 		&.icon_balance {
+// 			background-image: url("../img/pakage/common/ico_package_12.png") !important;
+// 		}
+// 		&.icon_nutrition {
+// 			background-image: url("../img/pakage/common/ico_package_13.png") !important;
+// 		}
+// 		&.icon_elastic {
+// 			background-image: url("../img/pakage/common/ico_package_14.png") !important;
+// 		}
+// 	}
+// }
 
 /* 20220511 라이프 샐러드 쉐이크 패키지 수정 */
-.health_wrap.type_package .health_container .package_bg .package_wrap .content_wrap .pass_wrap.event_life {
-	.pass_box {
-		padding: 30px 32px 20px;
-		h4 {
-			line-height: 26px;
-		}
-		.pass_cont {
-			margin: 18px 0 15px 0;
-		}
-		.pass_img {
-			width: 100%;
-			max-height: 200px;
-			height: auto;
-			border-radius: 10px;
-			overflow: hidden;
-			background: url('../img/pakage/common/img_life_salad.png') center no-repeat;
-			background-size: cover;
-			padding-top: 46.12%;
-			position: relative;
-		}
-		.icon_plus {
-			position: absolute;
-			top: 50%;
-			left: 57%;
-			transform: translateY(-50%);
-			width: 30px;
-			height: 30px;
-			background: url('../img/pakage/common/ico_plus.png') center no-repeat;
-			background-size: contain;
-		}
-		.pack_info {
-			text-align: center;
-			font-size: 13px;
-			margin: 0 -10px;
-		}
-	}
-}
+// .health_wrap.type_package .health_container .package_bg .package_wrap .content_wrap .pass_wrap.event_life {
+// 	.pass_box {
+// 		padding: 30px 32px 20px;
+// 		h4 {
+// 			line-height: 26px;
+// 		}
+// 		.pass_cont {
+// 			margin: 18px 0 15px 0;
+// 		}
+// 		.pass_img {
+// 			width: 100%;
+// 			max-height: 200px;
+// 			height: auto;
+// 			border-radius: 10px;
+// 			overflow: hidden;
+// 			background: url('../img/pakage/common/img_life_salad.png') center no-repeat;
+// 			background-size: cover;
+// 			padding-top: 46.12%;
+// 			position: relative;
+// 		}
+// 		.icon_plus {
+// 			position: absolute;
+// 			top: 50%;
+// 			left: 57%;
+// 			transform: translateY(-50%);
+// 			width: 30px;
+// 			height: 30px;
+// 			background: url('../img/pakage/common/ico_plus.png') center no-repeat;
+// 			background-size: contain;
+// 		}
+// 		.pack_info {
+// 			text-align: center;
+// 			font-size: 13px;
+// 			margin: 0 -10px;
+// 		}
+// 	}
+// }
 
 /* 20220518 마이기프트 획득 완료 케이스 추가 */
 .type_mypage .content_box .rewardlist .reward_item {
@@ -650,78 +650,78 @@
 }
 
 /* 20220615 슬립케어 패키지 수정 */
-.health_wrap.type_package .health_container {
-	.package_bg {
-		&.promotion {
-			.package_wrap {
-				.pass_wrap {
-					margin-top: -8px;
-					.pass_tit {
-						margin-bottom: -12px;
-						font-size: $fs-l;
-						font-weight: $fw-bb;
-						color: $bi-navy;
-					}
-					.pass_box {
-						padding: 32px 28px 15px;
-					}
-				}
-			}
-		}
-		.package_wrap {
-			.content_wrap {
-				.pass_wrap {
-					.pass_box {
-						.pass_cont {
-							.pack {
-								dt {
-									word-break: keep-all;
-								}
-							}
-						}
-						.pass_img {
-							&.row2 {
-								max-height: none;
-								padding-top: 0;
-								background: none;
-								position: relative;
-								ul {
-									display: flex;
-									justify-content: space-between;
-									flex-wrap: wrap;
-									li {
-										width: calc(100%/2 - 25px);
-										margin-top: 40px;
-										text-align: center;
-										&:nth-child(-n+2) {
-											margin-top: 13px;
-										}
-										p {
-											font-size: $fs-s;
-											font-weight: bold;
-											color: $color-black2;
-										}
-									}
-								}
-								.icon_plus {
-									width: 30px;
-									height: 30px;
-									position: absolute;
-									top: 50%;
-									left: 50%;
-									transform: translate(-50%, -50%);
-									margin-top: -10px;
-									background: url(../img/pakage/common/ico_plus.png) center no-repeat;
-									background-size: contain;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+// .health_wrap.type_package .health_container {
+// 	.package_bg {
+// 		&.promotion {
+// 			.package_wrap {
+// 				.pass_wrap {
+// 					margin-top: -8px;
+// 					.pass_tit {
+// 						margin-bottom: -12px;
+// 						font-size: $fs-l;
+// 						font-weight: $fw-bb;
+// 						color: $bi-navy;
+// 					}
+// 					.pass_box {
+// 						padding: 32px 28px 15px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 		.package_wrap {
+// 			.content_wrap {
+// 				.pass_wrap {
+// 					.pass_box {
+// 						.pass_cont {
+// 							.pack {
+// 								dt {
+// 									word-break: keep-all;
+// 								}
+// 							}
+// 						}
+// 						.pass_img {
+// 							&.row2 {
+// 								max-height: none;
+// 								padding-top: 0;
+// 								background: none;
+// 								position: relative;
+// 								ul {
+// 									display: flex;
+// 									justify-content: space-between;
+// 									flex-wrap: wrap;
+// 									li {
+// 										width: calc(100%/2 - 25px);
+// 										margin-top: 40px;
+// 										text-align: center;
+// 										&:nth-child(-n+2) {
+// 											margin-top: 13px;
+// 										}
+// 										p {
+// 											font-size: $fs-s;
+// 											font-weight: bold;
+// 											color: $color-black2;
+// 										}
+// 									}
+// 								}
+// 								.icon_plus {
+// 									width: 30px;
+// 									height: 30px;
+// 									position: absolute;
+// 									top: 50%;
+// 									left: 50%;
+// 									transform: translate(-50%, -50%);
+// 									margin-top: -10px;
+// 									background: url(../img/pakage/common/ico_plus.png) center no-repeat;
+// 									background-size: contain;
+// 								}
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 .package_popup.package_bf_pop {
 	.pop_con {
@@ -788,123 +788,123 @@
 	}
 }
 
-.health_wrap.type_package {
-	&.package_promotion {
-		padding-top: 0;
-		padding-bottom: 0;
-		.health_container {
-			padding-bottom: 0;
-		}
-		@media all and (min-width: 900px) {
-			.package_service .benefit_list li p.sub_txt.img_area {
-				align-items: center;
-			}
-		}
-	}
-}
+// .health_wrap.type_package {
+// 	&.package_promotion {
+// 		padding-top: 0;
+// 		padding-bottom: 0;
+// 		.health_container {
+// 			padding-bottom: 0;
+// 		}
+// 		@media all and (min-width: 900px) {
+// 			.package_service .benefit_list li p.sub_txt.img_area {
+// 				align-items: center;
+// 			}
+// 		}
+// 	}
+// }
 
 /* 20220616 수정 */
-@media all and (max-width: 375px) {
-	.type_package.type_main .health_container .info_get_wrap .info_box .circle_wrap li {
-		height: 88px;
-		width: 88px;
-		padding: 28px 15px;
-		line-height: 18px;
-	}
-}
+// @media all and (max-width: 375px) {
+// 	.type_package.type_main .health_container .info_get_wrap .info_box .circle_wrap li {
+// 		height: 88px;
+// 		width: 88px;
+// 		padding: 28px 15px;
+// 		line-height: 18px;
+// 	}
+// }
 
 /* 20220621 수정 */
 //패키지 상세페이지 - 패키지안내 영역 
-.health_wrap.type_package {
-	.cpr_info {
-		.service_hello_wrap {
-			background-color: transparent;
-			padding-top: 40px;
-			padding-bottom: 0;
-		}
-		.cpr_cont {
-			.btn_wrap {
-				margin-top: 18px;
-				justify-content: center;
-				.cpr_link_btn {
-					width: auto;
-					padding: 0 28px;
-				}
-			}
-		}
-		&+.package_service {
-			.benefit_list li {
-				margin-top: 80px;
-			}
-		}
-	}
-}
+// .health_wrap.type_package {
+// 	.cpr_info {
+// 		.service_hello_wrap {
+// 			background-color: transparent;
+// 			padding-top: 40px;
+// 			padding-bottom: 0;
+// 		}
+// 		.cpr_cont {
+// 			.btn_wrap {
+// 				margin-top: 18px;
+// 				justify-content: center;
+// 				.cpr_link_btn {
+// 					width: auto;
+// 					padding: 0 28px;
+// 				}
+// 			}
+// 		}
+// 		&+.package_service {
+// 			.benefit_list li {
+// 				margin-top: 80px;
+// 			}
+// 		}
+// 	}
+// }
 
 /* 20220706 수정 */
-.health_wrap.type_package {
-	.health_container {
-		.health_package {
-			.package_bg {
-				.package_wrap {
-					.content_wrap {
-						.pass_wrap.event_sleep {
-							margin-top: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-	.general_sleep {
-		.event_sleep {
-			h2 {
-				font-size: 28px;
-				line-height: 42px;
-			}
-			.pass_img {
-				&.row4 {
-					background: url('../img/pakage/general/sleep/pack_event_pad.png') center no-repeat;
-					background-size: cover;
-					padding-top: 98%;
-				}
-			}
-		}
-	}
-	&.package_promotion {
-		.general_sleep.promotion {
-			.event_sleep {
-				&.pass_wrap {
-					&.event_sleep {
-						.pass_box {
-							padding-top: 50px;
-						}
-					}
-				}
-				.pass_img {
-					&.row4 {
-						background: url('../img/pakage/general/sleep/pack_event_pad_2.png') center no-repeat;
-						background-size: cover;
-						padding-top: 98%;
-					}
-				}
-			}
-		}
-	}
-	.package_service {
-		.benefit_list li p.sub_txt.img_area {
-			&.center {
-				padding-right: 0;
-				justify-content: center;
-				margin: -35px -8px 50px -8px;
-				img {
-					width: 100%;
-					height: auto;
-					margin-right: 0;
-				}
-			}
-		}
-	}
-}
+// .health_wrap.type_package {
+// 	.health_container {
+// 		.health_package {
+// 			.package_bg {
+// 				.package_wrap {
+// 					.content_wrap {
+// 						.pass_wrap.event_sleep {
+// 							margin-top: 0;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.general_sleep {
+// 		.event_sleep {
+// 			h2 {
+// 				font-size: 28px;
+// 				line-height: 42px;
+// 			}
+// 			.pass_img {
+// 				&.row4 {
+// 					background: url('../img/pakage/general/sleep/pack_event_pad.png') center no-repeat;
+// 					background-size: cover;
+// 					padding-top: 98%;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	&.package_promotion {
+// 		.general_sleep.promotion {
+// 			.event_sleep {
+// 				&.pass_wrap {
+// 					&.event_sleep {
+// 						.pass_box {
+// 							padding-top: 50px;
+// 						}
+// 					}
+// 				}
+// 				.pass_img {
+// 					&.row4 {
+// 						background: url('../img/pakage/general/sleep/pack_event_pad_2.png') center no-repeat;
+// 						background-size: cover;
+// 						padding-top: 98%;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	.package_service {
+// 		.benefit_list li p.sub_txt.img_area {
+// 			&.center {
+// 				padding-right: 0;
+// 				justify-content: center;
+// 				margin: -35px -8px 50px -8px;
+// 				img {
+// 					width: 100%;
+// 					height: auto;
+// 					margin-right: 0;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 //플로팅 메세지
 .msg_floating {
@@ -929,44 +929,44 @@
 }
 
 //패키지 상단 이미지영역
-.health_wrap.type_package .health_container .package_bg .package_wrap .content_wrap .pass_wrap .pass_box .pass_img {
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-	background-size: cover;
-	position: relative;
-	img {
-		width: 100%;
-		height: auto;
-		vertical-align: bottom;
-	}
-}
+// .health_wrap.type_package .health_container .package_bg .package_wrap .content_wrap .pass_wrap .pass_box .pass_img {
+// 	width: 100%;
+// 	height: auto;
+// 	overflow: hidden;
+// 	background-size: cover;
+// 	position: relative;
+// 	img {
+// 		width: 100%;
+// 		height: auto;
+// 		vertical-align: bottom;
+// 	}
+// }
 
 //뉴바디핏 
-.health_wrap.type_package .health_container {
-	.package_bg.general_bodyfit.new_bodyfit {
-		.pass_wrap {
-			margin-top: -3px;
-			.pass_box {
-				margin-top: 34px;
-				padding: 24px 18px 18px 18px;
-				.tit_cont_05.txt_gradient {
-					margin-left: -4px;
-					margin-right: -4px;
-				}
-				.tit_cont_05+.tit_cont_05 {
-					margin-top: 2px;
-				}
-			}
-			.pass_cont {
-				.pass_txt {
-					font-size: $fs-s;
-					margin-top: 18px;
-				}
-			}
-		}
-	}
-}
+// .health_wrap.type_package .health_container {
+// 	.package_bg.general_bodyfit.new_bodyfit {
+// 		.pass_wrap {
+// 			margin-top: -3px;
+// 			.pass_box {
+// 				margin-top: 34px;
+// 				padding: 24px 18px 18px 18px;
+// 				.tit_cont_05.txt_gradient {
+// 					margin-left: -4px;
+// 					margin-right: -4px;
+// 				}
+// 				.tit_cont_05+.tit_cont_05 {
+// 					margin-top: 2px;
+// 				}
+// 			}
+// 			.pass_cont {
+// 				.pass_txt {
+// 					font-size: $fs-s;
+// 					margin-top: 18px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 //패키지 혜택리스트 영역 이미지 높이제한 없는 경우
 .package_service .benefit_list li .img_wrap {
@@ -2196,35 +2196,35 @@
 }
 
 //패키지 유형4
-.health_wrap.type_package .health_container {
-	.package_bg.type_text_img {
-		.package_wrap {
-			.content_wrap {
-				.pass_wrap {
-					margin-top: -3px;
-					.pass_box {
-						margin-top: 34px;
-						padding: 24px 18px 18px 18px;
-						.tit_cont_05.txt_gradient {
-							margin-left: -4px;
-							margin-right: -4px;
-							letter-spacing: -1.2px;
-						}
-						.tit_cont_05+.tit_cont_05 {
-							margin-top: 2px;
-						}
-					}
-					.pass_cont {
-						.pass_txt {
-							font-size: $fs-s;
-							margin-top: 18px;
-						}
-					}
-				}
-			}
-		}
-	}
-}
+// .health_wrap.type_package .health_container {
+// 	.package_bg.type_text_img {
+// 		.package_wrap {
+// 			.content_wrap {
+// 				.pass_wrap {
+// 					margin-top: -3px;
+// 					.pass_box {
+// 						margin-top: 34px;
+// 						padding: 24px 18px 18px 18px;
+// 						.tit_cont_05.txt_gradient {
+// 							margin-left: -4px;
+// 							margin-right: -4px;
+// 							letter-spacing: -1.2px;
+// 						}
+// 						.tit_cont_05+.tit_cont_05 {
+// 							margin-top: 2px;
+// 						}
+// 					}
+// 					.pass_cont {
+// 						.pass_txt {
+// 							font-size: $fs-s;
+// 							margin-top: 18px;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 //input 단위 위치 공통
 .inp_wrap {

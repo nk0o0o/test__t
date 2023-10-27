@@ -168,6 +168,15 @@ body {background-color: $bg-white;}
     @include flexBetween;
     width: 100%;
   }
+  &.depth_2{
+    justify-content: center;
+    .hd_noti{
+      position: absolute; right: 24px;
+    }
+    h1, h3{
+      @include typo_h3_B();
+    }
+  }
 }
 
 //mypage 네임 카드 
