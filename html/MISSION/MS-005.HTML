@@ -136,6 +136,19 @@
           alert(info.dateStr);
         }
       },
+      dayCellContent: function (info) {
+        var number = document.createElement("a")
+        number.classList.add("fc-daygrid-day-number")
+        number.innerHTML = info.dayNumberText.replace("일","");
+        if(info.view.type === "dayGridMonth"){
+          return{
+            html:number.outerHTML
+          };
+        }
+        return{
+          domNodes:[]
+        }
+      },
       events:[
         {
           groupId:'미션 시작일',
